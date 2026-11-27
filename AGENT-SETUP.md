@@ -87,3 +87,7 @@ The 32 planner fixture scenarios check tool selection, reuse, native/web separat
 ## Source-grounded design
 
 Invoking the skill enables the [mandatory grounding contract](skills/agentic-ui-ux/references/grounding.md). The agent reads selected [reviewed knowledge cards](skills/agentic-ui-ux/references/knowledge/INDEX.md) and actual upstream sources, records references for material decisions, and validates the record before editing and finishing. It must not substitute arbitrary aesthetics. A missing reference blocks the affected part unless you explicitly approve exploration. These checks do not prove that the agent followed the record or that the output is visually superior.
+
+## Creative structural redesign
+
+Use `Use agentic-ui-ux in rebuild mode to redesign every scoped section from scratch. Preserve product truth and functionality, not old composition. Retrieve actual external patterns and validate the rebuild gate.` Rebuild is the default for redesign, refine is for bounded polish, reference-match is for an exact reference. See [rebuild](skills/agentic-ui-ux/references/rebuild.md) and [source access](skills/agentic-ui-ux/references/source-access.md). A single install bundles references and retrieval scripts, not all external packages.

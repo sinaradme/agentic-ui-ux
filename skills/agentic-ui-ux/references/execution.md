@@ -4,17 +4,17 @@ The user gives a design task, not a list of libraries. The agent owns the invest
 
 ## 1. Understand and route
 
-Read the brief, target rules and actual project. Infer what is clear; ask only for a material missing requirement (for example target platform, brand constraints, permission). Capture a baseline for existing screens. Identify core tasks and supporting tasks, and concrete acceptance criteria. Use the compact capability index, relevant routing tables and project evidence. Do not ask the user to choose between equivalent libraries.
+Read the brief, target rules and actual project. Infer what is clear; ask only for a material missing requirement (for example target platform, brand constraints, permission). Capture a baseline for existing screens. Determine designMode; for rebuild inventory all requested sections and follow [rebuild.md](rebuild.md), including concrete external discovery and three structural alternatives per section. Identify core tasks and supporting tasks, and concrete acceptance criteria. Use the compact capability index, relevant routing tables and project evidence. Do not ask the user to choose between equivalent libraries.
 
 ## 2. One concise decision
 
-Show the design direction, project assets/components/runtime to reuse, the minimal new tools if any, why each is necessary, and one concrete implementation/verification plan. Use bundled playbooks if they are adequate. A genuine advanced gap must remain open if no suitable tool can be used. Do not claim equal quality from an unverified fallback.
+Show the design direction, project assets/components/runtime to reuse, the minimal new tools if any, why each is necessary, and one concrete implementation/verification plan. Use bundled playbooks for narrow work; never substitute them for mandatory external discovery in rebuild mode. A genuine advanced gap must remain open if no suitable tool can be used. Do not claim equal quality from an unverified fallback.
 
 If changes need approval, present a consolidated list of exact reviewed package/skill versions, commands, working directories, configuration changes, licenses, permissions, hooks and rollback. Keep global/hook approvals separate. If the task is already authorized and no new permissions/installs are needed, proceed within scope; do not make the user reconfirm every routine design decision. Never invent authorization.
 
 ## 3. Implement with a single design owner
 
-Follow [grounding.md](grounding.md) and validate the preflight record before visual edits. Use existing tokens, components, typography and visual language. Choose one source-grounded visual thesis and make a representative screen or section before scaling across the product. For an explicit reference-match task identify the reference's measurable layout, spacing, hierarchy, motion and states; preserve functional behavior and use only permitted assets. Read only the chosen upstream skill command or reference. For components, locate an exact suitable item, review its code, dependencies and accessibility, then adapt it. For motion distinguish guidance from runtime; verify actual interaction, not just a still image.
+Follow [grounding.md](grounding.md) and validate the preflight record before visual edits. In refine mode use existing tokens, components, typography and visual language. In rebuild mode retain explicit constraints and engineering primitives but discard old composition and any explicitly relaxed visual rules. Choose one source-grounded visual thesis and make a representative screen or section before scaling across the product. For an explicit reference-match task identify the reference's measurable layout, spacing, hierarchy, motion and states; preserve functional behavior and use only permitted assets. Read only the chosen upstream skill command or reference. For components, locate an exact suitable item, review its code, dependencies and accessibility, then adapt it. For motion distinguish guidance from runtime; verify actual interaction, not just a still image.
 
 ## 4. Verify before completion
 
@@ -22,4 +22,4 @@ Use a real browser or native device and capture before/after when possible. Chec
 
 ## 5. Finish
 
-Validate the final grounding record. Give a short outcome, verified checks, before/after evidence links where available, new dependencies and remaining gaps. Store reusable design decisions in the target project's existing design documentation only if authorized. Do not store sensitive project data in this public guide. Follow the [acceptance contract](acceptance.md).
+Validate the final grounding record including rebuild evidence where required. Give a short outcome, verified checks, before/after evidence links where available, new dependencies and remaining gaps. Store reusable design decisions in the target project's existing design documentation only if authorized. Do not store sensitive project data in this public guide. Follow the [acceptance contract](acceptance.md).

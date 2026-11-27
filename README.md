@@ -59,6 +59,12 @@ Ask before installing tools or making changes outside the task.
 
 You do not need to name any libraries. The agent should handle routine design decisions, present one consolidated approval plan if new tools are necessary, and show evidence of the result.
 
+## Rebuild, not just polish
+
+A structural redesign uses rebuild mode by default: old composition is baseline, not authority. The agent retrieves concrete external patterns, considers three different structural concepts per section, selects a task-fit direction and verifies actual before/after changes. Existing dependencies may still be reused. [Rebuild contract](skills/agentic-ui-ux/references/rebuild.md) · [Direct source access](skills/agentic-ui-ux/references/source-access.md).
+
+Installing this one skill does not install all upstream tools or grant external access automatically. The source retrieval CLI and catalog provide direct paths; missing runtime dependencies still require authorized installation.
+
 ## 3. Understand what the agent selects
 
 | Task | Preferred route (if a gap exists) |

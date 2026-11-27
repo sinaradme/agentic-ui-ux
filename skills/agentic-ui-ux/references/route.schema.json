@@ -127,6 +127,15 @@
         "unknown"
       ],
       "description": "Specify marketing website vs functional product UI vs native target. Existing system still wins; a core dashboard capability infers product when omitted."
+    },
+    "designMode": {
+      "enum": [
+        "refine",
+        "rebuild",
+        "reference-match",
+        "new"
+      ],
+      "description": "Redesign defaults to rebuild. Select refine only for bounded polishing, reference-match for exact requested references. Rebuild requires redesign goal."
     }
   }
 }

@@ -5,9 +5,12 @@ const read = name => JSON.parse(readFileSync(new URL('../references/'+name, impo
 const catalog=read('catalog.json'), registry=read('capabilities.json'), policy=read('priority-policy.json');
 function route(input,catalog,registry,policy,validateContext){
  const blocked=(reason)=>({schemaVersion:1,mode:"plan-only",status:"blocked",reason,routes:[],actions:[],playbooks:[],executionAuthorized:false});
- if(!input||typeof input!=="object"||Array.isArray(input)||Object.keys(input).some(k=>!["context","tasks","policy","asOf","surfaceType"].includes(k)))return blocked("Invalid route request.");
+ if(!input||typeof input!=="object"||Array.isArray(input)||Object.keys(input).some(k=>!["context","tasks","policy","asOf","surfaceType","designMode"].includes(k)))return blocked("Invalid route request.");
  const ctx=input.context; const checked=validateContext(ctx);if(checked.status==="blocked")return blocked(checked.reason);
  if(input.policy!==undefined&&!["minimal","no-new-tools"].includes(input.policy))return blocked("Invalid policy.");
+ if(input.designMode!==undefined&&!["refine","rebuild","reference-match","new"].includes(input.designMode))return blocked("Invalid designMode.");
+ const designMode=input.designMode||(ctx.goal==="redesign"?"rebuild":ctx.goal==="new-ui"?"new":"refine");
+ if(designMode==="rebuild"&&ctx.goal!=="redesign")return blocked("Rebuild mode requires redesign goal.");
  if(input.surfaceType!==undefined&&!["marketing","product","native","unknown"].includes(input.surfaceType))return blocked("Invalid surfaceType.");
  const date=input.asOf===undefined?catalog.reviewedAt:input.asOf;const dateMs=Date.parse(date);if(typeof date!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(dateMs)||new Date(dateMs).toISOString().slice(0,10)!==date||dateMs<Date.parse(catalog.reviewedAt))return blocked("Invalid asOf date; use current date or the catalog snapshot date.");
  const tasks=input.tasks;if(!Array.isArray(tasks)||tasks.length<1||tasks.length>policy.limits.maxTaskCapabilities)return blocked("Choose 1–"+policy.limits.maxTaskCapabilities+" relevant capability IDs.");
@@ -27,6 +30,7 @@ function route(input,catalog,registry,policy,validateContext){
  if(surfaceType==="native"&&!["react-native","flutter"].includes(ctx.stack)||["marketing","product"].includes(surfaceType)&&["react-native","flutter"].includes(ctx.stack))return blocked("Surface type conflicts with target platform.");const ordered=registry.capabilities.filter(c=>requested.has(c.id)).sort((a,b)=>Number(requested.get(a.id).priority==="supporting")-Number(requested.get(b.id).priority==="supporting"));
  const routes=[],actions=new Map(),notes=[],playbooks=new Set();let newSpecialists=0;const runtimeFamilies=new Set();
  const noNew=input.policy==="no-new-tools";
+ const focusedInvoke=(c,p)=>designMode==="rebuild"&&p.tool==="impeccable"&&["art-direction","page-layout","layout-refinement","brand-consistency","dashboard-layout","tokens","system-consistency"].includes(c.id)?"reference/new-work.md (replacement direction; inspect source, do not invoke bolder/layout as the primary route)":p.invoke;
  let owner=ctx.primarySkill==="none"?null:ctx.primarySkill;
  const primaryRole=t=>["primary","alternative-primary"].includes(t.role);
  const applicable=(c,p)=>p.stacks.includes(ctx.stack)&&tools.get(p.tool)?.stacks.includes(ctx.stack);
@@ -70,9 +74,9 @@ function route(input,catalog,registry,policy,validateContext){
        const t=tools.get(match.tool);
        if(primaryRole(t)&&owner!==t.id){finish("reuse-project","Existing capability is adequate; avoid loading another primary owner.");continue;}
        if(!tierAllowed(t)&&!primaryRole(t)){finish("reuse-project","Existing capability is adequate; no automatic invocation of a manual or exploratory reference.");continue;}
-       const res=pickAction(t,"Confirmed adequate existing provider",match.invoke,true);
+       const res=pickAction(t,"Confirmed adequate existing provider",focusedInvoke(c,match),true);
        if(res.blocked){finish("needs-verification","Existing provider prerequisites are unverified.",{blockers:res.blocked});continue;}
-       finish("reuse","Confirmed existing provider.",{provider:t.id,invoke:t.knowledge?.manualInvocation?undefined:match.invoke||undefined});continue;
+       finish("reuse","Confirmed existing provider.",{provider:t.id,invoke:t.knowledge?.manualInvocation?undefined:focusedInvoke(c,match)||undefined});continue;
      }
      finish("reuse-project","Confirmed project capability already covers this need.");continue;
    }
@@ -98,9 +102,9 @@ function route(input,catalog,registry,policy,validateContext){
      const t=tools.get(owner);const existing=ctx.installedTools.includes(owner);
      if(existing){finish("needs-verification","The existing primary was reported insufficient for this capability; review its focused command before adding another.");continue;}
      if(!existing&&(noNew||!tierAllowed(t))){finish("playbook","No new primary installation under this policy.");continue;}
-     const res=pickAction(t,"Single design owner for this task",match.invoke,existing);
+     const res=pickAction(t,"Single design owner for this task",focusedInvoke(c,match),existing);
      if(res.blocked){finish("needs-verification","Preferred primary prerequisites missing; no automatic alternative.",{blockers:res.blocked});continue;}
-     finish(res.status,"One primary owner; reuse the same skill across capabilities.",{provider:t.id,invoke:match.invoke||undefined});continue;
+     finish(res.status,"One primary owner; reuse the same skill across capabilities.",{provider:t.id,invoke:focusedInvoke(c,match)||undefined});continue;
    }
    if(noNew){finish(["tooling","implementation"].includes(c.kind)?"blocked":"playbook","No-new-tools policy; use existing/project guidance or report an unresolved gap.");continue;}
    if(c.browserGate&&ctx.installedTools.includes("playwright-mcp")){const t=tools.get("playwright-mcp");const res=pickAction(t,"Existing browser server is not working; review configuration rather than reinstall.",null,true,true);if(res.blocked){finish("needs-verification","Existing browser server prerequisites missing.",{blockers:res.blocked});continue;}finish(res.status,"Review and repair the existing browser server configuration.",{provider:t.id});continue;}
@@ -115,7 +119,7 @@ function route(input,catalog,registry,policy,validateContext){
    if(res.blocked){finish("needs-verification","Preferred provider prerequisites missing; no automatic lower-tier fallback.",{blockers:res.blocked});continue;}
    if(fresh&&t.kind==="skill")newSpecialists++;
    if(c.exclusive)runtimeFamilies.add(c.exclusive);
-   finish(res.status,"Best eligible default for this confirmed capability gap.",{provider:t.id,invoke:match.invoke||undefined});
+   finish(res.status,"Best eligible default for this confirmed capability gap.",{provider:t.id,invoke:focusedInvoke(c,match)||undefined});
  }
  // QA remains explicit even when the user asks only for styling.
  if(["new-ui","redesign","motion"].includes(ctx.goal)){
@@ -125,8 +129,9 @@ function route(input,catalog,registry,policy,validateContext){
  }
  if(ctx.stack==="flutter")notes.push("Flutter SDK widgets, animations and tests are the default; no web-only runtime.");
  if(!input.asOf)notes.push("Using the catalog snapshot date for deterministic routing; verify current upstream metadata before approval.");
+ if(designMode==="rebuild")notes.push("MANDATORY: reconstruct each scoped section using the rebuild contract, inspect concrete external patterns even when existing tools are adequate; old UI is baseline, not authority. Validate rebuild evidence before edits and final acceptance.");
  if(!actions.size)notes.push("No external installation/invocation is currently selected; bundled guidance remains available.");
- return {schemaVersion:1,edition:catalog.edition,asOf:date,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,surfaceType,primaryOwner:owner,primaryOwnerStatus:owner?(actions.has(owner)?"selected":ctx.primarySkill===owner?"existing-not-invoked":"unresolved"):"none",playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
+ return {schemaVersion:1,edition:catalog.edition,asOf:date,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,surfaceType,designMode,discoveryRequired:designMode==="rebuild",primaryOwner:owner,primaryOwnerStatus:owner?(actions.has(owner)?"selected":ctx.primarySkill===owner?"existing-not-invoked":"unresolved"):"none",playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
 }
 export function createRoute(input){return route(input,catalog,registry,policy,createPlan);}
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const input=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const out=createRoute(input);console.log(JSON.stringify(out,null,2));if(out.status==='blocked')process.exitCode=2;}catch(e){console.error('Route failed:',e.message);process.exitCode=2;}}

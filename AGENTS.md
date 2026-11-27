@@ -17,3 +17,5 @@ If editing this guide itself, keep the human README concise, maintain the catalo
 When the skill is invoked, [source-grounded design](skills/agentic-ui-ux/references/grounding.md) is mandatory. Read only selected upstream knowledge cards and actual sources; do not invent a visual direction without a traceable reference. Validate decision records before visual edits and completion.
 
 For final validation run all test scripts listed in .github/workflows/quality.yml, including repository-wide documentation integrity. Do not weaken acceptance gates or treat synthetic fixtures as real visual evidence.
+
+For structural redesign, [rebuild mode](skills/agentic-ui-ux/references/rebuild.md) overrides the old visual-preservation defaults. Require external pattern retrieval, three structural alternatives per scoped section, and before/after evidence; do not use an adequate existing component library as an excuse to skip discovery. [Direct source access](skills/agentic-ui-ux/references/source-access.md) does not install upstream tools.

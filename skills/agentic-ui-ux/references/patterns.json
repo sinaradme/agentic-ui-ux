@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-27",
+  "note": "Original pattern annotations of inspected pinned upstream documents, not copied components. Pattern references are read-only and do not authorize a competing library.",
+  "patterns": [
+    {
+      "id": "replacement-world",
+      "tool": "impeccable",
+      "repo": "pbakaus/impeccable",
+      "revision": "2fc5e1459efbbf06d92c7306517c286bf12490cf",
+      "path": ".agents/skills/impeccable/reference/new-work.md",
+      "blob": "fe0a8183d00a8ff8861593b66117a6d68f002699",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "fit": "Whole page or new visual world: derive materially different structures from content and user goals; replace old composition, not product truth.",
+      "section": "Decide what is already true; Choose the right amount of invention",
+      "avoid": "Not for a narrow extension; do not run upstream scripts or require additional approvals blindly."
+    },
+    {
+      "id": "spatial-thesis",
+      "tool": "impeccable",
+      "repo": "pbakaus/impeccable",
+      "revision": "2fc5e1459efbbf06d92c7306517c286bf12490cf",
+      "path": ".agents/skills/impeccable/reference/layout.md",
+      "blob": "aa547c742fc373bc459bdbb7977683441aa48ec0",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "fit": "Reading order, grouping, topology and density; asymmetric experience/marketing composition vs stable operational layout.",
+      "section": "Visitor mode; Set the spatial thesis; Verify",
+      "avoid": "Do not use the command's preserve-existing-world restriction to override authorized replacement."
+    },
+    {
+      "id": "embla-radix-carousel",
+      "tool": "shadcn",
+      "repo": "shadcn-ui/ui",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "path": "apps/v4/content/docs/components/radix/carousel.mdx",
+      "blob": "cd8ac34f425d04e6f868081952ba95baa2830ddd",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Swipe carousel composition, size, orientation, options, events and RTL; consider peek, vertical, indexed or multi-item navigation.",
+      "section": "Composition; Sizes; Orientation; Options; RTL",
+      "avoid": "Do not replace an adequate runtime or install a second registry system; use documented behavior as reference."
+    },
+    {
+      "id": "embla-base-carousel",
+      "tool": "shadcn",
+      "repo": "shadcn-ui/ui",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "path": "apps/v4/content/docs/components/base/carousel.mdx",
+      "blob": "0637774e2f1a2ca09580e4fb58ba464a3dfb7596",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Carousel for Base UI variant; exact component primitives, sizes, orientation, events and RTL.",
+      "section": "Composition; Sizes; Orientation; Options; RTL",
+      "avoid": "Same family as Radix carousel, not a second structural alternative."
+    },
+    {
+      "id": "feature-bento",
+      "tool": "magic-ui",
+      "repo": "magicuidesign/magicui",
+      "revision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+      "path": "apps/www/content/docs/components/bento-grid.mdx",
+      "blob": "19cb89e74304c909c5e09ce931b265c633967d63",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Asymmetric feature layout, one dominant panel and supporting tiles; evaluate content-driven spans or vertical variant.",
+      "section": "Examples; Usage",
+      "avoid": "Not a default for every section; avoid equal card wallpaper or gratuitous effects."
+    },
+    {
+      "id": "scroll-progress",
+      "tool": "magic-ui",
+      "repo": "magicuidesign/magicui",
+      "revision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+      "path": "apps/www/content/docs/components/scroll-progress.mdx",
+      "blob": "19add5236eb1e84794f7042cc14e01696f8498c3",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Progress feedback for long narrative; combine with real content milestones only when useful.",
+      "section": "Usage; Props",
+      "avoid": "Not a substitute for navigation; no forced scroll hijacking."
+    },
+    {
+      "id": "event-sequence",
+      "tool": "magic-ui",
+      "repo": "magicuidesign/magicui",
+      "revision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+      "path": "apps/www/content/docs/components/animated-list.mdx",
+      "blob": "dbf49ef662e9fd5b955cd22863b8da4fc9dbd2f8",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Sequence of events/notifications for an illustrative product or timeline section.",
+      "section": "Usage; Props",
+      "avoid": "Never delay essential content, fake live data or force repeated motion."
+    },
+    {
+      "id": "continuous-strip",
+      "tool": "magic-ui",
+      "repo": "magicuidesign/magicui",
+      "revision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+      "path": "apps/www/content/docs/components/marquee.mdx",
+      "blob": "5f374b56c0941c592c278d907718fb6f3c1504a2",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Optional continuous decorative partner strip; vertical or horizontal variants.",
+      "section": "Examples; Props",
+      "avoid": "Do not use for critical reading or primary navigation; pause/control and reduced motion required."
+    },
+    {
+      "id": "coordinated-motion",
+      "tool": "emil-choreograph",
+      "repo": "emilkowalski/skills",
+      "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "path": "skills/choreograph/SKILL.md",
+      "blob": "965f7b1ee991adbbc301401cf2f6f6890b247572",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "fit": "Plan lead/follow, overlap, exits and interruption; synchronize to the event that matters.",
+      "section": "Cast the Elements; Pick the Relationship; Interruption; Reduced Motion",
+      "avoid": "Not generic stagger or animation of every child."
+    },
+    {
+      "id": "direct-manipulation",
+      "tool": "emil-gestures",
+      "repo": "emilkowalski/skills",
+      "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "path": "skills/gestures/SKILL.md",
+      "blob": "71fb5af14cf57ce9b052bfbf22dad8e4c71e3ac1",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "fit": "Drag/swipe that tracks input, release physics and interruptibility; compare existing primitives.",
+      "section": "The two phases of every gesture; Interruptibility; Touch checklist",
+      "avoid": "Keyboard/non-gesture access mandatory; do not install a library just for novelty."
+    },
+    {
+      "id": "business-led-composition",
+      "tool": "taste",
+      "repo": "Leonxlnx/taste-skill",
+      "revision": "952435f63acece7d2fcb4b4d3c1786c1c43603e0",
+      "path": "skills/taste-skill/SKILL.md",
+      "blob": "7dc7a9fed097364515581a28ec45ef955620eede",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "fit": "Business-specific page architecture and visual rhythm, relevant official example gallery.",
+      "section": "The page plan by kind; What serves which page",
+      "avoid": "Marketing-only style rules must not displace functional product requirements."
+    }
+  ]
+}

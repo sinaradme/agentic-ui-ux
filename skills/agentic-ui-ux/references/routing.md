@@ -20,3 +20,7 @@ A candidate may require a skill command, code primitive, library runtime, regist
 ## Documentation-grounded routing
 
 After routing, read the selected [knowledge card](knowledge/INDEX.md), pinned upstream source and exact version-specific documentation. Use the documented fit/exclusions and select an actual command, component or pattern. Read-only review of a skill that disables automatic invocation is allowed as reference, not automatic execution. If the selected source conflicts with project rules or cannot be inspected, stop that capability or seek an explicitly reviewed alternative. Follow [grounding.md](grounding.md); no ungrounded design fallback.
+
+## Rebuild mode takes precedence over preservation defaults
+
+Redesign defaults to `designMode: rebuild`; use refine for bounded polishing or reference-match for exact references. Read [rebuild.md](rebuild.md) and [source-access.md](source-access.md). The design owner is not a mandate to retain the old layout. For Impeccable use `reference/new-work.md` as replacement direction rather than bolder/layout as the primary route. Existing adequate runtime/components do not waive mandatory external pattern retrieval or the three-concept gate. The source index works without installing upstream packages. Apply the same rules manually if no shell is available.
