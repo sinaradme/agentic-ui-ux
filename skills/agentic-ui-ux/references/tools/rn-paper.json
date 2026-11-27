@@ -30,5 +30,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/rn-paper.json",
+    "primarySource": "https://github.com/callstack/react-native-paper/blob/63a3d5acf8542caa863c081f7bbca15a62404646/README.md",
+    "sourceRevision": "63a3d5acf8542caa863c081f7bbca15a62404646",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview",
+    "manualInvocation": false
   }
 }

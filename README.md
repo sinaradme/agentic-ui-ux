@@ -25,7 +25,7 @@ The repository includes one skill, 12 focused playbooks, a capability router and
 | --- | --- | --- |
 | Art direction, UX, layout, typography, design systems | Components, motion, interactions, graphics, responsive/native | Accessibility, performance, visual QA |
 
-The agent routes the task to the relevant capabilities, uses the project's existing system first, and proposes external tools only for verified gaps. No need to install every library. [How routing works](skills/agentic-ui-ux/references/routing.md) · [Capability index](skills/agentic-ui-ux/references/INDEX.md)
+The agent routes the task to the relevant capabilities, uses the project's existing system first, and proposes external tools only for verified gaps. Every material visual decision must be grounded in an inspected project/user reference or a documented upstream pattern. [Source-grounding contract](skills/agentic-ui-ux/references/grounding.md) · [Reviewed upstream knowledge](skills/agentic-ui-ux/references/knowledge/INDEX.md). No need to install every library. [How routing works](skills/agentic-ui-ux/references/routing.md) · [Capability index](skills/agentic-ui-ux/references/INDEX.md)
 
 ## See the difference
 

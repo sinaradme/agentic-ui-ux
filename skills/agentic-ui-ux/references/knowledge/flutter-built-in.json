@@ -1,0 +1,42 @@
+{
+  "id": "flutter-built-in",
+  "fit": "Official Flutter layout, widgets, animation and testing guidance.",
+  "avoid": "Check installed SDK/version and actual Material/Cupertino package requirements; never assume current docs match an older SDK.",
+  "use": "Read version-appropriate widget/layout/animation docs and run native widget/integration tests.",
+  "sources": [
+    {
+      "id": "flutter-built-in:primary",
+      "url": "https://github.com/flutter/flutter/blob/43150a886d38fe7febfdee16c9b6813f3cf69cb1/README.md",
+      "kind": "repository-readme",
+      "revision": "43150a886d38fe7febfdee16c9b6813f3cf69cb1",
+      "locator": "Documentation; About Flutter"
+    },
+    {
+      "id": "flutter-built-in:docs-1",
+      "url": "https://docs.flutter.dev/ui",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "flutter-built-in:docs-2",
+      "url": "https://docs.flutter.dev/ui/widgets/layout",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "flutter-built-in:docs-3",
+      "url": "https://docs.flutter.dev/ui/animations",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "flutter-built-in:docs-4",
+      "url": "https://docs.flutter.dev/cookbook/testing/widget/introduction",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

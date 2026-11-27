@@ -1,0 +1,18 @@
+{
+  "id": "emil-gestures",
+  "fit": "Drag, swipe, dismiss, snap and touch tracking.",
+  "avoid": "Do not replace an adequate native or existing gesture solution; preserve non-gesture access.",
+  "use": "Use track/release rules and touch checklist; test release and mid-motion interruption.",
+  "sources": [
+    {
+      "id": "emil-gestures:primary",
+      "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/gestures/SKILL.md",
+      "kind": "skill-source",
+      "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "locator": "The two phases of every gesture; Interruptibility; Touch checklist"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

@@ -42,5 +42,13 @@
     "archived": false,
     "repositoryLicense": null,
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/stageshow.json",
+    "primarySource": "https://github.com/benjitaylor/skills/blob/299140fafd08df55a9c234e610c3f64af3f45531/stageshow/SKILL.md",
+    "sourceRevision": "299140fafd08df55a9c234e610c3f64af3f45531",
+    "reviewedAt": "2026-11-27",
+    "scope": "skill source + upstream overview",
+    "manualInvocation": false
   }
 }

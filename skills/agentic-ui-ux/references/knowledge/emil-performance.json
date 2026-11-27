@@ -1,0 +1,18 @@
+{
+  "id": "emil-performance",
+  "fit": "Diagnose animation jank and actual frame-budget problems.",
+  "avoid": "Do not assume CSS is always faster, add will-change indiscriminately or claim frame rates without measurement.",
+  "use": "Locate animated properties, measure and diagnose the actual trace before changing implementation.",
+  "sources": [
+    {
+      "id": "emil-performance:primary",
+      "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animation-performance/SKILL.md",
+      "kind": "skill-source",
+      "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "locator": "The Symptom Table; The Frame Budget; Workflow"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

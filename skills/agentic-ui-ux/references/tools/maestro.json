@@ -31,5 +31,13 @@
     "archived": false,
     "repositoryLicense": "Apache-2.0",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/maestro.json",
+    "primarySource": "https://github.com/mobile-dev-inc/Maestro/blob/26891a918ac1a55ed41506cbe0998154321b04c8/README.md",
+    "sourceRevision": "26891a918ac1a55ed41506cbe0998154321b04c8",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview",
+    "manualInvocation": false
   }
 }

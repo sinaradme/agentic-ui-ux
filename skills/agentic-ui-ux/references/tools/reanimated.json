@@ -30,5 +30,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/reanimated.json",
+    "primarySource": "https://github.com/software-mansion/react-native-reanimated/blob/2d381dba80a9145ac617e42c39bd771ff965d0ab/README.md",
+    "sourceRevision": "2d381dba80a9145ac617e42c39bd771ff965d0ab",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview + selected official docs",
+    "manualInvocation": false
   }
 }

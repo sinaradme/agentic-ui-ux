@@ -36,5 +36,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/motion-web.json",
+    "primarySource": "https://github.com/motiondivision/motion/blob/6390e6d2ddde40128258aaa0499587505f008f1e/README.md",
+    "sourceRevision": "6390e6d2ddde40128258aaa0499587505f008f1e",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview + selected official docs",
+    "manualInvocation": false
   }
 }

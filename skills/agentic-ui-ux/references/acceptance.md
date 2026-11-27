@@ -12,7 +12,7 @@ The objective is a better functioning interface with less manual rework, not max
 
 ## Design acceptance
 
-Before changing UI, capture a baseline when available, identify user goal, product constraints, relevant visual references and acceptance criteria. Build one representative screen/section first. Respect existing design tokens and functionality. Review actual rendered desktop/mobile/device screens and interaction states. Check layout, typography, spacing, hierarchy, navigation, loading/error states, keyboard/touch, accessibility, reduced motion and build/tests. Iterate on evidence, not on vague aesthetics. Stop when criteria are satisfied or the agreed budget is exhausted. For native, do not count browser screenshots as native proof.
+Before changing UI, satisfy [the grounding contract](grounding.md): every affected surface and material capability must have an inspected source and a specific documented adaptation, or remain blocked. Capture a baseline when available, identify user goal, product constraints, relevant visual references and acceptance criteria. Build one representative screen/section first. Respect existing design tokens and functionality. Review actual rendered desktop/mobile/device screens and interaction states. Check layout, typography, spacing, hierarchy, navigation, loading/error states, keyboard/touch, accessibility, reduced motion and build/tests. Iterate on evidence, not on vague aesthetics. Stop when criteria are satisfied or the agreed budget is exhausted. For native, do not count browser screenshots as native proof.
 
 ## Minimal report
 
@@ -26,4 +26,4 @@ Before changing UI, capture a baseline when available, identify user goal, produ
 - Blocked checks and remaining risks:
 - Outcome: setup planned / setup verified / design verified / blocked (state evidence for each).
 
-No independent quality improvement is established without a controlled baseline comparison. Use the project benchmark protocol for comparative claims.
+A grounding checker PASS verifies record structure only, not source truth or design quality. Final acceptance must include actual verification evidence or disclose blockers. No independent quality improvement is established without a controlled baseline comparison. Use the project benchmark protocol for comparative claims.

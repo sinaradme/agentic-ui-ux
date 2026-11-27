@@ -1,0 +1,36 @@
+{
+  "id": "magic-ui",
+  "fit": "Specific reusable decorative React component or effect.",
+  "avoid": "Avoid stacking effects, paid registry items or blanket Tailwind/theme changes.",
+  "use": "Use the official component index to find a named item; review its code, dependencies and reduced motion.",
+  "sources": [
+    {
+      "id": "magic-ui:primary",
+      "url": "https://github.com/magicuidesign/magicui/blob/a54d9edd7bd01dfb4fa72641df2b84da449a5e35/README.md",
+      "kind": "repository-readme",
+      "revision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+      "locator": "Documentation"
+    },
+    {
+      "id": "magic-ui:docs-1",
+      "url": "https://magicui.design/docs",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "magic-ui:docs-2",
+      "url": "https://magicui.design/docs/components",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "magic-ui:docs-3",
+      "url": "https://magicui.design/docs/installation",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

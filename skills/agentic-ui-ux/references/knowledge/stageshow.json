@@ -1,0 +1,18 @@
+{
+  "id": "stageshow",
+  "fit": "Illustrative product mockups and animated cursor/demo scenes for marketing.",
+  "avoid": "Mock UI is illustration, not working production UI or actual product evidence; do not use invented data as real.",
+  "use": "Choose an example from the kit, adapt to approved assets and clearly label illustrative content.",
+  "sources": [
+    {
+      "id": "stageshow:primary",
+      "url": "https://github.com/benjitaylor/skills/blob/299140fafd08df55a9c234e610c3f64af3f45531/stageshow/SKILL.md",
+      "kind": "skill-source",
+      "revision": "299140fafd08df55a9c234e610c3f64af3f45531",
+      "locator": "Workflow; Examples; The kit; The references"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

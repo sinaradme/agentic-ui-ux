@@ -30,5 +30,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/make-interfaces.json",
+    "primarySource": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/6d9f2f1df10e8ce2ae1708598a73b0506fb98794/skills/make-interfaces-feel-better/SKILL.md",
+    "sourceRevision": "6d9f2f1df10e8ce2ae1708598a73b0506fb98794",
+    "reviewedAt": "2026-11-27",
+    "scope": "skill source + upstream overview",
+    "manualInvocation": false
   }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "fancy-ui",
+  "fit": "Exploratory animated components; README documents Svelte, React and Vue editions.",
+  "avoid": "Low adoption; framework/version-specific peer requirements and Tailwind integration; no automatic route.",
+  "use": "If explicitly reviewed, use matching package and verify theme integration and actual output.",
+  "sources": [
+    {
+      "id": "fancy-ui:primary",
+      "url": "https://github.com/RamaHerbin/fancy-ui/blob/6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae/README.md",
+      "kind": "repository-readme",
+      "revision": "6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae",
+      "locator": "Features; Quick Start; Tailwind and colour tokens"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

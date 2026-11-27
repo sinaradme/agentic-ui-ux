@@ -1,0 +1,18 @@
+{
+  "id": "chrome-devtools-mcp",
+  "fit": "Browser diagnostics, traces and technical debugging when a real diagnostic gap exists.",
+  "avoid": "Do not attach to personal or production sessions without authorization; review telemetry, connection scope and permissions.",
+  "use": "Use exact approved diagnostic capability; retain traces or measured evidence.",
+  "sources": [
+    {
+      "id": "chrome-devtools-mcp:primary",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/aacf611faf0d329f3c49e4a1f9828864a5c13752/README.md",
+      "kind": "repository-readme",
+      "revision": "aacf611faf0d329f3c49e4a1f9828864a5c13752",
+      "locator": "Disclaimers; Requirements; Getting started; Skills"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

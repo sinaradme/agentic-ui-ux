@@ -1,0 +1,30 @@
+{
+  "id": "reanimated",
+  "fit": "Advanced native animation runtime with worklet support where compatible.",
+  "avoid": "Do not assume latest Reanimated matches every Expo/RN version; check native architecture and Worklets compatibility.",
+  "use": "Read installation and compatibility tables for exact target; verify native build and device motion.",
+  "sources": [
+    {
+      "id": "reanimated:primary",
+      "url": "https://github.com/software-mansion/react-native-reanimated/blob/2d381dba80a9145ac617e42c39bd771ff965d0ab/README.md",
+      "kind": "repository-readme",
+      "revision": "2d381dba80a9145ac617e42c39bd771ff965d0ab",
+      "locator": "Installation; Compatibility"
+    },
+    {
+      "id": "reanimated:docs-1",
+      "url": "https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "reanimated:docs-2",
+      "url": "https://docs.swmansion.com/react-native-reanimated/docs/guides/compatibility/",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

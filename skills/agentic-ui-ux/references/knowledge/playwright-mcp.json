@@ -1,0 +1,18 @@
+{
+  "id": "playwright-mcp",
+  "fit": "Browser automation, accessibility snapshots and explicit visual capture with suitable tools.",
+  "avoid": "An accessibility snapshot is not a screenshot; do not claim visual inspection without image evidence. Prefer working browser/CLI capabilities over duplicate MCP.",
+  "use": "Verify connection, navigate actual local page, exercise target interactions and capture real screenshots.",
+  "sources": [
+    {
+      "id": "playwright-mcp:primary",
+      "url": "https://github.com/microsoft/playwright-mcp/blob/2337aff0213d28db41d3e3daf48cee19b3d0bd82/README.md",
+      "kind": "repository-readme",
+      "revision": "2337aff0213d28db41d3e3daf48cee19b3d0bd82",
+      "locator": "Playwright MCP vs Playwright CLI; Requirements; Getting started"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

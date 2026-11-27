@@ -42,5 +42,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/hallmark.json",
+    "primarySource": "https://github.com/Nutlope/hallmark/blob/04977e15f3dfd6ee4b74c887dac3eb52665d6c92/skills/hallmark/SKILL.md",
+    "sourceRevision": "04977e15f3dfd6ee4b74c887dac3eb52665d6c92",
+    "reviewedAt": "2026-11-27",
+    "scope": "skill source + upstream overview",
+    "manualInvocation": false
   }
 }

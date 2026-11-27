@@ -32,9 +32,9 @@ function route(input,catalog,registry,policy,validateContext){
  const pickAction=(t,reason,invoke,existing=false,configure=false)=>{
    const gaps=prereqs(t);if(!existing&&(t.credibility?.archived!==false||!t.credibility?.checkedAt||dateMs-Date.parse(t.credibility.checkedAt)>60*86400000))gaps.push("Source metadata is archived, missing or older than 60 days; re-review upstream before selection.");if(gaps.length)return {blocked:gaps};
    const prev=actions.get(t.id);
-   if(prev){if(invoke&&!prev.invocations.includes(invoke))prev.invocations.push(invoke);return {status:prev.status};}
+   if(prev){if(invoke&&!t.knowledge?.manualInvocation&&!prev.invocations.includes(invoke))prev.invocations.push(invoke);return {status:prev.status};}
    const status=configure?"configure-existing":existing?"reuse":"candidate";
-   const a={id:t.id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,license:t.license,tier:t.selectionTier,evidenceLevel:t.evidenceLevel,qualityBenchmark:t.qualityBenchmark,credibility:t.credibility,lastRepositoryPush:t.lastRepositoryPush,verification:t.verify,invocations:invoke?[invoke]:[]};
+   const a={id:t.id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,license:t.license,tier:t.selectionTier,evidenceLevel:t.evidenceLevel,qualityBenchmark:t.qualityBenchmark,credibility:t.credibility,lastRepositoryPush:t.lastRepositoryPush,verification:t.verify,invocations:invoke&&!t.knowledge?.manualInvocation?[invoke]:[],documentation:t.knowledge,invocationPolicy:t.knowledge?.manualInvocation?"reference-only-unless-explicit-user-invocation":"reviewed-focused-invocation"};
    if(!existing||configure){a.installMode=t.install.mode;a.reviewBeforeApproval=t.install.review||[];if(t.install.command)a.commandExample=t.install.command;if(t.install.examples)a.commandExamples=t.install.examples;if(t.install.agentExamples?.[ctx.agent])a.commandExamples=t.install.agentExamples[ctx.agent];if(t.install.config)a.configExample=t.install.config;}
    actions.set(t.id,a);return {status};
  };
@@ -69,7 +69,7 @@ function route(input,catalog,registry,policy,validateContext){
        if(!tierAllowed(t)&&!primaryRole(t)){finish("reuse-project","Existing capability is adequate; no automatic invocation of a manual or exploratory reference.");continue;}
        const res=pickAction(t,"Confirmed adequate existing provider",match.invoke,true);
        if(res.blocked){finish("needs-verification","Existing provider prerequisites are unverified.",{blockers:res.blocked});continue;}
-       finish("reuse","Confirmed existing provider.",{provider:t.id,invoke:match.invoke||undefined});continue;
+       finish("reuse","Confirmed existing provider.",{provider:t.id,invoke:t.knowledge?.manualInvocation?undefined:match.invoke||undefined});continue;
      }
      finish("reuse-project","Confirmed project capability already covers this need.");continue;
    }
@@ -105,6 +105,7 @@ function route(input,catalog,registry,policy,validateContext){
    const match=[...providers].sort((a,b)=>Number(tools.get(a.tool).selectionTier!=="preferred")-Number(tools.get(b.tool).selectionTier!=="preferred")).find(p=>tierAllowed(tools.get(p.tool))&&(tools.get(p.tool).selectionTier!=="specialized"||c.explicitSpecialized===true));
    if(!match){finish(["tooling","implementation"].includes(c.kind)?"blocked":"playbook","No eligible external default for this capability; use bundled guidance and report unmet requirements.");continue;}
    const t=tools.get(match.tool);
+   if(t.knowledge?.manualInvocation){finish("playbook","Upstream disables automatic model invocation. Read the reviewed source as reference; explicit user invocation is needed for activation.",{referenceTool:t.id});continue;}
    if(t.kind==="skill"&&!actions.has(t.id)&&newSpecialists>=policy.limits.newSpecialistSkills){finish("playbook","Specialist skill budget reached; use bundled guidance or request a justified follow-up.");continue;}
    if(c.exclusive&&runtimeFamilies.has(c.exclusive)){finish("needs-verification","Runtime family already selected; do not add another.");continue;}
    const fresh=!actions.has(t.id);const res=pickAction(t,"Confirmed gap: "+c.label,match.invoke);

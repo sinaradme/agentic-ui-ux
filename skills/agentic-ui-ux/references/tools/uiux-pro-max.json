@@ -60,5 +60,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/uiux-pro-max.json",
+    "primarySource": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/11ca2b3bdd555649f278ee348c32a9302b24dcf1/.claude/skills/ui-ux-pro-max/SKILL.md",
+    "sourceRevision": "11ca2b3bdd555649f278ee348c32a9302b24dcf1",
+    "reviewedAt": "2026-11-27",
+    "scope": "skill source + upstream overview",
+    "manualInvocation": false
   }
 }

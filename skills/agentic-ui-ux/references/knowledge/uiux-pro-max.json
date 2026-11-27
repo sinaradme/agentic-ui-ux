@@ -1,0 +1,18 @@
+{
+  "id": "uiux-pro-max",
+  "fit": "Searchable design-system, UX, visual hierarchy and framework guidance; suitable for planning, not a component runtime.",
+  "avoid": "Search results are candidates, not permission to override brand tokens or select premium content. Avoid global CLI changes without approval.",
+  "use": "Run a focused design-system query or domain search and retain the actual returned pattern and stack-specific guidance.",
+  "sources": [
+    {
+      "id": "uiux-pro-max:primary",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/11ca2b3bdd555649f278ee348c32a9302b24dcf1/.claude/skills/ui-ux-pro-max/SKILL.md",
+      "kind": "skill-source",
+      "revision": "11ca2b3bdd555649f278ee348c32a9302b24dcf1",
+      "locator": "Query Contract; Generate Design System; Supplement with Detailed Searches; Stack Guidelines"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

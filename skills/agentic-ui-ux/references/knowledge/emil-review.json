@@ -1,0 +1,18 @@
+{
+  "id": "emil-review",
+  "fit": "Focused critique of existing animation code and behavior.",
+  "avoid": "Upstream metadata disables model invocation; use an explicit supported user invocation or reviewed reference-only reading, not automatic activation.",
+  "use": "Read the review criteria as reference; return findings and verdict, not implementation claims.",
+  "sources": [
+    {
+      "id": "emil-review:primary",
+      "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/review-animations/SKILL.md",
+      "kind": "skill-source",
+      "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "locator": "The Ten Non-Negotiable Standards; Required Output Format"
+    }
+  ],
+  "manualInvocation": true,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

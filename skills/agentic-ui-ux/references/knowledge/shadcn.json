@@ -1,0 +1,36 @@
+{
+  "id": "shadcn",
+  "fit": "Copyable React UI primitives and blocks, when compatible with the project's system.",
+  "avoid": "Do not reinitialize a working component system; registry content and item dependencies require separate review.",
+  "use": "Find the exact component/block in official docs and inspect source and accessibility before adaptation.",
+  "sources": [
+    {
+      "id": "shadcn:primary",
+      "url": "https://github.com/shadcn-ui/ui/blob/0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4/README.md",
+      "kind": "repository-readme",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "locator": "Documentation"
+    },
+    {
+      "id": "shadcn:docs-1",
+      "url": "https://ui.shadcn.com/docs/registry",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "shadcn:docs-2",
+      "url": "https://ui.shadcn.com/docs/new",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "shadcn:docs-3",
+      "url": "https://ui.shadcn.com/docs/official",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

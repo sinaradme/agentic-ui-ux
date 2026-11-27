@@ -1,0 +1,18 @@
+{
+  "id": "anthropic-frontend",
+  "fit": "General subject-grounded visual concept and deliberate critique.",
+  "avoid": "Alternative primary only; do not treat encouragement of distinctiveness as permission to invent ungrounded design or discard the project system.",
+  "use": "Use the brief-grounding and review process for a justified manually selected alternative.",
+  "sources": [
+    {
+      "id": "anthropic-frontend:primary",
+      "url": "https://github.com/anthropics/skills/blob/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/frontend-design/SKILL.md",
+      "kind": "skill-source",
+      "revision": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+      "locator": "Ground your designs in the subject matter; Process; Restraint and self-critique"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

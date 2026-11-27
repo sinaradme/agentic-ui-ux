@@ -1,0 +1,18 @@
+{
+  "id": "landing-page-atlas",
+  "fit": "Exploratory reference catalog of full landing-page patterns.",
+  "avoid": "Not an app UI library or evidence of improved design. Verify asset rights; no automatic selection.",
+  "use": "Manual review of a named page/example and its source; adapt only permitted patterns.",
+  "sources": [
+    {
+      "id": "landing-page-atlas:primary",
+      "url": "https://github.com/vezeqs/landing-page-atlas/blob/d7d16e51c3280bc763437741a54d921e2061492d/README.md",
+      "kind": "repository-readme",
+      "revision": "d7d16e51c3280bc763437741a54d921e2061492d",
+      "locator": "The catalogue; How to use one page; Checks"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

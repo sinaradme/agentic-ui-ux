@@ -1,0 +1,18 @@
+{
+  "id": "rn-paper",
+  "fit": "Material-oriented native primitives for a confirmed native component gap.",
+  "avoid": "Not a default for every Expo app or for a custom established design system.",
+  "use": "Read component and theming docs for actual installed version; check native rendering and interaction.",
+  "sources": [
+    {
+      "id": "rn-paper:primary",
+      "url": "https://github.com/callstack/react-native-paper/blob/63a3d5acf8542caa863c081f7bbca15a62404646/README.md",
+      "kind": "repository-readme",
+      "revision": "63a3d5acf8542caa863c081f7bbca15a62404646",
+      "locator": "Getting Started; Documentation; Features"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

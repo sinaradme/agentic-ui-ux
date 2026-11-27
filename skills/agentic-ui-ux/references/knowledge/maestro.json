@@ -1,0 +1,18 @@
+{
+  "id": "maestro",
+  "fit": "Native E2E task flows using platform accessibility and YAML steps.",
+  "avoid": "A passing flow does not establish visual quality; do not run destructive workflows on live accounts or assume cloud paid features.",
+  "use": "Use a reviewed local test flow on authorized simulator/device; capture actual outcome.",
+  "sources": [
+    {
+      "id": "maestro:primary",
+      "url": "https://github.com/mobile-dev-inc/Maestro/blob/26891a918ac1a55ed41506cbe0998154321b04c8/README.md",
+      "kind": "repository-readme",
+      "revision": "26891a918ac1a55ed41506cbe0998154321b04c8",
+      "locator": "Why Maestro?; Getting Started"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

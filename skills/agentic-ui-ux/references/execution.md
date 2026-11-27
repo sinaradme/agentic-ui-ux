@@ -14,7 +14,7 @@ If changes need approval, present a consolidated list of exact reviewed package/
 
 ## 3. Implement with a single design owner
 
-Use existing tokens, components, typography and visual language. Choose one visual thesis and make a representative screen or section before scaling across the product. For an explicit reference-match task identify the reference's measurable layout, spacing, hierarchy, motion and states; preserve functional behavior and use only permitted assets. Read only the chosen upstream skill command or reference. For components, locate an exact suitable item, review its code, dependencies and accessibility, then adapt it. For motion distinguish guidance from runtime; verify actual interaction, not just a still image.
+Follow [grounding.md](grounding.md) and validate the preflight record before visual edits. Use existing tokens, components, typography and visual language. Choose one source-grounded visual thesis and make a representative screen or section before scaling across the product. For an explicit reference-match task identify the reference's measurable layout, spacing, hierarchy, motion and states; preserve functional behavior and use only permitted assets. Read only the chosen upstream skill command or reference. For components, locate an exact suitable item, review its code, dependencies and accessibility, then adapt it. For motion distinguish guidance from runtime; verify actual interaction, not just a still image.
 
 ## 4. Verify before completion
 
@@ -22,4 +22,4 @@ Use a real browser or native device and capture before/after when possible. Chec
 
 ## 5. Finish
 
-Give a short outcome, verified checks, before/after evidence links where available, new dependencies and remaining gaps. Store reusable design decisions in the target project's existing design documentation only if authorized. Do not store sensitive project data in this public guide. Follow the [acceptance contract](acceptance.md).
+Validate the final grounding record. Give a short outcome, verified checks, before/after evidence links where available, new dependencies and remaining gaps. Store reusable design decisions in the target project's existing design documentation only if authorized. Do not store sensitive project data in this public guide. Follow the [acceptance contract](acceptance.md).

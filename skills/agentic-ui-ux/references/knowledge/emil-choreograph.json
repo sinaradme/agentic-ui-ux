@@ -1,0 +1,18 @@
+{
+  "id": "emil-choreograph",
+  "fit": "Multi-element sequence, overlap, lead/follow and interruption.",
+  "avoid": "Do not stagger all elements indiscriminately or introduce gratuitous motion.",
+  "use": "Map roles and relationships; verify exits and interruption in the rendered interaction.",
+  "sources": [
+    {
+      "id": "emil-choreograph:primary",
+      "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/choreograph/SKILL.md",
+      "kind": "skill-source",
+      "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "locator": "Cast the Elements; Pick the Relationship; Interruption; Reduced Motion"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "motion-web",
+  "fit": "Advanced compatible React web motion, layout transitions and scroll effects using MIT core.",
+  "avoid": "Motion supports other platforms upstream but this router only auto-selects React web; do not import paid Motion+ examples or add a competing runtime.",
+  "use": "Choose exact documented core API such as useScroll/layout/MotionConfig and verify reduced motion and behavior.",
+  "sources": [
+    {
+      "id": "motion-web:primary",
+      "url": "https://github.com/motiondivision/motion/blob/6390e6d2ddde40128258aaa0499587505f008f1e/README.md",
+      "kind": "repository-readme",
+      "revision": "6390e6d2ddde40128258aaa0499587505f008f1e",
+      "locator": "Why Motion?; Platforms; License"
+    },
+    {
+      "id": "motion-web:docs-1",
+      "url": "https://motion.dev/docs/react-use-scroll",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "motion-web:docs-2",
+      "url": "https://motion.dev/docs/react-layout-animations",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "motion-web:docs-3",
+      "url": "https://motion.dev/docs/react-accessibility",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "motion-web:docs-4",
+      "url": "https://motion.dev/docs/performance",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

@@ -30,5 +30,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/landing-page-atlas.json",
+    "primarySource": "https://github.com/vezeqs/landing-page-atlas/blob/d7d16e51c3280bc763437741a54d921e2061492d/README.md",
+    "sourceRevision": "d7d16e51c3280bc763437741a54d921e2061492d",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview",
+    "manualInvocation": false
   }
 }

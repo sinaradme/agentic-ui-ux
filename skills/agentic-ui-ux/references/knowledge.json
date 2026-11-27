@@ -1,0 +1,590 @@
+{
+  "schemaVersion": 1,
+  "edition": "1.0",
+  "reviewedAt": "2026-11-27",
+  "scope": "Primary README of 20 source repositories (Anthropic actual SKILL.md); actual SKILL.md for 13 skill entries; selected official API/registry docs. Summaries are original, not copied full documentation. Re-read exact version-specific docs before execution.",
+  "tools": {
+    "taste": {
+      "id": "taste",
+      "fit": "Distinctive new company/marketing pages; one visual system, business-specific page plan and browser finish checks.",
+      "avoid": "Do not impose a marketing-page layout, full-screen sections, fixed navigation, random font/palette choices or generated imagery on a dashboard or an established brand. Project requirements override house style.",
+      "use": "Read page-kind guidance and house rules; choose a concrete layout/example and validate the actual output.",
+      "sources": [
+        {
+          "id": "taste:primary",
+          "url": "https://github.com/Leonxlnx/taste-skill/blob/952435f63acece7d2fcb4b4d3c1786c1c43603e0/skills/taste-skill/SKILL.md",
+          "kind": "skill-source",
+          "revision": "952435f63acece7d2fcb4b4d3c1786c1c43603e0",
+          "locator": "House rules; The page plan by kind; The run; Checklist"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "impeccable": {
+      "id": "impeccable",
+      "fit": "Targeted interface shaping, layout, type, color, review and refinement; commands and project design context.",
+      "avoid": "Do not load all commands, initialize context files or enable hooks without permission; not a second primary design owner.",
+      "use": "Read relevant command and project PRODUCT.md/DESIGN.md; use critique/audit as review rather than proof.",
+      "sources": [
+        {
+          "id": "impeccable:primary",
+          "url": "https://github.com/pbakaus/impeccable/blob/2fc5e1459efbbf06d92c7306517c286bf12490cf/.agents/skills/impeccable/SKILL.md",
+          "kind": "skill-source",
+          "revision": "2fc5e1459efbbf06d92c7306517c286bf12490cf",
+          "locator": "Setup; How to design; Commands"
+        },
+        {
+          "id": "impeccable:docs-1",
+          "url": "https://impeccable.style/docs",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "uiux-pro-max": {
+      "id": "uiux-pro-max",
+      "fit": "Searchable design-system, UX, visual hierarchy and framework guidance; suitable for planning, not a component runtime.",
+      "avoid": "Search results are candidates, not permission to override brand tokens or select premium content. Avoid global CLI changes without approval.",
+      "use": "Run a focused design-system query or domain search and retain the actual returned pattern and stack-specific guidance.",
+      "sources": [
+        {
+          "id": "uiux-pro-max:primary",
+          "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/11ca2b3bdd555649f278ee348c32a9302b24dcf1/.claude/skills/ui-ux-pro-max/SKILL.md",
+          "kind": "skill-source",
+          "revision": "11ca2b3bdd555649f278ee348c32a9302b24dcf1",
+          "locator": "Query Contract; Generate Design System; Supplement with Detailed Searches; Stack Guidelines"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "hallmark": {
+      "id": "hallmark",
+      "fit": "Alternative new-page visual direction with structured references and review.",
+      "avoid": "Its upstream skill restricts existing-design use to explicitly named Hallmark requests. Do not select for a redesign by default or combine with Taste.",
+      "use": "Manual alternative: review preflight, direction, chosen references and sweep.",
+      "sources": [
+        {
+          "id": "hallmark:primary",
+          "url": "https://github.com/Nutlope/hallmark/blob/04977e15f3dfd6ee4b74c887dac3eb52665d6c92/skills/hallmark/SKILL.md",
+          "kind": "skill-source",
+          "revision": "04977e15f3dfd6ee4b74c887dac3eb52665d6c92",
+          "locator": "Flow; Direction; The Picks block; Sweep; Branches"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "anthropic-frontend": {
+      "id": "anthropic-frontend",
+      "fit": "General subject-grounded visual concept and deliberate critique.",
+      "avoid": "Alternative primary only; do not treat encouragement of distinctiveness as permission to invent ungrounded design or discard the project system.",
+      "use": "Use the brief-grounding and review process for a justified manually selected alternative.",
+      "sources": [
+        {
+          "id": "anthropic-frontend:primary",
+          "url": "https://github.com/anthropics/skills/blob/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/frontend-design/SKILL.md",
+          "kind": "skill-source",
+          "revision": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+          "locator": "Ground your designs in the subject matter; Process; Restraint and self-critique"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "emil-web": {
+      "id": "emil-web",
+      "fit": "Construct one web animation: purpose, simplest implementation, properties, timing, interruption and reduced motion.",
+      "avoid": "Not for full animation review or performance diagnosis; no new runtime merely because the skill is selected.",
+      "use": "Choose a specific relevant recipe; verify actual interaction and reduced motion.",
+      "sources": [
+        {
+          "id": "emil-web:primary",
+          "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animate/SKILL.md",
+          "kind": "skill-source",
+          "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+          "locator": "The Build Sequence; Recipes; Never Ship"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "emil-native": {
+      "id": "emil-native",
+      "fit": "Expo/RN press feedback, transitions, sheets and device motion.",
+      "avoid": "Do not assume Reanimated, Gesture Handler, Expo Router or haptics are installed or required. Match the actual project and device.",
+      "use": "Select the relevant recipe; check thread, interruption, reduced motion and compatible dependencies.",
+      "sources": [
+        {
+          "id": "emil-native:primary",
+          "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animate-expo/SKILL.md",
+          "kind": "skill-source",
+          "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+          "locator": "The Build Sequence; Setup that silently breaks motion; Recipes"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "stageshow": {
+      "id": "stageshow",
+      "fit": "Illustrative product mockups and animated cursor/demo scenes for marketing.",
+      "avoid": "Mock UI is illustration, not working production UI or actual product evidence; do not use invented data as real.",
+      "use": "Choose an example from the kit, adapt to approved assets and clearly label illustrative content.",
+      "sources": [
+        {
+          "id": "stageshow:primary",
+          "url": "https://github.com/benjitaylor/skills/blob/299140fafd08df55a9c234e610c3f64af3f45531/stageshow/SKILL.md",
+          "kind": "skill-source",
+          "revision": "299140fafd08df55a9c234e610c3f64af3f45531",
+          "locator": "Workflow; Examples; The kit; The references"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "make-interfaces": {
+      "id": "make-interfaces",
+      "fit": "Small polish fixes: optical alignment, radius, icon details and feedback.",
+      "avoid": "Do not override existing tokens or apply every rule wholesale.",
+      "use": "Select only relevant core principle and inspect before/after.",
+      "sources": [
+        {
+          "id": "make-interfaces:primary",
+          "url": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/6d9f2f1df10e8ce2ae1708598a73b0506fb98794/skills/make-interfaces-feel-better/SKILL.md",
+          "kind": "skill-source",
+          "revision": "6d9f2f1df10e8ce2ae1708598a73b0506fb98794",
+          "locator": "Quick Reference; Core Principles"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "shadcn": {
+      "id": "shadcn",
+      "fit": "Copyable React UI primitives and blocks, when compatible with the project's system.",
+      "avoid": "Do not reinitialize a working component system; registry content and item dependencies require separate review.",
+      "use": "Find the exact component/block in official docs and inspect source and accessibility before adaptation.",
+      "sources": [
+        {
+          "id": "shadcn:primary",
+          "url": "https://github.com/shadcn-ui/ui/blob/0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4/README.md",
+          "kind": "repository-readme",
+          "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+          "locator": "Documentation"
+        },
+        {
+          "id": "shadcn:docs-1",
+          "url": "https://ui.shadcn.com/docs/registry",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "shadcn:docs-2",
+          "url": "https://ui.shadcn.com/docs/new",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "shadcn:docs-3",
+          "url": "https://ui.shadcn.com/docs/official",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "magic-ui": {
+      "id": "magic-ui",
+      "fit": "Specific reusable decorative React component or effect.",
+      "avoid": "Avoid stacking effects, paid registry items or blanket Tailwind/theme changes.",
+      "use": "Use the official component index to find a named item; review its code, dependencies and reduced motion.",
+      "sources": [
+        {
+          "id": "magic-ui:primary",
+          "url": "https://github.com/magicuidesign/magicui/blob/a54d9edd7bd01dfb4fa72641df2b84da449a5e35/README.md",
+          "kind": "repository-readme",
+          "revision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+          "locator": "Documentation"
+        },
+        {
+          "id": "magic-ui:docs-1",
+          "url": "https://magicui.design/docs",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "magic-ui:docs-2",
+          "url": "https://magicui.design/docs/components",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "magic-ui:docs-3",
+          "url": "https://magicui.design/docs/installation",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "playwright-mcp": {
+      "id": "playwright-mcp",
+      "fit": "Browser automation, accessibility snapshots and explicit visual capture with suitable tools.",
+      "avoid": "An accessibility snapshot is not a screenshot; do not claim visual inspection without image evidence. Prefer working browser/CLI capabilities over duplicate MCP.",
+      "use": "Verify connection, navigate actual local page, exercise target interactions and capture real screenshots.",
+      "sources": [
+        {
+          "id": "playwright-mcp:primary",
+          "url": "https://github.com/microsoft/playwright-mcp/blob/2337aff0213d28db41d3e3daf48cee19b3d0bd82/README.md",
+          "kind": "repository-readme",
+          "revision": "2337aff0213d28db41d3e3daf48cee19b3d0bd82",
+          "locator": "Playwright MCP vs Playwright CLI; Requirements; Getting started"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "shadcn-mcp": {
+      "id": "shadcn-mcp",
+      "fit": "Search and inspect compatible configured registries.",
+      "avoid": "MCP is discovery, not permission to install or trust third-party registry code.",
+      "use": "Use official registry search, inspect the exact item and dependency graph, then request approval if required.",
+      "sources": [
+        {
+          "id": "shadcn-mcp:primary",
+          "url": "https://github.com/shadcn-ui/ui/blob/0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4/README.md",
+          "kind": "repository-readme",
+          "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+          "locator": "Documentation"
+        },
+        {
+          "id": "shadcn-mcp:docs-1",
+          "url": "https://ui.shadcn.com/docs/mcp",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "shadcn-mcp:docs-2",
+          "url": "https://ui.shadcn.com/docs/registry/mcp",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "chrome-devtools-mcp": {
+      "id": "chrome-devtools-mcp",
+      "fit": "Browser diagnostics, traces and technical debugging when a real diagnostic gap exists.",
+      "avoid": "Do not attach to personal or production sessions without authorization; review telemetry, connection scope and permissions.",
+      "use": "Use exact approved diagnostic capability; retain traces or measured evidence.",
+      "sources": [
+        {
+          "id": "chrome-devtools-mcp:primary",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/aacf611faf0d329f3c49e4a1f9828864a5c13752/README.md",
+          "kind": "repository-readme",
+          "revision": "aacf611faf0d329f3c49e4a1f9828864a5c13752",
+          "locator": "Disclaimers; Requirements; Getting started; Skills"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "rn-paper": {
+      "id": "rn-paper",
+      "fit": "Material-oriented native primitives for a confirmed native component gap.",
+      "avoid": "Not a default for every Expo app or for a custom established design system.",
+      "use": "Read component and theming docs for actual installed version; check native rendering and interaction.",
+      "sources": [
+        {
+          "id": "rn-paper:primary",
+          "url": "https://github.com/callstack/react-native-paper/blob/63a3d5acf8542caa863c081f7bbca15a62404646/README.md",
+          "kind": "repository-readme",
+          "revision": "63a3d5acf8542caa863c081f7bbca15a62404646",
+          "locator": "Getting Started; Documentation; Features"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "reanimated": {
+      "id": "reanimated",
+      "fit": "Advanced native animation runtime with worklet support where compatible.",
+      "avoid": "Do not assume latest Reanimated matches every Expo/RN version; check native architecture and Worklets compatibility.",
+      "use": "Read installation and compatibility tables for exact target; verify native build and device motion.",
+      "sources": [
+        {
+          "id": "reanimated:primary",
+          "url": "https://github.com/software-mansion/react-native-reanimated/blob/2d381dba80a9145ac617e42c39bd771ff965d0ab/README.md",
+          "kind": "repository-readme",
+          "revision": "2d381dba80a9145ac617e42c39bd771ff965d0ab",
+          "locator": "Installation; Compatibility"
+        },
+        {
+          "id": "reanimated:docs-1",
+          "url": "https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "reanimated:docs-2",
+          "url": "https://docs.swmansion.com/react-native-reanimated/docs/guides/compatibility/",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "maestro": {
+      "id": "maestro",
+      "fit": "Native E2E task flows using platform accessibility and YAML steps.",
+      "avoid": "A passing flow does not establish visual quality; do not run destructive workflows on live accounts or assume cloud paid features.",
+      "use": "Use a reviewed local test flow on authorized simulator/device; capture actual outcome.",
+      "sources": [
+        {
+          "id": "maestro:primary",
+          "url": "https://github.com/mobile-dev-inc/Maestro/blob/26891a918ac1a55ed41506cbe0998154321b04c8/README.md",
+          "kind": "repository-readme",
+          "revision": "26891a918ac1a55ed41506cbe0998154321b04c8",
+          "locator": "Why Maestro?; Getting Started"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "flutter-built-in": {
+      "id": "flutter-built-in",
+      "fit": "Official Flutter layout, widgets, animation and testing guidance.",
+      "avoid": "Check installed SDK/version and actual Material/Cupertino package requirements; never assume current docs match an older SDK.",
+      "use": "Read version-appropriate widget/layout/animation docs and run native widget/integration tests.",
+      "sources": [
+        {
+          "id": "flutter-built-in:primary",
+          "url": "https://github.com/flutter/flutter/blob/43150a886d38fe7febfdee16c9b6813f3cf69cb1/README.md",
+          "kind": "repository-readme",
+          "revision": "43150a886d38fe7febfdee16c9b6813f3cf69cb1",
+          "locator": "Documentation; About Flutter"
+        },
+        {
+          "id": "flutter-built-in:docs-1",
+          "url": "https://docs.flutter.dev/ui",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "flutter-built-in:docs-2",
+          "url": "https://docs.flutter.dev/ui/widgets/layout",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "flutter-built-in:docs-3",
+          "url": "https://docs.flutter.dev/ui/animations",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "flutter-built-in:docs-4",
+          "url": "https://docs.flutter.dev/cookbook/testing/widget/introduction",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "motion-ui-skill": {
+      "id": "motion-ui-skill",
+      "fit": "Exploratory React/Next component catalog with Motion and Tailwind.",
+      "avoid": "Low adoption and unbenchmarked; some items have additional dependencies. Never auto-select or bulk install.",
+      "use": "Manual research only; inspect individual component and prerequisites.",
+      "sources": [
+        {
+          "id": "motion-ui-skill:primary",
+          "url": "https://github.com/Rkj0123/motion-ui-skill/blob/e63d09b4ac908f747f357759c5a306b347f4d47e/README.md",
+          "kind": "repository-readme",
+          "revision": "e63d09b4ac908f747f357759c5a306b347f4d47e",
+          "locator": "Install; Catalogue"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "fancy-ui": {
+      "id": "fancy-ui",
+      "fit": "Exploratory animated components; README documents Svelte, React and Vue editions.",
+      "avoid": "Low adoption; framework/version-specific peer requirements and Tailwind integration; no automatic route.",
+      "use": "If explicitly reviewed, use matching package and verify theme integration and actual output.",
+      "sources": [
+        {
+          "id": "fancy-ui:primary",
+          "url": "https://github.com/RamaHerbin/fancy-ui/blob/6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae/README.md",
+          "kind": "repository-readme",
+          "revision": "6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae",
+          "locator": "Features; Quick Start; Tailwind and colour tokens"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "landing-page-atlas": {
+      "id": "landing-page-atlas",
+      "fit": "Exploratory reference catalog of full landing-page patterns.",
+      "avoid": "Not an app UI library or evidence of improved design. Verify asset rights; no automatic selection.",
+      "use": "Manual review of a named page/example and its source; adapt only permitted patterns.",
+      "sources": [
+        {
+          "id": "landing-page-atlas:primary",
+          "url": "https://github.com/vezeqs/landing-page-atlas/blob/d7d16e51c3280bc763437741a54d921e2061492d/README.md",
+          "kind": "repository-readme",
+          "revision": "d7d16e51c3280bc763437741a54d921e2061492d",
+          "locator": "The catalogue; How to use one page; Checks"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "emil-choreograph": {
+      "id": "emil-choreograph",
+      "fit": "Multi-element sequence, overlap, lead/follow and interruption.",
+      "avoid": "Do not stagger all elements indiscriminately or introduce gratuitous motion.",
+      "use": "Map roles and relationships; verify exits and interruption in the rendered interaction.",
+      "sources": [
+        {
+          "id": "emil-choreograph:primary",
+          "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/choreograph/SKILL.md",
+          "kind": "skill-source",
+          "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+          "locator": "Cast the Elements; Pick the Relationship; Interruption; Reduced Motion"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "emil-gestures": {
+      "id": "emil-gestures",
+      "fit": "Drag, swipe, dismiss, snap and touch tracking.",
+      "avoid": "Do not replace an adequate native or existing gesture solution; preserve non-gesture access.",
+      "use": "Use track/release rules and touch checklist; test release and mid-motion interruption.",
+      "sources": [
+        {
+          "id": "emil-gestures:primary",
+          "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/gestures/SKILL.md",
+          "kind": "skill-source",
+          "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+          "locator": "The two phases of every gesture; Interruptibility; Touch checklist"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "emil-performance": {
+      "id": "emil-performance",
+      "fit": "Diagnose animation jank and actual frame-budget problems.",
+      "avoid": "Do not assume CSS is always faster, add will-change indiscriminately or claim frame rates without measurement.",
+      "use": "Locate animated properties, measure and diagnose the actual trace before changing implementation.",
+      "sources": [
+        {
+          "id": "emil-performance:primary",
+          "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animation-performance/SKILL.md",
+          "kind": "skill-source",
+          "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+          "locator": "The Symptom Table; The Frame Budget; Workflow"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "emil-review": {
+      "id": "emil-review",
+      "fit": "Focused critique of existing animation code and behavior.",
+      "avoid": "Upstream metadata disables model invocation; use an explicit supported user invocation or reviewed reference-only reading, not automatic activation.",
+      "use": "Read the review criteria as reference; return findings and verdict, not implementation claims.",
+      "sources": [
+        {
+          "id": "emil-review:primary",
+          "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/review-animations/SKILL.md",
+          "kind": "skill-source",
+          "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+          "locator": "The Ten Non-Negotiable Standards; Required Output Format"
+        }
+      ],
+      "manualInvocation": true,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    },
+    "motion-web": {
+      "id": "motion-web",
+      "fit": "Advanced compatible React web motion, layout transitions and scroll effects using MIT core.",
+      "avoid": "Motion supports other platforms upstream but this router only auto-selects React web; do not import paid Motion+ examples or add a competing runtime.",
+      "use": "Choose exact documented core API such as useScroll/layout/MotionConfig and verify reduced motion and behavior.",
+      "sources": [
+        {
+          "id": "motion-web:primary",
+          "url": "https://github.com/motiondivision/motion/blob/6390e6d2ddde40128258aaa0499587505f008f1e/README.md",
+          "kind": "repository-readme",
+          "revision": "6390e6d2ddde40128258aaa0499587505f008f1e",
+          "locator": "Why Motion?; Platforms; License"
+        },
+        {
+          "id": "motion-web:docs-1",
+          "url": "https://motion.dev/docs/react-use-scroll",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "motion-web:docs-2",
+          "url": "https://motion.dev/docs/react-layout-animations",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "motion-web:docs-3",
+          "url": "https://motion.dev/docs/react-accessibility",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "motion-web:docs-4",
+          "url": "https://motion.dev/docs/performance",
+          "kind": "official-docs",
+          "locator": "Version-appropriate relevant section; re-read before use"
+        }
+      ],
+      "manualInvocation": false,
+      "evidence": "documentation reviewed; no independent visual benchmark",
+      "reviewedAt": "2026-11-27"
+    }
+  }
+}

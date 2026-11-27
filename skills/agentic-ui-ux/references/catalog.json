@@ -74,6 +74,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/taste.json",
+        "primarySource": "https://github.com/Leonxlnx/taste-skill/blob/952435f63acece7d2fcb4b4d3c1786c1c43603e0/skills/taste-skill/SKILL.md",
+        "sourceRevision": "952435f63acece7d2fcb4b4d3c1786c1c43603e0",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -125,6 +133,14 @@
         "archived": false,
         "repositoryLicense": "Apache-2.0",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/impeccable.json",
+        "primarySource": "https://github.com/pbakaus/impeccable/blob/2fc5e1459efbbf06d92c7306517c286bf12490cf/.agents/skills/impeccable/SKILL.md",
+        "sourceRevision": "2fc5e1459efbbf06d92c7306517c286bf12490cf",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -189,6 +205,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/uiux-pro-max.json",
+        "primarySource": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/blob/11ca2b3bdd555649f278ee348c32a9302b24dcf1/.claude/skills/ui-ux-pro-max/SKILL.md",
+        "sourceRevision": "11ca2b3bdd555649f278ee348c32a9302b24dcf1",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -235,6 +259,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/hallmark.json",
+        "primarySource": "https://github.com/Nutlope/hallmark/blob/04977e15f3dfd6ee4b74c887dac3eb52665d6c92/skills/hallmark/SKILL.md",
+        "sourceRevision": "04977e15f3dfd6ee4b74c887dac3eb52665d6c92",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -281,6 +313,14 @@
         "archived": false,
         "repositoryLicense": null,
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/anthropic-frontend.json",
+        "primarySource": "https://github.com/anthropics/skills/blob/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/frontend-design/SKILL.md",
+        "sourceRevision": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -327,6 +367,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/emil-web.json",
+        "primarySource": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animate/SKILL.md",
+        "sourceRevision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -372,6 +420,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/emil-native.json",
+        "primarySource": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animate-expo/SKILL.md",
+        "sourceRevision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -418,6 +474,14 @@
         "archived": false,
         "repositoryLicense": null,
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/stageshow.json",
+        "primarySource": "https://github.com/benjitaylor/skills/blob/299140fafd08df55a9c234e610c3f64af3f45531/stageshow/SKILL.md",
+        "sourceRevision": "299140fafd08df55a9c234e610c3f64af3f45531",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -452,6 +516,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/make-interfaces.json",
+        "primarySource": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/6d9f2f1df10e8ce2ae1708598a73b0506fb98794/skills/make-interfaces-feel-better/SKILL.md",
+        "sourceRevision": "6d9f2f1df10e8ce2ae1708598a73b0506fb98794",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -493,6 +565,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/shadcn.json",
+        "primarySource": "https://github.com/shadcn-ui/ui/blob/0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4/README.md",
+        "sourceRevision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview + selected official docs",
+        "manualInvocation": false
       }
     },
     {
@@ -527,6 +607,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/magic-ui.json",
+        "primarySource": "https://github.com/magicuidesign/magicui/blob/a54d9edd7bd01dfb4fa72641df2b84da449a5e35/README.md",
+        "sourceRevision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview + selected official docs",
+        "manualInvocation": false
       }
     },
     {
@@ -576,6 +664,14 @@
         "archived": false,
         "repositoryLicense": "Apache-2.0",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/playwright-mcp.json",
+        "primarySource": "https://github.com/microsoft/playwright-mcp/blob/2337aff0213d28db41d3e3daf48cee19b3d0bd82/README.md",
+        "sourceRevision": "2337aff0213d28db41d3e3daf48cee19b3d0bd82",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -625,6 +721,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/shadcn-mcp.json",
+        "primarySource": "https://github.com/shadcn-ui/ui/blob/0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4/README.md",
+        "sourceRevision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview + selected official docs",
+        "manualInvocation": false
       }
     },
     {
@@ -668,6 +772,14 @@
         "archived": false,
         "repositoryLicense": "Apache-2.0",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/chrome-devtools-mcp.json",
+        "primarySource": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/aacf611faf0d329f3c49e4a1f9828864a5c13752/README.md",
+        "sourceRevision": "aacf611faf0d329f3c49e4a1f9828864a5c13752",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -702,6 +814,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/rn-paper.json",
+        "primarySource": "https://github.com/callstack/react-native-paper/blob/63a3d5acf8542caa863c081f7bbca15a62404646/README.md",
+        "sourceRevision": "63a3d5acf8542caa863c081f7bbca15a62404646",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -736,6 +856,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/reanimated.json",
+        "primarySource": "https://github.com/software-mansion/react-native-reanimated/blob/2d381dba80a9145ac617e42c39bd771ff965d0ab/README.md",
+        "sourceRevision": "2d381dba80a9145ac617e42c39bd771ff965d0ab",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview + selected official docs",
+        "manualInvocation": false
       }
     },
     {
@@ -771,6 +899,14 @@
         "archived": false,
         "repositoryLicense": "Apache-2.0",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/maestro.json",
+        "primarySource": "https://github.com/mobile-dev-inc/Maestro/blob/26891a918ac1a55ed41506cbe0998154321b04c8/README.md",
+        "sourceRevision": "26891a918ac1a55ed41506cbe0998154321b04c8",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -802,6 +938,14 @@
         "archived": false,
         "repositoryLicense": "BSD-3-Clause",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/flutter-built-in.json",
+        "primarySource": "https://github.com/flutter/flutter/blob/43150a886d38fe7febfdee16c9b6813f3cf69cb1/README.md",
+        "sourceRevision": "43150a886d38fe7febfdee16c9b6813f3cf69cb1",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview + selected official docs",
+        "manualInvocation": false
       }
     },
     {
@@ -835,6 +979,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/motion-ui-skill.json",
+        "primarySource": "https://github.com/Rkj0123/motion-ui-skill/blob/e63d09b4ac908f747f357759c5a306b347f4d47e/README.md",
+        "sourceRevision": "e63d09b4ac908f747f357759c5a306b347f4d47e",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -868,6 +1020,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/fancy-ui.json",
+        "primarySource": "https://github.com/RamaHerbin/fancy-ui/blob/6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae/README.md",
+        "sourceRevision": "6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -902,6 +1062,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/landing-page-atlas.json",
+        "primarySource": "https://github.com/vezeqs/landing-page-atlas/blob/d7d16e51c3280bc763437741a54d921e2061492d/README.md",
+        "sourceRevision": "d7d16e51c3280bc763437741a54d921e2061492d",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -948,6 +1116,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/emil-choreograph.json",
+        "primarySource": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/choreograph/SKILL.md",
+        "sourceRevision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -994,6 +1170,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/emil-gestures.json",
+        "primarySource": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/gestures/SKILL.md",
+        "sourceRevision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -1040,6 +1224,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/emil-performance.json",
+        "primarySource": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animation-performance/SKILL.md",
+        "sourceRevision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": false
       }
     },
     {
@@ -1086,6 +1278,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/emil-review.json",
+        "primarySource": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/review-animations/SKILL.md",
+        "sourceRevision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+        "reviewedAt": "2026-11-27",
+        "scope": "skill source + upstream overview",
+        "manualInvocation": true
       }
     },
     {
@@ -1126,6 +1326,14 @@
         "archived": false,
         "repositoryLicense": "MIT",
         "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      },
+      "knowledge": {
+        "path": "references/knowledge/motion-web.json",
+        "primarySource": "https://github.com/motiondivision/motion/blob/6390e6d2ddde40128258aaa0499587505f008f1e/README.md",
+        "sourceRevision": "6390e6d2ddde40128258aaa0499587505f008f1e",
+        "reviewedAt": "2026-11-27",
+        "scope": "upstream overview + selected official docs",
+        "manualInvocation": false
       }
     }
   ]

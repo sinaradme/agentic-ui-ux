@@ -29,5 +29,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/motion-ui-skill.json",
+    "primarySource": "https://github.com/Rkj0123/motion-ui-skill/blob/e63d09b4ac908f747f357759c5a306b347f4d47e/README.md",
+    "sourceRevision": "e63d09b4ac908f747f357759c5a306b347f4d47e",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview",
+    "manualInvocation": false
   }
 }

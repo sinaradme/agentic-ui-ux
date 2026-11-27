@@ -30,5 +30,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/magic-ui.json",
+    "primarySource": "https://github.com/magicuidesign/magicui/blob/a54d9edd7bd01dfb4fa72641df2b84da449a5e35/README.md",
+    "sourceRevision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview + selected official docs",
+    "manualInvocation": false
   }
 }

@@ -1,0 +1,18 @@
+{
+  "id": "make-interfaces",
+  "fit": "Small polish fixes: optical alignment, radius, icon details and feedback.",
+  "avoid": "Do not override existing tokens or apply every rule wholesale.",
+  "use": "Select only relevant core principle and inspect before/after.",
+  "sources": [
+    {
+      "id": "make-interfaces:primary",
+      "url": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/6d9f2f1df10e8ce2ae1708598a73b0506fb98794/skills/make-interfaces-feel-better/SKILL.md",
+      "kind": "skill-source",
+      "revision": "6d9f2f1df10e8ce2ae1708598a73b0506fb98794",
+      "locator": "Quick Reference; Core Principles"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

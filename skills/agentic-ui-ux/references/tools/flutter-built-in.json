@@ -27,5 +27,13 @@
     "archived": false,
     "repositoryLicense": "BSD-3-Clause",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/flutter-built-in.json",
+    "primarySource": "https://github.com/flutter/flutter/blob/43150a886d38fe7febfdee16c9b6813f3cf69cb1/README.md",
+    "sourceRevision": "43150a886d38fe7febfdee16c9b6813f3cf69cb1",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview + selected official docs",
+    "manualInvocation": false
   }
 }

@@ -43,5 +43,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/taste.json",
+    "primarySource": "https://github.com/Leonxlnx/taste-skill/blob/952435f63acece7d2fcb4b4d3c1786c1c43603e0/skills/taste-skill/SKILL.md",
+    "sourceRevision": "952435f63acece7d2fcb4b4d3c1786c1c43603e0",
+    "reviewedAt": "2026-11-27",
+    "scope": "skill source + upstream overview",
+    "manualInvocation": false
   }
 }

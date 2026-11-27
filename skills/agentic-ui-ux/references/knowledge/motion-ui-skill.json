@@ -1,0 +1,18 @@
+{
+  "id": "motion-ui-skill",
+  "fit": "Exploratory React/Next component catalog with Motion and Tailwind.",
+  "avoid": "Low adoption and unbenchmarked; some items have additional dependencies. Never auto-select or bulk install.",
+  "use": "Manual research only; inspect individual component and prerequisites.",
+  "sources": [
+    {
+      "id": "motion-ui-skill:primary",
+      "url": "https://github.com/Rkj0123/motion-ui-skill/blob/e63d09b4ac908f747f357759c5a306b347f4d47e/README.md",
+      "kind": "repository-readme",
+      "revision": "e63d09b4ac908f747f357759c5a306b347f4d47e",
+      "locator": "Install; Catalogue"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

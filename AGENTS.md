@@ -13,3 +13,5 @@ If a user directs you here for UI/UX work in another project:
 A GitHub connection does not grant local terminal, MCP, browser or device access. A tool catalog is not authorization. Do not invent compatibility or independent benchmark results.
 
 If editing this guide itself, keep the human README concise, maintain the catalog and decision rules together, update the changelog, and run `node skills/agentic-ui-ux/scripts/test-plan.mjs` and `node skills/agentic-ui-ux/scripts/test-route.mjs` after modifying selection logic. Never add a vendor claim as an independent evaluation.
+
+When the skill is invoked, [source-grounded design](skills/agentic-ui-ux/references/grounding.md) is mandatory. Read only selected upstream knowledge cards and actual sources; do not invent a visual direction without a traceable reference. Validate decision records before visual edits and completion.

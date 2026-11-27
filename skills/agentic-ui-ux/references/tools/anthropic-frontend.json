@@ -42,5 +42,13 @@
     "archived": false,
     "repositoryLicense": null,
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/anthropic-frontend.json",
+    "primarySource": "https://github.com/anthropics/skills/blob/e4bb5d960d87126ff3b3a8af1a104b7db67560ba/skills/frontend-design/SKILL.md",
+    "sourceRevision": "e4bb5d960d87126ff3b3a8af1a104b7db67560ba",
+    "reviewedAt": "2026-11-27",
+    "scope": "skill source + upstream overview",
+    "manualInvocation": false
   }
 }

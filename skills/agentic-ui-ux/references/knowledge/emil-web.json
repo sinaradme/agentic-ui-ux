@@ -1,0 +1,18 @@
+{
+  "id": "emil-web",
+  "fit": "Construct one web animation: purpose, simplest implementation, properties, timing, interruption and reduced motion.",
+  "avoid": "Not for full animation review or performance diagnosis; no new runtime merely because the skill is selected.",
+  "use": "Choose a specific relevant recipe; verify actual interaction and reduced motion.",
+  "sources": [
+    {
+      "id": "emil-web:primary",
+      "url": "https://github.com/emilkowalski/skills/blob/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animate/SKILL.md",
+      "kind": "skill-source",
+      "revision": "64eb3deb9a5fbfa041faf783e0bc3fd635872e9c",
+      "locator": "The Build Sequence; Recipes; Never Ship"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

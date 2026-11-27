@@ -1,0 +1,24 @@
+{
+  "id": "impeccable",
+  "fit": "Targeted interface shaping, layout, type, color, review and refinement; commands and project design context.",
+  "avoid": "Do not load all commands, initialize context files or enable hooks without permission; not a second primary design owner.",
+  "use": "Read relevant command and project PRODUCT.md/DESIGN.md; use critique/audit as review rather than proof.",
+  "sources": [
+    {
+      "id": "impeccable:primary",
+      "url": "https://github.com/pbakaus/impeccable/blob/2fc5e1459efbbf06d92c7306517c286bf12490cf/.agents/skills/impeccable/SKILL.md",
+      "kind": "skill-source",
+      "revision": "2fc5e1459efbbf06d92c7306517c286bf12490cf",
+      "locator": "Setup; How to design; Commands"
+    },
+    {
+      "id": "impeccable:docs-1",
+      "url": "https://impeccable.style/docs",
+      "kind": "official-docs",
+      "locator": "Version-appropriate relevant section; re-read before use"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

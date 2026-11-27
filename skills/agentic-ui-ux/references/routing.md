@@ -16,3 +16,7 @@ The priority policy is task-specific. Preferred means a documented default for i
 ## Use, not just install
 
 A candidate may require a skill command, code primitive, library runtime, registry item or browser capability. Do not confuse these. If selected and approved, inspect exact docs, install or configure only what is needed, verify discovery and invoke the focused capability. For registry components search existing items first; inspect item source and dependencies, adapt tokens and verify the actual rendered result. When a tool is unavailable, the playbook provides a bounded fallback, not an assurance of equal quality. State remaining gaps. Use [execution.md](execution.md) for the actual design-and-verification workflow and consolidated user interaction.
+
+## Documentation-grounded routing
+
+After routing, read the selected [knowledge card](knowledge/INDEX.md), pinned upstream source and exact version-specific documentation. Use the documented fit/exclusions and select an actual command, component or pattern. Read-only review of a skill that disables automatic invocation is allowed as reference, not automatic execution. If the selected source conflicts with project rules or cannot be inspected, stop that capability or seek an explicitly reviewed alternative. Follow [grounding.md](grounding.md); no ungrounded design fallback.

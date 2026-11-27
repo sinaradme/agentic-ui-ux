@@ -47,5 +47,13 @@
     "archived": false,
     "repositoryLicense": "Apache-2.0",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/impeccable.json",
+    "primarySource": "https://github.com/pbakaus/impeccable/blob/2fc5e1459efbbf06d92c7306517c286bf12490cf/.agents/skills/impeccable/SKILL.md",
+    "sourceRevision": "2fc5e1459efbbf06d92c7306517c286bf12490cf",
+    "reviewedAt": "2026-11-27",
+    "scope": "skill source + upstream overview",
+    "manualInvocation": false
   }
 }

@@ -29,5 +29,13 @@
     "archived": false,
     "repositoryLicense": "MIT",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/fancy-ui.json",
+    "primarySource": "https://github.com/RamaHerbin/fancy-ui/blob/6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae/README.md",
+    "sourceRevision": "6ca10bdb4b2e481d32ff91c0c53cfe660a9695ae",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview",
+    "manualInvocation": false
   }
 }

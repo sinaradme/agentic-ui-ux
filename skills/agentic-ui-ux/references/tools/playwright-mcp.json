@@ -45,5 +45,13 @@
     "archived": false,
     "repositoryLicense": "Apache-2.0",
     "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  },
+  "knowledge": {
+    "path": "references/knowledge/playwright-mcp.json",
+    "primarySource": "https://github.com/microsoft/playwright-mcp/blob/2337aff0213d28db41d3e3daf48cee19b3d0bd82/README.md",
+    "sourceRevision": "2337aff0213d28db41d3e3daf48cee19b3d0bd82",
+    "reviewedAt": "2026-11-27",
+    "scope": "upstream overview",
+    "manualInvocation": false
   }
 }

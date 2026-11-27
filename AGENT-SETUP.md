@@ -82,3 +82,7 @@ node skills/agentic-ui-ux/scripts/test-route.mjs
 The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. The 59 route fixtures and 504 cross-product invariant checks cover capability selection, source priority, unknown coverage, conflicts and platform isolation. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
 
 [Return home](README.md) · [Manual setup](QUICKSTART.md) · [Tool directory](TOOLS.md)
+
+## Source-grounded design
+
+Invoking the skill enables the [mandatory grounding contract](skills/agentic-ui-ux/references/grounding.md). The agent reads selected [reviewed knowledge cards](skills/agentic-ui-ux/references/knowledge/INDEX.md) and actual upstream sources, records references for material decisions, and validates the record before editing and finishing. It must not substitute arbitrary aesthetics. A missing reference blocks the affected part unless you explicitly approve exploration. These checks do not prove that the agent followed the record or that the output is visually superior.

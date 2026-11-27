@@ -1,0 +1,18 @@
+{
+  "id": "hallmark",
+  "fit": "Alternative new-page visual direction with structured references and review.",
+  "avoid": "Its upstream skill restricts existing-design use to explicitly named Hallmark requests. Do not select for a redesign by default or combine with Taste.",
+  "use": "Manual alternative: review preflight, direction, chosen references and sweep.",
+  "sources": [
+    {
+      "id": "hallmark:primary",
+      "url": "https://github.com/Nutlope/hallmark/blob/04977e15f3dfd6ee4b74c887dac3eb52665d6c92/skills/hallmark/SKILL.md",
+      "kind": "skill-source",
+      "revision": "04977e15f3dfd6ee4b74c887dac3eb52665d6c92",
+      "locator": "Flow; Direction; The Picks block; Sweep; Branches"
+    }
+  ],
+  "manualInvocation": false,
+  "evidence": "documentation reviewed; no independent visual benchmark",
+  "reviewedAt": "2026-11-27"
+}

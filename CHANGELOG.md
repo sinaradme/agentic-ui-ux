@@ -2,6 +2,8 @@
 
 ## 1.0 — 2026-11-27
 
+- Reviewed the primary upstream documentation of all 20 source repositories and the relevant skill files; added 26 focused knowledge cards with pinned source revisions, scope, fit/exclusions and exact documentation pointers. Added mandatory source-grounded design, preflight/final decision evidence and structural verification. No fine-tuning or independent visual quality claim.
+
 - Completed capability routing hardening: 59 task fixtures, 504 cross-product invariants, 39 generated reference checks, 20 source-repository credibility snapshots, core/supporting priority, stale-source blocking and execution contract. Both CI workflows passed. Clarified one-skill onboarding and added paired human-effort/quality evaluation criteria.
 
 - Expanded the same 1.0 edition with capability-based routing, 12 focused playbooks, 42 capability IDs, explicit trust tiers, bounded specialist selection and conflict gates. Added the open-source Motion runtime and four precise Emil skills. Legacy setup planner remains available.
