@@ -17,3 +17,16 @@ Actual in-app Cursor/Codex/Claude invocation, comparative design quality, target
 ## Actual non-skill provider execution
 
 At [e970a1f](https://github.com/sinaradme/agentic-ui-ux/commit/e970a1fa3f8d2459135136fd3f3f0eac904bf938), [Official native tools](https://github.com/sinaradme/agentic-ui-ux/actions/runs/46027231726) passed: original Motion 14.14.0 import resolved, official shadcn 4.23.1 fetched actual Magic UI Bento Grid registry source, original Playwright MCP 0.0.86 initialized, listed 25 tools, navigated a real local fixture and captured a screenshot. [Public central install and native original installation](https://github.com/sinaradme/agentic-ui-ux/actions/runs/46027231661) and [repository quality](https://github.com/sinaradme/agentic-ui-ux/actions/runs/46027231587) also passed. These are isolated executable tests, not a visual benchmark or user-agent activation.
+
+## Final cross-platform and registry verification
+
+Implementation [fd9f4ae](https://github.com/sinaradme/agentic-ui-ux/commit/fd9f4ae930f93a2bfd333b4f384d80eec6b95c43). All four workflows passed:
+
+| Test | Result |
+| --- | --- |
+| [Direct upstream connections](https://github.com/sinaradme/agentic-ui-ux/actions/runs/46027477328) | Linux: all 17 original skill IDs, including full 1,632-file Taste install. Windows: original Impeccable, Emil, UI/UX Pro Max, Stageshow and React Native motion paths; original engine/search executed on both OSes. |
+| [Official native tools](https://github.com/sinaradme/agentic-ui-ux/actions/runs/46027477325) | Actual Motion import, official shadcn CLI fetched and added Magic UI Bento Grid source, actual Playwright MCP initialized and captured a browser screenshot. |
+| [Skill install smoke](https://github.com/sinaradme/agentic-ui-ux/actions/runs/46027477253) | Central skill installation in isolated native project paths; real original animate installation from public GitHub-installed central skill. |
+| [Repository quality](https://github.com/sinaradme/agentic-ui-ux/actions/runs/46027477257) | Existing quality tests and direct connector safeguards passed. |
+
+Windows CI is not the user's Windows installation. Actual host model invocation, provider-specific visual results and comparison to direct standalone skill usage remain unverified. For non-skill tools the agent follows the original native provider action; the connector does not automatically alter the target application or MCP configuration. Registry install was tested on a disposable fixture, not the user's project. The upstream hooks were not executed. No project files on the user's machine were modified.
