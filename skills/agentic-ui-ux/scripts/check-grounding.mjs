@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { createRoute } from './route.mjs';
 import { checkRebuild } from './check-rebuild.mjs';
+import { attachArtifactVerification } from './rebuild-artifacts.mjs';
 const read=name=>JSON.parse(readFileSync(new URL('../references/'+name,import.meta.url),'utf8'));
 const registry=read('capabilities.json'),catalog=read('catalog.json'),knowledge=read('knowledge.json');
 function check(record,route,registry,catalog,knowledge){
@@ -84,4 +85,4 @@ function check(record,route,registry,catalog,knowledge){
  return result();
 }
 export function checkGrounding(record){let route;try{route=createRoute(record?.request);}catch{}return check(record,route,registry,catalog,knowledge);}
-if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const record=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const out=checkGrounding(record);console.log(JSON.stringify(out,null,2));if(out.status!=='pass')process.exitCode=2;}catch(e){console.error('Grounding check failed:',e.message);process.exitCode=2;}}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const record=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const args=process.argv.slice(3);if(args.length&&!(args.length===2&&args[0]==="--evidence-root"))throw Error("Use --evidence-root <directory>");let out=checkGrounding(record);if(createRoute(record.request).designMode==="rebuild")out=attachArtifactVerification(out,record,args[1]);console.log(JSON.stringify(out,null,2));if(out.status!=='pass')process.exitCode=2;}catch(e){console.error('Grounding check failed:',e.message);process.exitCode=2;}}

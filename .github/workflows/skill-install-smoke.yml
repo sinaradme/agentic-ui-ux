@@ -55,6 +55,7 @@ jobs:
             node "$skill/scripts/test-grounding.mjs"
             node "$skill/scripts/test-source.mjs"
             node "$skill/scripts/test-rebuild.mjs"
+            node "$skill/scripts/test-rebuild-artifacts.mjs"
             node "$skill/scripts/generate-index.mjs" --check
             node "$skill/scripts/test-cli.mjs"
             test "$before" = "$(sha256sum package.json)"
@@ -83,7 +84,10 @@ jobs:
             node "$skill/scripts/test-grounding.mjs"
             node "$skill/scripts/test-source.mjs"
             node "$skill/scripts/test-rebuild.mjs"
+            node "$skill/scripts/test-rebuild-artifacts.mjs"
             node "$skill/scripts/generate-index.mjs" --check
           node "$skill/scripts/test-cli.mjs"
           test "$before" = "$(sha256sum package.json)"
+          node "$skill/scripts/source.mjs" read replacement-world > "$target/source-receipt.json"
+          node -e 'const r=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8"));if(r.id!=="replacement-world"||!r.content||!r.sha256)process.exit(1);console.log("PASS installed skill live upstream retrieval",r.id,r.bytes)' "$target/source-receipt.json"
           echo "PASS: public GitHub install route and working installed CLI"

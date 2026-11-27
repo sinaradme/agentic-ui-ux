@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { sources,rawUrl } from './source.mjs';
 import { createRoute } from './route.mjs';
+import { attachArtifactVerification } from './rebuild-artifacts.mjs';
 const read=n=>JSON.parse(readFileSync(new URL('../references/'+n,import.meta.url),'utf8'));
 const catalog=read('catalog.json'),knowledge=read('knowledge.json');
 export const axes={
@@ -123,4 +124,4 @@ export function checkRebuild(record,route,phase,surfaceIds){
  for(const id of surfaceIds)if(!seen.has(id))errors.push('Missing scoped section: '+id);
  return result();
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const r=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const route=createRoute(r.request);const out=checkRebuild(r.rebuild,route,r.phase,r.surfaces?.map(s=>s.id));console.log(JSON.stringify(out,null,2));if(out.status!=='pass')process.exitCode=2;}catch(e){console.error('Rebuild gate failed:',e.message);process.exitCode=2;}}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const r=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const route=createRoute(r.request);const args=process.argv.slice(3);if(args.length&&!(args.length===2&&args[0]==="--evidence-root"))throw Error("Use --evidence-root <directory>");const out=attachArtifactVerification(checkRebuild(r.rebuild,route,r.phase,r.surfaces?.map(s=>s.id)),r,args[1]);console.log(JSON.stringify(out,null,2));if(out.status!=='pass')process.exitCode=2;}catch(e){console.error('Rebuild gate failed:',e.message);process.exitCode=2;}}

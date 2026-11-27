@@ -161,6 +161,76 @@
       "fit": "Business-specific page architecture and visual rhythm, relevant official example gallery.",
       "section": "The page plan by kind; What serves which page",
       "avoid": "Marketing-only style rules must not displace functional product requirements."
+    },
+    {
+      "id": "indexed-panels",
+      "tool": "shadcn",
+      "repo": "shadcn-ui/ui",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "path": "apps/v4/content/docs/components/radix/tabs.mdx",
+      "blob": "c75e5ba4aeb736bbe2f0914b03816d07f95b1093",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Indexed content panels, horizontal/vertical tabs, changing focal content while maintaining context.",
+      "section": "Composition; Vertical; RTL",
+      "avoid": "Use when categories are genuine; preserve deep links and keyboard navigation."
+    },
+    {
+      "id": "disclosure-stack",
+      "tool": "shadcn",
+      "repo": "shadcn-ui/ui",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "path": "apps/v4/content/docs/components/radix/accordion.mdx",
+      "blob": "809154900cba582589ede0871bcebf4224262c8a",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Progressive disclosure; replace equal-card groups with a scan-friendly vertical hierarchy.",
+      "section": "Composition; Multiple; RTL",
+      "avoid": "Do not hide important comparisons or required disclosures."
+    },
+    {
+      "id": "resizable-stage",
+      "tool": "shadcn",
+      "repo": "shadcn-ui/ui",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "path": "apps/v4/content/docs/components/radix/resizable.mdx",
+      "blob": "be7ea4729675d9ee0b355d1cf65e063f847a3906",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Master-detail / configurable panels with keyboard resize support.",
+      "section": "Composition; Vertical; Handle; RTL",
+      "avoid": "Not appropriate for simple marketing sections or mobile-only views."
+    },
+    {
+      "id": "scrolling-rail",
+      "tool": "shadcn",
+      "repo": "shadcn-ui/ui",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "path": "apps/v4/content/docs/components/radix/scroll-area.mdx",
+      "blob": "4fdf702a17a1b2933ae98b9009ff5c283a63b359",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Native-scroll rail with horizontal option; content overview without one-card-at-a-time carousel.",
+      "section": "Composition; Horizontal; RTL",
+      "avoid": "Avoid nested scroll traps and inaccessible offscreen content."
+    },
+    {
+      "id": "structured-navigation",
+      "tool": "shadcn",
+      "repo": "shadcn-ui/ui",
+      "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+      "path": "apps/v4/content/docs/components/radix/navigation-menu.mdx",
+      "blob": "6507aef7afe71f1572152cb229abbddd20348ff2",
+      "stacks": [
+        "react-web"
+      ],
+      "fit": "Grouped navigation and link composition; make section exploration explicit.",
+      "section": "Composition; Link Component; RTL",
+      "avoid": "Do not change routes/permissions or replace accessible native navigation unnecessarily."
     }
   ]
 }
