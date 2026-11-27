@@ -2,6 +2,8 @@
 
 [Home](README.md) · [Tools](TOOLS.md) · [Workflows](WORKFLOWS.md)
 
+**In short:** Run the install command in your project's terminal, then use the installed skill in your agent's chat. You do not need to install every tool.
+
 ## 1. Understand what you are installing
 
 | Type | Purpose | Where it goes |
@@ -48,7 +50,7 @@ For Impeccable, use its own installer instead:
 npx impeccable install
 ```
 
-Choose your agent and project scope. Reload the tool. Upstream documents `/impeccable init` (Codex: `$impeccable init`). Review hooks and permissions, including any extra trust step. [Official instructions](https://github.com/pbakaus/impeccable#installation).
+Choose your agent and project scope. Reload the tool. Upstream documents `/impeccable init` (Codex: `$impeccable init`). Review hooks and permissions, including any extra trust step. [Official instructions](https://impeccable.style/docs).
 
 UI/UX Pro Max is another alternative, not a mandatory addition:
 
@@ -123,7 +125,17 @@ args = ["shadcn@latest", "mcp"]
 
 MCP is not a visual-quality guarantee. Screenshots still need to be inspected by an agent with appropriate vision capabilities or a person.
 
-## 6. Reproducibility and safety
+## 6. Optional: install this guide's skill
+
+If you prefer a single workflow guide that your agent can read directly, run this from your project root:
+
+```sh
+npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
+```
+
+This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It does not install third-party tools for you. This exact installation has not yet been executed by the maintainers.
+
+## 7. Reproducibility and safety
 
 The example commands use current upstream installers for discoverability. Before running them, inspect the package, skill scripts, hooks, licenses and transitive dependencies. For team use, pin reviewed versions or commits where supported; record changes to the lockfile or installed skill hashes. Never grant unreviewed tools unrestricted access to secrets, browsers or production systems. Review your Git diff after installation.
 

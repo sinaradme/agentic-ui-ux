@@ -4,6 +4,8 @@
 
 **Snapshot: 2026-11-27.** GitHub repository metadata was queried directly. Dates are GitHub `pushed_at` dates (UTC), not necessarily release dates or default-branch commit dates. Approximate star counts are a point-in-time adoption signal, not a quality score. Licenses refer to the linked open-source project or specific skill, not paid services or bundled third-party assets.
 
+**Need a quick answer?** Start with [the chooser](README.md#1-pick-one-tool). See [actual author examples and demos](EXAMPLES.md) before installing.
+
 The initial catalog uses a 60-day repository-push filter (since 2026-09-28). New or low-adoption entries are explicitly marked exploratory. Every entry remains unbenchmarked here.
 
 ## Core options — choose one primary design skill
@@ -16,9 +18,19 @@ The initial catalog uses a 60-day repository-push filter (since 2026-09-28). New
 | [Hallmark](https://github.com/Nutlope/hallmark) | Alternative visual direction and anti-generic design guidance | MIT | 2026-11-11 | 62k |
 | [Anthropic Frontend Design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) | Alternative frontend design guidance | Apache-2.0 (specific skill) | 2026-11-16 (parent repo) | 201k (parent repo) |
 
-**Evidence:** reviewed metadata; upstream documentation inspected for the first four; Anthropic skill directory and license checked. No head-to-head runs. Different tools overlap substantially.
+**Evidence:** reviewed metadata; upstream documentation inspected for the first four; Anthropic skill directory and license checked. No head-to-head runs. Different tools overlap substantially. The official Impeccable comparison and Taste examples were visually inspected in this edition; see [visual examples](EXAMPLES.md).
 
-Install examples (from your project root; choose one):
+### Install (choose one)
+
+| Tool | First thing to try after installation |
+| --- | --- |
+| Taste Skill | Ask for a new hero using the installed skill. [Examples](EXAMPLES.md#taste-skill--two-different-design-directions) |
+| Impeccable | Run initialization, then critique one section. [Before/after](EXAMPLES.md#impeccable--official-before--after) |
+| UI/UX Pro Max | Ask for a design system for a specific product and audience. [Docs](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
+| Hallmark | Ask for a visual direction for a focused page. [Examples and docs](https://github.com/Nutlope/hallmark) |
+| Anthropic Frontend Design | Ask for a single page with a clear visual direction. [Skill](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
+
+From your project root, choose the relevant command:
 
 ```sh
 npx skills add Leonxlnx/taste-skill --skill design-taste-frontend
@@ -38,7 +50,9 @@ For UI/UX Pro Max, use the [documented CLI setup](QUICKSTART.md#2-install-one-de
 | [Stageshow](https://github.com/benjitaylor/skills/tree/main/stageshow) | React-based product illustrations and motion demos, not a full app UI system | MIT (skill; see notices) | 2026-11-05 (parent repo) | 4.2k (parent repo) |
 
 ```sh
-npx skills add emilkowalski/skills --list
+npx skills add emilkowalski/skills --skill animate
+# Or, for React Native / Expo:
+npx skills add emilkowalski/skills --skill animate-expo
 npx skills add benjitaylor/skills --skill stageshow
 npx skills add jakubkrehel/make-interfaces-feel-better --list
 ```
@@ -67,7 +81,7 @@ Choose one browser path to start; existing automation is sufficient if it covers
 
 ## Reference catalogs — exploratory
 
-[Landing Page Atlas](https://github.com/vezeqs/landing-page-atlas) — MIT; pushed 2026-10-31; zero stars at snapshot. Repository metadata was accessible, but the README could not be independently retrieved in the public web review. Treat as a candidate, not an endorsed reference. Never copy design assets without checking rights.
+[Landing Page Atlas](https://github.com/vezeqs/landing-page-atlas) — MIT; pushed 2026-10-31; zero stars at snapshot. The README is now accessible and describes 60 complete HTML/CSS/JavaScript landing pages across ten visual families. [Browse live pages](https://vezeqs.github.io/landing-page-atlas/). Treat as a candidate, not an endorsed reference. Never copy design assets without checking rights.
 
 Discovery directories: [skills.sh](https://skills.sh), [shadcn registry docs](https://ui.shadcn.com/docs/registry). Directory listings are leads, not automatic approvals.
 

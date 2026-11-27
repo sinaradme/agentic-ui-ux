@@ -1,84 +1,98 @@
 # Agentic UI/UX
 
-**A practical, evidence-aware playbook for building better interfaces with AI coding agents.**
+Build better websites and apps with AI coding agents — without installing dozens of tools.
 
-Stop collecting tools. Start with one design skill, use your existing component system, and make the agent inspect its own rendered work.
+A free, open-source guide for Cursor, Codex, Claude Code and other coding agents. Pick the right design skill, give your agent a clear task, and check the result in a real browser or on a device.
 
-This repository distills research into actionable recommendations for designers, frontend engineers and AI-assisted product builders. It focuses on free, open-source resources rather than paid component packs or proprietary subscriptions.
+[Quickstart](QUICKSTART.md) · [Tool directory](TOOLS.md) · [Visual examples](EXAMPLES.md) · [Ready-to-use prompts](WORKFLOWS.md) · [Mobile](MOBILE.md)
 
-**Edition:** 0.1 · **Research snapshot:** 2026-11-27 · **Evidence:** documentation and repository metadata reviewed; comparative hands-on benchmarks not yet available.
+## See the difference
 
-## Start here
+| Without Impeccable | With Impeccable |
+| --- | --- |
+| [![A light hotel landing page with an illustrated villa](https://raw.githubusercontent.com/pbakaus/impeccable/2fc5e1459efbbf06d92c7306517c286bf12490cf/docs/images/readme-without.webp)](https://raw.githubusercontent.com/pbakaus/impeccable/2fc5e1459efbbf06d92c7306517c286bf12490cf/docs/images/readme-without.webp) | [![A hotel landing page with a full-width nighttime coastal illustration](https://raw.githubusercontent.com/pbakaus/impeccable/2fc5e1459efbbf06d92c7306517c286bf12490cf/docs/images/readme-with.webp)](https://raw.githubusercontent.com/pbakaus/impeccable/2fc5e1459efbbf06d92c7306517c286bf12490cf/docs/images/readme-with.webp) |
 
-| Your goal | Start with | Add only when needed |
-| --- | --- | --- |
-| New web landing page | Taste Skill | Existing UI system or shadcn/ui; Magic UI for selected effects |
-| Existing app or dashboard | Impeccable | Existing design system; targeted interaction skills |
-| Complex UI/UX planning | UI/UX Pro Max | A component system compatible with your stack |
-| Motion and micro-interactions | Emil's skills | Motion or your existing animation library |
-| React Native / Flutter | Native design system and device testing | Platform-specific motion and a compatible design skill |
+The two designs use different typography, imagery and composition. The tool's author reports using the same model (Fable 5.1) and brief for both. [Original comparison and context](https://github.com/pbakaus/impeccable/tree/2fc5e1459efbbf06d92c7306517c286bf12490cf).
 
-These are **starting hypotheses, not benchmark winners**. Choose one primary design skill. Do not install every option.
+*Official author example, not our own independent benchmark. It illustrates the potential difference, not a guaranteed improvement.*
 
-### The shortest useful setup
+## 1. Pick one tool
 
-Open a terminal in your **actual web project**, not this guide's repository. For a new website with Node.js available:
+| I want to… | Start here |
+| --- | --- |
+| Build a distinctive website from scratch | [Taste Skill](https://github.com/Leonxlnx/taste-skill) |
+| Improve an existing website or dashboard | [Impeccable](https://github.com/pbakaus/impeccable) |
+| Plan the UX and design system | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
+| Improve animations and gestures | [Emil's skills](https://github.com/emilkowalski/skills) |
+| Build a mobile app | [React Native / Flutter guide](MOBILE.md) |
 
-```sh
-npx skills add https://github.com/Leonxlnx/taste-skill --skill design-taste-frontend
+These are suggested starting points, not measured rankings. **You do not need all of them.**
+
+## 2. Install and try it
+
+Open a terminal inside the project you want to design. Node.js/npm is required for these example installers. Review the upstream source before running an installer.
+
+**New website:**
+
+```bash
+npx skills add Leonxlnx/taste-skill --skill design-taste-frontend
 ```
 
-Choose your coding agent and project scope when prompted. Inspect the downloaded skill, reopen your agent if necessary, then ask:
+Choose your coding agent and project scope. Reload the agent if needed.
 
-> Use design-taste-frontend. Read my project and existing design tokens first. Define an intentional visual direction, build the requested page, render it in a real browser, inspect desktop and mobile, and fix visual and interaction issues. Preserve existing functionality. Report what you could not verify.
+**Existing website (alternative):**
 
-If your agent cannot operate a browser, configure a browser tool or capture screenshots yourself. A skill alone does not grant browser access.
-
-For existing interfaces, an alternative starting point is:
-
-```sh
+```bash
 npx impeccable install
 ```
 
-Reload your agent and follow the upstream initialization instructions. Review any offered hooks before approving them.
+Reload your agent and run `/impeccable init` (Codex: `$impeccable init`).
 
-## The workflow
+[More installation details, agent setup and MCP configuration →](QUICKSTART.md)
 
-**Brief → visual direction → implementation → rendered inspection → refinement → acceptance**
+## 3. Give your agent a task
 
-1. Establish audience, task, constraints and an explicit visual direction.
-2. Reuse the project's existing tokens and components before adding dependencies.
-3. Build a working vertical slice rather than generating every screen at once.
-4. Render real screens and inspect layout, hierarchy, motion and interaction states.
-5. Fix issues and record the evidence. Never claim a visual check that did not happen.
+Paste into your coding agent's chat after installing the appropriate skill:
 
-## Documentation
+```text
+Use the installed design skill. Read the existing project and design
+system first. Design the requested page with clear typography, spacing
+and visual hierarchy. Reuse existing components. Keep all existing
+functionality working. Open the result in a browser, inspect desktop
+and mobile, fix visible problems and report anything you could not verify.
+```
 
-| Guide | What it answers |
+For motion, dashboards, redesigns and other tasks, use the [ready-to-use prompts](WORKFLOWS.md).
+
+## 4. Check the real result
+
+- Run your project and open the page.
+- Check desktop and mobile layouts, navigation and important UI states.
+- Fix visible issues before asking for more features.
+- If the agent cannot inspect the browser, add [browser access](QUICKSTART.md#5-give-the-agent-visual-feedback) or supply screenshots.
+
+A skill improves guidance; it does not give the agent browser access or guarantee good design.
+
+## More examples
+
+| Taste Skill: coffee shop | Taste Skill: events page |
 | --- | --- |
-| [Quickstart](QUICKSTART.md) | Where commands run, project vs global scope, Cursor/Codex/Claude Code and MCP setup |
-| [Curated tools](TOOLS.md) | What each tool does, when to use it, evidence, activity and license |
-| [Workflows](WORKFLOWS.md) | Ready-to-use prompts for new sites, existing products and interaction design |
-| [Mobile](MOBILE.md) | React Native and Flutter: what transfers and what changes |
-| [Benchmarks](benchmarks/README.md) | A repeatable evaluation protocol and honest testing status |
-| [Agent skill](skills/agentic-ui-ux/SKILL.md) | A framework-aware workflow for agents |
-| [Contributing](CONTRIBUTING.md) | How to propose tools, corrections and reproducible evaluations |
-| [Changelog](CHANGELOG.md) | Research and editorial updates |
+| [![Coffee shop website with a large headline and storefront illustration](https://raw.githubusercontent.com/Leonxlnx/taste-skill/952435f63acece7d2fcb4b4d3c1786c1c43603e0/examples/v2/coffee-storefront.webp)](https://raw.githubusercontent.com/Leonxlnx/taste-skill/952435f63acece7d2fcb4b4d3c1786c1c43603e0/examples/v2/coffee-storefront.webp) | [![Event calendar built around a photographic grid](https://raw.githubusercontent.com/Leonxlnx/taste-skill/952435f63acece7d2fcb4b4d3c1786c1c43603e0/examples/v2/night-dates.webp)](https://raw.githubusercontent.com/Leonxlnx/taste-skill/952435f63acece7d2fcb4b4d3c1786c1c43603e0/examples/v2/night-dates.webp) |
 
-## Why this guide is different
+*Official [Taste Skill examples](https://github.com/Leonxlnx/taste-skill/tree/952435f63acece7d2fcb4b4d3c1786c1c43603e0/examples/v2). These are different briefs, not a before/after comparison.*
 
-- **Decision-first:** a small default path, optional extensions, no dependency shopping list.
-- **Evidence-first:** repository activity and popularity are context, not proof of output quality.
-- **Framework-aware:** web component code is not portable to native mobile.
-- **Human- and agent-readable:** practical commands and a reusable skill for navigating the guide.
-- **Free-source focus:** upstream licenses are recorded separately; paid add-ons are not required for the recommended open-source path.
+[Browse the visual examples and live demos →](EXAMPLES.md)
 
-The agent or model you use may have its own costs. Inspect all third-party code and licenses before installation. No skill can guarantee a flawless or production-ready design.
+## Go further
 
-## Evidence policy
+- [Tools](TOOLS.md): what each tool is for, when to skip it, license and recent activity.
+- [Mobile](MOBILE.md): native components, animation and testing.
+- [Agentic UI/UX skill](skills/agentic-ui-ux/SKILL.md): optional workflow instructions for your agent.
+- [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
+- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md).
 
-**Reviewed** means the upstream material or repository metadata was inspected. **Candidate** means an option needs further investigation. **Tested** requires reproducible runs, screenshots and recorded conditions. No tool in this edition has been comparatively tested by this project.
+**Research updated:** November 27, 2026 · **Edition:** 0.2
 
-Browse the [original research shortlist](https://github.com/stars/sinaradme/lists/agent-skills-for-ui-ux). Contributions and evidence-backed corrections are welcome.
+We review upstream docs, repository metadata and selected official examples. Independent comparative runs are not yet published. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 
-Original guide content is [MIT licensed](LICENSE). Linked third-party resources retain their own licenses.
+Original guide: [MIT](LICENSE). Third-party examples are linked from their creators, not relicensed here.

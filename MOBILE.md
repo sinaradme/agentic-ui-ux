@@ -16,6 +16,14 @@ Do not install shadcn web components, React DOM, browser-only CSS effects or web
 
 ## React Native path
 
+For animation-specific agent guidance, Emil now documents [animate-expo](https://aiforui.dev/skills/animate-expo) for React Native and Expo. Install only if your task needs it:
+
+```sh
+npx skills add emilkowalski/skills --skill animate-expo
+```
+
+This is a native-motion skill, not a full native UI design system. The command follows the skills CLI syntax and the skill name listed in the [official collection](https://github.com/emilkowalski/skills); it has not been run here.
+
 Start with your existing design tokens and components. For new UI primitives, consider [React Native Paper](https://github.com/callstack/react-native-paper) if its Material Design approach suits the product. For complex native motion consider [Reanimated](https://github.com/software-mansion/react-native-reanimated), following [current compatibility and installation docs](https://docs.swmansion.com/react-native-reanimated/). Expo projects should use compatible packages and Expo's documented installation procedures.
 
 For device-level flows consider [Maestro](https://github.com/mobile-dev-inc/Maestro), or your existing native E2E tool. Use real emulator/device screenshots to verify safe areas, font scaling, keyboard appearance, touch targets, platform navigation and motion. Browser-only MCP is not sufficient.
@@ -35,7 +43,7 @@ GitHub metadata checked 2026-11-27; no comparative native testing performed.
 | [Maestro](https://github.com/mobile-dev-inc/Maestro) | Apache-2.0 | 2026-11-26 | 16.5k |
 | [Flutter SDK](https://github.com/flutter/flutter) | BSD-3-Clause | 2026-11-27 | 182k |
 
-A dedicated native-agent skill comparison remains open. UI/UX Pro Max may offer useful cross-platform planning guidance, but its native implementation quality is not established by this guide.
+A dedicated native-agent skill comparison remains open. The animate-expo skill is documented upstream; no independent quality result is claimed. UI/UX Pro Max may offer useful cross-platform planning guidance, but its native implementation quality is not established by this guide.
 
 ## Prompt
 

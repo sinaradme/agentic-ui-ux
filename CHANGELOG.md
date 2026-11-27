@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2 — 2026-11-27
+
+- Reworked README around a direct choose → install → prompt → check path.
+- Added source-linked official before/after screenshots and a separate visual gallery.
+- Inspected six peer READMEs, documented findings in REVIEW.md, and distinguished promotional examples from independent results.
+- Added first-use tasks, optional guide-skill installation and native animate-expo guidance.
+- Corrected the Landing Page Atlas entry after retrieving its upstream README.
+
 ## 0.1 — 2026-11-27
 
 - Initial decision-first guide and minimal web setup.

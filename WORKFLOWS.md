@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Quickstart](QUICKSTART.md)
 
-Choose one workflow. The prompts are original reusable templates, not evidence that a specific skill produces superior results.
+Choose one workflow. Copy the prompt into your coding agent after opening your actual project. The prompts are original templates, not proof of superior results. See [visual examples](EXAMPLES.md) if you are unsure what to aim for.
 
 ## New landing page
 
