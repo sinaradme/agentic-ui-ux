@@ -19,7 +19,7 @@ A skill is not necessarily an npm dependency. Installing a skill does not automa
 
 ## 2. Install one design skill
 
-Prerequisites: a coding agent, Git when needed, Node.js/npm for the following commands, and an existing project or separate test workspace.
+Prerequisites: a coding agent, Git when needed, Node.js/npm for the following commands, and an existing project or separate test workspace. Check the actual installer release's Node engine requirement. Upstream skills 1.9.1 declares Node >=22.20.0; use a compatible maintained version rather than assuming any Node installation works. [Upstream package](https://github.com/vercel-labs/skills/blob/main/package.json).
 
 Run commands in a real terminal (the IDE's integrated terminal is fine), from the root of the project you intend to change:
 
@@ -135,7 +135,7 @@ If you prefer a single workflow guide that your agent can read directly, run thi
 npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
 ```
 
-This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It selects a minimal plan using its bundled catalog and rules; it does not install third-party tools for you. [Agent-first setup](AGENT-SETUP.md). This exact installation has not yet been executed by the maintainers.
+This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It includes a read-only project inspector and selects a minimal plan using its bundled catalog and rules; it does not install third-party tools for you. [Agent-first setup](AGENT-SETUP.md). This exact installation has not yet been executed by the maintainers.
 
 ## 7. Reproducibility and safety
 

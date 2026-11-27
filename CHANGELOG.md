@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0 — 2026-11-27
+
+- Stable decision-first guide and plan-only architecture; added read-only project inspector and explicit setup/design acceptance contract.
+- Added source/license snapshot and per-tool verification steps to the catalog; documented actual runtime-version requirements.
+- Hardened inconsistent inventory, targeted-task selection and unverified activation handling. Expanded selection fixtures from 21 to 32 and added 11 inspection classifier fixtures plus filesystem tests.
+- See QUALITY.md for evidence and remaining limits. This release does not claim independent agent or design-quality validation.
+
 ## 0.3 — 2026-11-27
 
 - Added a repository-wide agent entry point (AGENTS.md) and a one-link onboarding guide.

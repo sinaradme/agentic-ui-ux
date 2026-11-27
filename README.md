@@ -17,7 +17,7 @@ compatible design-tool setup. Reuse what I have. Show the plan and
 ask before installing or changing anything.
 ```
 
-The repository includes an agent skill, a machine-readable catalog, decision rules and an optional plan-only selector. No need to memorize the tools. [Agent setup →](AGENT-SETUP.md)
+The repository includes an agent skill, a machine-readable catalog, decision rules and a read-only project inspector and an optional plan-only selector. No need to memorize the tools. [Agent setup →](AGENT-SETUP.md)
 
 ## See the difference
 
@@ -102,10 +102,10 @@ A skill improves guidance; it does not give the agent browser access or guarante
 - [Mobile](MOBILE.md): native components, animation and testing.
 - [Agentic UI/UX skill](skills/agentic-ui-ux/SKILL.md): optional workflow instructions for your agent.
 - [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
-- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md).
+- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [v1.0 quality report](QUALITY.md).
 
-**Research updated:** November 27, 2026 · **Edition:** 0.3
+**Research updated:** November 27, 2026 · **Edition:** 1.0
 
-We review upstream docs, repository metadata and selected official examples. Independent comparative runs are not yet published. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
+We review upstream docs, repository metadata and selected official examples. The selection logic has automated fixture tests. Independent comparative runs and full agent installation/visual validation are not yet published. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 
 Original guide: [MIT](LICENSE). Third-party examples are linked from their creators, not relicensed here.

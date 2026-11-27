@@ -1,0 +1,197 @@
+[
+  {
+    "name": "Next.js + MUI",
+    "input": {
+      "packageJson": {
+        "dependencies": {
+          "next": "16",
+          "react": "19",
+          "@mui/material": "7"
+        }
+      },
+      "paths": [
+        "pnpm-lock.yaml"
+      ],
+      "projectSkillNames": [
+        "design-taste-frontend"
+      ]
+    },
+    "expected": {
+      "stack": "react-web",
+      "packageManager": "pnpm",
+      "toolSignals": [
+        "taste"
+      ],
+      "componentSignals": [
+        "@mui/material"
+      ]
+    }
+  },
+  {
+    "name": "Expo with web support",
+    "input": {
+      "packageJson": {
+        "dependencies": {
+          "expo": "54",
+          "react-native": "0.81",
+          "react-dom": "19",
+          "react-native-reanimated": "4"
+        }
+      },
+      "paths": [
+        "package-lock.json"
+      ]
+    },
+    "expected": {
+      "stack": "react-native",
+      "packageManager": "npm",
+      "toolSignals": [
+        "reanimated"
+      ]
+    }
+  },
+  {
+    "name": "Flutter SDK",
+    "input": {
+      "flutterSdk": true,
+      "paths": [
+        "pubspec.yaml",
+        "lib/theme"
+      ]
+    },
+    "expected": {
+      "stack": "flutter",
+      "componentSignals": [
+        "lib/theme"
+      ]
+    }
+  },
+  {
+    "name": "Vue project",
+    "input": {
+      "packageJson": {
+        "dependencies": {
+          "vue": "3"
+        }
+      },
+      "paths": [
+        "yarn.lock"
+      ]
+    },
+    "expected": {
+      "stack": "other-web",
+      "packageManager": "yarn"
+    }
+  },
+  {
+    "name": "monorepo root",
+    "input": {
+      "packageJson": {
+        "workspaces": [
+          "apps/*"
+        ],
+        "dependencies": {
+          "react": "19"
+        }
+      },
+      "paths": [
+        "pnpm-workspace.yaml"
+      ]
+    },
+    "expected": {
+      "stack": "unknown"
+    }
+  },
+  {
+    "name": "ambiguous native and Flutter",
+    "input": {
+      "packageJson": {
+        "dependencies": {
+          "expo": "54"
+        }
+      },
+      "flutterSdk": true,
+      "paths": []
+    },
+    "expected": {
+      "stack": "unknown"
+    }
+  },
+  {
+    "name": "empty target",
+    "input": {
+      "paths": []
+    },
+    "expected": {
+      "stack": "unknown",
+      "packageManager": "unknown"
+    }
+  },
+  {
+    "name": "conflicting lockfiles",
+    "input": {
+      "packageJson": {
+        "dependencies": {
+          "next": "16"
+        },
+        "packageManager": "npm@11"
+      },
+      "paths": [
+        "pnpm-lock.yaml",
+        "package-lock.json"
+      ]
+    },
+    "expected": {
+      "stack": "react-web",
+      "packageManager": "unknown"
+    }
+  },
+  {
+    "name": "shadcn config not proof",
+    "input": {
+      "packageJson": {
+        "dependencies": {
+          "next": "16"
+        }
+      },
+      "paths": [
+        "components.json"
+      ]
+    },
+    "expected": {
+      "stack": "react-web",
+      "toolSignals": [
+        "shadcn"
+      ],
+      "componentSignals": [
+        "components.json"
+      ]
+    }
+  },
+  {
+    "name": "plain HTML",
+    "input": {
+      "paths": [
+        "index.html"
+      ]
+    },
+    "expected": {
+      "stack": "other-web"
+    }
+  },
+  {
+    "name": "framework collision",
+    "input": {
+      "packageJson": {
+        "dependencies": {
+          "react": "19",
+          "vue": "3"
+        }
+      },
+      "paths": []
+    },
+    "expected": {
+      "stack": "unknown"
+    }
+  }
+]

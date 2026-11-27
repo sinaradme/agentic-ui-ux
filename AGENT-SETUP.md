@@ -34,9 +34,17 @@ This is the standard upstream skills CLI syntax; choose your coding agent and pr
 | [Context schema](skills/agentic-ui-ux/references/context.schema.json) | Evidence needed about the target |
 | [Planner](skills/agentic-ui-ux/scripts/plan.mjs) | Optional deterministic, plan-only Node.js tool |
 
-## Optional local planner (no npm dependencies)
+## Optional local inspector and planner (no npm dependencies)
 
-If you have a local checkout, copy the [example context](skills/agentic-ui-ux/references/context.example.json) to a temporary file, replace the example values with evidence from your target project, and run:
+From a local checkout, collect a safe context draft for the actual target project:
+
+```sh
+node skills/agentic-ui-ux/scripts/inspect.mjs /path/to/target-project
+```
+
+This only reads a small allowlist of project files, detects framework/package-manager signals and lists known project skill names. It deliberately leaves inventory and tool availability unconfirmed. It never reads environment files or executes project scripts. Verify the draft, including global skills and live browser/device capabilities, before planning. For monorepos choose the actual application directory.
+
+If you have a local checkout, save and complete the inspector context draft, or copy the [example context](skills/agentic-ui-ux/references/context.example.json) to a temporary file, replace the example values with evidence from your target project, and run:
 
 ```sh
 node skills/agentic-ui-ux/scripts/plan.mjs /path/to/context.json
@@ -54,8 +62,9 @@ The agent should explain what it will reuse, what it proposes to add, what is bl
 
 ```sh
 node skills/agentic-ui-ux/scripts/test-plan.mjs
+node skills/agentic-ui-ux/scripts/test-inspect.mjs
 ```
 
-The 21 fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. These are logic tests, not installation tests or visual-quality benchmarks.
+The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
 
 [Return home](README.md) · [Manual setup](QUICKSTART.md) · [Tool directory](TOOLS.md)

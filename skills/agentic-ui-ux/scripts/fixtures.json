@@ -477,5 +477,251 @@
     },
     "expectedIds": [],
     "expectedStatus": "blocked"
+  },
+  {
+    "name": "component system conflict is blocked",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "shadcn"
+      ],
+      "componentSystem": "absent",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "components"
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "QA does not invoke unrelated primary",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "taste",
+      "installedTools": [
+        "taste"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "motion does not invoke unrelated primary",
+    "input": {
+      "stack": "react-web",
+      "goal": "motion",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "taste",
+      "installedTools": [
+        "taste"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "emil-web"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "existing shadcn registry discovery",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "shadcn"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "registry-discovery"
+      ]
+    },
+    "expectedIds": [
+      "shadcn-mcp"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "no existing shadcn means no registry MCP",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "registry-discovery"
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "missing Node blocks install examples",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "absent",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned",
+    "expectedActions": {
+      "taste": "needs-verification"
+    }
+  },
+  {
+    "name": "custom compatible primary means no install",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "custom-compatible",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "existing browser is reused for QA",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "playwright-mcp"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "native does not select browser MCP",
+    "input": {
+      "stack": "react-native",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "absent",
+      "deviceAccess": "absent",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "unknown component system not absence",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "unknown",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "components"
+      ]
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "two existing primary skills only one reused",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "taste",
+      "installedTools": [
+        "taste",
+        "impeccable"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned",
+    "expectedActions": {
+      "taste": "reuse"
+    }
   }
 ]

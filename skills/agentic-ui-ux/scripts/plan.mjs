@@ -5,8 +5,8 @@ const schema = JSON.parse(readFileSync(new URL('../references/context.schema.jso
 function plan(context,catalog,schema){
  const fail=(reason)=>({schemaVersion:1,mode:"plan-only",status:"blocked",reason,actions:[],executionAuthorized:false});
  if(!context||typeof context!=="object"||Array.isArray(context))return fail("Supply a project context object.");
- for(const key of schema.required){if(!(key in context))return fail("Missing field: "+key);}
- for(const key of Object.keys(context)){if(!(key in schema.properties))return fail("Unknown field: "+key);}
+ for(const key of schema.required){if(!Object.hasOwn(context,key))return fail("Missing field: "+key);}
+ for(const key of Object.keys(context)){if(!Object.hasOwn(schema.properties,key))return fail("Unknown field: "+key);}
  for(const [key,def] of Object.entries(schema.properties)){
    const v=context[key];
    if(def.enum&&!def.enum.includes(v))return fail("Invalid field: "+key);
@@ -24,6 +24,7 @@ function plan(context,catalog,schema){
  if(primaryKnown&&!context.installedTools.includes(primary))return fail("The selected existing primary skill must appear in installedTools.");
  if(context.stack==="unknown"||context.goal==="unknown")return fail("Identify the target stack and goal from project evidence before selecting tools.");
  if(context.inventoryComplete!==true||primary==="unknown")return fail("Inspect the existing skill/dependency inventory. Unknown is not absence.");
+ if(context.componentSystem==="absent"&&context.installedTools.some(x=>x==="shadcn"||x==="rn-paper"))return fail("Component inventory is inconsistent: an installed component system is marked absent.");
  const actions=[],notes=[];
  const add=(id,reason)=>{
    const t=byId[id];if(!t||!t.stacks.includes(context.stack)||actions.some(a=>a.id===id))return;
@@ -35,7 +36,7 @@ function plan(context,catalog,schema){
    let status=isInstalled?"reuse":t.install.mode==="none"?"built-in":gaps.length?"needs-verification":"candidate";
    if(isInstalled&&gaps.length)status="needs-verification";
    if(t.kind==="mcp"&&isInstalled&&gaps.length===0&&context.browserAccess==="absent"&&id==="playwright-mcp")status="configure-existing";
-   const entry={id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,evidence:t.evidence};
+   const entry={id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,evidence:t.evidence,license:t.license,lastRepositoryPush:t.lastRepositoryPush,verification:t.verify};
    if(gaps.length)entry.blockers=gaps;
    if(status==="candidate"||status==="configure-existing"){
      entry.installMode=t.install.mode;
@@ -45,7 +46,7 @@ function plan(context,catalog,schema){
      if(t.install.agentExamples?.[context.agent])entry.commandExamples=t.install.agentExamples[context.agent];
      if(t.install.review)entry.reviewBeforeApproval=t.install.review;
    }
-   if(t.install.activation?.[context.agent])entry.activationExample=t.install.activation[context.agent];
+   if((status==="candidate"||status==="reuse")&&t.install.activation?.[context.agent])entry.activationExample=t.install.activation[context.agent];
    actions.push(entry);
  };
  const isWeb=["react-web","other-web"].includes(context.stack);
@@ -53,7 +54,8 @@ function plan(context,catalog,schema){
  const isNative=context.stack==="react-native"||context.stack==="flutter";
  const need=(x)=>context.needs.includes(x);
  if(primaryInventory.length>1)notes.push("Multiple primary skills already exist; do not combine or install another. Select one compatible skill for this task.");
- if(primary==="custom-compatible"){notes.push("Reuse the existing compatible primary design skill; no new primary skill.");}
+ if(["motion","visual-qa"].includes(context.goal)){notes.push("This targeted task does not require invoking a primary design skill.");}
+ else if(primary==="custom-compatible"){notes.push("Reuse the existing compatible primary design skill; no new primary skill.");}
  else if(primary==="custom-unknown"){notes.push("Verify existing custom skill compatibility before using or replacing it; do not add another primary.");}
  else if(primaryKnown){
    if(byId[primary].stacks.includes(context.stack))add(primary,"An existing compatible primary design skill takes priority.");
@@ -94,6 +96,8 @@ function plan(context,catalog,schema){
    if(need("native-e2e"))add("maestro","An explicit native E2E gap exists; first confirm no adequate native E2E tool is already available.");
  }
  if(!actions.some(a=>["candidate","configure-existing"].includes(a.status)))notes.push("No new installation/configuration candidate is currently actionable.");
+ if(actions.some(a=>a.status==="needs-verification"))notes.push("Resolve prerequisites before proposing executable commands.");
+ if(context.agent==="unknown"||context.agent==="other")notes.push("Confirm the actual agent and supported skill/MCP configuration method.");
  return {schemaVersion:1,catalogEdition:catalog.edition,mode:"plan-only",status:"planned",stack:context.stack,goal:context.goal,agent:context.agent,actions,notes,executionAuthorized:false,requiredNextStep:"Present the plan, inspect compatibility/license/source and pin versions. Ask for explicit approval of exact commands, config and any global changes or hooks before execution. Verify installation and actual rendered UI afterwards."};
 }
 export function createPlan(context) { return plan(context, catalog, schema); }

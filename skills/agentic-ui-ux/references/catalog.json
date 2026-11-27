@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "edition": "0.3",
+  "edition": "1.0",
   "reviewedAt": "2026-11-27",
   "policy": {
     "default": "plan-only",
@@ -9,7 +9,7 @@
     "maxNewPrimarySkills": 1,
     "exploratoryAutoSelection": false,
     "authorizationRequired": true,
-    "versionPolicy": "Review source, license, compatibility, exact revision and any hooks before approval. Commands with @latest or no pin are examples, not locked installations."
+    "versionPolicy": "Review source, license, compatibility, exact revision and any hooks before approval. Check actual Node/npm/CLI versions, not just their presence. Unpinned commands are examples; do not execute them without review and user authorization."
   },
   "stacks": [
     "react-web",
@@ -53,10 +53,15 @@
           "node"
         ],
         "review": [
-          "Inspect skill source, scripts and exact revision."
+          "Inspect skill source, scripts and exact revision.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-26",
+      "verify": "Confirm the skill is discovered by the target agent and the loaded SKILL.md matches the approved revision."
     },
     {
       "id": "impeccable",
@@ -83,7 +88,8 @@
           "node"
         ],
         "review": [
-          "Review installer, detector and hooks. Do not enable unattended hooks without explicit approval."
+          "Review installer, detector and hooks. Do not enable unattended hooks without explicit approval.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ],
         "activation": {
           "cursor": "/impeccable init",
@@ -91,7 +97,10 @@
           "claude-code": "/impeccable init"
         }
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "Apache-2.0",
+      "lastRepositoryPush": "2026-11-27",
+      "verify": "Verify discovery and initialization; inspect generated PRODUCT.md/DESIGN.md and any hook settings. Run a focused critique only after approval."
     },
     {
       "id": "uiux-pro-max",
@@ -122,7 +131,8 @@
         ],
         "review": [
           "Official CLI setup may install a global CLI; obtain separate approval for user-wide changes.",
-          "Native use is planning guidance only; verify platform support."
+          "Native use is planning guidance only; verify platform support.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ],
         "agentExamples": {
           "cursor": [
@@ -139,7 +149,10 @@
           ]
         }
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-27",
+      "verify": "Confirm the installed CLI and Python versions, project skill discovery and a successful design-system query."
     },
     {
       "id": "hallmark",
@@ -166,10 +179,14 @@
           "node"
         ],
         "review": [
-          "Check current skill names and upstream installer. Alternative only; not a second primary skill."
+          "Check current skill names and upstream installer. Alternative only; not a second primary skill.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-11",
+      "verify": "Verify the installed skill name, source revision and agent discovery."
     },
     {
       "id": "anthropic-frontend",
@@ -194,9 +211,16 @@
         "scope": "target-project",
         "requires": [
           "node"
+        ],
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "Apache-2.0 (specific skill)",
+      "lastRepositoryPush": "2026-11-16",
+      "verify": "Verify frontend-design is discovered and the agent reads the approved skill."
     },
     {
       "id": "emil-web",
@@ -221,9 +245,16 @@
         "scope": "target-project",
         "requires": [
           "node"
+        ],
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-15",
+      "verify": "Verify animate discovery; inspect a real web interaction, reduced motion and keyboard behavior."
     },
     {
       "id": "emil-native",
@@ -247,9 +278,16 @@
         "scope": "target-project",
         "requires": [
           "node"
+        ],
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-15",
+      "verify": "Verify animate-expo discovery; inspect gestures, transitions and reduced motion on a native device."
     },
     {
       "id": "stageshow",
@@ -275,10 +313,15 @@
           "node"
         ],
         "review": [
-          "Inspect skill-specific license and notices, React requirements and scripts."
+          "Inspect skill-specific license and notices, React requirements and scripts.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT (specific skill; notices apply)",
+      "lastRepositoryPush": "2026-11-05",
+      "verify": "Verify discovery and compatible React demo/build; inspect the animation."
     },
     {
       "id": "make-interfaces",
@@ -292,9 +335,15 @@
       ],
       "role": "manual-reference",
       "install": {
-        "mode": "review-docs"
+        "mode": "review-docs",
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+        ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-18",
+      "verify": "Use only as a reference and verify the proposed UI change in the rendered app."
     },
     {
       "id": "shadcn",
@@ -316,10 +365,14 @@
           "npx shadcn@latest add button"
         ],
         "review": [
-          "Verify framework, styling and CLI compatibility; inspect existing components.json and tokens. Never reinitialize an existing component system. Add individual components only after approval."
+          "Verify framework, styling and CLI compatibility; inspect existing components.json and tokens. Never reinitialize an existing component system. Add individual components only after approval.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-26",
+      "verify": "Check components.json and generated component files, build, accessibility and existing token compatibility."
     },
     {
       "id": "magic-ui",
@@ -334,10 +387,14 @@
       "install": {
         "mode": "review-docs",
         "review": [
-          "Check existing component system, framework, dependencies and asset license. Use free source only. Select an individual effect, not a bulk install."
+          "Check existing component system, framework, dependencies and asset license. Use free source only. Select an individual effect, not a bulk install.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT (free repository)",
+      "lastRepositoryPush": "2026-11-26",
+      "verify": "Review the selected component source, dependency changes and rendered motion/performance."
     },
     {
       "id": "playwright-mcp",
@@ -367,10 +424,14 @@
           ]
         },
         "review": [
-          "Verify MCP support, browser availability and project scope. Merge existing config; do not overwrite other servers. Restrict browser to authorized work."
+          "Verify MCP support, browser availability and project scope. Merge existing config; do not overwrite other servers. Restrict browser to authorized work.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "Apache-2.0",
+      "lastRepositoryPush": "2026-11-18",
+      "verify": "Confirm the MCP server is connected and can navigate the authorized local page and capture a screenshot."
     },
     {
       "id": "shadcn-mcp",
@@ -400,10 +461,14 @@
           ]
         },
         "review": [
-          "Only for compatible shadcn-based projects with a registry-discovery gap."
+          "Only for compatible shadcn-based projects with a registry-discovery gap.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-26",
+      "verify": "Confirm the server can search the intended registry; inspect results before adding a component."
     },
     {
       "id": "chrome-devtools-mcp",
@@ -427,10 +492,14 @@
           "claude-code"
         ],
         "review": [
-          "Only if existing browser tools lack required diagnostics. Check official configuration and browser prerequisites."
+          "Only if existing browser tools lack required diagnostics. Check official configuration and browser prerequisites.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "Apache-2.0",
+      "lastRepositoryPush": "2026-11-27",
+      "verify": "Confirm connection and that the intended diagnostic tool works on an authorized local page."
     },
     {
       "id": "rn-paper",
@@ -445,10 +514,14 @@
       "install": {
         "mode": "review-docs",
         "review": [
-          "Only if Material Design fits and no native component system exists; check installed RN/Expo version."
+          "Only if Material Design fits and no native component system exists; check installed RN/Expo version.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-25",
+      "verify": "Verify native package compatibility, build and real device rendering."
     },
     {
       "id": "reanimated",
@@ -463,10 +536,14 @@
       "install": {
         "mode": "review-docs",
         "review": [
-          "Check Expo/RN compatibility, architecture, Babel/worklets requirements, native rebuild and existing animation dependencies."
+          "Check Expo/RN compatibility, architecture, Babel/worklets requirements, native rebuild and existing animation dependencies.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-27",
+      "verify": "Verify Expo/RN compatibility, required worklet configuration, native rebuild and real device animation."
     },
     {
       "id": "maestro",
@@ -482,10 +559,14 @@
       "install": {
         "mode": "review-docs",
         "review": [
-          "Verify platform support, OS tooling and authorized simulator/device. Reuse an existing native E2E framework."
+          "Verify platform support, OS tooling and authorized simulator/device. Reuse an existing native E2E framework.",
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
         ]
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "Apache-2.0",
+      "lastRepositoryPush": "2026-11-26",
+      "verify": "Run a non-destructive test flow against an authorized simulator/device; inspect actual results."
     },
     {
       "id": "flutter-built-in",
@@ -498,9 +579,13 @@
       ],
       "role": "native-foundation",
       "install": {
-        "mode": "none"
+        "mode": "none",
+        "review": []
       },
-      "evidence": "upstream-documented; not independently benchmarked"
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "BSD-3-Clause",
+      "lastRepositoryPush": "2026-11-27",
+      "verify": "Verify flutter analyze, relevant widget/integration tests and device rendering when possible."
     },
     {
       "id": "motion-ui-skill",
@@ -513,9 +598,15 @@
       ],
       "role": "manual-reference",
       "install": {
-        "mode": "review-docs"
+        "mode": "review-docs",
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+        ]
       },
-      "evidence": "metadata reviewed; low adoption; no automatic selection"
+      "evidence": "metadata reviewed; low adoption; no automatic selection",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-20",
+      "verify": "Review manually; inspect an isolated example before adoption."
     },
     {
       "id": "fancy-ui",
@@ -528,9 +619,15 @@
       ],
       "role": "manual-reference",
       "install": {
-        "mode": "review-docs"
+        "mode": "review-docs",
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+        ]
       },
-      "evidence": "metadata reviewed; verify exact framework; no automatic selection"
+      "evidence": "metadata reviewed; verify exact framework; no automatic selection",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-27",
+      "verify": "Review manually; verify exact framework and isolated rendering before adoption."
     },
     {
       "id": "landing-page-atlas",
@@ -544,9 +641,15 @@
       ],
       "role": "manual-reference",
       "install": {
-        "mode": "review-docs"
+        "mode": "review-docs",
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+        ]
       },
-      "evidence": "upstream catalog reviewed; no automatic selection"
+      "evidence": "upstream catalog reviewed; no automatic selection",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-10-31",
+      "verify": "Review the source and asset rights before reuse."
     }
   ]
 }
