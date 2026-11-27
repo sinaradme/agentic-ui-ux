@@ -8,7 +8,7 @@ Read the brief, target rules and actual project. Infer what is clear; ask only f
 
 ## 2. One concise decision
 
-Show the design direction, project assets/components/runtime to reuse, the minimal new tools if any, why each is necessary, and one concrete implementation/verification plan. Use bundled playbooks for narrow work; never substitute them for mandatory external discovery in rebuild mode. A genuine advanced gap must remain open if no suitable tool can be used. Do not claim equal quality from an unverified fallback.
+Show the design direction, project assets/components/runtime to reuse, the minimal new tools if any, why each is necessary, and one concrete implementation/verification plan. In rebuild mode inspect and compare three concepts per section before selecting the direction. Do not stop at the setup plan when implementation is already authorized. Use bundled playbooks for narrow work; never substitute them for mandatory external discovery in rebuild mode. A genuine advanced gap must remain open if no suitable tool can be used. Do not claim equal quality from an unverified fallback.
 
 If changes need approval, present a consolidated list of exact reviewed package/skill versions, commands, working directories, configuration changes, licenses, permissions, hooks and rollback. Keep global/hook approvals separate. If the task is already authorized and no new permissions/installs are needed, proceed within scope; do not make the user reconfirm every routine design decision. Never invent authorization.
 

@@ -78,3 +78,7 @@ Implementation commit [`0dc3c83`](https://github.com/sinaradme/agentic-ui-ux/com
 ## Final release review
 
 See [FINAL-QC.md](FINAL-QC.md) for the final cross-repository findings, fixes, verified CI evidence and explicit acceptance boundary. All current technical suites passed at the cited implementation commits.
+
+## Practical feedback: rebuild hardening
+
+See [REBUILD-QC.md](REBUILD-QC.md) for the source-access and structural-rebuild expansion, real retrieval tests, artifact checks, and remaining real-agent validation boundary.

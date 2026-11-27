@@ -7,7 +7,7 @@ If a user directs you here for UI/UX work in another project:
 1. Read [skills/agentic-ui-ux/SKILL.md](skills/agentic-ui-ux/SKILL.md).
 2. Follow [capability routing](skills/agentic-ui-ux/references/routing.md), using the capability index and relevant playbooks only.
 3. Inspect the user's **target project** and apply the capability rules. Use route.mjs if local files and Node.js are available; otherwise reason from the relevant registry rows. plan.mjs is legacy coarse setup guidance.
-4. Return the smallest compatible installation/configuration plan with reasons and verification gates. Reuse existing systems. Get explicit approval before running proposed installers, writing configuration, enabling hooks or making global changes.
+4. Return the smallest compatible installation/configuration plan with reasons and verification gates when needed. For an authorized implementation task, continue through source discovery, implementation and actual verification rather than stopping at setup. Reuse existing systems. Get explicit approval before running proposed installers, writing configuration, enabling hooks or making global changes.
 5. If authorized to implement, use [WORKFLOWS.md](WORKFLOWS.md) and [MOBILE.md](MOBILE.md) as applicable, and inspect actual rendered results.
 
 A GitHub connection does not grant local terminal, MCP, browser or device access. A tool catalog is not authorization. Do not invent compatibility or independent benchmark results.

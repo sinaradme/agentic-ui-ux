@@ -44,3 +44,7 @@ Evidence: [repository quality](https://github.com/sinaradme/agentic-ui-ux/action
 - Real Cursor/Codex/Claude Code sessions, visual comparisons, native device execution and human-effort measurements remain open. Use the paired [benchmark protocol](benchmarks/README.md). No simulated fixture is a real agent benchmark.
 
 No additional library, runtime dependency or automatic installer was introduced by this final review. The one-skill onboarding and plan-only approval model are preserved.
+
+## Subsequent practical feedback
+
+The reported homepage redesign revealed conservative behavior not captured by technical fixtures. [REBUILD-QC.md](REBUILD-QC.md) documents the corrective architecture and new technical evidence. The earlier acceptance does not imply that actual agent redesign quality was proven.

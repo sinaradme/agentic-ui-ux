@@ -12,9 +12,9 @@ Starting candidate: Taste Skill; use the existing component system, with selecti
 
 ## Existing product or dashboard
 
-Starting candidate: Impeccable or UI/UX Pro Max if the bottleneck is UX planning. Preserve established design language.
+Starting candidate: Impeccable or UI/UX Pro Max if the bottleneck is UX planning. Explicitly choose rebuild for structural redesign or refine for bounded improvements. Preserve the existing visual language only if required by the brief.
 
-> Review the existing screens, user goals, component library and design tokens. Capture baseline screens before changes. Identify and prioritize hierarchy, spacing, typography, accessibility and interaction issues. Propose a focused improvement, then implement it without changing business logic or introducing unnecessary dependencies. Verify loading, empty, error, success and disabled states. Compare before and after screenshots and report unresolved issues.
+> Use agentic-ui-ux in rebuild mode. Review the existing screens, user goals, component library and design tokens. Treat the old composition as baseline, retrieve concrete upstream patterns, compare three structurally distinct candidates per scoped section, and select the best task-fit option. Do not merely restyle old cards or grids. Capture baseline screens before changes. Identify and prioritize hierarchy, spacing, typography, accessibility and interaction issues. Select a structurally different improvement, then implement it without changing business logic or introducing unnecessary dependencies. Verify loading, empty, error, success and disabled states. Compare before and after screenshots and report unresolved issues.
 
 ## Motion and interaction
 

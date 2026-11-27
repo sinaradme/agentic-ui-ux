@@ -91,3 +91,5 @@ Invoking the skill enables the [mandatory grounding contract](skills/agentic-ui-
 ## Creative structural redesign
 
 Use `Use agentic-ui-ux in rebuild mode to redesign every scoped section from scratch. Preserve product truth and functionality, not old composition. Retrieve actual external patterns and validate the rebuild gate.` Rebuild is the default for redesign, refine is for bounded polish, reference-match is for an exact reference. See [rebuild](skills/agentic-ui-ux/references/rebuild.md) and [source access](skills/agentic-ui-ux/references/source-access.md). A single install bundles references and retrieval scripts, not all external packages.
+
+The installed source retrieval CLI is network-tested. Run `node <skill-directory>/scripts/source.mjs list react-web`, then `node <skill-directory>/scripts/source.mjs read replacement-world` for a concrete rebuild source. Use `check-grounding.mjs <record.json> --evidence-root <directory>` for local rebuild acceptance. These gates must be run by the agent or a separately configured host/CI integration; the one-skill install does not automatically add hooks to a target project.

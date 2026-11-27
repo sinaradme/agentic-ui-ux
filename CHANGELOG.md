@@ -43,3 +43,9 @@
 - Classified low-adoption resources as exploratory and separated open-source code from paid offerings.
 
 Next priorities: execute reproducible web comparisons, collect screenshots, verify native-specific agent skills, and periodically refresh upstream metadata.
+
+### Rebuild hardening (1.0, 2026-11-27)
+
+- Separated structural rebuild from refinement and exact-reference matching; use actual upstream new-work guidance for structural redesign.
+- Added direct read-only pinned source access, concrete pattern index, stack-filtered discovery plans, and mandatory per-section structural alternatives and evidence.
+- Added local artifact verification and live source-access CI; all three workflows passed at bd9021b. See [REBUILD-QC.md](REBUILD-QC.md).

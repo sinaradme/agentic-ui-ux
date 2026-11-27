@@ -51,8 +51,9 @@ Choose your coding agent and project scope. Reload the agent if needed. No third
 
 ```text
 Use the agentic-ui-ux skill to redesign this screen.
-Inspect the project first, preserve its behavior and design system,
-select only the tools needed for this task, and verify the actual
+Inspect the project first, preserve its behavior and explicit constraints,
+rebuild old composition unless I ask for refinement, select only needed tools,
+and verify the actual
 rendered result on the relevant devices.
 Ask before installing tools or making changes outside the task.
 ```
@@ -100,7 +101,7 @@ Ask the agent to inspect the actual rendered interface, test the important state
 - [Mobile](MOBILE.md): native components, animation and testing.
 - [Agentic UI/UX skill](skills/agentic-ui-ux/SKILL.md): central orchestration instructions for your agent.
 - [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
-- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [v1.0 quality report](QUALITY.md) · [Final release QC](FINAL-QC.md).
+- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [v1.0 quality report](QUALITY.md) · [Final release QC](FINAL-QC.md) · [Rebuild QC](REBUILD-QC.md).
 
 **Research updated:** November 27, 2026 · **Edition:** 1.0
 
