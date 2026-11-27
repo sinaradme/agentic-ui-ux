@@ -4,7 +4,20 @@ Build better websites and apps with AI coding agents — without installing doze
 
 A free, open-source guide for Cursor, Codex, Claude Code and other coding agents. Pick the right design skill, give your agent a clear task, and check the result in a real browser or on a device.
 
-[Quickstart](QUICKSTART.md) · [Tool directory](TOOLS.md) · [Visual examples](EXAMPLES.md) · [Ready-to-use prompts](WORKFLOWS.md) · [Mobile](MOBILE.md)
+[Give your agent one link](AGENT-SETUP.md) · [Quickstart](QUICKSTART.md) · [Tool directory](TOOLS.md) · [Visual examples](EXAMPLES.md) · [Ready-to-use prompts](WORKFLOWS.md) · [Mobile](MOBILE.md)
+
+## Let your agent choose for you
+
+Open your target project in Cursor, Codex or Claude Code and paste:
+
+```text
+Read https://github.com/sinaradme/agentic-ui-ux
+Start with AGENTS.md. Inspect my project and select the smallest
+compatible design-tool setup. Reuse what I have. Show the plan and
+ask before installing or changing anything.
+```
+
+The repository includes an agent skill, a machine-readable catalog, decision rules and an optional plan-only selector. No need to memorize the tools. [Agent setup →](AGENT-SETUP.md)
 
 ## See the difference
 
@@ -91,7 +104,7 @@ A skill improves guidance; it does not give the agent browser access or guarante
 - [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
 - [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md).
 
-**Research updated:** November 27, 2026 · **Edition:** 0.2
+**Research updated:** November 27, 2026 · **Edition:** 0.3
 
 We review upstream docs, repository metadata and selected official examples. Independent comparative runs are not yet published. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 

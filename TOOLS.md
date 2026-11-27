@@ -4,6 +4,8 @@
 
 **Snapshot: 2026-11-27.** GitHub repository metadata was queried directly. Dates are GitHub `pushed_at` dates (UTC), not necessarily release dates or default-branch commit dates. Approximate star counts are a point-in-time adoption signal, not a quality score. Licenses refer to the linked open-source project or specific skill, not paid services or bundled third-party assets.
 
+**For agents:** use the [machine-readable catalog](skills/agentic-ui-ux/references/catalog.json) and [selection rules](skills/agentic-ui-ux/references/decision-rules.md).
+
 **Need a quick answer?** Start with [the chooser](README.md#1-pick-one-tool). See [actual author examples and demos](EXAMPLES.md) before installing.
 
 The initial catalog uses a 60-day repository-push filter (since 2026-09-28). New or low-adoption entries are explicitly marked exploratory. Every entry remains unbenchmarked here.

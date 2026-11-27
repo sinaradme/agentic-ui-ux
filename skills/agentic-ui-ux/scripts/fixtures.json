@@ -1,0 +1,434 @@
+[
+  {
+    "name": "new React web with existing components/browser",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "redesign no browser",
+    "input": {
+      "stack": "react-web",
+      "goal": "redesign",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "absent",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "impeccable",
+      "playwright-mcp"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "existing primary preserved",
+    "input": {
+      "stack": "react-web",
+      "goal": "redesign",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "taste",
+      "installedTools": [
+        "taste"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned",
+    "expectedActions": {
+      "taste": "reuse"
+    }
+  },
+  {
+    "name": "React web confirmed component gap",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "absent",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "components"
+      ]
+    },
+    "expectedIds": [
+      "taste",
+      "shadcn"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "existing UI system prevents competing system",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "components"
+      ]
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "native motion with existing runtime",
+    "input": {
+      "stack": "react-native",
+      "goal": "motion",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "reanimated"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "not-applicable",
+      "deviceAccess": "present",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "motion"
+      ]
+    },
+    "expectedIds": [
+      "emil-native"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "native material and complex motion gaps",
+    "input": {
+      "stack": "react-native",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "absent",
+      "browserAccess": "not-applicable",
+      "deviceAccess": "present",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "native-material-components",
+        "native-motion-runtime",
+        "native-e2e"
+      ]
+    },
+    "expectedIds": [
+      "rn-paper",
+      "reanimated",
+      "maestro"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "Flutter no web packages",
+    "input": {
+      "stack": "flutter",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "not-applicable",
+      "deviceAccess": "absent",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "components",
+        "motion",
+        "creative-effects",
+        "product-illustration"
+      ]
+    },
+    "expectedIds": [
+      "flutter-built-in"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "unknown stack blocks",
+    "input": {
+      "stack": "unknown",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "unknown inventory blocks",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": false,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "unknown agent does not offer a command",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "unknown",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned",
+    "expectedActions": {
+      "taste": "needs-verification"
+    }
+  },
+  {
+    "name": "QA only with existing browser",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "unknown browser not a missing browser",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "unknown",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "existing MCP needs config not reinstall",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "playwright-mcp"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "absent",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "playwright-mcp"
+    ],
+    "expectedStatus": "planned",
+    "expectedActions": {
+      "playwright-mcp": "configure-existing"
+    }
+  },
+  {
+    "name": "non React web never gets React library",
+    "input": {
+      "stack": "other-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "absent",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "components",
+        "creative-effects",
+        "product-illustration"
+      ]
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "incompatible existing skill not replaced",
+    "input": {
+      "stack": "react-native",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "taste",
+      "installedTools": [
+        "taste"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "not-applicable",
+      "deviceAccess": "present",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "planned"
+  },
+  {
+    "name": "conflicting inventory blocks",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "taste"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "unsupported need blocks",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": [
+        "install-everything"
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "Python prerequisite blocks UX CLI command",
+    "input": {
+      "stack": "react-web",
+      "goal": "ux-planning",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "uiux-pro-max"
+    ],
+    "expectedStatus": "planned",
+    "expectedActions": {
+      "uiux-pro-max": "needs-verification"
+    }
+  }
+]

@@ -2,6 +2,8 @@
 
 [Home](README.md) · [Tools](TOOLS.md) · [Workflows](WORKFLOWS.md)
 
+Want the agent to choose instead? [Give it one link](AGENT-SETUP.md).
+
 **In short:** Run the install command in your project's terminal, then use the installed skill in your agent's chat. You do not need to install every tool.
 
 ## 1. Understand what you are installing
@@ -133,7 +135,7 @@ If you prefer a single workflow guide that your agent can read directly, run thi
 npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
 ```
 
-This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It does not install third-party tools for you. This exact installation has not yet been executed by the maintainers.
+This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It selects a minimal plan using its bundled catalog and rules; it does not install third-party tools for you. [Agent-first setup](AGENT-SETUP.md). This exact installation has not yet been executed by the maintainers.
 
 ## 7. Reproducibility and safety
 

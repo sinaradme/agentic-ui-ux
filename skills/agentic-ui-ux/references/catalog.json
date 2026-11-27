@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 1,
+  "edition": "0.3",
+  "reviewedAt": "2026-11-27",
+  "policy": {
+    "default": "plan-only",
+    "unknownIsNotAbsent": true,
+    "existingSystemFirst": true,
+    "maxNewPrimarySkills": 1,
+    "exploratoryAutoSelection": false,
+    "authorizationRequired": true,
+    "versionPolicy": "Review source, license, compatibility, exact revision and any hooks before approval. Commands with @latest or no pin are examples, not locked installations."
+  },
+  "stacks": [
+    "react-web",
+    "other-web",
+    "react-native",
+    "flutter"
+  ],
+  "agents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "primaryByGoal": {
+    "new-ui": "taste",
+    "redesign": "impeccable",
+    "ux-planning": "uiux-pro-max"
+  },
+  "tools": [
+    {
+      "id": "taste",
+      "name": "Taste Skill",
+      "source": "https://github.com/Leonxlnx/taste-skill",
+      "docs": "https://github.com/Leonxlnx/taste-skill",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "primary",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "design-taste-frontend",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add Leonxlnx/taste-skill --skill design-taste-frontend",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Inspect skill source, scripts and exact revision."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "impeccable",
+      "name": "Impeccable",
+      "source": "https://github.com/pbakaus/impeccable",
+      "docs": "https://impeccable.style/docs",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "primary",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "impeccable",
+      "install": {
+        "mode": "review-command",
+        "command": "npx impeccable install",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Review installer, detector and hooks. Do not enable unattended hooks without explicit approval."
+        ],
+        "activation": {
+          "cursor": "/impeccable init",
+          "codex": "$impeccable init",
+          "claude-code": "/impeccable init"
+        }
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "uiux-pro-max",
+      "name": "UI/UX Pro Max",
+      "source": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "docs": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "role": "primary",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "ui-ux-pro-max",
+      "install": {
+        "mode": "review-docs",
+        "command": null,
+        "scope": "target-project",
+        "requires": [
+          "node",
+          "python"
+        ],
+        "review": [
+          "Official CLI setup may install a global CLI; obtain separate approval for user-wide changes.",
+          "Native use is planning guidance only; verify platform support."
+        ],
+        "agentExamples": {
+          "cursor": [
+            "npm install -g ui-ux-pro-max-cli",
+            "uipro init --ai cursor"
+          ],
+          "codex": [
+            "npm install -g ui-ux-pro-max-cli",
+            "uipro init --ai codex"
+          ],
+          "claude-code": [
+            "npm install -g ui-ux-pro-max-cli",
+            "uipro init --ai claude"
+          ]
+        }
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "hallmark",
+      "name": "Hallmark",
+      "source": "https://github.com/Nutlope/hallmark",
+      "docs": "https://github.com/Nutlope/hallmark",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "alternative-primary",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "hallmark",
+      "install": {
+        "mode": "review-docs",
+        "command": null,
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Check current skill names and upstream installer. Alternative only; not a second primary skill."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "anthropic-frontend",
+      "name": "Anthropic Frontend Design",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+      "docs": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "alternative-primary",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "frontend-design",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add anthropics/skills --skill frontend-design",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "emil-web",
+      "name": "Emil: animate",
+      "source": "https://github.com/emilkowalski/skills",
+      "docs": "https://aiforui.dev/skills/animate",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "motion",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "animate",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add emilkowalski/skills --skill animate",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "emil-native",
+      "name": "Emil: animate-expo",
+      "source": "https://github.com/emilkowalski/skills",
+      "docs": "https://aiforui.dev/skills/animate-expo",
+      "kind": "skill",
+      "stacks": [
+        "react-native"
+      ],
+      "role": "motion",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "animate-expo",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add emilkowalski/skills --skill animate-expo",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "stageshow",
+      "name": "Stageshow",
+      "source": "https://github.com/benjitaylor/skills/tree/main/stageshow",
+      "docs": "https://github.com/benjitaylor/skills/tree/main/stageshow",
+      "kind": "skill",
+      "stacks": [
+        "react-web"
+      ],
+      "role": "illustration",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "stageshow",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add benjitaylor/skills --skill stageshow",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Inspect skill-specific license and notices, React requirements and scripts."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "make-interfaces",
+      "name": "Make Interfaces Feel Better",
+      "source": "https://github.com/jakubkrehel/make-interfaces-feel-better",
+      "docs": "https://github.com/jakubkrehel/make-interfaces-feel-better",
+      "kind": "reference",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "manual-reference",
+      "install": {
+        "mode": "review-docs"
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn/ui",
+      "source": "https://github.com/shadcn-ui/ui",
+      "docs": "https://ui.shadcn.com/docs/installation",
+      "kind": "components",
+      "stacks": [
+        "react-web"
+      ],
+      "role": "components",
+      "install": {
+        "mode": "review-docs",
+        "requires": [
+          "node"
+        ],
+        "examples": [
+          "npx shadcn@latest init",
+          "npx shadcn@latest add button"
+        ],
+        "review": [
+          "Verify framework, styling and CLI compatibility; inspect existing components.json and tokens. Never reinitialize an existing component system. Add individual components only after approval."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "magic-ui",
+      "name": "Magic UI",
+      "source": "https://github.com/magicuidesign/magicui",
+      "docs": "https://magicui.design/docs",
+      "kind": "components",
+      "stacks": [
+        "react-web"
+      ],
+      "role": "creative-effects",
+      "install": {
+        "mode": "review-docs",
+        "review": [
+          "Check existing component system, framework, dependencies and asset license. Use free source only. Select an individual effect, not a bulk install."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "playwright-mcp",
+      "name": "Playwright MCP",
+      "source": "https://github.com/microsoft/playwright-mcp",
+      "docs": "https://github.com/microsoft/playwright-mcp",
+      "kind": "mcp",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "browser",
+      "install": {
+        "mode": "review-config",
+        "requires": [
+          "node"
+        ],
+        "eligibleAgents": [
+          "cursor",
+          "codex",
+          "claude-code"
+        ],
+        "config": {
+          "command": "npx",
+          "args": [
+            "@playwright/mcp@latest"
+          ]
+        },
+        "review": [
+          "Verify MCP support, browser availability and project scope. Merge existing config; do not overwrite other servers. Restrict browser to authorized work."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "shadcn-mcp",
+      "name": "shadcn MCP",
+      "source": "https://github.com/shadcn-ui/ui",
+      "docs": "https://ui.shadcn.com/docs/mcp",
+      "kind": "mcp",
+      "stacks": [
+        "react-web"
+      ],
+      "role": "registry",
+      "install": {
+        "mode": "review-config",
+        "requires": [
+          "node"
+        ],
+        "eligibleAgents": [
+          "cursor",
+          "codex",
+          "claude-code"
+        ],
+        "config": {
+          "command": "npx",
+          "args": [
+            "shadcn@latest",
+            "mcp"
+          ]
+        },
+        "review": [
+          "Only for compatible shadcn-based projects with a registry-discovery gap."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "chrome-devtools-mcp",
+      "name": "Chrome DevTools MCP",
+      "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "docs": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "kind": "mcp",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "diagnostics",
+      "install": {
+        "mode": "review-docs",
+        "requires": [
+          "node"
+        ],
+        "eligibleAgents": [
+          "cursor",
+          "codex",
+          "claude-code"
+        ],
+        "review": [
+          "Only if existing browser tools lack required diagnostics. Check official configuration and browser prerequisites."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "rn-paper",
+      "name": "React Native Paper",
+      "source": "https://github.com/callstack/react-native-paper",
+      "docs": "https://callstack.github.io/react-native-paper/",
+      "kind": "components",
+      "stacks": [
+        "react-native"
+      ],
+      "role": "components",
+      "install": {
+        "mode": "review-docs",
+        "review": [
+          "Only if Material Design fits and no native component system exists; check installed RN/Expo version."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "reanimated",
+      "name": "Reanimated",
+      "source": "https://github.com/software-mansion/react-native-reanimated",
+      "docs": "https://docs.swmansion.com/react-native-reanimated/",
+      "kind": "runtime",
+      "stacks": [
+        "react-native"
+      ],
+      "role": "motion-runtime",
+      "install": {
+        "mode": "review-docs",
+        "review": [
+          "Check Expo/RN compatibility, architecture, Babel/worklets requirements, native rebuild and existing animation dependencies."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "maestro",
+      "name": "Maestro",
+      "source": "https://github.com/mobile-dev-inc/Maestro",
+      "docs": "https://docs.maestro.dev/",
+      "kind": "testing",
+      "stacks": [
+        "react-native",
+        "flutter"
+      ],
+      "role": "native-e2e",
+      "install": {
+        "mode": "review-docs",
+        "review": [
+          "Verify platform support, OS tooling and authorized simulator/device. Reuse an existing native E2E framework."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "flutter-built-in",
+      "name": "Flutter Material/Cupertino, animations and tests",
+      "source": "https://github.com/flutter/flutter",
+      "docs": "https://docs.flutter.dev/ui/",
+      "kind": "built-in",
+      "stacks": [
+        "flutter"
+      ],
+      "role": "native-foundation",
+      "install": {
+        "mode": "none"
+      },
+      "evidence": "upstream-documented; not independently benchmarked"
+    },
+    {
+      "id": "motion-ui-skill",
+      "name": "Motion UI Skill",
+      "source": "https://github.com/Rkj0123/motion-ui-skill",
+      "docs": "https://github.com/Rkj0123/motion-ui-skill",
+      "kind": "exploratory",
+      "stacks": [
+        "react-web"
+      ],
+      "role": "manual-reference",
+      "install": {
+        "mode": "review-docs"
+      },
+      "evidence": "metadata reviewed; low adoption; no automatic selection"
+    },
+    {
+      "id": "fancy-ui",
+      "name": "Fancy UI",
+      "source": "https://github.com/RamaHerbin/fancy-ui",
+      "docs": "https://github.com/RamaHerbin/fancy-ui",
+      "kind": "exploratory",
+      "stacks": [
+        "other-web"
+      ],
+      "role": "manual-reference",
+      "install": {
+        "mode": "review-docs"
+      },
+      "evidence": "metadata reviewed; verify exact framework; no automatic selection"
+    },
+    {
+      "id": "landing-page-atlas",
+      "name": "Landing Page Atlas",
+      "source": "https://github.com/vezeqs/landing-page-atlas",
+      "docs": "https://vezeqs.github.io/landing-page-atlas/",
+      "kind": "exploratory",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "manual-reference",
+      "install": {
+        "mode": "review-docs"
+      },
+      "evidence": "upstream catalog reviewed; no automatic selection"
+    }
+  ]
+}

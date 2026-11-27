@@ -1,0 +1,14 @@
+{
+  "stack": "react-web",
+  "goal": "new-ui",
+  "agent": "cursor",
+  "inventoryComplete": true,
+  "primarySkill": "none",
+  "installedTools": [],
+  "componentSystem": "present",
+  "browserAccess": "present",
+  "deviceAccess": "not-applicable",
+  "node": "present",
+  "python": "unknown",
+  "needs": []
+}

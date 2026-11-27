@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agentic UI/UX project context",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "stack",
+    "goal",
+    "agent",
+    "inventoryComplete",
+    "primarySkill",
+    "installedTools",
+    "componentSystem",
+    "browserAccess",
+    "deviceAccess",
+    "node",
+    "python",
+    "needs"
+  ],
+  "properties": {
+    "stack": {
+      "enum": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter",
+        "unknown"
+      ]
+    },
+    "goal": {
+      "enum": [
+        "new-ui",
+        "redesign",
+        "ux-planning",
+        "motion",
+        "visual-qa",
+        "unknown"
+      ]
+    },
+    "agent": {
+      "enum": [
+        "cursor",
+        "codex",
+        "claude-code",
+        "other",
+        "unknown"
+      ]
+    },
+    "inventoryComplete": {
+      "type": "boolean"
+    },
+    "primarySkill": {
+      "type": "string",
+      "description": "none, unknown, custom-compatible, custom-unknown, or a known catalog primary/alternative-primary ID"
+    },
+    "installedTools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "componentSystem": {
+      "enum": [
+        "present",
+        "absent",
+        "unknown"
+      ]
+    },
+    "browserAccess": {
+      "enum": [
+        "present",
+        "absent",
+        "unknown",
+        "not-applicable"
+      ]
+    },
+    "deviceAccess": {
+      "enum": [
+        "present",
+        "absent",
+        "unknown",
+        "not-applicable"
+      ]
+    },
+    "node": {
+      "enum": [
+        "present",
+        "absent",
+        "unknown"
+      ]
+    },
+    "python": {
+      "enum": [
+        "present",
+        "absent",
+        "unknown"
+      ]
+    },
+    "needs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "components",
+          "motion",
+          "creative-effects",
+          "product-illustration",
+          "registry-discovery",
+          "browser-diagnostics",
+          "native-material-components",
+          "native-motion-runtime",
+          "native-e2e"
+        ]
+      }
+    }
+  }
+}

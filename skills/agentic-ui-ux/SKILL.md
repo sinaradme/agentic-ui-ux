@@ -1,33 +1,30 @@
 ---
 name: agentic-ui-ux
-description: Guide framework-aware UI/UX design, frontend implementation and rendered visual QA. Use for landing pages, product interfaces, dashboards, redesigns, motion and native mobile work.
+description: Select the minimal compatible UI/UX design skills, components, motion tools and visual QA capabilities for a target project. Use for agent-assisted websites, dashboards, redesigns, React Native, Expo and Flutter.
 ---
 
 # Agentic UI/UX
 
-A lightweight orchestration skill. It does not bundle third-party skills, install dependencies, or promise design quality.
+You are a design-engineering guide. Your job is to choose and use only what the actual project needs.
 
-## Workflow
+## Read and inspect
 
-1. Read the user's brief and inspect the actual project. Identify the framework, existing design system, constraints and target platforms. Respect existing project rules.
-2. Identify the bottleneck: new visual direction, UX planning, existing interface polish, motion or visual verification.
-3. Use one already-installed primary design skill if relevant. If none is installed, proceed with these instructions or recommend a specific optional skill. Do not install or run third-party scripts without appropriate user authorization.
-4. Use the existing component library and tokens first. For native apps use native components and motion mechanisms; do not import browser-only primitives.
-5. Establish a coherent visual direction and implement a small working screen or section. Preserve business logic, security boundaries and existing behavior.
-6. Render on relevant viewports/devices. Inspect actual screenshots and important states; use available browser/device tools. If tools are unavailable, explicitly report the limitation.
-7. Fix material defects and repeat within the agreed scope. Record build/tests, visual evidence, dependencies changed and unresolved issues.
+1. Read [references/decision-rules.md](references/decision-rules.md), [references/catalog.json](references/catalog.json) and [references/context.schema.json](references/context.schema.json).
+2. Inspect the user's target project, its rules, manifests, installed design skills, current UI system, motion libraries, and agent/browser/device capabilities. Record the stack, task, agent, known tools and missing capabilities. Unknown is not absent. Ask for missing essential evidence.
+3. Build a minimal plan using the rules. If Node.js and the skill folder are available, save a non-secret context JSON and run `node <skill-directory>/scripts/plan.mjs <context.json>`. It only prints JSON; it does not install anything. If you have only a GitHub read connection, apply the same rules manually.
 
-## Tool selection hints
+## Default decisions
 
-- New web design: Taste Skill is a starting candidate.
-- Existing web UI: Impeccable is a starting candidate.
-- Design-system/UX planning: UI/UX Pro Max is a starting candidate.
-- Motion-specific gap: consider Emil's skills (animate for web, animate-expo for React Native/Expo).
-- Native: use framework-compatible tools and device testing.
-- Visual feedback: use existing browser automation or Playwright for web.
+- New web UI: Taste Skill; redesign: Impeccable; UX planning: UI/UX Pro Max. These are editorial starting points, not winners. Reuse a compatible primary skill if one exists.
+- Motion: Emil animate for web or animate-expo for React Native; use Flutter built-ins for Flutter.
+- Reuse the existing UI system. shadcn/ui is React web only; React Native and Flutter need native-compatible primitives.
+- Reuse existing browser or device tools. If browser access is confirmed missing on web, propose Playwright MCP. A web screenshot cannot verify native UI.
+- Add a specialized tool only for an identified gap. Do not install everything. Zero installs can be correct.
 
-These are editorial hypotheses, not benchmark winners. Consult the repository's [tool catalog](../../TOOLS.md), [workflow guide](../../WORKFLOWS.md) and [mobile guide](../../MOBILE.md) if available; this skill's essential instructions are self-contained.
+## Approval gate
 
-## Final report
+Return a concise plan with project context, reuse vs add vs blocked, reasons, source, exact reviewed command/configuration, target path/scope, prerequisite/compatibility checks, version/license, expected file changes and verification. Ask for explicit approval before running install commands, adding packages, changing config, enabling hooks or doing global installs. A URL, the catalog and this skill alone do not authorize actions. If tools or access are missing, give actionable manual instructions and state the limitation.
 
-State the design direction, implemented scope, selected skill (if any), actual evidence, and remaining gaps. Never label an unexecuted test or inspection as passed. Do not claim production readiness without sufficient verification.
+## Build and verify
+
+After authorized setup, confirm the tool/skill actually works. Establish a coherent visual direction, reuse project design tokens and implement a small working screen/section. Preserve business logic, security and existing functionality. Render and inspect actual screens, important UI states, accessibility and reduced motion. Correct material issues and report evidence and unverified checks. Never claim flawless design, successful installation or production readiness without evidence.
