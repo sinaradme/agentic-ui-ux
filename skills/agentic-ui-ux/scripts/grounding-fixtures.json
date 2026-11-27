@@ -2039,5 +2039,237 @@
       ]
     },
     "expected": "invalid"
+  },
+  {
+    "name": "specific official component page accepted",
+    "record": {
+      "phase": "preflight",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "none",
+          "installedTools": [],
+          "componentSystem": "absent",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "component-primitives",
+            "coverage": "gap",
+            "evidence": "Synthetic missing dialog"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "component-primitives",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "upstream",
+              "location": "https://ui.shadcn.com/docs/components/base/dialog",
+              "locator": "Dialog composition / usage",
+              "observed": "Synthetic record: exact component and documented composition",
+              "revision": "reviewed package revision fixture",
+              "toolId": "shadcn",
+              "sourceId": "shadcn:scope-1"
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+        }
+      ]
+    },
+    "expected": "pass"
+  },
+  {
+    "name": "lookalike source domain rejected",
+    "record": {
+      "phase": "preflight",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "none",
+          "installedTools": [],
+          "componentSystem": "absent",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "component-primitives",
+            "coverage": "gap",
+            "evidence": "Synthetic missing dialog"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "component-primitives",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "upstream",
+              "location": "https://ui.shadcn.com.example.org/docs/components/base/dialog",
+              "locator": "Dialog composition / usage",
+              "observed": "Synthetic record: exact component and documented composition",
+              "revision": "reviewed package revision fixture",
+              "toolId": "shadcn",
+              "sourceId": "shadcn:scope-1"
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+        }
+      ]
+    },
+    "expected": "invalid"
+  },
+  {
+    "name": "outside reviewed source scope rejected",
+    "record": {
+      "phase": "preflight",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "none",
+          "installedTools": [],
+          "componentSystem": "absent",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "component-primitives",
+            "coverage": "gap",
+            "evidence": "Synthetic missing dialog"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "component-primitives",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "upstream",
+              "location": "https://ui.shadcn.com/docs/components-other/dialog",
+              "locator": "Dialog composition / usage",
+              "observed": "Synthetic record: exact component and documented composition",
+              "revision": "reviewed package revision fixture",
+              "toolId": "shadcn",
+              "sourceId": "shadcn:scope-1"
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+        }
+      ]
+    },
+    "expected": "invalid"
+  },
+  {
+    "name": "redirect query rejected",
+    "record": {
+      "phase": "preflight",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "none",
+          "installedTools": [],
+          "componentSystem": "absent",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "component-primitives",
+            "coverage": "gap",
+            "evidence": "Synthetic missing dialog"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "component-primitives",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "upstream",
+              "location": "https://ui.shadcn.com/docs/components/base/dialog?redirect=external",
+              "locator": "Dialog composition / usage",
+              "observed": "Synthetic record: exact component and documented composition",
+              "revision": "reviewed package revision fixture",
+              "toolId": "shadcn",
+              "sourceId": "shadcn:scope-1"
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+        }
+      ]
+    },
+    "expected": "invalid"
   }
 ]

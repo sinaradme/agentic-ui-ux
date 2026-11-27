@@ -1966,5 +1966,137 @@
     "expectedStatuses": {
       "component-primitives": "blocked"
     }
+  },
+  {
+    "name": "new functional product uses product-oriented primary",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "surfaceType": "product",
+      "tasks": [
+        {
+          "id": "dashboard-layout",
+          "coverage": "gap",
+          "evidence": "Synthetic inspected task"
+        },
+        {
+          "id": "page-layout",
+          "coverage": "gap",
+          "evidence": "Synthetic inspected task"
+        }
+      ]
+    },
+    "expectedIds": [
+      "impeccable"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "marketing new page keeps Taste",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "surfaceType": "marketing",
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Synthetic inspected task"
+        },
+        {
+          "id": "page-layout",
+          "coverage": "gap",
+          "evidence": "Synthetic inspected task"
+        }
+      ]
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "native type conflicts with web",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "surfaceType": "native",
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Synthetic inspected task"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {},
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "invalid surface type",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "surfaceType": "other",
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Synthetic inspected task"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {},
+    "expectedStatus": "blocked"
   }
 ]

@@ -34,6 +34,20 @@
       "url": "https://docs.flutter.dev/cookbook/testing/widget/introduction",
       "kind": "official-docs",
       "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "flutter-built-in:scope-1",
+      "url": "https://docs.flutter.dev/ui",
+      "kind": "official-docs",
+      "locator": "Official UI docs",
+      "allowDescendants": true
+    },
+    {
+      "id": "flutter-built-in:scope-2",
+      "url": "https://docs.flutter.dev/cookbook/testing/widget",
+      "kind": "official-docs",
+      "locator": "Widget testing documentation",
+      "allowDescendants": true
     }
   ],
   "manualInvocation": false,

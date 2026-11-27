@@ -40,6 +40,13 @@
           "url": "https://impeccable.style/docs",
           "kind": "official-docs",
           "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "impeccable:scope-1",
+          "url": "https://impeccable.style/docs",
+          "kind": "official-docs",
+          "locator": "Focused official command docs",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,
@@ -202,6 +209,13 @@
           "url": "https://ui.shadcn.com/docs/official",
           "kind": "official-docs",
           "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "shadcn:scope-1",
+          "url": "https://ui.shadcn.com/docs/components",
+          "kind": "official-docs",
+          "locator": "Component directory; inspect actual Base UI, Radix UI or React Aria variant",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,
@@ -238,6 +252,13 @@
           "url": "https://magicui.design/docs/installation",
           "kind": "official-docs",
           "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "magic-ui:scope-1",
+          "url": "https://magicui.design/docs/components",
+          "kind": "official-docs",
+          "locator": "Free component index; inspect exact named item",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,
@@ -286,6 +307,13 @@
           "url": "https://ui.shadcn.com/docs/registry/mcp",
           "kind": "official-docs",
           "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "shadcn-mcp:scope-1",
+          "url": "https://ui.shadcn.com/docs/registry",
+          "kind": "official-docs",
+          "locator": "Registry documentation; inspect actual item and dependencies",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,
@@ -352,6 +380,13 @@
           "url": "https://docs.swmansion.com/react-native-reanimated/docs/guides/compatibility/",
           "kind": "official-docs",
           "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "reanimated:scope-1",
+          "url": "https://docs.swmansion.com/react-native-reanimated/docs",
+          "kind": "official-docs",
+          "locator": "Official version-specific API docs",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,
@@ -370,6 +405,20 @@
           "kind": "repository-readme",
           "revision": "26891a918ac1a55ed41506cbe0998154321b04c8",
           "locator": "Why Maestro?; Getting Started"
+        },
+        {
+          "id": "maestro:scope-1",
+          "url": "https://docs.maestro.dev/get-started/quickstart",
+          "kind": "official-docs",
+          "locator": "Local setup and first flow",
+          "allowDescendants": true
+        },
+        {
+          "id": "maestro:scope-2",
+          "url": "https://docs.maestro.dev/maestro-flows",
+          "kind": "official-docs",
+          "locator": "Flow documentation; inspect exact command",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,
@@ -412,6 +461,20 @@
           "url": "https://docs.flutter.dev/cookbook/testing/widget/introduction",
           "kind": "official-docs",
           "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "flutter-built-in:scope-1",
+          "url": "https://docs.flutter.dev/ui",
+          "kind": "official-docs",
+          "locator": "Official UI docs",
+          "allowDescendants": true
+        },
+        {
+          "id": "flutter-built-in:scope-2",
+          "url": "https://docs.flutter.dev/cookbook/testing/widget",
+          "kind": "official-docs",
+          "locator": "Widget testing documentation",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,
@@ -580,6 +643,13 @@
           "url": "https://motion.dev/docs/performance",
           "kind": "official-docs",
           "locator": "Version-appropriate relevant section; re-read before use"
+        },
+        {
+          "id": "motion-web:scope-1",
+          "url": "https://motion.dev/docs",
+          "kind": "official-docs",
+          "locator": "Official platform/API documentation; use React and MIT core only",
+          "allowDescendants": true
         }
       ],
       "manualInvocation": false,

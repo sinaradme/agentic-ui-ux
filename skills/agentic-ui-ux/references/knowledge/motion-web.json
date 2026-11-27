@@ -34,6 +34,13 @@
       "url": "https://motion.dev/docs/performance",
       "kind": "official-docs",
       "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "motion-web:scope-1",
+      "url": "https://motion.dev/docs",
+      "kind": "official-docs",
+      "locator": "Official platform/API documentation; use React and MIT core only",
+      "allowDescendants": true
     }
   ],
   "manualInvocation": false,

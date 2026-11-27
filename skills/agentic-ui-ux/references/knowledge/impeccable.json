@@ -16,6 +16,13 @@
       "url": "https://impeccable.style/docs",
       "kind": "official-docs",
       "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "impeccable:scope-1",
+      "url": "https://impeccable.style/docs",
+      "kind": "official-docs",
+      "locator": "Focused official command docs",
+      "allowDescendants": true
     }
   ],
   "manualInvocation": false,

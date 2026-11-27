@@ -6,7 +6,7 @@ This is not a brainstorming license. No arbitrary aesthetic, invented component 
 
 1. Explicit user requirements, approved reference and brand/design files.
 2. Actual project tokens, components, conventions and accepted screens.
-3. Relevant documented design pattern or specific official example from the routed source. Read the exact reference, not a title or a generic homepage. Use [knowledge cards](knowledge/INDEX.md) for retrieval, then the pinned source and relevant current/version-specific official docs.
+3. Relevant documented design pattern or specific official example from the routed source. Read the exact reference, not a title or a generic homepage. For a component or API use the specific official item page under a reviewed documentation scope, and record its actual version/revision and relevant section. A scope is only an allowlisted retrieval path, not proof all its pages were reviewed. Use [knowledge cards](knowledge/INDEX.md) for retrieval, then the pinned source and relevant current/version-specific official docs.
 4. Bundled playbook for scoped engineering rules and QA. It is not by itself a visual reference for a novel look.
 
 Do not copy proprietary assets or a distinctive third-party brand identity. Adapt the pattern, not the identity. Never fabricate examples, API names, design tokens, licenses, reference inspection or approval. A source may be inaccessible, stale or incompatible; mark the requirement blocked or ask once for the missing reference/approval. Do not silently downgrade to a generic design. For original visual exploration outside available references, obtain explicit user permission for that exception, label it exploratory and require acceptance of the reference/concept before implementation.

@@ -5,9 +5,10 @@ const read = name => JSON.parse(readFileSync(new URL('../references/'+name, impo
 const catalog=read('catalog.json'), registry=read('capabilities.json'), policy=read('priority-policy.json');
 function route(input,catalog,registry,policy,validateContext){
  const blocked=(reason)=>({schemaVersion:1,mode:"plan-only",status:"blocked",reason,routes:[],actions:[],playbooks:[],executionAuthorized:false});
- if(!input||typeof input!=="object"||Array.isArray(input)||Object.keys(input).some(k=>!["context","tasks","policy","asOf"].includes(k)))return blocked("Invalid route request.");
+ if(!input||typeof input!=="object"||Array.isArray(input)||Object.keys(input).some(k=>!["context","tasks","policy","asOf","surfaceType"].includes(k)))return blocked("Invalid route request.");
  const ctx=input.context; const checked=validateContext(ctx);if(checked.status==="blocked")return blocked(checked.reason);
  if(input.policy!==undefined&&!["minimal","no-new-tools"].includes(input.policy))return blocked("Invalid policy.");
+ if(input.surfaceType!==undefined&&!["marketing","product","native","unknown"].includes(input.surfaceType))return blocked("Invalid surfaceType.");
  const date=input.asOf||catalog.reviewedAt;const dateMs=Date.parse(date);if(typeof date!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(dateMs)||new Date(dateMs).toISOString().slice(0,10)!==date||dateMs<Date.parse(catalog.reviewedAt))return blocked("Invalid asOf date; use current date or the catalog snapshot date.");
  const tasks=input.tasks;if(!Array.isArray(tasks)||tasks.length<1||tasks.length>policy.limits.maxTaskCapabilities)return blocked("Choose 1–"+policy.limits.maxTaskCapabilities+" relevant capability IDs.");
  const caps=new Map(registry.capabilities.map(c=>[c.id,c]));const tools=new Map(catalog.tools.map(t=>[t.id,t]));const seen=new Set();
@@ -21,7 +22,9 @@ function route(input,catalog,registry,policy,validateContext){
    if(task.runtimeInventory!==undefined&&!["none","present","unknown"].includes(task.runtimeInventory))return blocked("Invalid runtime inventory.");
    seen.add(task.id);
  }
- const requested=new Map(tasks.map(t=>[t.id,t]));const ordered=registry.capabilities.filter(c=>requested.has(c.id)).sort((a,b)=>Number(requested.get(a.id).priority==="supporting")-Number(requested.get(b.id).priority==="supporting"));
+ const requested=new Map(tasks.map(t=>[t.id,t]));
+ const surfaceType=input.surfaceType|| (requested.has("dashboard-layout")&&requested.get("dashboard-layout").priority!=="supporting"?"product":(["react-native","flutter"].includes(ctx.stack)?"native":"unknown"));
+ if(surfaceType==="native"&&!["react-native","flutter"].includes(ctx.stack)||["marketing","product"].includes(surfaceType)&&["react-native","flutter"].includes(ctx.stack))return blocked("Surface type conflicts with target platform.");const ordered=registry.capabilities.filter(c=>requested.has(c.id)).sort((a,b)=>Number(requested.get(a.id).priority==="supporting")-Number(requested.get(b.id).priority==="supporting"));
  const routes=[],actions=new Map(),notes=[],playbooks=new Set();let newSpecialists=0;const runtimeFamilies=new Set();
  const noNew=input.policy==="no-new-tools";
  let owner=ctx.primarySkill==="none"?null:ctx.primarySkill;
@@ -42,7 +45,7 @@ function route(input,catalog,registry,policy,validateContext){
    if(owner||noNew||["motion","visual-qa"].includes(ctx.goal))return;
    const pending=ordered.filter(c=>c.kind==="primary"&&c.stacks.includes(ctx.stack)&&c.goals?.includes(ctx.goal)&&requested.get(c.id).coverage==="gap");
    if(!pending.length)return;
-   const preferred=catalog.primaryByGoal[ctx.goal];const preferredTool=tools.get(preferred);
+   const preferred=ctx.goal==="new-ui"&&surfaceType==="product"?"impeccable":catalog.primaryByGoal[ctx.goal];const preferredTool=tools.get(preferred);
    // Native defaults only for planning; never use a web-only owner on native.
    if(preferredTool&&preferredTool.stacks.includes(ctx.stack)&&(ctx.stack==="react-web"||ctx.stack==="other-web"||ctx.goal==="ux-planning")&&pending.some(c=>c.providers.some(p=>p.tool===preferred&&applicable(c,p)))){owner=preferred;return;}
    // Narrow capability-specific owner only if the task goal does not have a supported default.
@@ -123,7 +126,7 @@ function route(input,catalog,registry,policy,validateContext){
  if(ctx.stack==="flutter")notes.push("Flutter SDK widgets, animations and tests are the default; no web-only runtime.");
  if(!input.asOf)notes.push("Using the catalog snapshot date for deterministic routing; verify current upstream metadata before approval.");
  if(!actions.size)notes.push("No external installation/invocation is currently selected; bundled guidance remains available.");
- return {schemaVersion:1,edition:catalog.edition,asOf:date,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,primaryOwner:owner,primaryOwnerStatus:owner?(actions.has(owner)?"selected":ctx.primarySkill===owner?"existing-not-invoked":"unresolved"):"none",playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
+ return {schemaVersion:1,edition:catalog.edition,asOf:date,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,surfaceType,primaryOwner:owner,primaryOwnerStatus:owner?(actions.has(owner)?"selected":ctx.primarySkill===owner?"existing-not-invoked":"unresolved"):"none",playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
 }
 export function createRoute(input){return route(input,catalog,registry,policy,createPlan);}
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const input=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const out=createRoute(input);console.log(JSON.stringify(out,null,2));if(out.status==='blocked')process.exitCode=2;}catch(e){console.error('Route failed:',e.message);process.exitCode=2;}}

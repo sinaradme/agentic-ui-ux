@@ -28,6 +28,13 @@
       "url": "https://magicui.design/docs/installation",
       "kind": "official-docs",
       "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "magic-ui:scope-1",
+      "url": "https://magicui.design/docs/components",
+      "kind": "official-docs",
+      "locator": "Free component index; inspect exact named item",
+      "allowDescendants": true
     }
   ],
   "manualInvocation": false,

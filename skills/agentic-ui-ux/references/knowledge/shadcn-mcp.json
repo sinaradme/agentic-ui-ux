@@ -22,6 +22,13 @@
       "url": "https://ui.shadcn.com/docs/registry/mcp",
       "kind": "official-docs",
       "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "shadcn-mcp:scope-1",
+      "url": "https://ui.shadcn.com/docs/registry",
+      "kind": "official-docs",
+      "locator": "Registry documentation; inspect actual item and dependencies",
+      "allowDescendants": true
     }
   ],
   "manualInvocation": false,

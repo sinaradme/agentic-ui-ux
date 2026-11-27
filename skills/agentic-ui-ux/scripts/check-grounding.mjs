@@ -15,6 +15,7 @@ function check(record,route,registry,catalog,knowledge){
  const isPlanning=route.goal==="ux-planning", capMap=new Map(registry.capabilities.map(c=>[c.id,c])), routes=new Map(route.routes.map(r=>[r.id,r])), toolMap=new Map(catalog.tools.map(t=>[t.id,t]));
  const relPath=v=>str(v,500)&&!v.startsWith("/")&&!/^[a-zA-Z]:|\\|[\r\n]/.test(v)&&v.split("/").every(x=>x&&x!==".."&&x!==".");
  const https=v=>{try{const u=new URL(v);return u.protocol==="https:"&&!u.username&&!u.password;}catch{return false;}};
+ const sourceMatch=(location,registered)=>{if(location===registered.url)return true;if(!registered.allowDescendants||!https(location))return false;try{const u=new URL(location),b=new URL(registered.url);const prefix=b.pathname.replace(/\/$/,"");return u.origin===b.origin&&!u.search&&!u.hash&&!/%2e|%2f|%5c/i.test(u.pathname)&&(u.pathname.startsWith(prefix+"/"));}catch{return false;}};
  for(const s of record.surfaces){
    if(!only(s,["id","description"])||!str(s.id,100)||!str(s.description)||surfaceIds.has(s.id)){errors.push("Invalid/duplicate surface.");continue;}surfaceIds.add(s.id);
  }
@@ -37,7 +38,7 @@ function check(record,route,registry,catalog,knowledge){
        const mapped=cap.providers.some(p=>p.tool===s.toolId&&p.stacks.includes(route.stack));
        const tierOK=t&&["preferred","specialized"].includes(t.selectionTier);
        const selected=r.provider===s.toolId||r.referenceTool===s.toolId;
-       if(!t||!k||!registered||!mapped||(!selected&&(!tierOK||r.provider))||!https(s.location)||s.location!==registered.url||!str(s.revision,200)||(registered.revision&&s.revision!==registered.revision)){errors.push("Unmapped, unreviewed, mismatched or unpinned upstream source: "+d.capability);valid=false;}
+       if(!t||!k||!registered||!mapped||(!selected&&(!tierOK||r.provider))||!https(s.location)||!sourceMatch(s.location,registered)||!str(s.revision,200)||(registered.revision&&s.revision!==registered.revision)){errors.push("Unmapped, unreviewed, mismatched or unpinned upstream source: "+d.capability);valid=false;}
      }
    }
    if(!valid)continue;

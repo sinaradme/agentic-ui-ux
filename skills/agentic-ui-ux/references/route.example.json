@@ -29,5 +29,6 @@
       "coverage": "gap",
       "evidence": "Fixture: inspected target capability"
     }
-  ]
+  ],
+  "surfaceType": "marketing"
 }

@@ -1,6 +1,6 @@
 # Reviewed upstream knowledge
 
-Read only the cards selected for your task. Cards summarize fit, limits and exact source pointers, not the full upstream documents or verified quality rankings. For each selected item open the actual source and version-specific docs before use. The primary source URLs pin the reviewed GitHub revision. Official website URLs are live and must be rechecked. This is retrieval-based grounding, not fine-tuning.
+Read only the cards selected for your task. Cards summarize fit, limits and exact source pointers, not the full upstream documents or verified quality rankings. For each selected item open the actual source and version-specific docs before use. The primary source URLs pin the reviewed GitHub revision. Official website URLs are live and must be rechecked. A card's allowDescendants field scopes retrieval of exact item/API pages; it does not assert every descendant was read. This is retrieval-based grounding, not fine-tuning.
 
 | Tool | Card | Reviewed source |
 | --- | --- | --- |

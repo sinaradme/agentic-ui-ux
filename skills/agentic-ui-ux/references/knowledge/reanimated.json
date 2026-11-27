@@ -22,6 +22,13 @@
       "url": "https://docs.swmansion.com/react-native-reanimated/docs/guides/compatibility/",
       "kind": "official-docs",
       "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "reanimated:scope-1",
+      "url": "https://docs.swmansion.com/react-native-reanimated/docs",
+      "kind": "official-docs",
+      "locator": "Official version-specific API docs",
+      "allowDescendants": true
     }
   ],
   "manualInvocation": false,

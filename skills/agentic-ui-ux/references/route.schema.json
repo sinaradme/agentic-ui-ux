@@ -118,6 +118,15 @@
       "type": "string",
       "format": "date",
       "description": "Current UTC date for metadata freshness checks; omit only for reproducible snapshot routing."
+    },
+    "surfaceType": {
+      "enum": [
+        "marketing",
+        "product",
+        "native",
+        "unknown"
+      ],
+      "description": "Specify marketing website vs functional product UI vs native target. Existing system still wins; a core dashboard capability infers product when omitted."
     }
   }
 }

@@ -28,6 +28,13 @@
       "url": "https://ui.shadcn.com/docs/official",
       "kind": "official-docs",
       "locator": "Version-appropriate relevant section; re-read before use"
+    },
+    {
+      "id": "shadcn:scope-1",
+      "url": "https://ui.shadcn.com/docs/components",
+      "kind": "official-docs",
+      "locator": "Component directory; inspect actual Base UI, Radix UI or React Aria variant",
+      "allowDescendants": true
     }
   ],
   "manualInvocation": false,
