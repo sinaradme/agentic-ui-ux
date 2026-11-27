@@ -1,0 +1,32 @@
+{
+  "id": "shadcn",
+  "name": "shadcn/ui",
+  "source": "https://github.com/shadcn-ui/ui",
+  "docs": "https://ui.shadcn.com/docs/installation",
+  "kind": "components",
+  "stacks": [
+    "react-web"
+  ],
+  "role": "components",
+  "install": {
+    "mode": "review-docs",
+    "requires": [
+      "node"
+    ],
+    "examples": [
+      "npx shadcn@latest init",
+      "npx shadcn@latest add button"
+    ],
+    "review": [
+      "Verify framework, styling and CLI compatibility; inspect existing components.json and tokens. Never reinitialize an existing component system. Add individual components only after approval.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-26",
+  "verify": "Check components.json and generated component files, build, accessibility and existing token compatibility.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

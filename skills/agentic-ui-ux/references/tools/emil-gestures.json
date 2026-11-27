@@ -1,0 +1,37 @@
+{
+  "id": "emil-gestures",
+  "name": "Emil: gestures",
+  "source": "https://github.com/emilkowalski/skills",
+  "docs": "https://aiforui.dev/skills/gestures",
+  "kind": "skill",
+  "stacks": [
+    "react-web",
+    "other-web"
+  ],
+  "role": "motion",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "gestures",
+  "install": {
+    "mode": "review-command",
+    "command": "npx skills add emilkowalski/skills --skill gestures",
+    "scope": "target-project",
+    "requires": [
+      "node"
+    ],
+    "review": [
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+      "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-15",
+  "verify": "Confirm discovery of gestures; inspect actual relevant interaction or animation and record evidence.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

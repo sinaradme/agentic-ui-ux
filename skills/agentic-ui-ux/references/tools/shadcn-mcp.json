@@ -1,0 +1,40 @@
+{
+  "id": "shadcn-mcp",
+  "name": "shadcn MCP",
+  "source": "https://github.com/shadcn-ui/ui",
+  "docs": "https://ui.shadcn.com/docs/mcp",
+  "kind": "mcp",
+  "stacks": [
+    "react-web"
+  ],
+  "role": "registry",
+  "install": {
+    "mode": "review-config",
+    "requires": [
+      "node"
+    ],
+    "eligibleAgents": [
+      "cursor",
+      "codex",
+      "claude-code"
+    ],
+    "config": {
+      "command": "npx",
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ]
+    },
+    "review": [
+      "Only for compatible shadcn-based projects with a registry-discovery gap.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-26",
+  "verify": "Confirm the server can search the intended registry; inspect results before adding a component.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

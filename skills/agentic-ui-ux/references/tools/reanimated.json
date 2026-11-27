@@ -1,0 +1,25 @@
+{
+  "id": "reanimated",
+  "name": "Reanimated",
+  "source": "https://github.com/software-mansion/react-native-reanimated",
+  "docs": "https://docs.swmansion.com/react-native-reanimated/",
+  "kind": "runtime",
+  "stacks": [
+    "react-native"
+  ],
+  "role": "motion-runtime",
+  "install": {
+    "mode": "review-docs",
+    "review": [
+      "Check Expo/RN compatibility, architecture, Babel/worklets requirements, native rebuild and existing animation dependencies.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-27",
+  "verify": "Verify Expo/RN compatibility, required worklet configuration, native rebuild and real device animation.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "chrome-devtools-mcp",
+  "name": "Chrome DevTools MCP",
+  "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "docs": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "kind": "mcp",
+  "stacks": [
+    "react-web",
+    "other-web"
+  ],
+  "role": "diagnostics",
+  "install": {
+    "mode": "review-docs",
+    "requires": [
+      "node"
+    ],
+    "eligibleAgents": [
+      "cursor",
+      "codex",
+      "claude-code"
+    ],
+    "review": [
+      "Only if existing browser tools lack required diagnostics. Check official configuration and browser prerequisites.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "Apache-2.0",
+  "lastRepositoryPush": "2026-11-27",
+  "verify": "Confirm connection and that the intended diagnostic tool works on an authorized local page.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

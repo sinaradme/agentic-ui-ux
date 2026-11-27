@@ -1,0 +1,31 @@
+{
+  "id": "motion-web",
+  "name": "Motion (open-source core)",
+  "source": "https://github.com/motiondivision/motion",
+  "docs": "https://motion.dev/docs/react",
+  "kind": "runtime",
+  "stacks": [
+    "react-web"
+  ],
+  "role": "motion-runtime",
+  "install": {
+    "mode": "review-docs",
+    "requires": [
+      "node"
+    ],
+    "examples": [
+      "npm install motion"
+    ],
+    "review": [
+      "Use the actual package manager and pin a reviewed version. Check existing Motion/Framer Motion or another animation runtime first; never add a second runtime automatically.",
+      "Use only MIT core features; Motion+ is not required. Check framework/runtime compatibility and license."
+    ]
+  },
+  "license": "MIT (core)",
+  "lastRepositoryPush": "2026-11-26",
+  "evidence": "upstream README and metadata reviewed; no independent quality benchmark",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run",
+  "selectionTier": "preferred",
+  "verify": "Confirm actual installed revision and imports, build, reduced-motion behavior, interrupted transitions and rendered performance."
+}

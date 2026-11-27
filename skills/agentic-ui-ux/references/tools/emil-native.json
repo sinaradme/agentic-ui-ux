@@ -1,0 +1,36 @@
+{
+  "id": "emil-native",
+  "name": "Emil: animate-expo",
+  "source": "https://github.com/emilkowalski/skills",
+  "docs": "https://aiforui.dev/skills/animate-expo",
+  "kind": "skill",
+  "stacks": [
+    "react-native"
+  ],
+  "role": "motion",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "animate-expo",
+  "install": {
+    "mode": "review-command",
+    "command": "npx skills add emilkowalski/skills --skill animate-expo",
+    "scope": "target-project",
+    "requires": [
+      "node"
+    ],
+    "review": [
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+      "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-15",
+  "verify": "Verify animate-expo discovery; inspect gestures, transitions and reduced motion on a native device.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

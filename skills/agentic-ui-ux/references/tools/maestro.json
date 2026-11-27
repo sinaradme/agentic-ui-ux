@@ -1,0 +1,26 @@
+{
+  "id": "maestro",
+  "name": "Maestro",
+  "source": "https://github.com/mobile-dev-inc/Maestro",
+  "docs": "https://docs.maestro.dev/",
+  "kind": "testing",
+  "stacks": [
+    "react-native",
+    "flutter"
+  ],
+  "role": "native-e2e",
+  "install": {
+    "mode": "review-docs",
+    "review": [
+      "Verify platform support, OS tooling and authorized simulator/device. Reuse an existing native E2E framework.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "Apache-2.0",
+  "lastRepositoryPush": "2026-11-26",
+  "verify": "Run a non-destructive test flow against an authorized simulator/device; inspect actual results.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "anthropic-frontend",
+  "name": "Anthropic Frontend Design",
+  "source": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+  "docs": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+  "kind": "skill",
+  "stacks": [
+    "react-web",
+    "other-web"
+  ],
+  "role": "alternative-primary",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "frontend-design",
+  "install": {
+    "mode": "review-command",
+    "command": "npx skills add anthropics/skills --skill frontend-design",
+    "scope": "target-project",
+    "requires": [
+      "node"
+    ],
+    "review": [
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+      "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "Apache-2.0 (specific skill)",
+  "lastRepositoryPush": "2026-11-16",
+  "verify": "Verify frontend-design is discovered and the agent reads the approved skill.",
+  "selectionTier": "alternative",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

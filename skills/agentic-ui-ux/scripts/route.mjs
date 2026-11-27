@@ -11,14 +11,16 @@ function route(input,catalog,registry,policy,validateContext){
  const tasks=input.tasks;if(!Array.isArray(tasks)||tasks.length<1||tasks.length>policy.limits.maxTaskCapabilities)return blocked("Choose 1–"+policy.limits.maxTaskCapabilities+" relevant capability IDs.");
  const caps=new Map(registry.capabilities.map(c=>[c.id,c]));const tools=new Map(catalog.tools.map(t=>[t.id,t]));const seen=new Set();
  for(const task of tasks){
-   if(!task||typeof task!=="object"||Array.isArray(task)||Object.keys(task).some(k=>!["id","coverage","evidence","provider","advanced","materialFit"].includes(k))||!caps.has(task.id)||seen.has(task.id)||!["adequate","gap","unknown"].includes(task.coverage))return blocked("Invalid or duplicate capability.");
+   if(!task||typeof task!=="object"||Array.isArray(task)||Object.keys(task).some(k=>!["id","coverage","evidence","provider","advanced","materialFit","priority","runtimeInventory"].includes(k))||!caps.has(task.id)||seen.has(task.id)||!["adequate","gap","unknown"].includes(task.coverage))return blocked("Invalid or duplicate capability.");
    if(task.evidence!==undefined&&(typeof task.evidence!=="string"||task.evidence.length>1000))return blocked("Invalid evidence for "+task.id);
    if(task.coverage!=="unknown"&&!task.evidence?.trim())return blocked("Evidence required for "+task.id+"; use unknown if not checked.");
    if(task.provider!==undefined&&(task.coverage!=="adequate"||typeof task.provider!=="string"||(task.provider!=="project"&&(!tools.has(task.provider)||!ctx.installedTools.includes(task.provider)))))return blocked("Provider must be a confirmed existing tool for adequate coverage.");
    if(["advanced","materialFit"].some(k=>task[k]!==undefined&&typeof task[k]!=="boolean"))return blocked("Invalid capability flags.");
+   if(task.priority!==undefined&&!["core","supporting"].includes(task.priority))return blocked("Invalid capability priority.");
+   if(task.runtimeInventory!==undefined&&!["none","present","unknown"].includes(task.runtimeInventory))return blocked("Invalid runtime inventory.");
    seen.add(task.id);
  }
- const requested=new Map(tasks.map(t=>[t.id,t]));const ordered=registry.capabilities.filter(c=>requested.has(c.id));
+ const requested=new Map(tasks.map(t=>[t.id,t]));const ordered=registry.capabilities.filter(c=>requested.has(c.id)).sort((a,b)=>Number(requested.get(a.id).priority==="supporting")-Number(requested.get(b.id).priority==="supporting"));
  const routes=[],actions=new Map(),notes=[],playbooks=new Set();let newSpecialists=0;const runtimeFamilies=new Set();
  const noNew=input.policy==="no-new-tools";
  let owner=ctx.primarySkill==="none"?null:ctx.primarySkill;
@@ -26,13 +28,13 @@ function route(input,catalog,registry,policy,validateContext){
  const applicable=(c,p)=>p.stacks.includes(ctx.stack)&&tools.get(p.tool)?.stacks.includes(ctx.stack);
  const tierAllowed=t=>["preferred","specialized"].includes(t.selectionTier);
  const prereqs=t=>{const gaps=(t.install.requires||[]).filter(k=>ctx[k]!=="present").map(k=>k+" is "+ctx[k]);const agents=t.kind==="skill"?t.eligibleAgents:t.install.eligibleAgents;if(agents&&!agents.includes(ctx.agent))gaps.push("Verify agent support");return gaps;};
- const pickAction=(t,reason,invoke,existing=false)=>{
+ const pickAction=(t,reason,invoke,existing=false,configure=false)=>{
    const gaps=prereqs(t);if(gaps.length)return {blocked:gaps};
    const prev=actions.get(t.id);
    if(prev){if(invoke&&!prev.invocations.includes(invoke))prev.invocations.push(invoke);return {status:prev.status};}
-   const status=existing?"reuse":"candidate";
+   const status=configure?"configure-existing":existing?"reuse":"candidate";
    const a={id:t.id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,license:t.license,tier:t.selectionTier,evidenceLevel:t.evidenceLevel,qualityBenchmark:t.qualityBenchmark,lastRepositoryPush:t.lastRepositoryPush,verification:t.verify,invocations:invoke?[invoke]:[]};
-   if(!existing){a.installMode=t.install.mode;a.reviewBeforeApproval=t.install.review||[];if(t.install.command)a.commandExample=t.install.command;if(t.install.examples)a.commandExamples=t.install.examples;if(t.install.agentExamples?.[ctx.agent])a.commandExamples=t.install.agentExamples[ctx.agent];if(t.install.config)a.configExample=t.install.config;}
+   if(!existing||configure){a.installMode=t.install.mode;a.reviewBeforeApproval=t.install.review||[];if(t.install.command)a.commandExample=t.install.command;if(t.install.examples)a.commandExamples=t.install.examples;if(t.install.agentExamples?.[ctx.agent])a.commandExamples=t.install.agentExamples[ctx.agent];if(t.install.config)a.configExample=t.install.config;}
    actions.set(t.id,a);return {status};
  };
  const choosePrimary=()=>{
@@ -51,10 +53,13 @@ function route(input,catalog,registry,policy,validateContext){
    const task=requested.get(c.id);
    if(!c.stacks.includes(ctx.stack)){routes.push({id:c.id,group:c.group,status:"not-applicable",reason:"Capability is not defined for "+ctx.stack});continue;}
    const playbook=registry.groups[c.group].path;playbooks.add(playbook);
-   const r={id:c.id,group:c.group,kind:c.kind,playbook,coverage:task.coverage,status:"playbook",reason:"Use bundled guidance and project primitives first."};
+   const r={id:c.id,group:c.group,kind:c.kind,playbook,coverage:task.coverage,priority:task.priority||"core",status:"playbook",reason:"Use bundled guidance and project primitives first."};
    const providers=c.providers.filter(p=>applicable(c,p));
    const finish=(status,reason,extra={})=>{Object.assign(r,{status,reason},extra);routes.push(r);};
    if(task.coverage==="adequate"){
+     if(c.browserGate&&ctx.browserAccess!=="present"){finish("needs-verification","Adequate browser coverage conflicts with unconfirmed browser access.");continue;}
+     if(c.deviceGate&&ctx.deviceAccess!=="present"){finish("blocked","Adequate native coverage conflicts with unconfirmed device access.");continue;}
+     if(c.componentGate&&ctx.componentSystem!=="present"){finish("needs-verification","Adequate component coverage conflicts with the component inventory.");continue;}
      if(task.provider&&task.provider!=="project"){
        const match=providers.find(p=>p.tool===task.provider);
        if(!match){finish("needs-verification","Existing provider is not mapped to this capability; verify fit manually.");continue;}
@@ -75,27 +80,29 @@ function route(input,catalog,registry,policy,validateContext){
    if(c.id==="device-inspection"){finish("reuse-project","Use the confirmed native device or emulator.");continue;}
    if(c.explicitMaterial&&task.materialFit!==true){finish("needs-verification","Confirm Material Design fits the native product.");continue;}
    if(c.requiresAdvanced&&task.advanced!==true){finish("playbook","Use built-in or existing runtime first; advanced gap not confirmed.",{builtin:c.builtin});continue;}
-   if(c.exclusive&&ctx.installedTools.some(id=>tools.get(id)?.role==="motion-runtime")){finish("needs-verification","An animation runtime is already present; review or extend it instead of installing another.");continue;}
+   if(c.exclusive&&(task.runtimeInventory==="present"||ctx.installedTools.some(id=>tools.get(id)?.role==="motion-runtime"))){finish("needs-verification","An animation runtime is already present; review or extend it instead of installing another.");continue;}
+   if(c.exclusive&&task.runtimeInventory!=="none"){finish("needs-verification","Confirm that no suitable animation runtime is installed, including uncataloged runtimes.");continue;}
    if(task.coverage==="unknown"){
      finish(["tooling","implementation"].includes(c.kind)?"needs-verification":"playbook","Unknown coverage is not a confirmed gap. Use the playbook and inspect the project.");continue;
    }
    if(c.kind==="primary"||c.existingPrimaryOnly){
      const match=providers.find(p=>p.tool===owner);
      if(!match){finish("playbook",owner?"Preserve the current primary owner; use bundled guidance for this uncovered capability.":"Use bundled guidance; do not install a general design skill for a narrow task.");continue;}
-     if(c.existingPrimaryOnly&&!ctx.installedTools.includes(owner)&&!actions.has(owner)){
+     if(c.existingPrimaryOnly&&!ctx.installedTools.includes(owner)&&!ordered.some(k=>k.kind==="primary"&&k.goals?.includes(ctx.goal)&&k.stacks.includes(ctx.stack)&&requested.get(k.id).coverage==="gap"&&k.providers.some(p=>p.tool===owner&&applicable(k,p)))){
        finish("playbook","Narrow task does not justify a separate primary skill.");continue;
      }
      const t=tools.get(owner);const existing=ctx.installedTools.includes(owner);
-     if(existing&&!actions.has(owner)){finish("needs-verification","The existing primary was reported insufficient for this capability; review its focused command before adding another.");continue;}
+     if(existing){finish("needs-verification","The existing primary was reported insufficient for this capability; review its focused command before adding another.");continue;}
      if(!existing&&(noNew||!tierAllowed(t))){finish("playbook","No new primary installation under this policy.");continue;}
      const res=pickAction(t,"Single design owner for this task",match.invoke,existing);
      if(res.blocked){finish("needs-verification","Preferred primary prerequisites missing; no automatic alternative.",{blockers:res.blocked});continue;}
      finish(res.status,"One primary owner; reuse the same skill across capabilities.",{provider:t.id,invoke:match.invoke||undefined});continue;
    }
-   if(noNew){finish("playbook","No-new-tools policy; use existing/project guidance or report an unresolved gap.");continue;}
+   if(noNew){finish(["tooling","implementation"].includes(c.kind)?"blocked":"playbook","No-new-tools policy; use existing/project guidance or report an unresolved gap.");continue;}
+   if(c.browserGate&&ctx.installedTools.includes("playwright-mcp")){const t=tools.get("playwright-mcp");const res=pickAction(t,"Existing browser server is not working; review configuration rather than reinstall.",null,true,true);if(res.blocked){finish("needs-verification","Existing browser server prerequisites missing.",{blockers:res.blocked});continue;}finish(res.status,"Review and repair the existing browser server configuration.",{provider:t.id});continue;}
    if(providers.some(p=>ctx.installedTools.includes(p.tool))){finish("needs-verification","A mapped provider is already installed but reported insufficient; diagnose it instead of silently installing another.");continue;}
-   const match=providers.find(p=>tierAllowed(tools.get(p.tool))&&(tools.get(p.tool).selectionTier!=="specialized"||c.explicitSpecialized===true));
-   if(!match){finish("playbook","No eligible external default for this capability; use bundled guidance and report unmet requirements.");continue;}
+   const match=[...providers].sort((a,b)=>Number(tools.get(a.tool).selectionTier!=="preferred")-Number(tools.get(b.tool).selectionTier!=="preferred")).find(p=>tierAllowed(tools.get(p.tool))&&(tools.get(p.tool).selectionTier!=="specialized"||c.explicitSpecialized===true));
+   if(!match){finish(["tooling","implementation"].includes(c.kind)?"blocked":"playbook","No eligible external default for this capability; use bundled guidance and report unmet requirements.");continue;}
    const t=tools.get(match.tool);
    if(t.kind==="skill"&&!actions.has(t.id)&&newSpecialists>=policy.limits.newSpecialistSkills){finish("playbook","Specialist skill budget reached; use bundled guidance or request a justified follow-up.");continue;}
    if(c.exclusive&&runtimeFamilies.has(c.exclusive)){finish("needs-verification","Runtime family already selected; do not add another.");continue;}
@@ -113,7 +120,7 @@ function route(input,catalog,registry,policy,validateContext){
  }
  if(ctx.stack==="flutter")notes.push("Flutter SDK widgets, animations and tests are the default; no web-only runtime.");
  if(!actions.size)notes.push("No external installation/invocation is currently selected; bundled guidance remains available.");
- return {schemaVersion:1,edition:catalog.edition,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,primaryOwner:owner,playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
+ return {schemaVersion:1,edition:catalog.edition,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,primaryOwner:owner,primaryOwnerStatus:owner?(actions.has(owner)?"selected":ctx.primarySkill===owner?"existing-not-invoked":"unresolved"):"none",playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
 }
 export function createRoute(input){return route(input,catalog,registry,policy,createPlan);}
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const input=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const out=createRoute(input);console.log(JSON.stringify(out,null,2));if(out.status==='blocked')process.exitCode=2;}catch(e){console.error('Route failed:',e.message);process.exitCode=2;}}

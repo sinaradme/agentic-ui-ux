@@ -1,0 +1,38 @@
+{
+  "id": "taste",
+  "name": "Taste Skill",
+  "source": "https://github.com/Leonxlnx/taste-skill",
+  "docs": "https://github.com/Leonxlnx/taste-skill",
+  "kind": "skill",
+  "stacks": [
+    "react-web",
+    "other-web"
+  ],
+  "role": "primary",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "design-taste-frontend",
+  "install": {
+    "mode": "review-command",
+    "command": "npx skills add Leonxlnx/taste-skill --skill design-taste-frontend",
+    "scope": "target-project",
+    "requires": [
+      "node"
+    ],
+    "review": [
+      "Inspect skill source, scripts and exact revision.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+      "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-26",
+  "verify": "Confirm the skill is discovered by the target agent and the loaded SKILL.md matches the approved revision.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

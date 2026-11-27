@@ -11,3 +11,5 @@ For hands-on comparisons, follow the [evaluation protocol](benchmarks/README.md)
 Maintain concise, English-language documentation. Link upstream rather than copying large portions of third-party instructions. Keep recommendations actionable, distinguish observed facts from editorial judgments, and update the research date when rechecking metadata. By contributing, you agree to license original contributions under this repository's MIT license.
 
 For changes to agent selection, update the skill's catalog and decision rules together. Add a representative fixture and run `node skills/agentic-ui-ux/scripts/test-plan.mjs`. Keep installation examples separate from executable actions. Do not claim installation or visual-quality validation based on planner fixtures alone.
+
+Capability routing uses canonical `capabilities.json`, `catalog.json` and `priority-policy.json`. Regenerate the compact agent-readable index and tool cards with `node skills/agentic-ui-ux/scripts/generate-index.mjs`; CI rejects drift. Add a route fixture for changes to provider priority, conflict gates or capabilities.

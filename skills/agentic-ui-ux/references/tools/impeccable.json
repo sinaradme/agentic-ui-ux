@@ -1,0 +1,42 @@
+{
+  "id": "impeccable",
+  "name": "Impeccable",
+  "source": "https://github.com/pbakaus/impeccable",
+  "docs": "https://impeccable.style/docs",
+  "kind": "skill",
+  "stacks": [
+    "react-web",
+    "other-web"
+  ],
+  "role": "primary",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "impeccable",
+  "install": {
+    "mode": "review-command",
+    "command": "npx impeccable install",
+    "scope": "target-project",
+    "requires": [
+      "node"
+    ],
+    "review": [
+      "Review installer, detector and hooks. Do not enable unattended hooks without explicit approval.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ],
+    "activation": {
+      "cursor": "/impeccable init",
+      "codex": "$impeccable init",
+      "claude-code": "/impeccable init"
+    }
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "Apache-2.0",
+  "lastRepositoryPush": "2026-11-27",
+  "verify": "Verify discovery and initialization; inspect generated PRODUCT.md/DESIGN.md and any hook settings. Run a focused critique only after approval.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

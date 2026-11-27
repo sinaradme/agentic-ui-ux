@@ -89,6 +89,21 @@
           },
           "materialFit": {
             "type": "boolean"
+          },
+          "priority": {
+            "enum": [
+              "core",
+              "supporting"
+            ],
+            "description": "Core task capabilities are routed before supporting capabilities."
+          },
+          "runtimeInventory": {
+            "enum": [
+              "none",
+              "present",
+              "unknown"
+            ],
+            "description": "Required for a new advanced animation runtime; includes runtimes outside this catalog."
           }
         }
       }

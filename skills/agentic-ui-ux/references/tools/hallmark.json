@@ -1,0 +1,37 @@
+{
+  "id": "hallmark",
+  "name": "Hallmark",
+  "source": "https://github.com/Nutlope/hallmark",
+  "docs": "https://github.com/Nutlope/hallmark",
+  "kind": "skill",
+  "stacks": [
+    "react-web",
+    "other-web"
+  ],
+  "role": "alternative-primary",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "hallmark",
+  "install": {
+    "mode": "review-docs",
+    "command": null,
+    "scope": "target-project",
+    "requires": [
+      "node"
+    ],
+    "review": [
+      "Check current skill names and upstream installer. Alternative only; not a second primary skill.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-11",
+  "verify": "Verify the installed skill name, source revision and agent discovery.",
+  "selectionTier": "alternative",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

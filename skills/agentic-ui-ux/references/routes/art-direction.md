@@ -1,0 +1,8 @@
+# Art direction: routing table
+
+Generated from the canonical registry. [Playbook](../playbooks/art-direction.md) · [Index](../INDEX.md). Apply compatibility, coverage, ownership, budget and priority gates before choosing any provider. A listed provider is not an installation recommendation.
+
+| Capability ID | Need | Role | Stacks | Providers / focused invocation | Gates |
+| --- | --- | --- | --- | --- | --- |
+| `art-direction` | Visual direction / concept | primary | react-web, other-web, react-native, flutter | [Taste Skill](../tools/taste.json) (react-web, other-web; design-taste-frontend); [Impeccable](../tools/impeccable.json) (react-web, other-web; bolder / quieter); [UI/UX Pro Max](../tools/uiux-pro-max.json) (react-web, other-web, react-native, flutter; design-system search (planning only)); [Hallmark](../tools/hallmark.json) (react-web, other-web); [Anthropic Frontend Design](../tools/anthropic-frontend.json) (react-web, other-web; frontend-design) | goals: new-ui, redesign, ux-planning |
+| `brand-consistency` | Preserve or establish brand language | primary | react-web, other-web, react-native, flutter | [Taste Skill](../tools/taste.json) (react-web, other-web; design-taste-frontend); [Impeccable](../tools/impeccable.json) (react-web, other-web; document); [UI/UX Pro Max](../tools/uiux-pro-max.json) (react-web, other-web, react-native, flutter; design-system search (planning only)); [Hallmark](../tools/hallmark.json) (react-web, other-web); [Anthropic Frontend Design](../tools/anthropic-frontend.json) (react-web, other-web; frontend-design) | goals: new-ui, redesign, ux-planning |

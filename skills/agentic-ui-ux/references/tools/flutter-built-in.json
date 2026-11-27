@@ -1,0 +1,22 @@
+{
+  "id": "flutter-built-in",
+  "name": "Flutter Material/Cupertino, animations and tests",
+  "source": "https://github.com/flutter/flutter",
+  "docs": "https://docs.flutter.dev/ui/",
+  "kind": "built-in",
+  "stacks": [
+    "flutter"
+  ],
+  "role": "native-foundation",
+  "install": {
+    "mode": "none",
+    "review": []
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "BSD-3-Clause",
+  "lastRepositoryPush": "2026-11-27",
+  "verify": "Verify flutter analyze, relevant widget/integration tests and device rendering when possible.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

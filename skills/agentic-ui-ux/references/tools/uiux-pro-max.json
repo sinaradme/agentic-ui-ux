@@ -1,0 +1,55 @@
+{
+  "id": "uiux-pro-max",
+  "name": "UI/UX Pro Max",
+  "source": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "docs": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "kind": "skill",
+  "stacks": [
+    "react-web",
+    "other-web",
+    "react-native",
+    "flutter"
+  ],
+  "role": "primary",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "ui-ux-pro-max",
+  "install": {
+    "mode": "review-docs",
+    "command": null,
+    "scope": "target-project",
+    "requires": [
+      "node",
+      "python"
+    ],
+    "review": [
+      "Official CLI setup may install a global CLI; obtain separate approval for user-wide changes.",
+      "Native use is planning guidance only; verify platform support.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ],
+    "agentExamples": {
+      "cursor": [
+        "npm install -g ui-ux-pro-max-cli",
+        "uipro init --ai cursor"
+      ],
+      "codex": [
+        "npm install -g ui-ux-pro-max-cli",
+        "uipro init --ai codex"
+      ],
+      "claude-code": [
+        "npm install -g ui-ux-pro-max-cli",
+        "uipro init --ai claude"
+      ]
+    }
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-27",
+  "verify": "Confirm the installed CLI and Python versions, project skill discovery and a successful design-system query.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

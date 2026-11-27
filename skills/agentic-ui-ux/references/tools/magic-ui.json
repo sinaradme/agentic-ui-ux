@@ -1,0 +1,25 @@
+{
+  "id": "magic-ui",
+  "name": "Magic UI",
+  "source": "https://github.com/magicuidesign/magicui",
+  "docs": "https://magicui.design/docs",
+  "kind": "components",
+  "stacks": [
+    "react-web"
+  ],
+  "role": "creative-effects",
+  "install": {
+    "mode": "review-docs",
+    "review": [
+      "Check existing component system, framework, dependencies and asset license. Use free source only. Select an individual effect, not a bulk install.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT (free repository)",
+  "lastRepositoryPush": "2026-11-26",
+  "verify": "Review the selected component source, dependency changes and rendered motion/performance.",
+  "selectionTier": "specialized",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

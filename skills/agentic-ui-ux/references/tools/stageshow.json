@@ -1,0 +1,37 @@
+{
+  "id": "stageshow",
+  "name": "Stageshow",
+  "source": "https://github.com/benjitaylor/skills/tree/main/stageshow",
+  "docs": "https://github.com/benjitaylor/skills/tree/main/stageshow",
+  "kind": "skill",
+  "stacks": [
+    "react-web"
+  ],
+  "role": "illustration",
+  "eligibleAgents": [
+    "cursor",
+    "codex",
+    "claude-code"
+  ],
+  "skillName": "stageshow",
+  "install": {
+    "mode": "review-command",
+    "command": "npx skills add benjitaylor/skills --skill stageshow",
+    "scope": "target-project",
+    "requires": [
+      "node"
+    ],
+    "review": [
+      "Inspect skill-specific license and notices, React requirements and scripts.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+      "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT (specific skill; notices apply)",
+  "lastRepositoryPush": "2026-11-05",
+  "verify": "Verify discovery and compatible React demo/build; inspect the animation.",
+  "selectionTier": "specialized",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

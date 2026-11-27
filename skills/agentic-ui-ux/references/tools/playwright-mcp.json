@@ -1,0 +1,40 @@
+{
+  "id": "playwright-mcp",
+  "name": "Playwright MCP",
+  "source": "https://github.com/microsoft/playwright-mcp",
+  "docs": "https://github.com/microsoft/playwright-mcp",
+  "kind": "mcp",
+  "stacks": [
+    "react-web",
+    "other-web"
+  ],
+  "role": "browser",
+  "install": {
+    "mode": "review-config",
+    "requires": [
+      "node"
+    ],
+    "eligibleAgents": [
+      "cursor",
+      "codex",
+      "claude-code"
+    ],
+    "config": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "review": [
+      "Verify MCP support, browser availability and project scope. Merge existing config; do not overwrite other servers. Restrict browser to authorized work.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "Apache-2.0",
+  "lastRepositoryPush": "2026-11-18",
+  "verify": "Confirm the MCP server is connected and can navigate the authorized local page and capture a screenshot.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

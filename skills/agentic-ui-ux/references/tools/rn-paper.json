@@ -1,0 +1,25 @@
+{
+  "id": "rn-paper",
+  "name": "React Native Paper",
+  "source": "https://github.com/callstack/react-native-paper",
+  "docs": "https://callstack.github.io/react-native-paper/",
+  "kind": "components",
+  "stacks": [
+    "react-native"
+  ],
+  "role": "components",
+  "install": {
+    "mode": "review-docs",
+    "review": [
+      "Only if Material Design fits and no native component system exists; check installed RN/Expo version.",
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "upstream-documented; not independently benchmarked",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-25",
+  "verify": "Verify native package compatibility, build and real device rendering.",
+  "selectionTier": "preferred",
+  "evidenceLevel": "upstream-documented",
+  "qualityBenchmark": "not-run"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "fancy-ui",
+  "name": "Fancy UI",
+  "source": "https://github.com/RamaHerbin/fancy-ui",
+  "docs": "https://github.com/RamaHerbin/fancy-ui",
+  "kind": "exploratory",
+  "stacks": [
+    "other-web"
+  ],
+  "role": "manual-reference",
+  "install": {
+    "mode": "review-docs",
+    "review": [
+      "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval."
+    ]
+  },
+  "evidence": "metadata reviewed; verify exact framework; no automatic selection",
+  "license": "MIT",
+  "lastRepositoryPush": "2026-11-27",
+  "verify": "Review manually; verify exact framework and isolated rendering before adoption.",
+  "selectionTier": "exploratory",
+  "evidenceLevel": "metadata-reviewed",
+  "qualityBenchmark": "not-run"
+}
