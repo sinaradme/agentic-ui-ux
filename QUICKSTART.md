@@ -135,10 +135,10 @@ If you prefer a single workflow guide that your agent can read directly, run thi
 npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
 ```
 
-This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It includes a read-only project inspector and selects a minimal plan using its bundled catalog and rules; it does not install third-party tools for you. [Agent-first setup](AGENT-SETUP.md). The pinned Skills CLI was tested with this repository's local checkout for Cursor, Codex and Claude Code project paths. In-app discovery still needs verification; see [quality evidence](QUALITY.md).
+This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It includes a read-only project inspector and selects a minimal plan using its bundled catalog and rules; it does not install third-party tools for you. [Agent-first setup](AGENT-SETUP.md). The pinned Skills CLI was tested with this repository's local checkout for Cursor, Codex and Claude Code project paths. The public GitHub shorthand install route also passed in an isolated Codex-path project. In-app discovery still needs verification; see [quality evidence](QUALITY.md).
 
 ## 7. Reproducibility and safety
 
 The example commands use current upstream installers for discoverability. Before running them, inspect the package, skill scripts, hooks, licenses and transitive dependencies. For team use, pin reviewed versions or commits where supported; record changes to the lockfile or installed skill hashes. Never grant unreviewed tools unrestricted access to secrets, browsers or production systems. Review your Git diff after installation.
 
-**Status:** Commands are documented upstream, not executed or end-to-end tested by this repository.
+**Status:** Our own orchestration skill's packaging and CLI installation passed isolated CI tests. Third-party tool installation commands are documented upstream but not end-to-end tested here.

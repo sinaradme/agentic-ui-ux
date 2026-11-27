@@ -20,8 +20,8 @@ The goal is to let a coding agent read one repository, inspect a target project,
 | --- | --- |
 | Selection logic | 32/32 deterministic fixtures passed in authoring JavaScript runtime |
 | Inspector classification | 11/11 deterministic classifier fixtures passed in authoring JavaScript runtime |
-| Local CLI / filesystem tests | Passed in [GitHub Actions run 45960396562](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45960396562), Node 24.22.3 on Ubuntu: filesystem inspection, symlink isolation, isolated skill copy, actual CLI exit codes, unchanged project lockfile |
-| Skill installation using official Skills CLI 1.9.1 | Passed: [CI run 45960484167](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45960484167). Installed the skill from the checked-out repo in three isolated target projects for Cursor, Codex and Claude Code, ran the installed scripts and verified unchanged app manifests. This checks packaging, not agent model behavior. |
+| Local CLI / filesystem tests | Passed in [GitHub Actions run 45960613804](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45960613804), Node 24.22.3 on Ubuntu: filesystem inspection, symlink isolation, isolated skill copy, actual CLI exit codes, unchanged project lockfile |
+| Skill installation using official Skills CLI 1.9.1 | Passed: [final CI run 45960613833](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45960613833). Installed the skill from the checked-out repo in three isolated target projects for Cursor, Codex and Claude Code, ran the installed scripts and verified unchanged app manifests. Also passed the public GitHub shorthand install route in a fourth Codex-path fixture. This checks packaging, not agent model behavior. |
 | Actual in-app agent discovery and instruction following | Not yet tested in running Cursor, Codex or Claude Code sessions |
 | Real MCP connection / native device / browser QA | Not yet verified end-to-end |
 | Baseline vs skill-generated UI quality, manual edits and time | No independent results yet |

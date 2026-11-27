@@ -21,7 +21,7 @@ From the target project's terminal:
 npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
 ```
 
-This is the standard upstream skills CLI syntax; choose your coding agent and project scope. Review the source before installation. This repo's skill contains its own catalog, rules and optional planner in the same folder; it does not bundle or install third-party tools. Reload the agent and ask it to use agentic-ui-ux. The pinned Skills CLI successfully installed this skill from a local checkout into isolated Cursor, Codex and Claude Code project paths; the installed scripts also ran successfully. In-app agent discovery and behavior remain unverified. See [quality evidence](QUALITY.md).
+This is the standard upstream skills CLI syntax; choose your coding agent and project scope. Review the source before installation. This repo's skill contains its own catalog, rules and optional planner in the same folder; it does not bundle or install third-party tools. Reload the agent and ask it to use agentic-ui-ux. The pinned Skills CLI successfully installed this skill from a local checkout into isolated Cursor, Codex and Claude Code project paths; the installed scripts also ran successfully. The public GitHub shorthand install route also passed in a disposable Codex-path project using the pinned CLI. In-app agent discovery and behavior remain unverified. See [quality evidence](QUALITY.md).
 
 ## What the agent reads
 
