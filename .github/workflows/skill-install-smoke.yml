@@ -52,6 +52,7 @@ jobs:
             test -f "$skill/scripts/inspect.mjs"
             node "$skill/scripts/test-plan.mjs"
             node "$skill/scripts/test-route.mjs"
+            node "$skill/scripts/test-grounding.mjs"
             node "$skill/scripts/generate-index.mjs" --check
             node "$skill/scripts/test-cli.mjs"
             test "$before" = "$(sha256sum package.json)"
@@ -77,6 +78,7 @@ jobs:
           test -f "$skill/LICENSE"
           test -f "$skill/references/catalog.json"
           node "$skill/scripts/test-route.mjs"
+            node "$skill/scripts/test-grounding.mjs"
             node "$skill/scripts/generate-index.mjs" --check
           node "$skill/scripts/test-cli.mjs"
           test "$before" = "$(sha256sum package.json)"

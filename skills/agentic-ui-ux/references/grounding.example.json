@@ -1,0 +1,95 @@
+{
+  "phase": "preflight",
+  "request": {
+    "context": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "present",
+      "needs": []
+    },
+    "tasks": [
+      {
+        "id": "art-direction",
+        "coverage": "gap",
+        "evidence": "Fixture: inspected target capability"
+      },
+      {
+        "id": "page-layout",
+        "coverage": "gap",
+        "evidence": "Fixture: inspected target capability"
+      },
+      {
+        "id": "typography",
+        "coverage": "gap",
+        "evidence": "Fixture: inspected target capability"
+      }
+    ]
+  },
+  "surfaces": [
+    {
+      "id": "hero",
+      "description": "Landing hero (synthetic example only)"
+    }
+  ],
+  "decisions": [
+    {
+      "capability": "art-direction",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Hero and typography tokens",
+          "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+        }
+      ],
+      "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+      "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+    },
+    {
+      "capability": "page-layout",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Hero and typography tokens",
+          "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+        }
+      ],
+      "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+      "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+    },
+    {
+      "capability": "typography",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Hero and typography tokens",
+          "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+        }
+      ],
+      "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+      "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+    }
+  ]
+}
