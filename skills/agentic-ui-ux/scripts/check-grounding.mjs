@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import { createRoute } from './route.mjs';
+import { checkRebuild } from './check-rebuild.mjs';
 const read=name=>JSON.parse(readFileSync(new URL('../references/'+name,import.meta.url),'utf8'));
 const registry=read('capabilities.json'),catalog=read('catalog.json'),knowledge=read('knowledge.json');
 function check(record,route,registry,catalog,knowledge){
@@ -10,7 +11,7 @@ function check(record,route,registry,catalog,knowledge){
  const only=(o,keys)=>obj(o)&&Object.keys(o).every(k=>keys.includes(k));
  const arr=(x,min=0,max=100)=>Array.isArray(x)&&x.length>=min&&x.length<=max;
  const result=()=>({status:errors.length?"invalid":blockers.length?"blocked":"pass",phase:record?.phase||null,errors,blockers,structuralOnly:true,executionAuthorized:false,notice:"Record structure only; not proof of source inspection, permission, actual execution or visual quality."});
- if(!only(record,["phase","request","surfaces","decisions","acceptance","toolVerification"])||!["preflight","final"].includes(record.phase)||!arr(record.surfaces,1,100)||!arr(record.decisions,1,100)){errors.push("Invalid record shape.");return result();}
+ if(!only(record,["phase","request","surfaces","decisions","acceptance","toolVerification","rebuild"])||!["preflight","final"].includes(record.phase)||!arr(record.surfaces,1,100)||!arr(record.decisions,1,100)){errors.push("Invalid record shape.");return result();}
  if(!route||route.status!=="planned"){errors.push("A valid planned route request is required.");return result();}
  const isPlanning=route.goal==="ux-planning", capMap=new Map(registry.capabilities.map(c=>[c.id,c])), routes=new Map(route.routes.map(r=>[r.id,r])), toolMap=new Map(catalog.tools.map(t=>[t.id,t]));
  const relPath=v=>str(v,500)&&!v.startsWith("/")&&!/^[a-zA-Z]:|\\|[\r\n]/.test(v)&&v.split("/").every(x=>x&&x!==".."&&x!==".");
@@ -55,6 +56,7 @@ function check(record,route,registry,catalog,knowledge){
      if(kinds.has("screenshot"))d.surfaces.forEach(s=>verifiedSurfaces.add(s));
    }
  }
+ if(route.designMode==="rebuild"){const audit=checkRebuild(record.rebuild,route,record.phase,[...surfaceIds]);errors.push(...audit.errors.map(e=>"Rebuild: "+e));blockers.push(...audit.blockers.map(e=>"Rebuild: "+e));}
  for(const r of route.routes)if(![...covered].some(k=>k.startsWith(r.id+"\0")))errors.push("Missing decision for routed capability: "+r.id);
  if(record.phase==="final"){
    const required=isPlanning?["brief","design-system"]:["rendered-ui","functional","accessibility","responsive-or-native","build-or-validation"];

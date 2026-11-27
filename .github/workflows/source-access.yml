@@ -1,0 +1,23 @@
+name: Upstream source access
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/agentic-ui-ux/scripts/source.mjs'
+      - 'skills/agentic-ui-ux/scripts/test-source.mjs'
+      - 'skills/agentic-ui-ux/references/patterns.json'
+      - 'skills/agentic-ui-ux/references/catalog.json'
+      - 'skills/agentic-ui-ux/references/knowledge.json'
+      - '.github/workflows/source-access.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  retrieve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - run: node skills/agentic-ui-ux/scripts/test-source.mjs --live

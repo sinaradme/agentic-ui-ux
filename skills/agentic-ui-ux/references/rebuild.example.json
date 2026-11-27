@@ -1,0 +1,212 @@
+{
+  "phase": "preflight",
+  "request": {
+    "context": {
+      "stack": "react-web",
+      "goal": "redesign",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "present",
+      "needs": []
+    },
+    "tasks": [
+      {
+        "id": "art-direction",
+        "coverage": "gap",
+        "evidence": "Fixture: inspected target capability"
+      },
+      {
+        "id": "page-layout",
+        "coverage": "gap",
+        "evidence": "Fixture: inspected target capability"
+      },
+      {
+        "id": "typography",
+        "coverage": "gap",
+        "evidence": "Fixture: inspected target capability"
+      }
+    ],
+    "designMode": "rebuild",
+    "surfaceType": "marketing"
+  },
+  "surfaces": [
+    {
+      "id": "hero",
+      "description": "Synthetic existing hero"
+    }
+  ],
+  "decisions": [
+    {
+      "capability": "art-direction",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Approved product constraints",
+          "observed": "Synthetic preserved product facts"
+        }
+      ],
+      "adaptation": "Reconstruct composition with the rebuild record; preserve product facts",
+      "verificationPlan": "Compare actual before/after"
+    },
+    {
+      "capability": "page-layout",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Approved product constraints",
+          "observed": "Synthetic preserved product facts"
+        }
+      ],
+      "adaptation": "Reconstruct composition with the rebuild record; preserve product facts",
+      "verificationPlan": "Compare actual before/after"
+    },
+    {
+      "capability": "typography",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Approved product constraints",
+          "observed": "Synthetic preserved product facts"
+        }
+      ],
+      "adaptation": "Reconstruct composition with the rebuild record; preserve product facts",
+      "verificationPlan": "Compare actual before/after"
+    }
+  ],
+  "rebuild": {
+    "scope": {
+      "surfaceIds": [
+        "hero"
+      ],
+      "authorization": "Synthetic user requested structural redesign",
+      "constraints": [
+        "Preserve functionality and approved content"
+      ]
+    },
+    "baseline": "fixture/before-page.png",
+    "sources": [
+      {
+        "id": "replacement-world",
+        "sourceId": "replacement-world",
+        "toolId": "impeccable",
+        "location": "https://github.com/pbakaus/impeccable/blob/2fc5e1459efbbf06d92c7306517c286bf12490cf/.agents/skills/impeccable/reference/new-work.md",
+        "revision": "2fc5e1459efbbf06d92c7306517c286bf12490cf",
+        "method": "github",
+        "locator": "Decide what is already true; Choose the right amount of invention",
+        "observed": "Synthetic fixture — actual observation required in a project",
+        "gitBlob": "fe0a8183d00a8ff8861593b66117a6d68f002699",
+        "status": "read"
+      },
+      {
+        "id": "embla-radix-carousel",
+        "sourceId": "embla-radix-carousel",
+        "toolId": "shadcn",
+        "location": "https://github.com/shadcn-ui/ui/blob/0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4/apps/v4/content/docs/components/radix/carousel.mdx",
+        "revision": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
+        "method": "github",
+        "locator": "Composition; Sizes; Orientation; Options; RTL",
+        "observed": "Synthetic fixture — actual observation required in a project",
+        "gitBlob": "cd8ac34f425d04e6f868081952ba95baa2830ddd",
+        "status": "read"
+      },
+      {
+        "id": "feature-bento",
+        "sourceId": "feature-bento",
+        "toolId": "magic-ui",
+        "location": "https://github.com/magicuidesign/magicui/blob/a54d9edd7bd01dfb4fa72641df2b84da449a5e35/apps/www/content/docs/components/bento-grid.mdx",
+        "revision": "a54d9edd7bd01dfb4fa72641df2b84da449a5e35",
+        "method": "github",
+        "locator": "Examples; Usage",
+        "observed": "Synthetic fixture — actual observation required in a project",
+        "gitBlob": "19cb89e74304c909c5e09ce931b265c633967d63",
+        "status": "read"
+      }
+    ],
+    "sections": [
+      {
+        "id": "hero",
+        "baseline": {
+          "axes": {
+            "topology": "equal-grid",
+            "hierarchy": "equal-items",
+            "interaction": "slide-controls",
+            "motion": "entry"
+          },
+          "evidence": "fixture/before-hero.png",
+          "observation": "Synthetic equal cards and slider"
+        },
+        "concepts": [
+          {
+            "id": "stage",
+            "axes": {
+              "topology": "full-bleed",
+              "hierarchy": "single-dominant",
+              "interaction": "indexed-selection",
+              "motion": "crossfade"
+            },
+            "sources": [
+              "replacement-world",
+              "embla-radix-carousel"
+            ],
+            "sketch": "fixture/stage.html",
+            "rationale": "Synthetic concept: foreground one item with indexed navigation",
+            "tradeoff": "Needs mobile fallback"
+          },
+          {
+            "id": "matrix",
+            "axes": {
+              "topology": "asymmetric-grid",
+              "hierarchy": "visual-first",
+              "interaction": "static-reading",
+              "motion": "none"
+            },
+            "sources": [
+              "feature-bento"
+            ],
+            "sketch": "fixture/matrix.html",
+            "rationale": "Synthetic concept: hierarchy through unequal spans",
+            "tradeoff": "All items visible, no swipe"
+          },
+          {
+            "id": "rail",
+            "axes": {
+              "topology": "vertical-rail",
+              "hierarchy": "chronological",
+              "interaction": "scroll-linked",
+              "motion": "scroll-progress"
+            },
+            "sources": [
+              "replacement-world"
+            ],
+            "sketch": "fixture/rail.html",
+            "rationale": "Synthetic concept: chapter-based progression",
+            "tradeoff": "Check small screens"
+          }
+        ],
+        "selected": "stage",
+        "selectionReason": "Synthetic selection based on content hierarchy and accessible navigation"
+      }
+    ]
+  }
+}

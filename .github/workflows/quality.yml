@@ -22,6 +22,8 @@ jobs:
           node skills/agentic-ui-ux/scripts/test-inspect.mjs
           node skills/agentic-ui-ux/scripts/test-route.mjs
           node skills/agentic-ui-ux/scripts/test-grounding.mjs
+          node skills/agentic-ui-ux/scripts/test-source.mjs
+          node skills/agentic-ui-ux/scripts/test-rebuild.mjs
           node skills/agentic-ui-ux/scripts/generate-index.mjs --check
           node skills/agentic-ui-ux/scripts/test-repository.mjs
       - name: CLI and package integrity
