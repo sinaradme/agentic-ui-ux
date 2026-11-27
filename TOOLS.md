@@ -6,7 +6,7 @@
 
 **For agents:** use the [capability index](skills/agentic-ui-ux/references/INDEX.md), focused route tables and [routing guide](skills/agentic-ui-ux/references/routing.md). The [machine-readable catalog](skills/agentic-ui-ux/references/catalog.json) contains individual source credibility snapshots and trust tiers.
 
-**Need a quick answer?** Start with [the chooser](README.md#3-understand-what-the-agent-selects). See [actual author examples and demos](EXAMPLES.md) before installing.
+See [how the agent connects a provider](README.md#3-see-what-was-connected). See [actual author examples and demos](EXAMPLES.md) before installing.
 
 The initial catalog uses a 60-day repository-push filter (since 2026-09-28). New or low-adoption entries are explicitly marked exploratory. Every entry remains unbenchmarked here.
 
@@ -41,7 +41,7 @@ npx skills add Nutlope/hallmark
 npx skills add anthropics/skills --skill frontend-design
 ```
 
-For UI/UX Pro Max, use the [documented CLI setup](QUICKSTART.md#manual-alternatives). The Anthropic command uses the skills CLI's standard syntax; verify the skill list before installing.
+For UI/UX Pro Max, use the [documented CLI setup](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill). The Anthropic command uses the skills CLI's standard syntax; verify the skill list before installing.
 
 ## Motion and polish — optional
 
@@ -80,7 +80,7 @@ The last two are **exploratory** due to limited adoption. Do not infer maturity,
 | [Playwright MCP](https://github.com/microsoft/playwright-mcp) | Browser interaction, screenshots and functional checks | Apache-2.0 | 2026-11-18 | 40k |
 | [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Browser diagnostics and performance investigation | Apache-2.0 | 2026-11-27 | 60k |
 
-Choose one browser path to start; existing automation is sufficient if it covers the required checks. Neither tool is an autonomous design critic. See [setup](QUICKSTART.md#5-give-the-agent-visual-feedback).
+Choose one browser path to start; existing automation is sufficient if it covers the required checks. Neither tool is an autonomous design critic. See [setup](QUICKSTART.md#check-the-result).
 
 ## Reference catalogs — exploratory
 

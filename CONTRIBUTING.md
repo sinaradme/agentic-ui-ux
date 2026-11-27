@@ -10,10 +10,6 @@ For hands-on comparisons, follow the [evaluation protocol](benchmarks/README.md)
 
 Maintain concise, English-language documentation. Link upstream rather than copying large portions of third-party instructions. Keep recommendations actionable, distinguish observed facts from editorial judgments, and update the research date when rechecking metadata. By contributing, you agree to license original contributions under this repository's MIT license.
 
-For changes to agent selection, update the skill's catalog and decision rules together. Add a representative fixture and run `node skills/agentic-ui-ux/scripts/test-plan.mjs`. Keep installation examples separate from executable actions. Do not claim installation or visual-quality validation based on planner fixtures alone.
+For changes to the connection CLI, run `node skills/agentic-ui-ux/scripts/test-connect.mjs` and the live smoke. Preserve the project's exact-ID contract, upstream invocation flags, complete original manifests and license notices. Verify actual upstream execution when the provider requires it, and update [direct connection QC](DIRECT-CONNECT-QC.md).
 
-Capability routing uses canonical `capabilities.json`, `catalog.json` and `priority-policy.json`. Regenerate the compact agent-readable index and tool cards with `node skills/agentic-ui-ux/scripts/generate-index.mjs`; CI rejects drift. Add a route fixture for changes to provider priority, conflict gates or capabilities.
-
-Run all suites including `test-grounding.mjs`, `test-cli.mjs` and `test-repository.mjs` before merging. Update aggregate and per-tool knowledge cards together; source scopes and version-specific pointers must be reviewed, not copied blindly. Do not remove failing cases just to pass CI.
-
-For 1.1, prefer an actual native adapter and exact full original source manifest over a new summary or design instruction. Preserve upstream invocation flags and license notices, test original execution, and update [direct connection QC](DIRECT-CONNECT-QC.md).
+When editing the legacy capability tables, regenerate the index and tool cards with `node skills/agentic-ui-ux/scripts/generate-index.mjs`. Run [repository quality](.github/workflows/quality.yml) before merging.

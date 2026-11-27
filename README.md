@@ -1,8 +1,8 @@
 # Agentic UI/UX
 
-Build better websites and apps with AI coding agents — without installing dozens of tools.
+Connect a coding agent to original UI, UX and motion tools with one project skill.
 
-One open-source connector for Cursor, Codex and Claude Code. Give it a design task; it installs verified original skills as needed and hands the work to them. Other tools use their own official native installation and invocation paths.
+One open-source connector for Cursor, Codex and Claude Code. Give it a design task. The agent chooses the upstream tools it needs, installs verified originals on demand, and follows their workflows. Other tools use their own official native installation and invocation paths.
 
 [Give your agent one link](AGENT-SETUP.md) · [Quickstart](QUICKSTART.md) · [Tool directory](TOOLS.md) · [Visual examples](EXAMPLES.md) · [Ready-to-use prompts](WORKFLOWS.md) · [Mobile](MOBILE.md)
 
@@ -12,7 +12,6 @@ Agentic UI/UX connects your coding agent to the actual original design and motio
 
 ```text
 Use agentic-ui-ux to redesign this homepage with professional motion.
-Connect the original upstream tools and follow their own workflows.
 ```
 
 [Direct connection workflow](skills/agentic-ui-ux/references/direct-connect.md) · [Agent setup](AGENT-SETUP.md) · [Tool directory](TOOLS.md)
@@ -29,7 +28,7 @@ The two designs use different typography, imagery and composition. The tool's au
 
 ## 1. Install one skill
 
-Open a terminal in your target project. Review the repository and install only the orchestration skill:
+Open a terminal in your target project. Install the connector:
 
 ```bash
 npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
@@ -41,25 +40,13 @@ Choose your coding agent and project scope. Reload the agent if needed. No third
 
 ```text
 Use the agentic-ui-ux skill to redesign this screen with professional motion.
-Preserve functionality and follow the selected original upstream tools.
 ```
 
-Authorize project-scoped native installation when prompted. The agent runs the connector, installs exact original skill trees, then invokes them through its host (reload if needed). If a selected library or MCP requires an additional native action, the agent follows the actual official tool and verifies its use.
+The agent reads the original descriptions, chooses the IDs it needs, and installs verified skill trees within the project when authorized. It uses host invocation where available or applies the original files directly where permitted. For libraries and MCP, it runs the selected provider's official action.
 
-## 3. Understand what the agent selects
+## 3. See what was connected
 
-| Task | Original provider |
-| --- | --- |
-| New marketing website | Taste |
-| Web redesign, functional UI or design review | Impeccable |
-| UX planning / native design intelligence | UI/UX Pro Max |
-| Web motion | Emil animate and focused specialists |
-| React component registry | Original shadcn or Magic UI skill + actual official CLI |
-| RN/Expo motion | Emil animate-expo |
-| Product UI illustration | Stageshow |
-| Browser verification | Existing browser tool or actual Playwright MCP |
-
-These are task-specific defaults, not measured quality rankings. A task may need no new dependency. The connector does not override the original provider's decisions.
+The [tool directory](TOOLS.md) lists candidates and links to their publishers. The [connection CLI](skills/agentic-ui-ux/references/direct-connect.md) accepts only IDs explicitly chosen by the agent and returns the original repository, pinned revision and verified local entry. The agent can connect a further tool if the original workflow requires it.
 
 ## 4. Check the real result
 
@@ -83,8 +70,8 @@ An original skill installation is not an agent activation, and neither proves vi
 - [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
 - [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [Quality reports](QUALITY.md) · [Final release QC](FINAL-QC.md) · [Rebuild QC](REBUILD-QC.md).
 
-**Research updated:** November 27, 2026 · **Edition:** 1.1 — Direct upstream connection
+**Research updated:** November 27, 2026 · **Edition:** 1.2 — Agent-selected upstream connection
 
-Direct native installation and actual upstream executable smoke tests are tracked in [Direct connection QC](DIRECT-CONNECT-QC.md). In-app agent behavior and independent design-quality comparisons remain unvalidated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
+Installation and actual upstream use are tracked in [Direct connection QC](DIRECT-CONNECT-QC.md). Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 
 Original guide: [MIT](LICENSE). Third-party examples are linked from their creators, not relicensed here.

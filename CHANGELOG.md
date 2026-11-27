@@ -1,11 +1,18 @@
+# Changelog
+
+## 1.2 — Agent-selected upstream connection (2026-11-27)
+
+- Accept explicit provider IDs only. The connector preserves order and adds no providers.
+- Add CLI discovery and source receipts with pinned official URLs, native installation paths and original invocation restrictions.
+- Preserve original file verification and improve recovery when Git and raw networking are unavailable.
+- Document immediate use of verified original files when host invocation is unavailable.
+
 ## 1.1 — Direct upstream connection (2026-11-27)
 
 - Replaced the mandatory central design/playbook workflow with direct original provider delegation.
 - Added full native skill distribution retrieval, verified file manifests, project-scoped installation, existing-file conflict checks and explicit hook/tool-permission handling.
 - Added original shadcn and Magic UI native skills and direct official CLI/runtime/MCP handoffs.
 - Added actual upstream engine and native connection smoke checks. [Direct connection QC](DIRECT-CONNECT-QC.md).
-
-# Changelog
 
 ## 1.0 — 2026-11-27
 

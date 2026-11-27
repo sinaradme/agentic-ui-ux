@@ -5,6 +5,10 @@ on:
     paths:
       - 'skills/agentic-ui-ux/**'
       - '.github/workflows/skill-install-smoke.yml'
+  pull_request:
+    paths:
+      - 'skills/agentic-ui-ux/**'
+      - '.github/workflows/skill-install-smoke.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -63,6 +67,7 @@ jobs:
             echo "PASS: $agent project-scoped skill files, executable planner and unchanged app manifest"
           done
       - name: Verify the public GitHub install route
+        if: github.event_name != 'pull_request'
         shell: bash
         env:
           CI: 'true'
@@ -92,8 +97,8 @@ jobs:
           test "$before" = "$(sha256sum package.json)"
           node "$skill/scripts/source.mjs" read replacement-world > "$target/source-receipt.json"
           node -e 'const r=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8"));if(r.id!=="replacement-world"||!r.content||!r.sha256)process.exit(1);console.log("PASS installed skill live upstream retrieval",r.id,r.bytes)' "$target/source-receipt.json"
-          printf '%s\n' '{"agent":"codex","stack":"react-web","goal":"motion","primary":"none"}' > "$target/connect-task.json"
+          printf '%s\n' '{"agent":"codex","tools":["emil-web"]}' > "$target/connect-task.json"
           node "$skill/scripts/connect.mjs" "$target/connect-task.json" "$target" --apply > "$target/connect-receipt.json"
-          node -e 'const r=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8"));if(r.status!=="original-files-verified"||!r.results.some(x=>x.name==="animate"&&x.verifiedFiles>0))process.exit(1);console.log("PASS installed central skill installed original upstream animate")' "$target/connect-receipt.json"
+          node -e 'const r=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8"));if(r.status!=="original-files-verified"||r.results.length!==1||r.results[0].name!=="animate"||r.results[0].verifiedFiles<1)process.exit(1);console.log("PASS installed central skill installed original upstream animate")' "$target/connect-receipt.json"
           test "$before" = "$(sha256sum package.json)"
           echo "PASS: public GitHub install route and working installed CLI"

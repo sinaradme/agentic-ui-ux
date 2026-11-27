@@ -1,5 +1,5 @@
 # Agent instructions — Agentic UI/UX
 
-For a target project, read [the skill](skills/agentic-ui-ux/SKILL.md) and [direct connection workflow](skills/agentic-ui-ux/references/direct-connect.md). This is a connector, not a designer. Install and verify selected original native skills with the connection CLI; delegate to their actual workflows. Use official native actions for components, runtime and MCP; no mock or summary substitutes. Keep permissions scoped and report blocked native activation. Legacy playbooks are not mandatory design rules.
+For a target project, read [the skill](skills/agentic-ui-ux/SKILL.md) and the [direct connection workflow](skills/agentic-ui-ux/references/direct-connect.md). Let the agent choose original providers, connect their exact IDs and follow their workflows. Use official native actions for components, runtime and MCP. Preserve installation permissions and report how each provider was actually used.
 
-For repository maintenance, keep exact upstream sources and lock manifests verified, preserve original licenses, never claim a quality benchmark without real agent evidence, and run all checks in [quality workflow](.github/workflows/quality.yml) plus the [direct connection smoke](.github/workflows/direct-connect.yml).
+For repository maintenance, verify upstream sources and lock manifests, preserve original licenses, and run [repository quality](.github/workflows/quality.yml) and [direct connection smoke](.github/workflows/direct-connect.yml). Ground behavior claims in real agent or tool evidence.

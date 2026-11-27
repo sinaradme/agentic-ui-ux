@@ -1,43 +1,21 @@
-# Give your agent one link
+# Set up Agentic UI/UX
 
-```text
-Read https://github.com/sinaradme/agentic-ui-ux
-Use the direct connection workflow to connect and invoke the original
-upstream tools for my UI task. Do not substitute custom design instructions.
-```
+From your project, install the connector once and select your active agent and project scope.
 
-## Option B: install one orchestration skill (recommended for repeat use)
-
-```bash
+```sh
 npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
 ```
 
-Then ask the installed skill to perform your task. Authorize project-scoped installation when needed.
+To update an installation managed by the same CLI, run `npx skills update agentic-ui-ux` in the project. For a global installation, update it in that scope.
 
-## What the agent reads
+Give the agent one task prompt, for example:
 
-[SKILL.md](skills/agentic-ui-ux/SKILL.md) and [direct-connect.md](skills/agentic-ui-ux/references/direct-connect.md) are the current entry points. The agent inspects the target, selects original tools, installs verified full original native skill trees, invokes the originals and uses their own workflow.
+```text
+Use agentic-ui-ux to add an entrance transition to the existing details panel.
+```
 
-## Capability routing (recommended)
+The agent starts with [SKILL.md](skills/agentic-ui-ux/SKILL.md), identifies needed tools using the [catalog](skills/agentic-ui-ux/references/catalog.json), and connects the chosen IDs through the [direct connection workflow](skills/agentic-ui-ux/references/direct-connect.md). It uses the original provider instructions and performs the task. Host discovery and provider-specific permissions remain subject to the active host.
 
-The current direct connector selects original providers using task intent and stack. The [task JSON example](skills/agentic-ui-ux/references/connect.example.json) is internal to the agent. The [capability index](skills/agentic-ui-ux/references/INDEX.md) is available if a task needs focused specialists.
+To use the instructions without installing first, point your agent to [SKILL.md on GitHub](https://github.com/sinaradme/agentic-ui-ux/blob/main/skills/agentic-ui-ux/SKILL.md) and give it the task. The agent needs the skill directory to run the connector.
 
-## Optional local inspector and planner (no npm dependencies)
-
-The read-only inspector and old planner remain optional legacy diagnostics. They are not a substitute for direct connection.
-
-## What happens next
-
-The agent runs the connector plan, then applies it with authorization, invokes the native original and executes any outstanding approved official library/MCP actions. Host reload may be required. Do not claim activation from file installation.
-
-## Check the selection logic
-
-See [Direct connection QC](DIRECT-CONNECT-QC.md).
-
-## Source-grounded design
-
-Follow the selected original provider's own process. Legacy 1.0 grounding/playbooks are optional, not mandatory.
-
-## Creative structural redesign
-
-Ask for a structural redesign and original provider workflow. For Impeccable, the connector directs the task to the original new-work route, not a cosmetic polish command.
+[Quickstart](QUICKSTART.md) · [Connection test results](DIRECT-CONNECT-QC.md)

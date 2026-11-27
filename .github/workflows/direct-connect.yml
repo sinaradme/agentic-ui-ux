@@ -9,6 +9,10 @@ on:
       - 'skills/agentic-ui-ux/references/native-actions.json'
       - 'skills/agentic-ui-ux/SKILL.md'
       - '.github/workflows/direct-connect.yml'
+  pull_request:
+    paths:
+      - 'skills/agentic-ui-ux/**'
+      - '.github/workflows/direct-connect.yml'
   workflow_dispatch:
 permissions:
   contents: read
