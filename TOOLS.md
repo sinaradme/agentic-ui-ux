@@ -41,7 +41,7 @@ npx skills add Nutlope/hallmark
 npx skills add anthropics/skills --skill frontend-design
 ```
 
-For UI/UX Pro Max, use the [documented CLI setup](QUICKSTART.md#2-install-one-design-skill). The Anthropic command uses the skills CLI's standard syntax; verify the skill list before installing.
+For UI/UX Pro Max, use the [documented CLI setup](QUICKSTART.md#manual-alternatives). The Anthropic command uses the skills CLI's standard syntax; verify the skill list before installing.
 
 ## Motion and polish — optional
 
