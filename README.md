@@ -37,62 +37,45 @@ The two designs use different typography, imagery and composition. The tool's au
 
 *Official author example, not our own independent benchmark. It illustrates the potential difference, not a guaranteed improvement.*
 
-## 1. Pick one tool
+## 1. Install one skill
 
-| I want to… | Start here |
-| --- | --- |
-| Build a distinctive website from scratch | [Taste Skill](https://github.com/Leonxlnx/taste-skill) |
-| Improve an existing website or dashboard | [Impeccable](https://github.com/pbakaus/impeccable) |
-| Plan the UX and design system | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) |
-| Improve animations and gestures | [Emil's skills](https://github.com/emilkowalski/skills) |
-| Build a mobile app | [React Native / Flutter guide](MOBILE.md) |
-
-These are suggested starting points, not measured rankings. **You do not need all of them.**
-
-## 2. Install and try it
-
-Open a terminal inside the project you want to design. Node.js/npm is required for these example installers. Review the upstream source before running an installer.
-
-**New website:**
+Open a terminal in your target project. Review the repository and install only the orchestration skill:
 
 ```bash
-npx skills add Leonxlnx/taste-skill --skill design-taste-frontend
+npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
 ```
 
-Choose your coding agent and project scope. Reload the agent if needed.
+Choose your coding agent and project scope. Reload the agent if needed. No third-party design library is installed by this command. The alternative is to give your agent the repository link above. [Setup details](AGENT-SETUP.md).
 
-**Existing website (alternative):**
-
-```bash
-npx impeccable install
-```
-
-Reload your agent and run `/impeccable init` (Codex: `$impeccable init`).
-
-[More installation details, agent setup and MCP configuration →](QUICKSTART.md)
-
-## 3. Give your agent a task
-
-Paste into your coding agent's chat after installing the appropriate skill:
+## 2. Give the agent a design task
 
 ```text
-Use the installed design skill. Read the existing project and design
-system first. Design the requested page with clear typography, spacing
-and visual hierarchy. Reuse existing components. Keep all existing
-functionality working. Open the result in a browser, inspect desktop
-and mobile, fix visible problems and report anything you could not verify.
+Use the agentic-ui-ux skill to redesign this screen.
+Inspect the project first, preserve its behavior and design system,
+select only the tools needed for this task, and verify the actual
+rendered result on the relevant devices.
+Ask before installing tools or making changes outside the task.
 ```
 
-For motion, dashboards, redesigns and other tasks, use the [ready-to-use prompts](WORKFLOWS.md).
+You do not need to name any libraries. The agent should handle routine design decisions, present one consolidated approval plan if new tools are necessary, and show evidence of the result.
+
+## 3. Understand what the agent selects
+
+| Task | Preferred route (if a gap exists) |
+| --- | --- |
+| New web page | Taste, with the layout and art-direction playbooks |
+| Existing product redesign | Impeccable, existing tokens and visual QA |
+| UX / design-system planning | UI/UX Pro Max |
+| Motion | Focused Emil guidance; existing CSS/runtime first; Motion only for an advanced compatible gap |
+| React components | Existing component system; shadcn/ui only for a confirmed gap |
+| Native app | Native primitives; platform-specific guidance and device QA |
+| Graphics / effects | Existing licensed assets; a focused specialized tool only when needed |
+
+These are task-specific defaults, not measured quality rankings. A narrow task may need no external tool. The router has 42 capabilities across 12 playbooks and 26 catalogued tools. It avoids stacking primary skills, competing component systems and duplicate animation runtimes. [Manual tool selection](TOOLS.md) remains available.
 
 ## 4. Check the real result
 
-- Run your project and open the page.
-- Check desktop and mobile layouts, navigation and important UI states.
-- Fix visible issues before asking for more features.
-- If the agent cannot inspect the browser, add [browser access](QUICKSTART.md#5-give-the-agent-visual-feedback) or supply screenshots.
-
-A skill improves guidance; it does not give the agent browser access or guarantee good design.
+Ask the agent to inspect the actual rendered interface, test the important states and interactions, fix blocking issues first, and report missing evidence. Browser or native device access is required for the corresponding checks. A successful install is not a successful design.
 
 ## More examples
 
@@ -114,6 +97,6 @@ A skill improves guidance; it does not give the agent browser access or guarante
 
 **Research updated:** November 27, 2026 · **Edition:** 1.0
 
-We review upstream docs, repository metadata and selected official examples. The selection logic, project inspection and project-scoped skill installation have passed CI checks. In-app agent behavior and independent design-quality comparisons have not yet been validated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
+We review upstream docs, repository metadata and selected official examples. The capability router, project inspection, CLI and project-scoped skill installation have passed CI checks. See [the evidence](QUALITY.md). In-app agent behavior and independent design-quality comparisons have not yet been validated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 
 Original guide: [MIT](LICENSE). Third-party examples are linked from their creators, not relicensed here.

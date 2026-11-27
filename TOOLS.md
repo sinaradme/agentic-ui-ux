@@ -4,9 +4,9 @@
 
 **Snapshot: 2026-11-27.** GitHub repository metadata was queried directly. Dates are GitHub `pushed_at` dates (UTC), not necessarily release dates or default-branch commit dates. Approximate star counts are a point-in-time adoption signal, not a quality score. Licenses refer to the linked open-source project or specific skill, not paid services or bundled third-party assets.
 
-**For agents:** use the [machine-readable catalog](skills/agentic-ui-ux/references/catalog.json) and [selection rules](skills/agentic-ui-ux/references/decision-rules.md).
+**For agents:** use the [capability index](skills/agentic-ui-ux/references/INDEX.md), focused route tables and [routing guide](skills/agentic-ui-ux/references/routing.md). The [machine-readable catalog](skills/agentic-ui-ux/references/catalog.json) contains individual source credibility snapshots and trust tiers.
 
-**Need a quick answer?** Start with [the chooser](README.md#1-pick-one-tool). See [actual author examples and demos](EXAMPLES.md) before installing.
+**Need a quick answer?** Start with [the chooser](README.md#3-understand-what-the-agent-selects). See [actual author examples and demos](EXAMPLES.md) before installing.
 
 The initial catalog uses a 60-day repository-push filter (since 2026-09-28). New or low-adoption entries are explicitly marked exploratory. Every entry remains unbenchmarked here.
 
@@ -47,7 +47,8 @@ For UI/UX Pro Max, use the [documented CLI setup](QUICKSTART.md#2-install-one-de
 
 | Tool / source | Use it for | License | Last push | Stars (approx.) |
 | --- | --- | --- | --- | ---: |
-| [Emil's skills](https://github.com/emilkowalski/skills) | Animation decisions, gestures, choreography and motion review | MIT | 2026-11-15 | 60k |
+| [Emil's skills](https://github.com/emilkowalski/skills) | Focused guidance: animate, animate-expo, choreograph, gestures, animation-performance, review-animations | MIT | 2026-11-15 | 60k |
+| [Motion (core)](https://github.com/motiondivision/motion) | React web runtime for complex scroll, gesture and layout animation; only when existing CSS/runtime is insufficient | MIT core | 2026-11-26 | 35.6k |
 | [Make Interfaces Feel Better](https://github.com/jakubkrehel/make-interfaces-feel-better) | Small interaction and visual-detail refinements | MIT | 2026-11-18 | 4.3k |
 | [Stageshow](https://github.com/benjitaylor/skills/tree/main/stageshow) | React-based product illustrations and motion demos, not a full app UI system | MIT (skill; see notices) | 2026-11-05 (parent repo) | 4.2k (parent repo) |
 
@@ -59,7 +60,7 @@ npx skills add benjitaylor/skills --skill stageshow
 npx skills add jakubkrehel/make-interfaces-feel-better --list
 ```
 
-Select only relevant skills from a listed collection; check upstream setup if the CLI does not recognize it. Treat demo animations as inspiration, not mandatory effects.
+These commands are independent alternatives, not a bulk install. Use the [motion routing table](skills/agentic-ui-ux/references/routes/motion.md) for precise skill selection; the router also checks existing runtime inventory. Select only relevant skills from a listed collection; check upstream setup if the CLI does not recognize it. Treat demo animations as inspiration, not mandatory effects.
 
 ## UI components and registries
 
@@ -91,7 +92,7 @@ Discovery directories: [skills.sh](https://skills.sh), [shadcn registry docs](ht
 
 Start with the tool addressing your actual bottleneck. If the interface is visually generic, choose art direction. If usability is weak, choose structured UX guidance. If interactions are rough, add a targeted motion skill. If the agent cannot inspect its work, add browser access before adding another design skill.
 
-A tool earns a stronger recommendation through reproducible evaluations, not GitHub popularity or vendor demonstrations. See [benchmark protocol](benchmarks/README.md).
+The catalog uses preferred, specialized, alternative and exploratory tiers. These are task-fit policies, not an overall quality leaderboard. Existing compatible tools take precedence; specialized candidates must match a specific gap, and exploratory candidates are not automatically installed. The router blocks new candidates when their metadata snapshot is stale relative to the request date. A tool earns a stronger recommendation through reproducible evaluations, not GitHub popularity or vendor demonstrations. See [benchmark protocol](benchmarks/README.md).
 
 ## Source and refresh policy
 

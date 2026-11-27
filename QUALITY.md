@@ -50,4 +50,19 @@ v1.0 describes a complete, usable selection guide and reviewable plan-only engin
 
 ## Capability routing expansion (same v1.0 edition)
 
-The default workflow now routes the user's task into 42 capabilities in 12 playbooks rather than choosing an entire library by category. It separates design guidance, runtime/component implementation and QA tools, preserves one primary owner and existing systems, limits specialist additions, treats unknown coverage as unverified, and prevents automatic lower-tier fallback. The route fixtures verify stable ordering, deduplication, stack isolation, evidence requirements, budgets, and no execution authorization. Run `node skills/agentic-ui-ux/scripts/test-route.mjs`. CI evidence for this expansion is available on [Actions](https://github.com/sinaradme/agentic-ui-ux/actions). It still does not establish human cognitive-load reduction, autonomous agent compliance or equal/improved design quality; those require controlled real agent trials.
+**Verified implementation commit:** [`f7e212fe`](https://github.com/sinaradme/agentic-ui-ux/commit/f7e212fe0776dd8d966b4a920540ba1fca76a639). Both [Repository quality](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45963372898) and [Skill install smoke](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45963372871) completed successfully.
+
+| Check | Result |
+| --- | --- |
+| Coarse setup planner | 32/32 passed |
+| Inspector classification | 11 fixtures passed; filesystem and symlink isolation passed |
+| Capability router | 59/59 passed, including freshness, scope, ownership and prerequisite cases |
+| Capability × platform × coverage invariant matrix | 504/504 passed |
+| Generated compact references | 39/39 matched the canonical registry |
+| Skill installation | Cursor, Codex and Claude Code project-path fixtures; public GitHub install route passed |
+| Catalog evidence | 26 entries, 20 unique source repositories checked on 2026-11-27; stars are repository-level signals, not measured skill quality |
+
+Routing, installation and the test suite were actually executed in CI. The tests do not invoke a live coding-agent model or judge its visual design. The code review and routing cases are not a guarantee of all possible failure modes.
+
+
+The default workflow now routes the user's task into 42 capabilities in 12 playbooks rather than choosing an entire library by category. It separates design guidance, runtime/component implementation and QA tools, preserves one primary owner and existing systems, limits specialist additions, treats unknown coverage as unverified, and prevents automatic lower-tier fallback. The route fixtures verify stable ordering, deduplication, stack isolation, evidence requirements, budgets, and no execution authorization. Run `node skills/agentic-ui-ux/scripts/test-route.mjs` and `node skills/agentic-ui-ux/scripts/generate-index.mjs --check`. It reduces the user's need to manually name and rank tools by design. Actual cognitive-load reduction, autonomous agent compliance, and equal/improved design quality still require controlled real agent trials. See the [paired evaluation protocol](benchmarks/README.md).

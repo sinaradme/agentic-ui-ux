@@ -2,6 +2,8 @@
 
 ## 1.0 — 2026-11-27
 
+- Completed capability routing hardening: 59 task fixtures, 504 cross-product invariants, 39 generated reference checks, 20 source-repository credibility snapshots, core/supporting priority, stale-source blocking and execution contract. Both CI workflows passed. Clarified one-skill onboarding and added paired human-effort/quality evaluation criteria.
+
 - Expanded the same 1.0 edition with capability-based routing, 12 focused playbooks, 42 capability IDs, explicit trust tiers, bounded specialist selection and conflict gates. Added the open-source Motion runtime and four precise Emil skills. Legacy setup planner remains available.
 - Added task routing fixtures, registry integrity checks and isolated CLI installation verification; see QUALITY.md for exact evidence.
 

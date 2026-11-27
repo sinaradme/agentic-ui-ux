@@ -13,7 +13,7 @@ compatibility checks and reasons. Ask before making changes.
 
 You can add the actual task to the same message (for example: redesign the onboarding flow, build a Next.js landing page, or improve Expo motion). The agent must have read access to the guide and the target project. Merely connecting GitHub does not load instructions automatically.
 
-## Option B: install one orchestration skill
+## Option B: install one orchestration skill (recommended for repeat use)
 
 From the target project's terminal:
 
@@ -29,10 +29,13 @@ This is the standard upstream skills CLI syntax; choose your coding agent and pr
 | --- | --- |
 | [AGENTS.md](AGENTS.md) | Entry point when reading the repository |
 | [SKILL.md](skills/agentic-ui-ux/SKILL.md) | Reusable workflow and safety gates |
-| [Decision rules](skills/agentic-ui-ux/references/decision-rules.md) | How to pick tools |
+| [Capability index](skills/agentic-ui-ux/references/INDEX.md) | 12 domains and their routing tables |
+| [Routing guide](skills/agentic-ui-ux/references/routing.md) | How to decompose a task and choose sources |
+| [Execution workflow](skills/agentic-ui-ux/references/execution.md) | One consolidated approval, implementation and evidence |
 | [Catalog JSON](skills/agentic-ui-ux/references/catalog.json) | Machine-readable tools, compatibility and installation examples |
 | [Context schema](skills/agentic-ui-ux/references/context.schema.json) | Evidence needed about the target |
-| [Planner](skills/agentic-ui-ux/scripts/plan.mjs) | Optional deterministic, plan-only Node.js tool |
+| [Router](skills/agentic-ui-ux/scripts/route.mjs) | Recommended task-specific plan-only engine |
+| [Planner](skills/agentic-ui-ux/scripts/plan.mjs) | Legacy coarse setup-only path |
 
 ## Capability routing (recommended)
 
@@ -66,7 +69,7 @@ Example: a Next.js site with an existing component library and working browser a
 
 ## What happens next
 
-The agent should explain what it will reuse, what it proposes to add, what is blocked, and why. It must verify the exact upstream revision, license, agent/framework compatibility, installers and hooks before asking approval. If you approve specific changes, your coding agent with the necessary permissions can execute them in the target project and verify the result.
+The agent should explain what it will reuse, what it proposes to add, what is blocked, and why. It should not ask you to choose between equivalent libraries; the agent owns that decision within your constraints. For new tools it should present one consolidated approval plan. It must verify the exact upstream revision, license, agent/framework compatibility, installers and hooks before asking approval. If you approve specific changes, your coding agent with the necessary permissions can execute them in the target project and verify the result.
 
 ## Check the selection logic
 
@@ -76,6 +79,6 @@ node skills/agentic-ui-ux/scripts/test-inspect.mjs
 node skills/agentic-ui-ux/scripts/test-route.mjs
 ```
 
-The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
+The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. The 59 route fixtures and 504 cross-product invariant checks cover capability selection, source priority, unknown coverage, conflicts and platform isolation. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
 
 [Return home](README.md) · [Manual setup](QUICKSTART.md) · [Tool directory](TOOLS.md)
