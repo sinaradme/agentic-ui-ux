@@ -20,5 +20,14 @@
   "verify": "Review manually; verify exact framework and isolated rendering before adoption.",
   "selectionTier": "exploratory",
   "evidenceLevel": "metadata-reviewed",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "RamaHerbin/fancy-ui",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 25,
+    "lastPush": "2026-11-27",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

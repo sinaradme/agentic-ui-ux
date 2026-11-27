@@ -30,5 +30,14 @@
   "verify": "Confirm connection and that the intended diagnostic tool works on an authorized local page.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "ChromeDevTools/chrome-devtools-mcp",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 59543,
+    "lastPush": "2026-11-27",
+    "archived": false,
+    "repositoryLicense": "Apache-2.0",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

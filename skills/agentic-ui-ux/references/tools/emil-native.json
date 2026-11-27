@@ -32,5 +32,14 @@
   "verify": "Verify animate-expo discovery; inspect gestures, transitions and reduced motion on a native device.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "emilkowalski/skills",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 60209,
+    "lastPush": "2026-11-15",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

@@ -29,6 +29,7 @@ export function classify(observation) {
  if(dep("motion")||dep("framer-motion"))installedSignals.push("motion-web");
  const skillMap={"design-taste-frontend":"taste","impeccable":"impeccable","ui-ux-pro-max":"uiux-pro-max","hallmark":"hallmark","frontend-design":"anthropic-frontend","animate":"emil-web","animate-expo":"emil-native","stageshow":"stageshow","choreograph":"emil-choreograph","gestures":"emil-gestures","animation-performance":"emil-performance","review-animations":"emil-review"};
  for(const name of observation.projectSkillNames||[])if(Object.hasOwn(skillMap,name))installedSignals.push(skillMap[name]);
+ const runtimeSignals=["motion","framer-motion","gsap","animejs","@react-spring/web","@react-spring/native","react-native-reanimated","motion-v","@vueuse/motion"].filter(dep);
  const componentSignals=["@mui/material","antd","@chakra-ui/react","react-native-paper","tamagui","@mantine/core","@heroui/react","@nextui-org/react","native-base","vuetify","@headlessui/react","@radix-ui/react-dialog"].filter(dep);
  if(has("components.json"))componentSignals.push("components.json");
  for(const p of ["components/ui","src/components/ui","src/theme","lib/theme"])if(has(p))componentSignals.push(p);
@@ -39,7 +40,7 @@ export function classify(observation) {
  if(manager==="unknown")notes.push("Package manager unknown or conflicting; verify before installation.");
  if(stack==="react-native")notes.push("React Native/Expo signals take priority over React DOM; verify the target platform.");
  if(observation.errors?.length)notes.push("Some project signals could not be read; inventory remains incomplete.");
- return {stack,packageManager:manager,frameworkSignals:{flutter,reactNative:rn,reactWeb,otherWeb,workspace:multi,expo:dep("expo")},componentSignals,toolSignals:[...new Set(installedSignals)].sort(),projectSkillNames:observation.projectSkillNames||[],notes,contextDraft:{stack,goal:"unknown",agent:"unknown",inventoryComplete:false,primarySkill:"unknown",installedTools:[],componentSystem:"unknown",browserAccess:"unknown",deviceAccess:"unknown",node:"present",python:"unknown",needs:[]},next:"Confirm these signals and inspect actual installed skills, agent tools, project rules, package versions and current UI. Fill context only from verified evidence. No commands were executed."};
+ return {stack,packageManager:manager,frameworkSignals:{flutter,reactNative:rn,reactWeb,otherWeb,workspace:multi,expo:dep("expo")},componentSignals,runtimeSignals,toolSignals:[...new Set(installedSignals)].sort(),projectSkillNames:observation.projectSkillNames||[],notes,contextDraft:{stack,goal:"unknown",agent:"unknown",inventoryComplete:false,primarySkill:"unknown",installedTools:[],componentSystem:"unknown",browserAccess:"unknown",deviceAccess:"unknown",node:"present",python:"unknown",needs:[]},next:"Confirm these signals and inspect actual installed skills, agent tools, project rules, package versions and current UI. Fill context only from verified evidence. No commands were executed."};
 }
 
 // Read a small allowlist only. Do not follow symlinked descendants or read env/config secrets.

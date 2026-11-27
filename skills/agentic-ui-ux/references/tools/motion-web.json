@@ -27,5 +27,14 @@
   "evidenceLevel": "upstream-documented",
   "qualityBenchmark": "not-run",
   "selectionTier": "preferred",
-  "verify": "Confirm actual installed revision and imports, build, reduced-motion behavior, interrupted transitions and rendered performance."
+  "verify": "Confirm actual installed revision and imports, build, reduced-motion behavior, interrupted transitions and rendered performance.",
+  "credibility": {
+    "repository": "motiondivision/motion",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 35617,
+    "lastPush": "2026-11-26",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

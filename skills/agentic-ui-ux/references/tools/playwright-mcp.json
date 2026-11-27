@@ -36,5 +36,14 @@
   "verify": "Confirm the MCP server is connected and can navigate the authorized local page and capture a screenshot.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "microsoft/playwright-mcp",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 40196,
+    "lastPush": "2026-11-18",
+    "archived": false,
+    "repositoryLicense": "Apache-2.0",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

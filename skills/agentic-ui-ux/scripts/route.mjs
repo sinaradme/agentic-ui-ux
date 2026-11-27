@@ -5,9 +5,10 @@ const read = name => JSON.parse(readFileSync(new URL('../references/'+name, impo
 const catalog=read('catalog.json'), registry=read('capabilities.json'), policy=read('priority-policy.json');
 function route(input,catalog,registry,policy,validateContext){
  const blocked=(reason)=>({schemaVersion:1,mode:"plan-only",status:"blocked",reason,routes:[],actions:[],playbooks:[],executionAuthorized:false});
- if(!input||typeof input!=="object"||Array.isArray(input)||Object.keys(input).some(k=>!["context","tasks","policy"].includes(k)))return blocked("Invalid route request.");
+ if(!input||typeof input!=="object"||Array.isArray(input)||Object.keys(input).some(k=>!["context","tasks","policy","asOf"].includes(k)))return blocked("Invalid route request.");
  const ctx=input.context; const checked=validateContext(ctx);if(checked.status==="blocked")return blocked(checked.reason);
  if(input.policy!==undefined&&!["minimal","no-new-tools"].includes(input.policy))return blocked("Invalid policy.");
+ const date=input.asOf||catalog.reviewedAt;const dateMs=Date.parse(date);if(typeof date!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(dateMs)||new Date(dateMs).toISOString().slice(0,10)!==date||dateMs<Date.parse(catalog.reviewedAt))return blocked("Invalid asOf date; use current date or the catalog snapshot date.");
  const tasks=input.tasks;if(!Array.isArray(tasks)||tasks.length<1||tasks.length>policy.limits.maxTaskCapabilities)return blocked("Choose 1–"+policy.limits.maxTaskCapabilities+" relevant capability IDs.");
  const caps=new Map(registry.capabilities.map(c=>[c.id,c]));const tools=new Map(catalog.tools.map(t=>[t.id,t]));const seen=new Set();
  for(const task of tasks){
@@ -29,11 +30,11 @@ function route(input,catalog,registry,policy,validateContext){
  const tierAllowed=t=>["preferred","specialized"].includes(t.selectionTier);
  const prereqs=t=>{const gaps=(t.install.requires||[]).filter(k=>ctx[k]!=="present").map(k=>k+" is "+ctx[k]);const agents=t.kind==="skill"?t.eligibleAgents:t.install.eligibleAgents;if(agents&&!agents.includes(ctx.agent))gaps.push("Verify agent support");return gaps;};
  const pickAction=(t,reason,invoke,existing=false,configure=false)=>{
-   const gaps=prereqs(t);if(gaps.length)return {blocked:gaps};
+   const gaps=prereqs(t);if(!existing&&(t.credibility?.archived!==false||!t.credibility?.checkedAt||dateMs-Date.parse(t.credibility.checkedAt)>60*86400000))gaps.push("Source metadata is archived, missing or older than 60 days; re-review upstream before selection.");if(gaps.length)return {blocked:gaps};
    const prev=actions.get(t.id);
    if(prev){if(invoke&&!prev.invocations.includes(invoke))prev.invocations.push(invoke);return {status:prev.status};}
    const status=configure?"configure-existing":existing?"reuse":"candidate";
-   const a={id:t.id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,license:t.license,tier:t.selectionTier,evidenceLevel:t.evidenceLevel,qualityBenchmark:t.qualityBenchmark,lastRepositoryPush:t.lastRepositoryPush,verification:t.verify,invocations:invoke?[invoke]:[]};
+   const a={id:t.id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,license:t.license,tier:t.selectionTier,evidenceLevel:t.evidenceLevel,qualityBenchmark:t.qualityBenchmark,credibility:t.credibility,lastRepositoryPush:t.lastRepositoryPush,verification:t.verify,invocations:invoke?[invoke]:[]};
    if(!existing||configure){a.installMode=t.install.mode;a.reviewBeforeApproval=t.install.review||[];if(t.install.command)a.commandExample=t.install.command;if(t.install.examples)a.commandExamples=t.install.examples;if(t.install.agentExamples?.[ctx.agent])a.commandExamples=t.install.agentExamples[ctx.agent];if(t.install.config)a.configExample=t.install.config;}
    actions.set(t.id,a);return {status};
  };
@@ -119,8 +120,9 @@ function route(input,catalog,registry,policy,validateContext){
    if(["react-native","flutter"].includes(ctx.stack)&&ctx.deviceAccess!=="present")notes.push("Rendered native QA blocked until a device/emulator is available.");
  }
  if(ctx.stack==="flutter")notes.push("Flutter SDK widgets, animations and tests are the default; no web-only runtime.");
+ if(!input.asOf)notes.push("Using the catalog snapshot date for deterministic routing; verify current upstream metadata before approval.");
  if(!actions.size)notes.push("No external installation/invocation is currently selected; bundled guidance remains available.");
- return {schemaVersion:1,edition:catalog.edition,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,primaryOwner:owner,primaryOwnerStatus:owner?(actions.has(owner)?"selected":ctx.primarySkill===owner?"existing-not-invoked":"unresolved"):"none",playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
+ return {schemaVersion:1,edition:catalog.edition,asOf:date,mode:"plan-only",status:"planned",stack:ctx.stack,goal:ctx.goal,primaryOwner:owner,primaryOwnerStatus:owner?(actions.has(owner)?"selected":ctx.primarySkill===owner?"existing-not-invoked":"unresolved"):"none",playbooks:[...playbooks],routes,actions:[...actions.values()],notes,executionAuthorized:false,next:"Review relevant playbooks only. Resolve verification gaps; check pinned upstream versions, license, source, exact changes and approval before any install or activation. Capture real rendered evidence and report blocked checks."};
 }
 export function createRoute(input){return route(input,catalog,registry,policy,createPlan);}
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){try{const input=JSON.parse(readFileSync(process.argv[2]||0,'utf8'));const out=createRoute(input);console.log(JSON.stringify(out,null,2));if(out.status==='blocked')process.exitCode=2;}catch(e){console.error('Route failed:',e.message);process.exitCode=2;}}

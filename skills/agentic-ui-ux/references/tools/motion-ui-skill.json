@@ -20,5 +20,14 @@
   "verify": "Review manually; inspect an isolated example before adoption.",
   "selectionTier": "exploratory",
   "evidenceLevel": "metadata-reviewed",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "Rkj0123/motion-ui-skill",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 7,
+    "lastPush": "2026-11-20",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

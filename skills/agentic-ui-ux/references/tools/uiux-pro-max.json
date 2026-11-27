@@ -51,5 +51,14 @@
   "verify": "Confirm the installed CLI and Python versions, project skill discovery and a successful design-system query.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 154780,
+    "lastPush": "2026-11-27",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

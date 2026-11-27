@@ -21,5 +21,14 @@
   "verify": "Review the source and asset rights before reuse.",
   "selectionTier": "exploratory",
   "evidenceLevel": "metadata-reviewed",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "vezeqs/landing-page-atlas",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 0,
+    "lastPush": "2026-10-31",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

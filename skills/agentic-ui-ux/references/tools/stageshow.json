@@ -33,5 +33,14 @@
   "verify": "Verify discovery and compatible React demo/build; inspect the animation.",
   "selectionTier": "specialized",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "benjitaylor/skills",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 4227,
+    "lastPush": "2026-11-05",
+    "archived": false,
+    "repositoryLicense": null,
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

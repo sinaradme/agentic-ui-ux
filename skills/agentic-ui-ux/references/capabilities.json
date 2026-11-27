@@ -555,7 +555,10 @@
       "label": "Reusable UI primitives",
       "kind": "implementation",
       "stacks": [
-        "react-web"
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
       ],
       "providers": [
         {
@@ -573,7 +576,8 @@
       "label": "Reusable page sections / blocks",
       "kind": "implementation",
       "stacks": [
-        "react-web"
+        "react-web",
+        "other-web"
       ],
       "providers": [
         {

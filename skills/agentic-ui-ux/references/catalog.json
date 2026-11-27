@@ -65,7 +65,16 @@
       "verify": "Confirm the skill is discovered by the target agent and the loaded SKILL.md matches the approved revision.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "Leonxlnx/taste-skill",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 122107,
+        "lastPush": "2026-11-26",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "impeccable",
@@ -107,7 +116,16 @@
       "verify": "Verify discovery and initialization; inspect generated PRODUCT.md/DESIGN.md and any hook settings. Run a focused critique only after approval.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "pbakaus/impeccable",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 117699,
+        "lastPush": "2026-11-27",
+        "archived": false,
+        "repositoryLicense": "Apache-2.0",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "uiux-pro-max",
@@ -162,7 +180,16 @@
       "verify": "Confirm the installed CLI and Python versions, project skill discovery and a successful design-system query.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 154780,
+        "lastPush": "2026-11-27",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "hallmark",
@@ -199,7 +226,16 @@
       "verify": "Verify the installed skill name, source revision and agent discovery.",
       "selectionTier": "alternative",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "Nutlope/hallmark",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 61795,
+        "lastPush": "2026-11-11",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "anthropic-frontend",
@@ -236,7 +272,16 @@
       "verify": "Verify frontend-design is discovered and the agent reads the approved skill.",
       "selectionTier": "alternative",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "anthropics/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 201202,
+        "lastPush": "2026-11-16",
+        "archived": false,
+        "repositoryLicense": null,
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "emil-web",
@@ -273,7 +318,16 @@
       "verify": "Verify animate discovery; inspect a real web interaction, reduced motion and keyboard behavior.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "emilkowalski/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 60209,
+        "lastPush": "2026-11-15",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "emil-native",
@@ -309,7 +363,16 @@
       "verify": "Verify animate-expo discovery; inspect gestures, transitions and reduced motion on a native device.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "emilkowalski/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 60209,
+        "lastPush": "2026-11-15",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "stageshow",
@@ -346,7 +409,16 @@
       "verify": "Verify discovery and compatible React demo/build; inspect the animation.",
       "selectionTier": "specialized",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "benjitaylor/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 4227,
+        "lastPush": "2026-11-05",
+        "archived": false,
+        "repositoryLicense": null,
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "make-interfaces",
@@ -371,7 +443,16 @@
       "verify": "Use only as a reference and verify the proposed UI change in the rendered app.",
       "selectionTier": "specialized",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "jakubkrehel/make-interfaces-feel-better",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 4321,
+        "lastPush": "2026-11-18",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "shadcn",
@@ -403,7 +484,16 @@
       "verify": "Check components.json and generated component files, build, accessibility and existing token compatibility.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "shadcn-ui/ui",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 129206,
+        "lastPush": "2026-11-26",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "magic-ui",
@@ -428,7 +518,16 @@
       "verify": "Review the selected component source, dependency changes and rendered motion/performance.",
       "selectionTier": "specialized",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "magicuidesign/magicui",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 23603,
+        "lastPush": "2026-11-26",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "playwright-mcp",
@@ -468,7 +567,16 @@
       "verify": "Confirm the MCP server is connected and can navigate the authorized local page and capture a screenshot.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "microsoft/playwright-mcp",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 40196,
+        "lastPush": "2026-11-18",
+        "archived": false,
+        "repositoryLicense": "Apache-2.0",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "shadcn-mcp",
@@ -508,7 +616,16 @@
       "verify": "Confirm the server can search the intended registry; inspect results before adding a component.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "shadcn-ui/ui",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 129206,
+        "lastPush": "2026-11-26",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "chrome-devtools-mcp",
@@ -542,7 +659,16 @@
       "verify": "Confirm connection and that the intended diagnostic tool works on an authorized local page.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "ChromeDevTools/chrome-devtools-mcp",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 59543,
+        "lastPush": "2026-11-27",
+        "archived": false,
+        "repositoryLicense": "Apache-2.0",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "rn-paper",
@@ -567,7 +693,16 @@
       "verify": "Verify native package compatibility, build and real device rendering.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "callstack/react-native-paper",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 14501,
+        "lastPush": "2026-11-25",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "reanimated",
@@ -592,7 +727,16 @@
       "verify": "Verify Expo/RN compatibility, required worklet configuration, native rebuild and real device animation.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "software-mansion/react-native-reanimated",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 11102,
+        "lastPush": "2026-11-27",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "maestro",
@@ -618,7 +762,16 @@
       "verify": "Run a non-destructive test flow against an authorized simulator/device; inspect actual results.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "mobile-dev-inc/Maestro",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 16537,
+        "lastPush": "2026-11-26",
+        "archived": false,
+        "repositoryLicense": "Apache-2.0",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "flutter-built-in",
@@ -640,7 +793,16 @@
       "verify": "Verify flutter analyze, relevant widget/integration tests and device rendering when possible.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "flutter/flutter",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 181550,
+        "lastPush": "2026-11-27",
+        "archived": false,
+        "repositoryLicense": "BSD-3-Clause",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "motion-ui-skill",
@@ -664,7 +826,16 @@
       "verify": "Review manually; inspect an isolated example before adoption.",
       "selectionTier": "exploratory",
       "evidenceLevel": "metadata-reviewed",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "Rkj0123/motion-ui-skill",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 7,
+        "lastPush": "2026-11-20",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "fancy-ui",
@@ -688,7 +859,16 @@
       "verify": "Review manually; verify exact framework and isolated rendering before adoption.",
       "selectionTier": "exploratory",
       "evidenceLevel": "metadata-reviewed",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "RamaHerbin/fancy-ui",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 25,
+        "lastPush": "2026-11-27",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "landing-page-atlas",
@@ -713,7 +893,16 @@
       "verify": "Review the source and asset rights before reuse.",
       "selectionTier": "exploratory",
       "evidenceLevel": "metadata-reviewed",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "vezeqs/landing-page-atlas",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 0,
+        "lastPush": "2026-10-31",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "emil-choreograph",
@@ -750,7 +939,16 @@
       "verify": "Confirm discovery of choreograph; inspect actual relevant interaction or animation and record evidence.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "emilkowalski/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 60209,
+        "lastPush": "2026-11-15",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "emil-gestures",
@@ -787,7 +985,16 @@
       "verify": "Confirm discovery of gestures; inspect actual relevant interaction or animation and record evidence.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "emilkowalski/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 60209,
+        "lastPush": "2026-11-15",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "emil-performance",
@@ -824,7 +1031,16 @@
       "verify": "Confirm discovery of animation-performance; inspect actual relevant interaction or animation and record evidence.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "emilkowalski/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 60209,
+        "lastPush": "2026-11-15",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "emil-review",
@@ -861,7 +1077,16 @@
       "verify": "Confirm discovery of review-animations; inspect actual relevant interaction or animation and record evidence.",
       "selectionTier": "preferred",
       "evidenceLevel": "upstream-documented",
-      "qualityBenchmark": "not-run"
+      "qualityBenchmark": "not-run",
+      "credibility": {
+        "repository": "emilkowalski/skills",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 60209,
+        "lastPush": "2026-11-15",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     },
     {
       "id": "motion-web",
@@ -892,7 +1117,16 @@
       "evidenceLevel": "upstream-documented",
       "qualityBenchmark": "not-run",
       "selectionTier": "preferred",
-      "verify": "Confirm actual installed revision and imports, build, reduced-motion behavior, interrupted transitions and rendered performance."
+      "verify": "Confirm actual installed revision and imports, build, reduced-motion behavior, interrupted transitions and rendered performance.",
+      "credibility": {
+        "repository": "motiondivision/motion",
+        "checkedAt": "2026-11-27",
+        "repositoryStars": 35617,
+        "lastPush": "2026-11-26",
+        "archived": false,
+        "repositoryLicense": "MIT",
+        "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+      }
     }
   ]
 }

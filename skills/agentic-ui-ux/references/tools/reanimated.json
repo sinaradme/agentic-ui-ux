@@ -21,5 +21,14 @@
   "verify": "Verify Expo/RN compatibility, required worklet configuration, native rebuild and real device animation.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "software-mansion/react-native-reanimated",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 11102,
+    "lastPush": "2026-11-27",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

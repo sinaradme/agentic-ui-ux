@@ -34,5 +34,14 @@
   "verify": "Confirm the skill is discovered by the target agent and the loaded SKILL.md matches the approved revision.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "Leonxlnx/taste-skill",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 122107,
+    "lastPush": "2026-11-26",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

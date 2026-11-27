@@ -113,6 +113,11 @@
         "minimal",
         "no-new-tools"
       ]
+    },
+    "asOf": {
+      "type": "string",
+      "format": "date",
+      "description": "Current UTC date for metadata freshness checks; omit only for reproducible snapshot routing."
     }
   }
 }

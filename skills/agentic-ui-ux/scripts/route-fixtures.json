@@ -1809,5 +1809,162 @@
     "expectedIds": [],
     "expectedStatuses": {},
     "expectedStatus": "blocked"
+  },
+  {
+    "name": "stale metadata blocks new candidate",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ],
+      "asOf": "2027-02-01"
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "art-direction": "needs-verification"
+    }
+  },
+  {
+    "name": "stale snapshot still allows verified existing provider",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "taste",
+        "installedTools": [
+          "taste"
+        ],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "adequate",
+          "evidence": "Fixture: inspected target capability",
+          "provider": "taste"
+        }
+      ],
+      "asOf": "2027-02-01"
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatuses": {
+      "art-direction": "reuse"
+    }
+  },
+  {
+    "name": "invalid date rejected",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ],
+      "asOf": "2026-11-31"
+    },
+    "expectedIds": [],
+    "expectedStatuses": {},
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "other web existing component reuse",
+    "input": {
+      "context": {
+        "stack": "other-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "component-primitives",
+          "coverage": "adequate",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "component-primitives": "reuse-project"
+    }
+  },
+  {
+    "name": "native generic components do not install React web",
+    "input": {
+      "context": {
+        "stack": "react-native",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "absent",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "component-primitives",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "component-primitives": "blocked"
+    }
   }
 ]

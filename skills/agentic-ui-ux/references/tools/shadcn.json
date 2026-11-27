@@ -28,5 +28,14 @@
   "verify": "Check components.json and generated component files, build, accessibility and existing token compatibility.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "shadcn-ui/ui",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 129206,
+    "lastPush": "2026-11-26",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

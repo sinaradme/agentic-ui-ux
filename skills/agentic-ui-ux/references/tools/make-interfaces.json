@@ -21,5 +21,14 @@
   "verify": "Use only as a reference and verify the proposed UI change in the rendered app.",
   "selectionTier": "specialized",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "jakubkrehel/make-interfaces-feel-better",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 4321,
+    "lastPush": "2026-11-18",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

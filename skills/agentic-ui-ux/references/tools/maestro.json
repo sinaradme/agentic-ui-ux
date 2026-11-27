@@ -22,5 +22,14 @@
   "verify": "Run a non-destructive test flow against an authorized simulator/device; inspect actual results.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "mobile-dev-inc/Maestro",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 16537,
+    "lastPush": "2026-11-26",
+    "archived": false,
+    "repositoryLicense": "Apache-2.0",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

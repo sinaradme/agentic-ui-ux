@@ -33,5 +33,14 @@
   "verify": "Verify the installed skill name, source revision and agent discovery.",
   "selectionTier": "alternative",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "Nutlope/hallmark",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 61795,
+    "lastPush": "2026-11-11",
+    "archived": false,
+    "repositoryLicense": "MIT",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

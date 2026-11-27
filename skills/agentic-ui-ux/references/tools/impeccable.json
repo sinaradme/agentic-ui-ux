@@ -38,5 +38,14 @@
   "verify": "Verify discovery and initialization; inspect generated PRODUCT.md/DESIGN.md and any hook settings. Run a focused critique only after approval.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "pbakaus/impeccable",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 117699,
+    "lastPush": "2026-11-27",
+    "archived": false,
+    "repositoryLicense": "Apache-2.0",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }

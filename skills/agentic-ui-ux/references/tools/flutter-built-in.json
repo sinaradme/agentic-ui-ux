@@ -18,5 +18,14 @@
   "verify": "Verify flutter analyze, relevant widget/integration tests and device rendering when possible.",
   "selectionTier": "preferred",
   "evidenceLevel": "upstream-documented",
-  "qualityBenchmark": "not-run"
+  "qualityBenchmark": "not-run",
+  "credibility": {
+    "repository": "flutter/flutter",
+    "checkedAt": "2026-11-27",
+    "repositoryStars": 181550,
+    "lastPush": "2026-11-27",
+    "archived": false,
+    "repositoryLicense": "BSD-3-Clause",
+    "note": "Stars and push date apply to the whole repository, not a particular skill. No independent quality score."
+  }
 }
