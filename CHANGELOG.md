@@ -2,6 +2,8 @@
 
 ## 1.0 — 2026-11-27
 
+- Final technical QC: mandatory acceptance checks, confirmed post-install inventory, invalid freshness-date rejection, installed router/grounding CLI tests, repository-wide internal link checks and consistent one-skill onboarding. See FINAL-QC.md for verified results and open empirical validation.
+
 - Completed source-grounding hardening: exact official component/API retrieval scopes, product versus marketing routing, native-dashboard regression fix, and explicit verification outcomes. Final CI: 64 route fixtures, 504 invariant checks, 28 grounding fixtures and 26 knowledge cards passed; isolated skill installation passed.
 
 - Reviewed the primary upstream documentation of all 20 source repositories and the relevant skill files; added 26 focused knowledge cards with pinned source revisions, scope, fit/exclusions and exact documentation pointers. Added mandatory source-grounded design, preflight/final decision evidence and structural verification. No fine-tuning or independent visual quality claim.

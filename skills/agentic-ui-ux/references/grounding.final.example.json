@@ -1,0 +1,165 @@
+{
+  "phase": "final",
+  "request": {
+    "context": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "taste",
+      "installedTools": [
+        "taste"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "present",
+      "needs": []
+    },
+    "tasks": [
+      {
+        "id": "art-direction",
+        "coverage": "adequate",
+        "evidence": "Synthetic confirmed post-implementation coverage",
+        "provider": "taste"
+      },
+      {
+        "id": "page-layout",
+        "coverage": "adequate",
+        "evidence": "Synthetic confirmed post-implementation coverage",
+        "provider": "taste"
+      },
+      {
+        "id": "typography",
+        "coverage": "adequate",
+        "evidence": "Synthetic confirmed post-implementation coverage",
+        "provider": "taste"
+      }
+    ]
+  },
+  "surfaces": [
+    {
+      "id": "hero",
+      "description": "Landing hero (synthetic example only)"
+    }
+  ],
+  "decisions": [
+    {
+      "capability": "art-direction",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Hero and typography tokens",
+          "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+        }
+      ],
+      "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+      "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+      "verification": [
+        {
+          "kind": "screenshot",
+          "location": "fixture/hero.png",
+          "result": "Synthetic test record only",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "capability": "page-layout",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Hero and typography tokens",
+          "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+        }
+      ],
+      "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+      "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+      "verification": [
+        {
+          "kind": "screenshot",
+          "location": "fixture/hero.png",
+          "result": "Synthetic test record only",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "capability": "typography",
+      "surfaces": [
+        "hero"
+      ],
+      "status": "grounded",
+      "sources": [
+        {
+          "kind": "project",
+          "location": "DESIGN.md",
+          "locator": "Hero and typography tokens",
+          "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+        }
+      ],
+      "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+      "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+      "verification": [
+        {
+          "kind": "screenshot",
+          "location": "fixture/hero.png",
+          "result": "Synthetic test record only",
+          "status": "pass"
+        }
+      ]
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "rendered-ui",
+      "status": "pass",
+      "location": "fixture/rendered-ui.md",
+      "result": "Synthetic test evidence only"
+    },
+    {
+      "id": "functional",
+      "status": "pass",
+      "location": "fixture/functional.md",
+      "result": "Synthetic test evidence only"
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "location": "fixture/accessibility.md",
+      "result": "Synthetic test evidence only"
+    },
+    {
+      "id": "responsive-or-native",
+      "status": "pass",
+      "location": "fixture/responsive-or-native.md",
+      "result": "Synthetic test evidence only"
+    },
+    {
+      "id": "build-or-validation",
+      "status": "pass",
+      "location": "fixture/build-or-validation.md",
+      "result": "Synthetic test evidence only"
+    }
+  ],
+  "toolVerification": [
+    {
+      "id": "taste",
+      "status": "pass",
+      "revision": "synthetic-revision",
+      "location": "fixture/discovery.md",
+      "result": "Synthetic verified provider"
+    }
+  ]
+}

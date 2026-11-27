@@ -74,3 +74,7 @@ Primary upstream documentation was inspected for all 20 source repositories; foc
 ### Final grounding verification
 
 Implementation commit [`0dc3c83`](https://github.com/sinaradme/agentic-ui-ux/commit/0dc3c83cdb96d9c3fc1a5c6cd8e3b1ebecd3f7d5): both [Repository quality](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45964529031) and [Skill install smoke](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45964529114) passed. 64/64 routing fixtures, 504/504 cross-product invariant checks, 28/28 grounding fixtures, 26/26 knowledge cards and 39/39 generated reference checks passed. The setup and inspector suites still pass. The intermediate routing matrix identified a native-dashboard surface inference conflict; corrected in commit `73c2286` and covered by a dedicated regression. The final gate rejects missing sources, mismatched revisions, unapproved references, unresolved routes, lookalike domains, missing dynamic evidence and failed/blocked verification outcomes. The official-document scopes allow exact component/API pages under reviewed paths; they do not prove every page was reviewed. All claims are structural/packaging verification only: no live model adherence, real design comparison, or exhaustive source audit is claimed.
+
+## Final release review
+
+See [FINAL-QC.md](FINAL-QC.md) for the final cross-repository findings, fixes, verified CI evidence and explicit acceptance boundary. All current technical suites passed at the cited implementation commits.

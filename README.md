@@ -94,7 +94,7 @@ Ask the agent to inspect the actual rendered interface, test the important state
 - [Mobile](MOBILE.md): native components, animation and testing.
 - [Agentic UI/UX skill](skills/agentic-ui-ux/SKILL.md): central orchestration instructions for your agent.
 - [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
-- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [v1.0 quality report](QUALITY.md).
+- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [v1.0 quality report](QUALITY.md) · [Final release QC](FINAL-QC.md).
 
 **Research updated:** November 27, 2026 · **Edition:** 1.0
 
