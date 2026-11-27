@@ -26,7 +26,8 @@ export function classify(observation) {
  if(has("components.json"))installedSignals.push("shadcn");
  if(dep("react-native-paper"))installedSignals.push("rn-paper");
  if(dep("react-native-reanimated"))installedSignals.push("reanimated");
- const skillMap={"design-taste-frontend":"taste","impeccable":"impeccable","ui-ux-pro-max":"uiux-pro-max","hallmark":"hallmark","frontend-design":"anthropic-frontend","animate":"emil-web","animate-expo":"emil-native","stageshow":"stageshow"};
+ if(dep("motion")||dep("framer-motion"))installedSignals.push("motion-web");
+ const skillMap={"design-taste-frontend":"taste","impeccable":"impeccable","ui-ux-pro-max":"uiux-pro-max","hallmark":"hallmark","frontend-design":"anthropic-frontend","animate":"emil-web","animate-expo":"emil-native","stageshow":"stageshow","choreograph":"emil-choreograph","gestures":"emil-gestures","animation-performance":"emil-performance","review-animations":"emil-review"};
  for(const name of observation.projectSkillNames||[])if(Object.hasOwn(skillMap,name))installedSignals.push(skillMap[name]);
  const componentSignals=["@mui/material","antd","@chakra-ui/react","react-native-paper","tamagui","@mantine/core","@heroui/react","@nextui-org/react","native-base","vuetify","@headlessui/react","@radix-ui/react-dialog"].filter(dep);
  if(has("components.json"))componentSignals.push("components.json");

@@ -1,0 +1,33 @@
+{
+  "context": {
+    "stack": "react-web",
+    "goal": "new-ui",
+    "agent": "cursor",
+    "inventoryComplete": true,
+    "primarySkill": "none",
+    "installedTools": [],
+    "componentSystem": "present",
+    "browserAccess": "present",
+    "deviceAccess": "not-applicable",
+    "node": "present",
+    "python": "present",
+    "needs": []
+  },
+  "tasks": [
+    {
+      "id": "art-direction",
+      "coverage": "gap",
+      "evidence": "Fixture: inspected target capability"
+    },
+    {
+      "id": "page-layout",
+      "coverage": "gap",
+      "evidence": "Fixture: inspected target capability"
+    },
+    {
+      "id": "typography",
+      "coverage": "gap",
+      "evidence": "Fixture: inspected target capability"
+    }
+  ]
+}

@@ -34,6 +34,16 @@ This is the standard upstream skills CLI syntax; choose your coding agent and pr
 | [Context schema](skills/agentic-ui-ux/references/context.schema.json) | Evidence needed about the target |
 | [Planner](skills/agentic-ui-ux/scripts/plan.mjs) | Optional deterministic, plan-only Node.js tool |
 
+## Capability routing (recommended)
+
+The agent breaks a task into focused capabilities, checks existing coverage and reads only the relevant playbooks. Use the [routing guide](skills/agentic-ui-ux/references/routing.md). With local files and Node.js, create a request from the [example](skills/agentic-ui-ux/references/route.example.json) and run:
+
+```sh
+node skills/agentic-ui-ux/scripts/route.mjs /path/to/request.json
+```
+
+This produces a plan with selected playbooks, reused tools, candidates and blocked checks. It does not install or activate anything. The older coarse planner below remains available for setup-only requests.
+
 ## Optional local inspector and planner (no npm dependencies)
 
 From a local checkout, collect a safe context draft for the actual target project:
@@ -63,6 +73,7 @@ The agent should explain what it will reuse, what it proposes to add, what is bl
 ```sh
 node skills/agentic-ui-ux/scripts/test-plan.mjs
 node skills/agentic-ui-ux/scripts/test-inspect.mjs
+node skills/agentic-ui-ux/scripts/test-route.mjs
 ```
 
 The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).

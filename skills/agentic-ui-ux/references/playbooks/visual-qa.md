@@ -1,0 +1,5 @@
+# Visual QA and refinement
+
+Capture baseline when possible. Render actual implementation at representative desktop/mobile or native device sizes. Compare against brief, tokens and references. Verify functional paths, edge states, accessibility and motion. Prioritize P0 broken flows/security, P1 blocking UX/layout, P2 visual consistency and P3 polish. Fix P0/P1 before visual embellishment. Use existing browser/device tools; propose Playwright only for a confirmed browser gap. If no visual access, mark visual QA blocked and request screenshots. Iterate up to three rounds by default, stop sooner when acceptance criteria pass or on budget/permission limits. Record screenshots, tests, remaining issues and changes; never manufacture pass results.
+
+Use [capabilities.json](../capabilities.json) to select only the relevant capability and [priority policy](../priority-policy.json) for external tools. The playbook works without installing an external skill; it is not a substitute for verified specialist guidance when a gap remains.

@@ -9,7 +9,8 @@
     "maxNewPrimarySkills": 1,
     "exploratoryAutoSelection": false,
     "authorizationRequired": true,
-    "versionPolicy": "Review source, license, compatibility, exact revision and any hooks before approval. Check actual Node/npm/CLI versions, not just their presence. Unpinned commands are examples; do not execute them without review and user authorization."
+    "versionPolicy": "Review source, license, compatibility, exact revision and any hooks before approval. Check actual Node/npm/CLI versions, not just their presence. Unpinned commands are examples; do not execute them without review and user authorization.",
+    "capabilityRouting": "Use route.mjs and capabilities.json for design tasks; legacy plan.mjs remains a coarse setup planner."
   },
   "stacks": [
     "react-web",
@@ -61,7 +62,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-26",
-      "verify": "Confirm the skill is discovered by the target agent and the loaded SKILL.md matches the approved revision."
+      "verify": "Confirm the skill is discovered by the target agent and the loaded SKILL.md matches the approved revision.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "impeccable",
@@ -100,7 +104,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "Apache-2.0",
       "lastRepositoryPush": "2026-11-27",
-      "verify": "Verify discovery and initialization; inspect generated PRODUCT.md/DESIGN.md and any hook settings. Run a focused critique only after approval."
+      "verify": "Verify discovery and initialization; inspect generated PRODUCT.md/DESIGN.md and any hook settings. Run a focused critique only after approval.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "uiux-pro-max",
@@ -152,7 +159,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-27",
-      "verify": "Confirm the installed CLI and Python versions, project skill discovery and a successful design-system query."
+      "verify": "Confirm the installed CLI and Python versions, project skill discovery and a successful design-system query.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "hallmark",
@@ -186,7 +196,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-11",
-      "verify": "Verify the installed skill name, source revision and agent discovery."
+      "verify": "Verify the installed skill name, source revision and agent discovery.",
+      "selectionTier": "alternative",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "anthropic-frontend",
@@ -220,7 +233,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "Apache-2.0 (specific skill)",
       "lastRepositoryPush": "2026-11-16",
-      "verify": "Verify frontend-design is discovered and the agent reads the approved skill."
+      "verify": "Verify frontend-design is discovered and the agent reads the approved skill.",
+      "selectionTier": "alternative",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "emil-web",
@@ -254,7 +270,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-15",
-      "verify": "Verify animate discovery; inspect a real web interaction, reduced motion and keyboard behavior."
+      "verify": "Verify animate discovery; inspect a real web interaction, reduced motion and keyboard behavior.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "emil-native",
@@ -287,7 +306,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-15",
-      "verify": "Verify animate-expo discovery; inspect gestures, transitions and reduced motion on a native device."
+      "verify": "Verify animate-expo discovery; inspect gestures, transitions and reduced motion on a native device.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "stageshow",
@@ -321,7 +343,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT (specific skill; notices apply)",
       "lastRepositoryPush": "2026-11-05",
-      "verify": "Verify discovery and compatible React demo/build; inspect the animation."
+      "verify": "Verify discovery and compatible React demo/build; inspect the animation.",
+      "selectionTier": "specialized",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "make-interfaces",
@@ -343,7 +368,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-18",
-      "verify": "Use only as a reference and verify the proposed UI change in the rendered app."
+      "verify": "Use only as a reference and verify the proposed UI change in the rendered app.",
+      "selectionTier": "specialized",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "shadcn",
@@ -372,7 +400,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-26",
-      "verify": "Check components.json and generated component files, build, accessibility and existing token compatibility."
+      "verify": "Check components.json and generated component files, build, accessibility and existing token compatibility.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "magic-ui",
@@ -394,7 +425,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT (free repository)",
       "lastRepositoryPush": "2026-11-26",
-      "verify": "Review the selected component source, dependency changes and rendered motion/performance."
+      "verify": "Review the selected component source, dependency changes and rendered motion/performance.",
+      "selectionTier": "specialized",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "playwright-mcp",
@@ -431,7 +465,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "Apache-2.0",
       "lastRepositoryPush": "2026-11-18",
-      "verify": "Confirm the MCP server is connected and can navigate the authorized local page and capture a screenshot."
+      "verify": "Confirm the MCP server is connected and can navigate the authorized local page and capture a screenshot.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "shadcn-mcp",
@@ -468,7 +505,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-26",
-      "verify": "Confirm the server can search the intended registry; inspect results before adding a component."
+      "verify": "Confirm the server can search the intended registry; inspect results before adding a component.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "chrome-devtools-mcp",
@@ -499,7 +539,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "Apache-2.0",
       "lastRepositoryPush": "2026-11-27",
-      "verify": "Confirm connection and that the intended diagnostic tool works on an authorized local page."
+      "verify": "Confirm connection and that the intended diagnostic tool works on an authorized local page.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "rn-paper",
@@ -521,7 +564,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-25",
-      "verify": "Verify native package compatibility, build and real device rendering."
+      "verify": "Verify native package compatibility, build and real device rendering.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "reanimated",
@@ -543,7 +589,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-27",
-      "verify": "Verify Expo/RN compatibility, required worklet configuration, native rebuild and real device animation."
+      "verify": "Verify Expo/RN compatibility, required worklet configuration, native rebuild and real device animation.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "maestro",
@@ -566,7 +615,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "Apache-2.0",
       "lastRepositoryPush": "2026-11-26",
-      "verify": "Run a non-destructive test flow against an authorized simulator/device; inspect actual results."
+      "verify": "Run a non-destructive test flow against an authorized simulator/device; inspect actual results.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "flutter-built-in",
@@ -585,7 +637,10 @@
       "evidence": "upstream-documented; not independently benchmarked",
       "license": "BSD-3-Clause",
       "lastRepositoryPush": "2026-11-27",
-      "verify": "Verify flutter analyze, relevant widget/integration tests and device rendering when possible."
+      "verify": "Verify flutter analyze, relevant widget/integration tests and device rendering when possible.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "motion-ui-skill",
@@ -606,7 +661,10 @@
       "evidence": "metadata reviewed; low adoption; no automatic selection",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-20",
-      "verify": "Review manually; inspect an isolated example before adoption."
+      "verify": "Review manually; inspect an isolated example before adoption.",
+      "selectionTier": "exploratory",
+      "evidenceLevel": "metadata-reviewed",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "fancy-ui",
@@ -627,7 +685,10 @@
       "evidence": "metadata reviewed; verify exact framework; no automatic selection",
       "license": "MIT",
       "lastRepositoryPush": "2026-11-27",
-      "verify": "Review manually; verify exact framework and isolated rendering before adoption."
+      "verify": "Review manually; verify exact framework and isolated rendering before adoption.",
+      "selectionTier": "exploratory",
+      "evidenceLevel": "metadata-reviewed",
+      "qualityBenchmark": "not-run"
     },
     {
       "id": "landing-page-atlas",
@@ -649,7 +710,189 @@
       "evidence": "upstream catalog reviewed; no automatic selection",
       "license": "MIT",
       "lastRepositoryPush": "2026-10-31",
-      "verify": "Review the source and asset rights before reuse."
+      "verify": "Review the source and asset rights before reuse.",
+      "selectionTier": "exploratory",
+      "evidenceLevel": "metadata-reviewed",
+      "qualityBenchmark": "not-run"
+    },
+    {
+      "id": "emil-choreograph",
+      "name": "Emil: choreograph",
+      "source": "https://github.com/emilkowalski/skills",
+      "docs": "https://aiforui.dev/skills/choreograph",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "motion",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "choreograph",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add emilkowalski/skills --skill choreograph",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-15",
+      "verify": "Confirm discovery of choreograph; inspect actual relevant interaction or animation and record evidence.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
+    },
+    {
+      "id": "emil-gestures",
+      "name": "Emil: gestures",
+      "source": "https://github.com/emilkowalski/skills",
+      "docs": "https://aiforui.dev/skills/gestures",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "motion",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "gestures",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add emilkowalski/skills --skill gestures",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-15",
+      "verify": "Confirm discovery of gestures; inspect actual relevant interaction or animation and record evidence.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
+    },
+    {
+      "id": "emil-performance",
+      "name": "Emil: animation-performance",
+      "source": "https://github.com/emilkowalski/skills",
+      "docs": "https://aiforui.dev/skills/animation-performance",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "motion-review",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "animation-performance",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add emilkowalski/skills --skill animation-performance",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-15",
+      "verify": "Confirm discovery of animation-performance; inspect actual relevant interaction or animation and record evidence.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
+    },
+    {
+      "id": "emil-review",
+      "name": "Emil: review-animations",
+      "source": "https://github.com/emilkowalski/skills",
+      "docs": "https://aiforui.dev/skills/review-animations",
+      "kind": "skill",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "role": "motion-review",
+      "eligibleAgents": [
+        "cursor",
+        "codex",
+        "claude-code"
+      ],
+      "skillName": "review-animations",
+      "install": {
+        "mode": "review-command",
+        "command": "npx skills add emilkowalski/skills --skill review-animations",
+        "scope": "target-project",
+        "requires": [
+          "node"
+        ],
+        "review": [
+          "Recheck upstream license, supported versions and exact source revision; inspect proposed changes before approval.",
+          "Check the installed Node/npm version against the selected skills CLI release; upstream skills 1.9.1 declares Node >=22.20.0."
+        ]
+      },
+      "evidence": "upstream-documented; not independently benchmarked",
+      "license": "MIT",
+      "lastRepositoryPush": "2026-11-15",
+      "verify": "Confirm discovery of review-animations; inspect actual relevant interaction or animation and record evidence.",
+      "selectionTier": "preferred",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run"
+    },
+    {
+      "id": "motion-web",
+      "name": "Motion (open-source core)",
+      "source": "https://github.com/motiondivision/motion",
+      "docs": "https://motion.dev/docs/react",
+      "kind": "runtime",
+      "stacks": [
+        "react-web"
+      ],
+      "role": "motion-runtime",
+      "install": {
+        "mode": "review-docs",
+        "requires": [
+          "node"
+        ],
+        "examples": [
+          "npm install motion"
+        ],
+        "review": [
+          "Use the actual package manager and pin a reviewed version. Check existing Motion/Framer Motion or another animation runtime first; never add a second runtime automatically.",
+          "Use only MIT core features; Motion+ is not required. Check framework/runtime compatibility and license."
+        ]
+      },
+      "license": "MIT (core)",
+      "lastRepositoryPush": "2026-11-26",
+      "evidence": "upstream README and metadata reviewed; no independent quality benchmark",
+      "evidenceLevel": "upstream-documented",
+      "qualityBenchmark": "not-run",
+      "selectionTier": "preferred",
+      "verify": "Confirm actual installed revision and imports, build, reduced-motion behavior, interrupted transitions and rendered performance."
     }
   ]
 }

@@ -2,6 +2,9 @@
 
 ## 1.0 — 2026-11-27
 
+- Expanded the same 1.0 edition with capability-based routing, 12 focused playbooks, 42 capability IDs, explicit trust tiers, bounded specialist selection and conflict gates. Added the open-source Motion runtime and four precise Emil skills. Legacy setup planner remains available.
+- Added task routing fixtures, registry integrity checks and isolated CLI installation verification; see QUALITY.md for exact evidence.
+
 - Stable decision-first guide and plan-only architecture; added read-only project inspector and explicit setup/design acceptance contract.
 - Added source/license snapshot and per-tool verification steps to the catalog; documented actual runtime-version requirements.
 - Hardened inconsistent inventory, targeted-task selection and unverified activation handling. Expanded selection fixtures from 21 to 32 and added 11 inspection classifier fixtures plus filesystem tests.

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Capability route request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "context",
+    "tasks"
+  ],
+  "properties": {
+    "context": {
+      "$ref": "context.schema.json"
+    },
+    "tasks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "coverage"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "art-direction",
+              "brand-consistency",
+              "ux-flow",
+              "onboarding",
+              "form-states",
+              "page-layout",
+              "layout-refinement",
+              "dashboard-layout",
+              "typography",
+              "color",
+              "tokens",
+              "system-consistency",
+              "component-primitives",
+              "section-blocks",
+              "native-components",
+              "component-discovery",
+              "micro-interactions",
+              "choreography",
+              "scroll-motion",
+              "layout-transitions",
+              "complex-web-runtime",
+              "complex-native-runtime",
+              "motion-review",
+              "motion-performance",
+              "gesture",
+              "feedback",
+              "navigation",
+              "image-direction",
+              "product-illustration",
+              "decorative-effect",
+              "iconography",
+              "responsive-layout",
+              "native-platform",
+              "keyboard-rtl",
+              "accessibility-audit",
+              "page-performance",
+              "browser-diagnostics",
+              "visual-review",
+              "browser-inspection",
+              "device-inspection",
+              "native-e2e",
+              "functional-regression"
+            ]
+          },
+          "coverage": {
+            "enum": [
+              "adequate",
+              "gap",
+              "unknown"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "maxLength": 1000
+          },
+          "provider": {
+            "type": "string",
+            "description": "Confirmed existing catalog tool ID or project"
+          },
+          "advanced": {
+            "type": "boolean"
+          },
+          "materialFit": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "policy": {
+      "enum": [
+        "minimal",
+        "no-new-tools"
+      ]
+    }
+  }
+}

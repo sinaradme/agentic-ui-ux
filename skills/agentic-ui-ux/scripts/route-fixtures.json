@@ -1,0 +1,1342 @@
+[
+  {
+    "name": "new landing design + layout dedup",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "page-layout",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "typography",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatuses": {
+      "art-direction": "candidate",
+      "page-layout": "candidate",
+      "typography": "candidate"
+    }
+  },
+  {
+    "name": "same request reordered",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "typography",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "page-layout",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "taste"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "existing component system",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "component-primitives",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "component-primitives": "reuse-project"
+    }
+  },
+  {
+    "name": "confirmed new React components",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "absent",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "component-primitives",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "section-blocks",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "shadcn"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "unknown components",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "unknown",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "component-primitives",
+          "coverage": "unknown"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "component-primitives": "needs-verification"
+    }
+  },
+  {
+    "name": "narrow typography no primary",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "redesign",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "typography",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "typography": "playbook"
+    }
+  },
+  {
+    "name": "existing design owner adequate",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "redesign",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "impeccable",
+        "installedTools": [
+          "impeccable"
+        ],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "typography",
+          "coverage": "adequate",
+          "evidence": "Fixture: inspected target capability",
+          "provider": "impeccable"
+        },
+        {
+          "id": "layout-refinement",
+          "coverage": "adequate",
+          "evidence": "Fixture: inspected target capability",
+          "provider": "impeccable"
+        }
+      ]
+    },
+    "expectedIds": [
+      "impeccable"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "existing primary reported inadequate",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "taste",
+        "installedTools": [
+          "taste"
+        ],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "art-direction": "needs-verification"
+    }
+  },
+  {
+    "name": "existing alternate owner only",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "hallmark",
+        "installedTools": [
+          "hallmark"
+        ],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "adequate",
+          "evidence": "Fixture: inspected target capability",
+          "provider": "hallmark"
+        }
+      ]
+    },
+    "expectedIds": [
+      "hallmark"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "micro motion default specialist",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "micro-interactions",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "emil-web"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "scroll and micro dedup",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "scroll-motion",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "micro-interactions",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "emil-web"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "motion budget",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "micro-interactions",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "choreography",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "gesture",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "motion-review",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "emil-web",
+      "emil-choreograph"
+    ],
+    "expectedStatuses": {
+      "motion-review": "playbook",
+      "gesture": "playbook"
+    }
+  },
+  {
+    "name": "advanced runtime gap",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "complex-web-runtime",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability",
+          "advanced": true
+        }
+      ]
+    },
+    "expectedIds": [
+      "motion-web"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "ordinary motion no runtime",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "complex-web-runtime",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "complex-web-runtime": "playbook"
+    }
+  },
+  {
+    "name": "existing runtime must be diagnosed",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [
+          "motion-web"
+        ],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "complex-web-runtime",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability",
+          "advanced": true
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "complex-web-runtime": "needs-verification"
+    }
+  },
+  {
+    "name": "runtime already adequate",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [
+          "motion-web"
+        ],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "complex-web-runtime",
+          "coverage": "adequate",
+          "evidence": "Fixture: inspected target capability",
+          "provider": "motion-web"
+        }
+      ]
+    },
+    "expectedIds": [
+      "motion-web"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "Vue cannot select React runtime",
+    "input": {
+      "context": {
+        "stack": "other-web",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "complex-web-runtime",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability",
+          "advanced": true
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "complex-web-runtime": "not-applicable"
+    }
+  },
+  {
+    "name": "native no web tools",
+    "input": {
+      "context": {
+        "stack": "react-native",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "not-applicable",
+        "deviceAccess": "present",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "gesture",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "micro-interactions",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "complex-web-runtime",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability",
+          "advanced": true
+        },
+        {
+          "id": "decorative-effect",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "emil-native"
+    ],
+    "expectedStatuses": {
+      "complex-web-runtime": "not-applicable",
+      "decorative-effect": "not-applicable"
+    }
+  },
+  {
+    "name": "native runtime gap",
+    "input": {
+      "context": {
+        "stack": "react-native",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "present",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "complex-native-runtime",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability",
+          "advanced": true
+        }
+      ]
+    },
+    "expectedIds": [
+      "reanimated"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "native material requires fit",
+    "input": {
+      "context": {
+        "stack": "react-native",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "absent",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "native-components",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "native-components": "needs-verification"
+    }
+  },
+  {
+    "name": "native material approved fit",
+    "input": {
+      "context": {
+        "stack": "react-native",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "absent",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "native-components",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability",
+          "materialFit": true
+        }
+      ]
+    },
+    "expectedIds": [
+      "rn-paper"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "Flutter built-ins",
+    "input": {
+      "context": {
+        "stack": "flutter",
+        "goal": "motion",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "present",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "gesture",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "choreography",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "complex-native-runtime",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability",
+          "advanced": true
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "complex-native-runtime": "not-applicable"
+    }
+  },
+  {
+    "name": "graphics no fictitious library",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "image-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "iconography",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "specialized effect explicit",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "decorative-effect",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "product-illustration",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "stageshow",
+      "magic-ui"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "registry without shadcn",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "component-discovery",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "component-discovery": "needs-verification"
+    }
+  },
+  {
+    "name": "registry with shadcn",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [
+          "shadcn"
+        ],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "component-discovery",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "shadcn-mcp"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "browser absent",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "visual-qa",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "absent",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "browser-inspection",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [
+      "playwright-mcp"
+    ],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "browser present",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "visual-qa",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "browser-inspection",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "browser-inspection": "reuse-project"
+    }
+  },
+  {
+    "name": "browser unknown",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "visual-qa",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "unknown",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "browser-inspection",
+          "coverage": "unknown"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "browser-inspection": "needs-verification"
+    }
+  },
+  {
+    "name": "native QA device blocked",
+    "input": {
+      "context": {
+        "stack": "react-native",
+        "goal": "visual-qa",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "absent",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "device-inspection",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "native-e2e",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "device-inspection": "blocked",
+      "native-e2e": "blocked"
+    }
+  },
+  {
+    "name": "unknown coverage no install",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "unknown"
+        },
+        {
+          "id": "choreography",
+          "coverage": "unknown"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "no-new-tools",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "choreography",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "decorative-effect",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ],
+      "policy": "no-new-tools"
+    },
+    "expectedIds": [],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "missing runtime prerequisites no fallback",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "absent",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "micro-interactions",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "art-direction": "needs-verification",
+      "micro-interactions": "needs-verification"
+    }
+  },
+  {
+    "name": "unknown agent no skill install",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "unknown",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "art-direction": "needs-verification"
+    }
+  },
+  {
+    "name": "incompatible custom owner",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "custom-unknown",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "quality only no general skill",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "visual-qa",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "visual-review",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "accessibility-audit",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {}
+  },
+  {
+    "name": "invalid invented cap",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "invented",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {},
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "duplicate capability",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "color",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        },
+        {
+          "id": "color",
+          "coverage": "gap",
+          "evidence": "Fixture: inspected target capability"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {},
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "missing evidence",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "gap"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {},
+    "expectedStatus": "blocked"
+  },
+  {
+    "name": "unconfirmed provider",
+    "input": {
+      "context": {
+        "stack": "react-web",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "present",
+        "deviceAccess": "not-applicable",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "art-direction",
+          "coverage": "adequate",
+          "evidence": "Fixture: inspected target capability",
+          "provider": "taste"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {},
+    "expectedStatus": "blocked"
+  }
+]

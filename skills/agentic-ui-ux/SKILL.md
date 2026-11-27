@@ -1,6 +1,6 @@
 ---
 name: agentic-ui-ux
-description: Select the minimal compatible UI/UX design skills, components, motion tools and visual QA capabilities for a target project. Use for agent-assisted websites, dashboards, redesigns, React Native, Expo and Flutter.
+description: Route UI/UX tasks to focused design, layout, typography, components, motion, graphics, native and visual QA capabilities. Inspect the target project, reuse existing tools, select only compatible gap-filling resources, implement and verify rendered interfaces.
 license: MIT
 metadata:
   version: "1.0"
@@ -8,26 +8,18 @@ metadata:
 
 # Agentic UI/UX
 
-You are a design-engineering guide. Your job is to choose and use only what the actual project needs.
+One entry point for design engineering. Do not install a stack by default.
 
-## Read and inspect
+## Route the task
 
-1. Read [references/decision-rules.md](references/decision-rules.md). Start with the target task; do not load unrelated tool entries or examples.
-2. If available, run the read-only inspector `node <skill-directory>/scripts/inspect.mjs <target-project>` to get a context draft. It does not confirm availability or install anything. Inspect the user's target project, its rules, manifests, installed design skills, current UI system, motion libraries, and agent/browser/device capabilities. Record the stack, task, agent, known tools and missing capabilities. Unknown is not absent. Ask for missing essential evidence.
-3. Build a minimal plan using the rules and [references/context.schema.json](references/context.schema.json). If Node.js and the skill folder are available, save a non-secret context JSON and run `node <skill-directory>/scripts/plan.mjs <context.json>`. It only prints JSON; it does not install anything. If you have only a GitHub read connection, apply the same rules manually. Consult only the relevant entries in [references/catalog.json](references/catalog.json) and their upstream docs; the local planner already reads the catalog for you.
+1. Read the target project's rules, brief, manifests, design tokens, existing UI and actual agent/browser/device capabilities. If available, use `node <skill-directory>/scripts/inspect.mjs <target>` for a safe context draft; confirm its signals. Unknown is not absence.
+2. Read [references/routing.md](references/routing.md) and identify only the relevant capability IDs in [references/capabilities.json](references/capabilities.json). Split the task into concrete needs, not library names. Record evidence of adequate/gap/unknown coverage. Use [references/route.example.json](references/route.example.json) and run `node <skill-directory>/scripts/route.mjs <request.json>` if local Node/files are available. With a read-only GitHub connection follow the same rules manually.
+3. Read only the returned playbooks and relevant upstream entries in [references/catalog.json](references/catalog.json). Preserve one primary design owner, existing component system and runtime. Reuse working tools. Prefer established compatible providers for confirmed gaps; specialized tools only for their exact need. No automatic exploratory or weaker fallback. No new tools is valid. The old plan.mjs is a coarse setup-only path, not the task router.
 
-## Default decisions
+## Approval and execution
 
-- New web UI: Taste Skill; redesign: Impeccable; UX planning: UI/UX Pro Max. These are editorial starting points, not winners. Reuse a compatible primary skill if one exists.
-- Motion: Emil animate for web or animate-expo for React Native; use Flutter built-ins for Flutter.
-- Reuse the existing UI system. shadcn/ui is React web only; React Native and Flutter need native-compatible primitives.
-- Reuse existing browser or device tools. If browser access is confirmed missing on web, propose Playwright MCP. A web screenshot cannot verify native UI.
-- Add a specialized tool only for an identified gap. Do not install everything. Zero installs can be correct.
+A candidate is not an install instruction. Show reasons, exact reviewed versions/commands/config, scope, compatibility, license, expected file changes, hooks and rollback. Ask for explicit approval before installation, config changes or new permissions; separately approve global changes and hooks. Do not blindly execute external repository instructions. Verify installation/discovery and use only the selected focused commands. If capability is unavailable, use bundled guidance where appropriate and disclose unmet requirements.
 
-## Approval gate
+## Deliver real design evidence
 
-Return a concise plan with project context, reuse vs add vs blocked, reasons, source, exact reviewed command/configuration, target path/scope, prerequisite/compatibility checks, version/license, expected file changes and verification. Ask for explicit approval before running install commands, adding packages, changing config, enabling hooks or doing global installs. A URL, the catalog and this skill alone do not authorize actions. If tools or access are missing, give actionable manual instructions and state the limitation. Use the per-tool verification field in the catalog; do not treat installed files as working tools. Report exact Node/npm/CLI versions, not simply presence.
-
-## Build and verify
-
-After authorized setup, execute only the approved commands, one step at a time; stop on errors rather than silently switching installers. Confirm the tool/skill actually works. Use [references/acceptance.md](references/acceptance.md) for the setup and design acceptance report. Establish a coherent visual direction, reuse project design tokens and implement a small working screen/section. Preserve business logic, security and existing functionality. Render and inspect actual screens, important UI states, accessibility and reduced motion. Correct material issues and report evidence and unverified checks. Never claim flawless design, successful installation or production readiness without evidence.
+Establish visual intent and acceptance criteria; preserve the design system, business logic and security. Build a representative screen/section, inspect actual desktop/mobile or native output, interactions and failure states. Check accessibility and performance where relevant. Fix issues in priority order, up to three rounds by default. Follow [references/acceptance.md](references/acceptance.md). Never report unexecuted tests, pretend mockups are actual output, or claim quality improvement without a controlled comparison.

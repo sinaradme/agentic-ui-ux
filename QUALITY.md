@@ -47,3 +47,7 @@ For practical adoption, use a throwaway target project, [agent setup](AGENT-SETU
 ## Release boundary
 
 v1.0 describes a complete, usable selection guide and reviewable plan-only engine. It does not establish that an arbitrary agent will follow every instruction, that upstream dependencies install in every environment, or that the final visual output is better than a baseline. Those require actual agent sessions with controlled project evidence. The first independent benchmark must publish failures as well as successes.
+
+## Capability routing expansion (same v1.0 edition)
+
+The default workflow now routes the user's task into 42 capabilities in 12 playbooks rather than choosing an entire library by category. It separates design guidance, runtime/component implementation and QA tools, preserves one primary owner and existing systems, limits specialist additions, treats unknown coverage as unverified, and prevents automatic lower-tier fallback. The route fixtures verify stable ordering, deduplication, stack isolation, evidence requirements, budgets, and no execution authorization. Run `node skills/agentic-ui-ux/scripts/test-route.mjs`. CI evidence for this expansion is available on [Actions](https://github.com/sinaradme/agentic-ui-ux/actions). It still does not establish human cognitive-load reduction, autonomous agent compliance or equal/improved design quality; those require controlled real agent trials.

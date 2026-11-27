@@ -1,0 +1,1180 @@
+{
+  "schemaVersion": 1,
+  "edition": "1.0",
+  "groups": {
+    "art-direction": {
+      "title": "Art direction",
+      "path": "references/playbooks/art-direction.md"
+    },
+    "ux": {
+      "title": "UX and user flows",
+      "path": "references/playbooks/ux.md"
+    },
+    "layout": {
+      "title": "Layout and composition",
+      "path": "references/playbooks/layout.md"
+    },
+    "typography": {
+      "title": "Typography and color",
+      "path": "references/playbooks/typography.md"
+    },
+    "design-systems": {
+      "title": "Design systems",
+      "path": "references/playbooks/design-systems.md"
+    },
+    "components": {
+      "title": "Components and sections",
+      "path": "references/playbooks/components.md"
+    },
+    "motion": {
+      "title": "Motion engineering",
+      "path": "references/playbooks/motion.md"
+    },
+    "interactions": {
+      "title": "Interaction design",
+      "path": "references/playbooks/interactions.md"
+    },
+    "graphics": {
+      "title": "Graphics and illustration",
+      "path": "references/playbooks/graphics.md"
+    },
+    "responsive-native": {
+      "title": "Responsive and native",
+      "path": "references/playbooks/responsive-native.md"
+    },
+    "accessibility-performance": {
+      "title": "Accessibility and performance",
+      "path": "references/playbooks/accessibility-performance.md"
+    },
+    "visual-qa": {
+      "title": "Visual QA and refinement",
+      "path": "references/playbooks/visual-qa.md"
+    }
+  },
+  "capabilities": [
+    {
+      "id": "art-direction",
+      "group": "art-direction",
+      "label": "Visual direction / concept",
+      "kind": "primary",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        },
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "bolder / quieter"
+        },
+        {
+          "tool": "uiux-pro-max",
+          "stacks": [
+            "react-web",
+            "other-web",
+            "react-native",
+            "flutter"
+          ],
+          "invoke": "design-system search (planning only)"
+        },
+        {
+          "tool": "hallmark",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ]
+        },
+        {
+          "tool": "anthropic-frontend",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "frontend-design"
+        }
+      ],
+      "goals": [
+        "new-ui",
+        "redesign",
+        "ux-planning"
+      ]
+    },
+    {
+      "id": "brand-consistency",
+      "group": "art-direction",
+      "label": "Preserve or establish brand language",
+      "kind": "primary",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        },
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "document"
+        },
+        {
+          "tool": "uiux-pro-max",
+          "stacks": [
+            "react-web",
+            "other-web",
+            "react-native",
+            "flutter"
+          ],
+          "invoke": "design-system search (planning only)"
+        },
+        {
+          "tool": "hallmark",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ]
+        },
+        {
+          "tool": "anthropic-frontend",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "frontend-design"
+        }
+      ],
+      "goals": [
+        "new-ui",
+        "redesign",
+        "ux-planning"
+      ]
+    },
+    {
+      "id": "ux-flow",
+      "group": "ux",
+      "label": "User journeys / information architecture",
+      "kind": "primary",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "uiux-pro-max",
+          "stacks": [
+            "react-web",
+            "other-web",
+            "react-native",
+            "flutter"
+          ],
+          "invoke": "design-system search (planning only)"
+        },
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "critique"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "goals": [
+        "new-ui",
+        "redesign",
+        "ux-planning"
+      ]
+    },
+    {
+      "id": "onboarding",
+      "group": "ux",
+      "label": "Onboarding / empty states",
+      "kind": "primary",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "onboard"
+        },
+        {
+          "tool": "uiux-pro-max",
+          "stacks": [
+            "react-web",
+            "other-web",
+            "react-native",
+            "flutter"
+          ],
+          "invoke": "planning"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "goals": [
+        "new-ui",
+        "redesign",
+        "ux-planning"
+      ]
+    },
+    {
+      "id": "form-states",
+      "group": "ux",
+      "label": "Forms / errors / task flows",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": []
+    },
+    {
+      "id": "page-layout",
+      "group": "layout",
+      "label": "Page / hero / section composition",
+      "kind": "primary",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        },
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "layout"
+        },
+        {
+          "tool": "uiux-pro-max",
+          "stacks": [
+            "react-web",
+            "other-web",
+            "react-native",
+            "flutter"
+          ],
+          "invoke": "design-system search (planning only)"
+        },
+        {
+          "tool": "hallmark",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ]
+        },
+        {
+          "tool": "anthropic-frontend",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "frontend-design"
+        }
+      ],
+      "goals": [
+        "new-ui",
+        "redesign",
+        "ux-planning"
+      ]
+    },
+    {
+      "id": "layout-refinement",
+      "group": "layout",
+      "label": "Spacing / alignment / visual rhythm",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "layout"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "dashboard-layout",
+      "group": "layout",
+      "label": "Dense product / dashboard layout",
+      "kind": "primary",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "layout"
+        },
+        {
+          "tool": "uiux-pro-max",
+          "stacks": [
+            "react-web",
+            "other-web",
+            "react-native",
+            "flutter"
+          ],
+          "invoke": "planning"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "goals": [
+        "new-ui",
+        "redesign",
+        "ux-planning"
+      ]
+    },
+    {
+      "id": "typography",
+      "group": "typography",
+      "label": "Type scale / hierarchy / readable copy",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "typeset"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "color",
+      "group": "typography",
+      "label": "Color / contrast / semantic palette",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "colorize"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "tokens",
+      "group": "design-systems",
+      "label": "Design tokens / theme",
+      "kind": "primary",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "uiux-pro-max",
+          "stacks": [
+            "react-web",
+            "other-web",
+            "react-native",
+            "flutter"
+          ],
+          "invoke": "design-system search (planning only)"
+        },
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "document"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "goals": [
+        "new-ui",
+        "redesign",
+        "ux-planning"
+      ]
+    },
+    {
+      "id": "system-consistency",
+      "group": "design-systems",
+      "label": "Component and token consistency",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "document"
+        },
+        {
+          "tool": "taste",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "design-taste-frontend"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "component-primitives",
+      "group": "components",
+      "label": "Reusable UI primitives",
+      "kind": "implementation",
+      "stacks": [
+        "react-web"
+      ],
+      "providers": [
+        {
+          "tool": "shadcn",
+          "stacks": [
+            "react-web"
+          ]
+        }
+      ],
+      "componentGate": true
+    },
+    {
+      "id": "section-blocks",
+      "group": "components",
+      "label": "Reusable page sections / blocks",
+      "kind": "implementation",
+      "stacks": [
+        "react-web"
+      ],
+      "providers": [
+        {
+          "tool": "shadcn",
+          "stacks": [
+            "react-web"
+          ]
+        }
+      ],
+      "componentGate": true
+    },
+    {
+      "id": "native-components",
+      "group": "components",
+      "label": "Native Material component system",
+      "kind": "implementation",
+      "stacks": [
+        "react-native"
+      ],
+      "providers": [
+        {
+          "tool": "rn-paper",
+          "stacks": [
+            "react-native"
+          ]
+        }
+      ],
+      "componentGate": true,
+      "explicitMaterial": true
+    },
+    {
+      "id": "component-discovery",
+      "group": "components",
+      "label": "Find existing registry items",
+      "kind": "tooling",
+      "stacks": [
+        "react-web"
+      ],
+      "providers": [
+        {
+          "tool": "shadcn-mcp",
+          "stacks": [
+            "react-web"
+          ]
+        }
+      ],
+      "requiresInstalled": "shadcn"
+    },
+    {
+      "id": "micro-interactions",
+      "group": "motion",
+      "label": "Hover / press / state transitions",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "emil-web",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "animate"
+        },
+        {
+          "tool": "emil-native",
+          "stacks": [
+            "react-native"
+          ],
+          "invoke": "animate-expo"
+        }
+      ],
+      "builtin": "CSS transitions / existing animation APIs"
+    },
+    {
+      "id": "choreography",
+      "group": "motion",
+      "label": "Coordinated multi-element motion",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "emil-choreograph",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "choreograph"
+        },
+        {
+          "tool": "emil-native",
+          "stacks": [
+            "react-native"
+          ],
+          "invoke": "animate-expo"
+        }
+      ],
+      "builtin": "Sequence a small number of meaningful transitions"
+    },
+    {
+      "id": "scroll-motion",
+      "group": "motion",
+      "label": "Scroll-linked motion / sticky narrative",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "providers": [
+        {
+          "tool": "emil-web",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "animate"
+        }
+      ],
+      "builtin": "CSS sticky, scroll behavior and native scroll-driven animation where supported"
+    },
+    {
+      "id": "layout-transitions",
+      "group": "motion",
+      "label": "Shared layout / presence transitions",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "emil-web",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "animate"
+        },
+        {
+          "tool": "emil-native",
+          "stacks": [
+            "react-native"
+          ],
+          "invoke": "animate-expo"
+        }
+      ],
+      "builtin": "Existing transition APIs"
+    },
+    {
+      "id": "complex-web-runtime",
+      "group": "motion",
+      "label": "Complex web motion runtime gap",
+      "kind": "implementation",
+      "stacks": [
+        "react-web"
+      ],
+      "providers": [
+        {
+          "tool": "motion-web",
+          "stacks": [
+            "react-web"
+          ]
+        }
+      ],
+      "requiresAdvanced": true,
+      "exclusive": "motion-runtime",
+      "builtin": "CSS / existing runtime first"
+    },
+    {
+      "id": "complex-native-runtime",
+      "group": "motion",
+      "label": "Complex React Native runtime gap",
+      "kind": "implementation",
+      "stacks": [
+        "react-native"
+      ],
+      "providers": [
+        {
+          "tool": "reanimated",
+          "stacks": [
+            "react-native"
+          ]
+        }
+      ],
+      "requiresAdvanced": true,
+      "exclusive": "motion-runtime",
+      "builtin": "React Native Animated / existing runtime first"
+    },
+    {
+      "id": "motion-review",
+      "group": "motion",
+      "label": "Review existing animation quality",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "emil-review",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "review-animations"
+        },
+        {
+          "tool": "emil-native",
+          "stacks": [
+            "react-native"
+          ],
+          "invoke": "animate-expo"
+        }
+      ]
+    },
+    {
+      "id": "motion-performance",
+      "group": "motion",
+      "label": "Animation performance / dropped frames",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "emil-performance",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "animation-performance"
+        },
+        {
+          "tool": "emil-native",
+          "stacks": [
+            "react-native"
+          ],
+          "invoke": "animate-expo"
+        }
+      ]
+    },
+    {
+      "id": "gesture",
+      "group": "interactions",
+      "label": "Drag / swipe / interruptible gestures",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "emil-gestures",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "gestures"
+        },
+        {
+          "tool": "emil-native",
+          "stacks": [
+            "react-native"
+          ],
+          "invoke": "animate-expo"
+        }
+      ]
+    },
+    {
+      "id": "feedback",
+      "group": "interactions",
+      "label": "Focus / feedback / interaction states",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "emil-web",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "animate"
+        },
+        {
+          "tool": "emil-native",
+          "stacks": [
+            "react-native"
+          ],
+          "invoke": "animate-expo"
+        }
+      ],
+      "builtin": "Native control semantics and CSS"
+    },
+    {
+      "id": "navigation",
+      "group": "interactions",
+      "label": "Navigation / dialogs / overlays",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": []
+    },
+    {
+      "id": "image-direction",
+      "group": "graphics",
+      "label": "Photography / illustration / assets",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": []
+    },
+    {
+      "id": "product-illustration",
+      "group": "graphics",
+      "label": "Animated product illustration",
+      "kind": "guidance",
+      "stacks": [
+        "react-web"
+      ],
+      "providers": [
+        {
+          "tool": "stageshow",
+          "stacks": [
+            "react-web"
+          ],
+          "invoke": "stageshow"
+        }
+      ],
+      "explicitSpecialized": true
+    },
+    {
+      "id": "decorative-effect",
+      "group": "graphics",
+      "label": "One specific decorative UI effect",
+      "kind": "implementation",
+      "stacks": [
+        "react-web"
+      ],
+      "providers": [
+        {
+          "tool": "magic-ui",
+          "stacks": [
+            "react-web"
+          ]
+        }
+      ],
+      "explicitSpecialized": true
+    },
+    {
+      "id": "iconography",
+      "group": "graphics",
+      "label": "Icons / SVG / chart semantics",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": []
+    },
+    {
+      "id": "responsive-layout",
+      "group": "responsive-native",
+      "label": "Responsive / adaptive layout",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "adapt"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "native-platform",
+      "group": "responsive-native",
+      "label": "Native platform conventions",
+      "kind": "guidance",
+      "stacks": [
+        "react-native",
+        "flutter"
+      ],
+      "providers": []
+    },
+    {
+      "id": "keyboard-rtl",
+      "group": "responsive-native",
+      "label": "Keyboard / RTL / text scaling",
+      "kind": "guidance",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "harden"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "accessibility-audit",
+      "group": "accessibility-performance",
+      "label": "Keyboard / semantics / accessibility audit",
+      "kind": "review",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "audit"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "page-performance",
+      "group": "accessibility-performance",
+      "label": "Page loading / layout stability / rendering",
+      "kind": "review",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "optimize"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "browser-diagnostics",
+      "group": "accessibility-performance",
+      "label": "Browser trace / technical diagnostics",
+      "kind": "tooling",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "providers": [
+        {
+          "tool": "chrome-devtools-mcp",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "visual-review",
+      "group": "visual-qa",
+      "label": "Rendered visual critique / finish",
+      "kind": "review",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "impeccable",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ],
+          "invoke": "critique / polish"
+        }
+      ],
+      "existingPrimaryOnly": true
+    },
+    {
+      "id": "browser-inspection",
+      "group": "visual-qa",
+      "label": "Real browser screenshots and interaction",
+      "kind": "tooling",
+      "stacks": [
+        "react-web",
+        "other-web"
+      ],
+      "providers": [
+        {
+          "tool": "playwright-mcp",
+          "stacks": [
+            "react-web",
+            "other-web"
+          ]
+        }
+      ],
+      "browserGate": true
+    },
+    {
+      "id": "device-inspection",
+      "group": "visual-qa",
+      "label": "Real native device screenshots",
+      "kind": "tooling",
+      "stacks": [
+        "react-native",
+        "flutter"
+      ],
+      "providers": [],
+      "deviceGate": true
+    },
+    {
+      "id": "native-e2e",
+      "group": "visual-qa",
+      "label": "Native end-to-end testing",
+      "kind": "tooling",
+      "stacks": [
+        "react-native",
+        "flutter"
+      ],
+      "providers": [
+        {
+          "tool": "maestro",
+          "stacks": [
+            "react-native",
+            "flutter"
+          ]
+        }
+      ],
+      "deviceGate": true
+    },
+    {
+      "id": "functional-regression",
+      "group": "visual-qa",
+      "label": "Existing flows / regression checks",
+      "kind": "review",
+      "stacks": [
+        "react-web",
+        "other-web",
+        "react-native",
+        "flutter"
+      ],
+      "providers": []
+    }
+  ]
+}

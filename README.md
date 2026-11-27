@@ -17,7 +17,15 @@ compatible design-tool setup. Reuse what I have. Show the plan and
 ask before installing or changing anything.
 ```
 
-The repository includes an agent skill, a machine-readable catalog, decision rules and a read-only project inspector and an optional plan-only selector. No need to memorize the tools. [Agent setup →](AGENT-SETUP.md)
+The repository includes one skill, 12 focused playbooks, a capability router and a read-only project inspector. No need to memorize the tools. [Agent setup →](AGENT-SETUP.md)
+
+## One skill, focused capabilities
+
+| Design | Build | Verify |
+| --- | --- | --- |
+| Art direction, UX, layout, typography, design systems | Components, motion, interactions, graphics, responsive/native | Accessibility, performance, visual QA |
+
+The agent routes the task to the relevant capabilities, uses the project's existing system first, and proposes external tools only for verified gaps. No need to install every library. [How routing works](skills/agentic-ui-ux/references/routing.md) · [Capability index](skills/agentic-ui-ux/references/capabilities.json)
 
 ## See the difference
 

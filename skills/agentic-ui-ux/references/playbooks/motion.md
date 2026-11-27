@@ -1,0 +1,5 @@
+# Motion engineering
+
+Choose the motion intent: feedback, state continuity, sequence, scroll or gesture. Default to restrained motion; every motion has a reason. Use CSS transitions/sticky or existing/native APIs for ordinary work. Define duration/easing consistently, prioritize transform/opacity where appropriate, avoid layout thrash, test interruption, and support reduced motion without hiding content. For choreography use a clear lead/follow order; scroll effects must keep navigation and text readable and degrade gracefully. Use Emil's exact relevant skill only for a documented knowledge gap. Motion (MIT core) or Reanimated only for a proven runtime gap after native/existing APIs were evaluated. Never add a second runtime automatically. Inspect real motion via recording or interaction, not screenshots alone; measure performance when claimed.
+
+Use [capabilities.json](../capabilities.json) to select only the relevant capability and [priority policy](../priority-policy.json) for external tools. The playbook works without installing an external skill; it is not a substitute for verified specialist guidance when a gap remains.

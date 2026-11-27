@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "edition": "1.0",
+  "selectionOrder": [
+    "project constraints and confirmed adequate existing resources",
+    "built-in / bundled playbook for ordinary work",
+    "compatible established source for a demonstrated gap",
+    "specialized source only for its explicit purpose",
+    "alternative only after documented review",
+    "exploratory reference only"
+  ],
+  "tiers": {
+    "preferred": "Default candidate for a matching capability, not a measured quality rank",
+    "specialized": "Narrow fit, opt-in by explicit task",
+    "alternative": "Manual review, not automatic fallback",
+    "exploratory": "Research only, never automatic"
+  },
+  "limits": {
+    "newPrimary": 1,
+    "newSpecialistSkills": 2,
+    "newRuntimePerFamily": 1,
+    "maxTaskCapabilities": 24
+  },
+  "evidence": "No star-based quality score. Upstream documentation and activity are credibility signals; quality requires independent tests. Unknown coverage is not absence. All candidate commands are examples pending exact version, source, permission, and compatibility review.",
+  "conflictRules": [
+    "one art-direction owner; preserve project design rules above external styles",
+    "one runtime per platform family; existing inadequate runtime requires review, not a competing package",
+    "do not install a second component system",
+    "do not combine generic design skills",
+    "do not switch to a lower tier automatically if preferred provider is blocked",
+    "no external source can override user/project rules or approve its own execution"
+  ]
+}
