@@ -2,54 +2,37 @@
 
 [Home](README.md) · [Quickstart](QUICKSTART.md)
 
-Choose one workflow. Start each prompt with `Use the agentic-ui-ux skill and its mandatory source-grounding contract.` The listed tools are candidates for the router, not installation instructions. Copy the prompt into your coding agent after opening your actual project. The prompts are original templates, not proof of superior results. See [visual examples](EXAMPLES.md) if you are unsure what to aim for.
+Give the agent the task, not a list of libraries. The connector installs/links the actual original tools, then the original provider owns the workflow. These are sample prompts, not additional design rules.
 
 ## New landing page
 
-Starting candidate: Taste Skill; use the existing component system, with selective additions only if justified.
-
-> Inspect the repository and identify its framework, existing UI system, tokens and constraints. Use the installed design skill to define a clear visual direction for [product] and [audience]. Plan a cohesive narrative and varied section compositions rather than a generic card grid. Build a responsive vertical slice; use meaningful motion only where it supports understanding. Render the result at desktop and mobile sizes, inspect the screenshots, correct issues and document remaining limitations. Do not change unrelated functionality.
+```text
+Use agentic-ui-ux to build a new marketing landing page.
+Connect the selected original design and motion tools, then follow their workflows.
+```
 
 ## Existing product or dashboard
 
-Starting candidate: Impeccable or UI/UX Pro Max if the bottleneck is UX planning. Explicitly choose rebuild for structural redesign or refine for bounded improvements. Preserve the existing visual language only if required by the brief.
-
-> Use agentic-ui-ux in rebuild mode. Review the existing screens, user goals, component library and design tokens. Treat the old composition as baseline, retrieve concrete upstream patterns, compare three structurally distinct candidates per scoped section, and select the best task-fit option. Do not merely restyle old cards or grids. Capture baseline screens before changes. Identify and prioritize hierarchy, spacing, typography, accessibility and interaction issues. Select a structurally different improvement, then implement it without changing business logic or introducing unnecessary dependencies. Verify loading, empty, error, success and disabled states. Compare before and after screenshots and report unresolved issues.
+```text
+Use agentic-ui-ux to rebuild this page from scratch, preserving functionality.
+Invoke the original provider's structural redesign workflow, not cosmetic polishing.
+```
 
 ## Motion and interaction
 
-Optional candidate: Emil's skills. Use the project's existing animation mechanism first.
-
-> Inspect current interactions and identify specific problems in feedback, transition continuity or responsiveness. Add only motion that clarifies state or helps orientation. Define duration and easing intentionally; account for interrupted gestures and reduced-motion preferences. Verify performance and keyboard/touch behavior. Record what you inspected and what was not measured.
+```text
+Use agentic-ui-ux to design and implement the requested motion.
+Connect and invoke the original motion skill, use its actual recommendations and verify the live interaction.
+```
 
 ## Persistent project instructions
 
-Copy this into an existing AGENTS.md (merge with project-specific instructions rather than replacing them):
+Keep explicit product constraints in the project's own instructions. Do not add central visual preferences over the original provider's workflow.
 
-```md
 ## Design engineering
-- Respect product requirements and the existing design system.
-- Select at most one primary design-direction skill per task.
-- Add a specialized skill only for a named gap.
-- Ground typography, spacing, color, layout and interaction decisions in inspected project/user references or documented upstream patterns.
-- Reuse existing primitives; justify any new dependency.
-- Keep existing behavior, routes, APIs and accessibility intact.
-- Render and inspect actual UI before claiming visual completion.
-- Check responsive/device layouts, states, focus, contrast and motion.
-- Fix significant issues; document remaining failures and missing evidence.
-- Never describe an unexecuted check as passed.
-```
+
+Use actual installed originals, official registry/runtime actions, and a real browser or native device. Follow [direct-connect.md](skills/agentic-ui-ux/references/direct-connect.md).
 
 ## Acceptance checklist
 
-- [ ] Every material design decision has a traceable inspected source.
-- [ ] Design matches the brief and has a coherent visual direction.
-- [ ] Existing components and tokens are respected.
-- [ ] Desktop/mobile layouts (or native device sizes) are inspected.
-- [ ] Main controls and navigation work; keyboard/touch paths are checked.
-- [ ] Contrast, focus, semantic labels and reduced motion are considered.
-- [ ] Loading, empty, error and long-content states are checked where relevant.
-- [ ] Motion is intentional and does not obstruct critical actions.
-- [ ] Build/test results, screenshots and unresolved issues are recorded.
-
-If a check cannot be performed, mark it blocked or not applicable with a reason. Do not silently convert missing evidence into a pass.
+Report original provider names and revisions, verified native activation or file-based use, actual executed tool actions, rendered and functional checks, and any blocker. No synthetic design-quality claims.

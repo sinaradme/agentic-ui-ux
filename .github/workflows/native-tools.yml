@@ -1,0 +1,20 @@
+name: Official native tools
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/agentic-ui-ux/scripts/test-native-tools.mjs'
+      - 'skills/agentic-ui-ux/references/native-actions.json'
+      - '.github/workflows/native-tools.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - run: node skills/agentic-ui-ux/scripts/test-native-tools.mjs

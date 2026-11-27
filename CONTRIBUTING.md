@@ -15,3 +15,5 @@ For changes to agent selection, update the skill's catalog and decision rules to
 Capability routing uses canonical `capabilities.json`, `catalog.json` and `priority-policy.json`. Regenerate the compact agent-readable index and tool cards with `node skills/agentic-ui-ux/scripts/generate-index.mjs`; CI rejects drift. Add a route fixture for changes to provider priority, conflict gates or capabilities.
 
 Run all suites including `test-grounding.mjs`, `test-cli.mjs` and `test-repository.mjs` before merging. Update aggregate and per-tool knowledge cards together; source scopes and version-specific pointers must be reviewed, not copied blindly. Do not remove failing cases just to pass CI.
+
+For 1.1, prefer an actual native adapter and exact full original source manifest over a new summary or design instruction. Preserve upstream invocation flags and license notices, test original execution, and update [direct connection QC](DIRECT-CONNECT-QC.md).

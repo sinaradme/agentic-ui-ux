@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Workflows](WORKFLOWS.md)
 
-The workflow stays the same: brief → design → build → render → inspect → refine. The implementation and device verification tools change.
+Use the same direct connection entry; select original native planning/motion skills and actual platform tools. The implementation and device verification tools change.
 
 | Layer | React web | React Native | Flutter |
 | --- | --- | --- | --- |
@@ -22,7 +22,7 @@ For animation-specific agent guidance, Emil now documents [animate-expo](https:/
 npx skills add emilkowalski/skills --skill animate-expo
 ```
 
-This is a native-motion skill, not a full native UI design system. The command follows the skills CLI syntax and the skill name listed in the [official collection](https://github.com/emilkowalski/skills); it has not been run here.
+This is a native-motion skill, not a full native UI design system. The command follows the skills CLI syntax and the skill name listed in the [official collection](https://github.com/emilkowalski/skills); the original complete native skill installation has been verified in isolated CI; actual in-app invocation and device behavior remain unverified.
 
 Start with your existing design tokens and components. For new UI primitives, consider [React Native Paper](https://github.com/callstack/react-native-paper) if its Material Design approach suits the product. For complex native motion consider [Reanimated](https://github.com/software-mansion/react-native-reanimated), following [current compatibility and installation docs](https://docs.swmansion.com/react-native-reanimated/). Expo projects should use compatible packages and Expo's documented installation procedures.
 

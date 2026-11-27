@@ -82,3 +82,7 @@ See [FINAL-QC.md](FINAL-QC.md) for the final cross-repository findings, fixes, v
 ## Practical feedback: rebuild hardening
 
 See [REBUILD-QC.md](REBUILD-QC.md) for the source-access and structural-rebuild expansion, real retrieval tests, artifact checks, and remaining real-agent validation boundary.
+
+## Edition 1.1 direct connection
+
+The former design-instruction wrapper was replaced after real-user feedback. See [Direct connection QC](DIRECT-CONNECT-QC.md) for native original installation and actual upstream engine evidence. Earlier fixture counts are historical, not evidence of in-app visual quality.

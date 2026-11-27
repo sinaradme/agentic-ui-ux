@@ -1,3 +1,10 @@
+## 1.1 — Direct upstream connection (2026-11-27)
+
+- Replaced the mandatory central design/playbook workflow with direct original provider delegation.
+- Added full native skill distribution retrieval, verified file manifests, project-scoped installation, existing-file conflict checks and explicit hook/tool-permission handling.
+- Added original shadcn and Magic UI native skills and direct official CLI/runtime/MCP handoffs.
+- Added actual upstream engine and native connection smoke checks. [Direct connection QC](DIRECT-CONNECT-QC.md).
+
 # Changelog
 
 ## 1.0 — 2026-11-27

@@ -2,30 +2,20 @@
 
 Build better websites and apps with AI coding agents — without installing dozens of tools.
 
-One free, open-source orchestration skill for Cursor, Codex, Claude Code and other coding agents. Give the agent a design task; it chooses compatible tools and documented patterns, then verifies the rendered result.
+One open-source connector for Cursor, Codex and Claude Code. Give it a design task; it installs verified original skills as needed and hands the work to them. Other tools use their own official native installation and invocation paths.
 
 [Give your agent one link](AGENT-SETUP.md) · [Quickstart](QUICKSTART.md) · [Tool directory](TOOLS.md) · [Visual examples](EXAMPLES.md) · [Ready-to-use prompts](WORKFLOWS.md) · [Mobile](MOBILE.md)
 
-## Let your agent choose for you
+## One entry point. Original tools.
 
-Open your target project in Cursor, Codex or Claude Code and paste:
+Agentic UI/UX connects your coding agent to the actual original design and motion skills. It fetches and verifies complete upstream distributions, installs selected skills in the project's native skill directory, and delegates to their own workflows. It is not a new design system or a substitute for the original providers.
 
 ```text
-Read https://github.com/sinaradme/agentic-ui-ux
-Start with AGENTS.md. Inspect my project and select the smallest
-compatible design-tool setup. Reuse what I have. Show the plan and
-ask before installing or changing anything.
+Use agentic-ui-ux to redesign this homepage with professional motion.
+Connect the original upstream tools and follow their own workflows.
 ```
 
-The repository includes one skill, 12 focused playbooks, a capability router and a read-only project inspector. No need to memorize the tools. [Agent setup →](AGENT-SETUP.md)
-
-## One skill, focused capabilities
-
-| Design | Build | Verify |
-| --- | --- | --- |
-| Art direction, UX, layout, typography, design systems | Components, motion, interactions, graphics, responsive/native | Accessibility, performance, visual QA |
-
-The agent routes the task to the relevant capabilities, uses the project's existing system first, and proposes external tools only for verified gaps. Every material visual decision must be grounded in an inspected project/user reference or a documented upstream pattern. [Source-grounding contract](skills/agentic-ui-ux/references/grounding.md) · [Reviewed upstream knowledge](skills/agentic-ui-ux/references/knowledge/INDEX.md). No need to install every library. [How routing works](skills/agentic-ui-ux/references/routing.md) · [Capability index](skills/agentic-ui-ux/references/INDEX.md)
+[Direct connection workflow](skills/agentic-ui-ux/references/direct-connect.md) · [Agent setup](AGENT-SETUP.md) · [Tool directory](TOOLS.md)
 
 ## See the difference (upstream example)
 
@@ -50,40 +40,30 @@ Choose your coding agent and project scope. Reload the agent if needed. No third
 ## 2. Give the agent a design task
 
 ```text
-Use the agentic-ui-ux skill to redesign this screen.
-Inspect the project first, preserve its behavior and explicit constraints,
-rebuild old composition unless I ask for refinement, select only needed tools,
-and verify the actual
-rendered result on the relevant devices.
-Ask before installing tools or making changes outside the task.
+Use the agentic-ui-ux skill to redesign this screen with professional motion.
+Preserve functionality and follow the selected original upstream tools.
 ```
 
-You do not need to name any libraries. The agent should handle routine design decisions, present one consolidated approval plan if new tools are necessary, and show evidence of the result.
-
-## Rebuild, not just polish
-
-A structural redesign uses rebuild mode by default: old composition is baseline, not authority. The agent retrieves concrete external patterns, considers three different structural concepts per section, selects a task-fit direction and verifies actual before/after changes. Existing dependencies may still be reused. [Rebuild contract](skills/agentic-ui-ux/references/rebuild.md) · [Direct source access](skills/agentic-ui-ux/references/source-access.md).
-
-Installing this one skill does not install all upstream tools or grant external access automatically. The source retrieval CLI and catalog provide direct paths; missing runtime dependencies still require authorized installation.
+Authorize project-scoped native installation when prompted. The agent runs the connector, installs exact original skill trees, then invokes them through its host (reload if needed). If a selected library or MCP requires an additional native action, the agent follows the actual official tool and verifies its use.
 
 ## 3. Understand what the agent selects
 
-| Task | Preferred route (if a gap exists) |
+| Task | Original provider |
 | --- | --- |
-| New marketing website | Taste, with the layout and art-direction playbooks |
-| New functional product UI | Impeccable, existing system and task-specific patterns |
-| Existing product redesign | Impeccable, existing tokens and visual QA |
-| UX / design-system planning | UI/UX Pro Max |
-| Motion | Focused Emil guidance; existing CSS/runtime first; Motion only for an advanced compatible gap |
-| React components | Existing component system; shadcn/ui only for a confirmed gap |
-| Native app | Native primitives; platform-specific guidance and device QA |
-| Graphics / effects | Existing licensed assets; a focused specialized tool only when needed |
+| New marketing website | Taste |
+| Web redesign, functional UI or design review | Impeccable |
+| UX planning / native design intelligence | UI/UX Pro Max |
+| Web motion | Emil animate and focused specialists |
+| React component registry | Original shadcn or Magic UI skill + actual official CLI |
+| RN/Expo motion | Emil animate-expo |
+| Product UI illustration | Stageshow |
+| Browser verification | Existing browser tool or actual Playwright MCP |
 
-These are task-specific defaults, not measured quality rankings. A narrow task may need no external tool. The router has 42 capabilities across 12 playbooks and 26 catalogued tools. It avoids stacking primary skills, competing component systems and duplicate animation runtimes. [Manual tool selection](TOOLS.md) remains available.
+These are task-specific defaults, not measured quality rankings. A task may need no new dependency. The connector does not override the original provider's decisions.
 
 ## 4. Check the real result
 
-Ask the agent to inspect the actual rendered interface, test the important states and interactions, fix blocking issues first, and report missing evidence. Browser or native device access is required for the corresponding checks. A successful install is not a successful design.
+An original skill installation is not an agent activation, and neither proves visual quality. The agent must follow the actual original workflow and inspect rendered and interactive output. The former 1.0 playbooks and structural gates remain optional legacy diagnostics; they are not applied over native upstream workflows.
 
 ## More examples
 
@@ -101,10 +81,10 @@ Ask the agent to inspect the actual rendered interface, test the important state
 - [Mobile](MOBILE.md): native components, animation and testing.
 - [Agentic UI/UX skill](skills/agentic-ui-ux/SKILL.md): central orchestration instructions for your agent.
 - [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
-- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [v1.0 quality report](QUALITY.md) · [Final release QC](FINAL-QC.md) · [Rebuild QC](REBUILD-QC.md).
+- [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [Quality reports](QUALITY.md) · [Final release QC](FINAL-QC.md) · [Rebuild QC](REBUILD-QC.md).
 
-**Research updated:** November 27, 2026 · **Edition:** 1.0
+**Research updated:** November 27, 2026 · **Edition:** 1.1 — Direct upstream connection
 
-We review upstream docs, repository metadata and selected official examples. The capability router, source-grounding checker, project inspection, CLI and project-scoped skill installation have passed CI checks. See [the evidence](QUALITY.md). In-app agent behavior and independent design-quality comparisons have not yet been validated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
+Direct native installation and actual upstream executable smoke tests are tracked in [Direct connection QC](DIRECT-CONNECT-QC.md). In-app agent behavior and independent design-quality comparisons remain unvalidated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 
 Original guide: [MIT](LICENSE). Third-party examples are linked from their creators, not relicensed here.

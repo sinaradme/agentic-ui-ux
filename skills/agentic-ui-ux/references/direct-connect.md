@@ -40,3 +40,5 @@ The [upstream lock](upstream-lock.json) records publisher Git tree paths, file s
 ## Boundaries
 
 A central install does not install all libraries or grant network/device access. File verification is not host activation. No universal cross-agent API can force invocation. No claim of visual equivalence follows from successful installation. For current upstream releases review and update the lock rather than silently using mutable latest.
+
+A user-approved newer original already installed in the host should not be downgraded or overwritten to satisfy this lock. Verify its current upstream origin separately and invoke it directly; report that it is not verified by this pinned connector. Use the reviewed package versions returned by the direct actions only after confirming current compatibility and actual published versions. Follow each provider's own guidance.

@@ -32,3 +32,7 @@ CI: [Repository quality](https://github.com/sinaradme/agentic-ui-ux/actions/runs
 ## Remaining limitations
 
 Installing the central skill does not install all libraries or grant network, browser or device access. Actual external runtime installation and in-app activation are separate and must be authorized and verified. Source access passed in the CI network environment, not the user's agent sandbox. The artifact checker verifies file structure/bytes, not semantic visual novelty, and agent-supplied classification remains fallible. No host-enforced hook is automatically added; an agent that disregards the workflow can still bypass it. A true enforced integration requires a trusted target-project CI or host-specific hook, separately authorized. No new real-agent visual comparison or independent quality improvement is claimed. Re-run the same brief from the same baseline with the updated skill and compare section structures, actual screenshots, interaction recordings and functional regression tests.
+
+## Superseded default
+
+Edition 1.1 uses [direct original provider delegation](skills/agentic-ui-ux/references/direct-connect.md). This earlier rebuild contract remains optional historical diagnostics, not mandatory design authority.
