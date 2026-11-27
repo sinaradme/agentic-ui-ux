@@ -16,7 +16,7 @@ try{
   // Exercise an isolated copy of the exact skill directory, not the repository root.
   const copied=join(temp,'skill');cpSync(root,copied,{recursive:true});
   const skill=readFileSync(join(copied,'SKILL.md'),'utf8');
-  assert.match(skill,/^---\nname: agentic-ui-ux\n/);
+  assert.match(skill,/^---\nname: agentic-ui-ux\n/);assert.match(skill,/^license: MIT$/m);assert.ok(readFileSync(join(copied,'LICENSE'),'utf8').includes('MIT License'));assert.ok(skill.split('\n').length<500);
   for(const [,p] of skill.matchAll(/\]\((references\/[^)]+)\)/g))assert.ok(readFileSync(join(copied,p)).length,p);
   const target=join(temp,'project');const {mkdirSync}=await import('node:fs');mkdirSync(target);
   writeFileSync(join(target,'package.json'),JSON.stringify({dependencies:{next:'16','@mui/material':'7'}}));

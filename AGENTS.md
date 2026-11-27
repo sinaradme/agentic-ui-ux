@@ -5,7 +5,7 @@ This repository is a design-tool selection guide, not the application to redesig
 If a user directs you here for UI/UX work in another project:
 
 1. Read [skills/agentic-ui-ux/SKILL.md](skills/agentic-ui-ux/SKILL.md).
-2. Read its [decision rules](skills/agentic-ui-ux/references/decision-rules.md), [tool catalog](skills/agentic-ui-ux/references/catalog.json), and [context schema](skills/agentic-ui-ux/references/context.schema.json).
+2. Read its [decision rules](skills/agentic-ui-ux/references/decision-rules.md). Use the [context schema](skills/agentic-ui-ux/references/context.schema.json) to organize verified evidence; load only relevant entries in the [tool catalog](skills/agentic-ui-ux/references/catalog.json) as needed.
 3. Inspect the user's **target project** and apply the rules. Use the optional read-only planner only if you have the local files and Node.js; otherwise reason from the catalog.
 4. Return the smallest compatible installation/configuration plan with reasons and verification gates. Reuse existing systems. Get explicit approval before running proposed installers, writing configuration, enabling hooks or making global changes.
 5. If authorized to implement, use [WORKFLOWS.md](WORKFLOWS.md) and [MOBILE.md](MOBILE.md) as applicable, and inspect actual rendered results.

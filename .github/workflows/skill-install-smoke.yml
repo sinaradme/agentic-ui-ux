@@ -55,3 +55,25 @@ jobs:
             test "$before" = "$(sha256sum package.json)"
             echo "PASS: $agent project-scoped skill files, executable planner and unchanged app manifest"
           done
+      - name: Verify the public GitHub install route
+        shell: bash
+        env:
+          CI: 'true'
+          DISABLE_TELEMETRY: '1'
+          DO_NOT_TRACK: '1'
+        run: |
+          set -euo pipefail
+          target="$(mktemp -d "$RUNNER_TEMP/agentic-remote-XXXXXX")"
+          mkdir -p "$target/home"
+          cd "$target"
+          git init -q
+          printf '%s\n' '{"name":"agentic-remote","private":true}' > package.json
+          before="$(sha256sum package.json)"
+          HOME="$target/home" node "$RUNNER_TEMP/skills-cli/node_modules/skills/bin/cli.mjs" add sinaradme/agentic-ui-ux --skill agentic-ui-ux --agent codex --copy --yes
+          skill="$target/.agents/skills/agentic-ui-ux"
+          test -f "$skill/SKILL.md"
+          test -f "$skill/LICENSE"
+          test -f "$skill/references/catalog.json"
+          node "$skill/scripts/test-cli.mjs"
+          test "$before" = "$(sha256sum package.json)"
+          echo "PASS: public GitHub install route and working installed CLI"

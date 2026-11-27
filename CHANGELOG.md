@@ -5,6 +5,7 @@
 - Stable decision-first guide and plan-only architecture; added read-only project inspector and explicit setup/design acceptance contract.
 - Added source/license snapshot and per-tool verification steps to the catalog; documented actual runtime-version requirements.
 - Hardened inconsistent inventory, targeted-task selection and unverified activation handling. Expanded selection fixtures from 21 to 32 and added 11 inspection classifier fixtures plus filesystem tests.
+- Added CI with successful Node runtime, filesystem, isolated skill-copy and pinned official Skills CLI installation checks for Cursor, Codex and Claude Code project paths. Reviewed the Agent Skills format and bundled license metadata.
 - See QUALITY.md for evidence and remaining limits. This release does not claim independent agent or design-quality validation.
 
 ## 0.3 — 2026-11-27

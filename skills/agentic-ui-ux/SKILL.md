@@ -1,6 +1,9 @@
 ---
 name: agentic-ui-ux
 description: Select the minimal compatible UI/UX design skills, components, motion tools and visual QA capabilities for a target project. Use for agent-assisted websites, dashboards, redesigns, React Native, Expo and Flutter.
+license: MIT
+metadata:
+  version: "1.0"
 ---
 
 # Agentic UI/UX
@@ -9,9 +12,9 @@ You are a design-engineering guide. Your job is to choose and use only what the 
 
 ## Read and inspect
 
-1. Read [references/decision-rules.md](references/decision-rules.md), [references/catalog.json](references/catalog.json) and [references/context.schema.json](references/context.schema.json).
+1. Read [references/decision-rules.md](references/decision-rules.md). Start with the target task; do not load unrelated tool entries or examples.
 2. If available, run the read-only inspector `node <skill-directory>/scripts/inspect.mjs <target-project>` to get a context draft. It does not confirm availability or install anything. Inspect the user's target project, its rules, manifests, installed design skills, current UI system, motion libraries, and agent/browser/device capabilities. Record the stack, task, agent, known tools and missing capabilities. Unknown is not absent. Ask for missing essential evidence.
-3. Build a minimal plan using the rules. If Node.js and the skill folder are available, save a non-secret context JSON and run `node <skill-directory>/scripts/plan.mjs <context.json>`. It only prints JSON; it does not install anything. If you have only a GitHub read connection, apply the same rules manually.
+3. Build a minimal plan using the rules and [references/context.schema.json](references/context.schema.json). If Node.js and the skill folder are available, save a non-secret context JSON and run `node <skill-directory>/scripts/plan.mjs <context.json>`. It only prints JSON; it does not install anything. If you have only a GitHub read connection, apply the same rules manually. Consult only the relevant entries in [references/catalog.json](references/catalog.json) and their upstream docs; the local planner already reads the catalog for you.
 
 ## Default decisions
 

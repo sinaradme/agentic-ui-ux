@@ -106,6 +106,6 @@ A skill improves guidance; it does not give the agent browser access or guarante
 
 **Research updated:** November 27, 2026 · **Edition:** 1.0
 
-We review upstream docs, repository metadata and selected official examples. The selection logic has automated fixture tests. Independent comparative runs and full agent installation/visual validation are not yet published. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
+We review upstream docs, repository metadata and selected official examples. The selection logic, project inspection and project-scoped skill installation have passed CI checks. In-app agent behavior and independent design-quality comparisons have not yet been validated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 
 Original guide: [MIT](LICENSE). Third-party examples are linked from their creators, not relicensed here.

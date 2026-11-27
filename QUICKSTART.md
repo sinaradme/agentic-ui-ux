@@ -135,7 +135,7 @@ If you prefer a single workflow guide that your agent can read directly, run thi
 npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
 ```
 
-This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It includes a read-only project inspector and selects a minimal plan using its bundled catalog and rules; it does not install third-party tools for you. [Agent-first setup](AGENT-SETUP.md). This exact installation has not yet been executed by the maintainers.
+This uses the standard skills CLI syntax. Reload your agent, verify it discovers `agentic-ui-ux`, and ask it to use the skill for your design task. It includes a read-only project inspector and selects a minimal plan using its bundled catalog and rules; it does not install third-party tools for you. [Agent-first setup](AGENT-SETUP.md). The pinned Skills CLI was tested with this repository's local checkout for Cursor, Codex and Claude Code project paths. In-app discovery still needs verification; see [quality evidence](QUALITY.md).
 
 ## 7. Reproducibility and safety
 
