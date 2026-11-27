@@ -9,7 +9,7 @@ function route(input,catalog,registry,policy,validateContext){
  const ctx=input.context; const checked=validateContext(ctx);if(checked.status==="blocked")return blocked(checked.reason);
  if(input.policy!==undefined&&!["minimal","no-new-tools"].includes(input.policy))return blocked("Invalid policy.");
  if(input.surfaceType!==undefined&&!["marketing","product","native","unknown"].includes(input.surfaceType))return blocked("Invalid surfaceType.");
- const date=input.asOf||catalog.reviewedAt;const dateMs=Date.parse(date);if(typeof date!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(dateMs)||new Date(dateMs).toISOString().slice(0,10)!==date||dateMs<Date.parse(catalog.reviewedAt))return blocked("Invalid asOf date; use current date or the catalog snapshot date.");
+ const date=input.asOf===undefined?catalog.reviewedAt:input.asOf;const dateMs=Date.parse(date);if(typeof date!=="string"||!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Number.isFinite(dateMs)||new Date(dateMs).toISOString().slice(0,10)!==date||dateMs<Date.parse(catalog.reviewedAt))return blocked("Invalid asOf date; use current date or the catalog snapshot date.");
  const tasks=input.tasks;if(!Array.isArray(tasks)||tasks.length<1||tasks.length>policy.limits.maxTaskCapabilities)return blocked("Choose 1–"+policy.limits.maxTaskCapabilities+" relevant capability IDs.");
  const caps=new Map(registry.capabilities.map(c=>[c.id,c]));const tools=new Map(catalog.tools.map(t=>[t.id,t]));const seen=new Set();
  for(const task of tasks){

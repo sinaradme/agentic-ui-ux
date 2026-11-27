@@ -10,7 +10,7 @@ function check(record,route,registry,catalog,knowledge){
  const only=(o,keys)=>obj(o)&&Object.keys(o).every(k=>keys.includes(k));
  const arr=(x,min=0,max=100)=>Array.isArray(x)&&x.length>=min&&x.length<=max;
  const result=()=>({status:errors.length?"invalid":blockers.length?"blocked":"pass",phase:record?.phase||null,errors,blockers,structuralOnly:true,executionAuthorized:false,notice:"Record structure only; not proof of source inspection, permission, actual execution or visual quality."});
- if(!only(record,["phase","request","surfaces","decisions"])||!["preflight","final"].includes(record.phase)||!arr(record.surfaces,1,100)||!arr(record.decisions,1,100)){errors.push("Invalid record shape.");return result();}
+ if(!only(record,["phase","request","surfaces","decisions","acceptance","toolVerification"])||!["preflight","final"].includes(record.phase)||!arr(record.surfaces,1,100)||!arr(record.decisions,1,100)){errors.push("Invalid record shape.");return result();}
  if(!route||route.status!=="planned"){errors.push("A valid planned route request is required.");return result();}
  const isPlanning=route.goal==="ux-planning", capMap=new Map(registry.capabilities.map(c=>[c.id,c])), routes=new Map(route.routes.map(r=>[r.id,r])), toolMap=new Map(catalog.tools.map(t=>[t.id,t]));
  const relPath=v=>str(v,500)&&!v.startsWith("/")&&!/^[a-zA-Z]:|\\|[\r\n]/.test(v)&&v.split("/").every(x=>x&&x!==".."&&x!==".");
@@ -45,6 +45,7 @@ function check(record,route,registry,catalog,knowledge){
    // QA/tooling sources are not by themselves a visual pattern for a modified surface.
    if(isPlanning||route.goal==="visual-qa"||!["review","tooling"].includes(cap.kind))d.surfaces.forEach(s=>groundedSurfaces.add(s));
    if(record.phase==="final"){
+     if(r.coverage==="unknown")blockers.push("Resolve unknown coverage before final acceptance: "+d.capability);
      if(!arr(d.verification,1,12)||d.verification.some(v=>!only(v,["kind","location","result","status"])||!["screenshot","recording","interaction","test","trace","document-review"].includes(v.kind)||!str(v.location,1000)||!str(v.result)||!["pass","fail","blocked"].includes(v.status))){errors.push("Final decision needs actual evidence records: "+d.capability);continue;}
      const kinds=new Set(d.verification.map(v=>v.kind));
      for(const v of d.verification)if(v.status!=="pass")blockers.push(d.capability+": "+v.kind+" verification "+v.status+" — "+v.result);
@@ -55,6 +56,28 @@ function check(record,route,registry,catalog,knowledge){
    }
  }
  for(const r of route.routes)if(![...covered].some(k=>k.startsWith(r.id+"\0")))errors.push("Missing decision for routed capability: "+r.id);
+ if(record.phase==="final"){
+   const required=isPlanning?["brief","design-system"]:["rendered-ui","functional","accessibility","responsive-or-native","build-or-validation"];
+   if(route.routes.some(r=>["motion","interactions"].includes(r.group)&&r.status!=="not-applicable"))required.push("dynamic-interaction");
+   if(route.routes.some(r=>["motion-performance","page-performance","browser-diagnostics"].includes(r.id)&&r.status!=="not-applicable"))required.push("performance");
+   const checks=record.acceptance;
+   if(!arr(checks,1,100))errors.push("Final acceptance checklist is mandatory.");
+   else {
+     const keys=new Set();
+     for(const a of checks){
+       if(!only(a,["id","status","location","result"])||!required.includes(a.id)||keys.has(a.id)||!["pass","fail","blocked"].includes(a.status)||!str(a.location,1000)||!str(a.result)){errors.push("Invalid/duplicate acceptance check.");continue;}
+       keys.add(a.id);if(a.status!=="pass")blockers.push("Acceptance "+a.id+": "+a.status+" — "+a.result);
+     }
+     for(const id of required)if(!keys.has(id))errors.push("Missing mandatory acceptance check: "+id);
+   }
+   const access=record.request.context;
+   if(!isPlanning&&((route.stack==="react-web"||route.stack==="other-web")?access.browserAccess!=="present":access.deviceAccess!=="present"))blockers.push("Confirm actual browser/native device access in the final request; rendered QA cannot pass without it.");
+   const expected=new Map(route.actions.map(a=>[a.id,a]));
+   const tv=record.toolVerification;
+   if(!Array.isArray(tv))errors.push("Final tool verification list is required (empty when no tools selected).");
+   else {const seenTools=new Set();for(const t of tv){if(!only(t,["id","status","revision","location","result"])||!expected.has(t.id)||seenTools.has(t.id)||!["pass","fail","blocked"].includes(t.status)||!str(t.revision,200)||!str(t.location,1000)||!str(t.result)){errors.push("Invalid/duplicate tool verification.");continue;}seenTools.add(t.id);if(t.status!=="pass")blockers.push("Tool "+t.id+" verification "+t.status);if(expected.get(t.id).status!=="reuse")blockers.push("Re-inspect and reroute after approved installation/configuration: "+t.id);}
+     for(const id of expected.keys())if(!seenTools.has(id))errors.push("Missing tool verification: "+id);}
+ }
  for(const id of surfaceIds){if(!groundedSurfaces.has(id))blockers.push("No grounded design decision for surface "+id);if(record.phase==="final"&&!isPlanning&&!verifiedSurfaces.has(id))blockers.push("No rendered screenshot evidence for surface "+id);}
  return result();
 }

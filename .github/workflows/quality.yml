@@ -23,5 +23,6 @@ jobs:
           node skills/agentic-ui-ux/scripts/test-route.mjs
           node skills/agentic-ui-ux/scripts/test-grounding.mjs
           node skills/agentic-ui-ux/scripts/generate-index.mjs --check
+          node skills/agentic-ui-ux/scripts/test-repository.mjs
       - name: CLI and package integrity
         run: node skills/agentic-ui-ux/scripts/test-cli.mjs

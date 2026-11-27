@@ -26,4 +26,4 @@ Before changing UI, satisfy [the grounding contract](grounding.md): every affect
 - Blocked checks and remaining risks:
 - Outcome: setup planned / setup verified / design verified / blocked (state evidence for each).
 
-A grounding checker PASS verifies record structure only, not source truth or design quality. Final acceptance must include actual verification evidence or disclose blockers. No independent quality improvement is established without a controlled baseline comparison. Use the project benchmark protocol for comparative claims.
+A grounding checker PASS verifies record structure only, not source truth or design quality. Final acceptance must include actual verification evidence or disclose blockers. Mandatory final checks and tool-verification fields are defined in grounding.md; re-inspect installed tools and reroute before submitting the final record. No independent quality improvement is established without a controlled baseline comparison. Use the project benchmark protocol for comparative claims.

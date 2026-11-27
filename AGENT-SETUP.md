@@ -80,7 +80,7 @@ node skills/agentic-ui-ux/scripts/test-route.mjs
 node skills/agentic-ui-ux/scripts/test-grounding.mjs
 ```
 
-The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. The 64 route fixtures and 504 cross-product invariant checks cover capability selection, source priority, unknown coverage, conflicts and platform isolation. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
+The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. The 66 route fixtures and 504 cross-product invariant checks cover capability selection, source priority, unknown coverage, conflicts and platform isolation. The grounding checker also validates final mandatory acceptance and tool-verification records. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
 
 [Return home](README.md) · [Manual setup](QUICKSTART.md) · [Tool directory](TOOLS.md)
 

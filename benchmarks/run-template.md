@@ -3,7 +3,7 @@
 - Run ID:
 - Date:
 - Brief ID / source:
-- Condition (baseline / single skill / combined):
+- Condition (A baseline / B expert-selected / C orchestration / D upstream comparison):
 - Starter commit:
 - Model and agent versions:
 - Skill name and exact revision:
@@ -13,7 +13,12 @@
 - Output commit:
 - Screenshot / recording paths:
 - Test commands and results:
-- Manual intervention count:
+- Manual tool-selection decisions:
+- Approval requests / clarification turns:
+- Manual intervention and direct-edit count:
+- Active user minutes / total elapsed minutes:
+- Initial vs post-review output:
+- Predeclared non-inferiority margin:
 - Time / token usage (if available):
 - New dependencies:
 - Rubric ratings and evidence:

@@ -13,3 +13,5 @@ Maintain concise, English-language documentation. Link upstream rather than copy
 For changes to agent selection, update the skill's catalog and decision rules together. Add a representative fixture and run `node skills/agentic-ui-ux/scripts/test-plan.mjs`. Keep installation examples separate from executable actions. Do not claim installation or visual-quality validation based on planner fixtures alone.
 
 Capability routing uses canonical `capabilities.json`, `catalog.json` and `priority-policy.json`. Regenerate the compact agent-readable index and tool cards with `node skills/agentic-ui-ux/scripts/generate-index.mjs`; CI rejects drift. Add a route fixture for changes to provider priority, conflict gates or capabilities.
+
+Run all suites including `test-grounding.mjs`, `test-cli.mjs` and `test-repository.mjs` before merging. Update aggregate and per-tool knowledge cards together; source scopes and version-specific pointers must be reviewed, not copied blindly. Do not remove failing cases just to pass CI.

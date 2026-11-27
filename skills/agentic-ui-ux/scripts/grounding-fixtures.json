@@ -1483,8 +1483,10 @@
           "goal": "new-ui",
           "agent": "cursor",
           "inventoryComplete": true,
-          "primarySkill": "none",
-          "installedTools": [],
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -1495,18 +1497,21 @@
         "tasks": [
           {
             "id": "art-direction",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "page-layout",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "typography",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           }
         ]
       },
@@ -1567,6 +1572,47 @@
           ],
           "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
           "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules."
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
         }
       ]
     },
@@ -1582,8 +1628,10 @@
           "goal": "new-ui",
           "agent": "cursor",
           "inventoryComplete": true,
-          "primarySkill": "none",
-          "installedTools": [],
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -1594,18 +1642,21 @@
         "tasks": [
           {
             "id": "art-direction",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "page-layout",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "typography",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           }
         ]
       },
@@ -1690,6 +1741,47 @@
               "status": "pass"
             }
           ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
         }
       ]
     },
@@ -1705,8 +1797,10 @@
           "goal": "new-ui",
           "agent": "cursor",
           "inventoryComplete": true,
-          "primarySkill": "none",
-          "installedTools": [],
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -1717,18 +1811,21 @@
         "tasks": [
           {
             "id": "art-direction",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "page-layout",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "typography",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           }
         ]
       },
@@ -1813,6 +1910,47 @@
               "status": "pass"
             }
           ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
         }
       ]
     },
@@ -1829,7 +1967,9 @@
           "agent": "cursor",
           "inventoryComplete": true,
           "primarySkill": "none",
-          "installedTools": [],
+          "installedTools": [
+            "emil-web"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -1840,8 +1980,9 @@
         "tasks": [
           {
             "id": "micro-interactions",
-            "coverage": "gap",
-            "evidence": "Synthetic"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "emil-web"
           }
         ]
       },
@@ -1877,6 +2018,53 @@
             }
           ]
         }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "dynamic-interaction",
+          "status": "pass",
+          "location": "fixture/dynamic-interaction.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "emil-web",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
       ]
     },
     "expected": "invalid"
@@ -1892,7 +2080,9 @@
           "agent": "cursor",
           "inventoryComplete": true,
           "primarySkill": "none",
-          "installedTools": [],
+          "installedTools": [
+            "emil-web"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -1903,8 +2093,9 @@
         "tasks": [
           {
             "id": "micro-interactions",
-            "coverage": "gap",
-            "evidence": "Synthetic"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "emil-web"
           }
         ]
       },
@@ -1945,6 +2136,53 @@
               "status": "pass"
             }
           ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "dynamic-interaction",
+          "status": "pass",
+          "location": "fixture/dynamic-interaction.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "emil-web",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
         }
       ]
     },
@@ -2291,8 +2529,10 @@
           "goal": "new-ui",
           "agent": "cursor",
           "inventoryComplete": true,
-          "primarySkill": "none",
-          "installedTools": [],
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -2303,18 +2543,21 @@
         "tasks": [
           {
             "id": "art-direction",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "page-layout",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "typography",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           }
         ]
       },
@@ -2400,6 +2643,47 @@
             }
           ]
         }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
       ]
     },
     "expected": "blocked"
@@ -2414,8 +2698,10 @@
           "goal": "new-ui",
           "agent": "cursor",
           "inventoryComplete": true,
-          "primarySkill": "none",
-          "installedTools": [],
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -2426,18 +2712,21 @@
         "tasks": [
           {
             "id": "art-direction",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "page-layout",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "typography",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           }
         ]
       },
@@ -2523,6 +2812,47 @@
             }
           ]
         }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
       ]
     },
     "expected": "blocked"
@@ -2537,8 +2867,10 @@
           "goal": "new-ui",
           "agent": "cursor",
           "inventoryComplete": true,
-          "primarySkill": "none",
-          "installedTools": [],
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
           "componentSystem": "present",
           "browserAccess": "present",
           "deviceAccess": "not-applicable",
@@ -2549,18 +2881,21 @@
         "tasks": [
           {
             "id": "art-direction",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "page-layout",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           },
           {
             "id": "typography",
-            "coverage": "gap",
-            "evidence": "Fixture: inspected target capability"
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
           }
         ]
       },
@@ -2645,8 +2980,1043 @@
             }
           ]
         }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
       ]
     },
     "expected": "invalid"
+  },
+  {
+    "name": "final cannot omit functional acceptance",
+    "record": {
+      "phase": "final",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
+          "componentSystem": "present",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "art-direction",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "page-layout",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "typography",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "art-direction",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "page-layout",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "typography",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
+      ]
+    },
+    "expected": "invalid"
+  },
+  {
+    "name": "final accessibility failure blocks acceptance",
+    "record": {
+      "phase": "final",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
+          "componentSystem": "present",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "art-direction",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "page-layout",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "typography",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "art-direction",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "page-layout",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "typography",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "fail",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
+      ]
+    },
+    "expected": "blocked"
+  },
+  {
+    "name": "final missing tool verification",
+    "record": {
+      "phase": "final",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
+          "componentSystem": "present",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "art-direction",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "page-layout",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "typography",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "art-direction",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "page-layout",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "typography",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": []
+    },
+    "expected": "invalid"
+  },
+  {
+    "name": "final proposed tool is not verified installation",
+    "record": {
+      "phase": "final",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "none",
+          "installedTools": [],
+          "componentSystem": "present",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "art-direction",
+            "coverage": "gap",
+            "evidence": "Synthetic confirmed post-implementation coverage"
+          },
+          {
+            "id": "page-layout",
+            "coverage": "gap",
+            "evidence": "Synthetic confirmed post-implementation coverage"
+          },
+          {
+            "id": "typography",
+            "coverage": "gap",
+            "evidence": "Synthetic confirmed post-implementation coverage"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "art-direction",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "page-layout",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "typography",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
+      ]
+    },
+    "expected": "blocked"
+  },
+  {
+    "name": "final browser access unconfirmed",
+    "record": {
+      "phase": "final",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
+          "componentSystem": "present",
+          "browserAccess": "unknown",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "art-direction",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "page-layout",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "typography",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "art-direction",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "page-layout",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "typography",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
+      ]
+    },
+    "expected": "blocked"
+  },
+  {
+    "name": "final unknown route coverage blocks acceptance",
+    "record": {
+      "phase": "final",
+      "request": {
+        "context": {
+          "stack": "react-web",
+          "goal": "new-ui",
+          "agent": "cursor",
+          "inventoryComplete": true,
+          "primarySkill": "taste",
+          "installedTools": [
+            "taste"
+          ],
+          "componentSystem": "present",
+          "browserAccess": "present",
+          "deviceAccess": "not-applicable",
+          "node": "present",
+          "python": "present",
+          "needs": []
+        },
+        "tasks": [
+          {
+            "id": "art-direction",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "page-layout",
+            "coverage": "adequate",
+            "evidence": "Synthetic confirmed post-implementation coverage",
+            "provider": "taste"
+          },
+          {
+            "id": "typography",
+            "coverage": "unknown",
+            "evidence": "Synthetic confirmed post-implementation coverage"
+          }
+        ]
+      },
+      "surfaces": [
+        {
+          "id": "hero",
+          "description": "Landing hero (synthetic example only)"
+        }
+      ],
+      "decisions": [
+        {
+          "capability": "art-direction",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "page-layout",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        },
+        {
+          "capability": "typography",
+          "surfaces": [
+            "hero"
+          ],
+          "status": "grounded",
+          "sources": [
+            {
+              "kind": "project",
+              "location": "DESIGN.md",
+              "locator": "Hero and typography tokens",
+              "observed": "Synthetic fixture: approved type scale and existing editorial layout."
+            }
+          ],
+          "adaptation": "Apply the existing project rule to the requested hero; preserve brand identity.",
+          "verificationPlan": "Render hero at desktop and mobile widths; compare with approved design rules.",
+          "verification": [
+            {
+              "kind": "screenshot",
+              "location": "fixture/hero.png",
+              "result": "Synthetic test record only",
+              "status": "pass"
+            }
+          ]
+        }
+      ],
+      "acceptance": [
+        {
+          "id": "rendered-ui",
+          "status": "pass",
+          "location": "fixture/rendered-ui.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "functional",
+          "status": "pass",
+          "location": "fixture/functional.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "accessibility",
+          "status": "pass",
+          "location": "fixture/accessibility.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "responsive-or-native",
+          "status": "pass",
+          "location": "fixture/responsive-or-native.md",
+          "result": "Synthetic test evidence only"
+        },
+        {
+          "id": "build-or-validation",
+          "status": "pass",
+          "location": "fixture/build-or-validation.md",
+          "result": "Synthetic test evidence only"
+        }
+      ],
+      "toolVerification": [
+        {
+          "id": "taste",
+          "status": "pass",
+          "revision": "synthetic-revision",
+          "location": "fixture/discovery.md",
+          "result": "Synthetic verified provider"
+        }
+      ]
+    },
+    "expected": "blocked"
   }
 ]

@@ -2,7 +2,7 @@
 
 [Home](README.md) · [Quickstart](QUICKSTART.md)
 
-Choose one workflow. Copy the prompt into your coding agent after opening your actual project. The prompts are original templates, not proof of superior results. See [visual examples](EXAMPLES.md) if you are unsure what to aim for.
+Choose one workflow. Start each prompt with `Use the agentic-ui-ux skill and its mandatory source-grounding contract.` The listed tools are candidates for the router, not installation instructions. Copy the prompt into your coding agent after opening your actual project. The prompts are original templates, not proof of superior results. See [visual examples](EXAMPLES.md) if you are unsure what to aim for.
 
 ## New landing page
 
@@ -31,7 +31,7 @@ Copy this into an existing AGENTS.md (merge with project-specific instructions r
 - Respect product requirements and the existing design system.
 - Select at most one primary design-direction skill per task.
 - Add a specialized skill only for a named gap.
-- Define typography, spacing, color, layout and interaction decisions.
+- Ground typography, spacing, color, layout and interaction decisions in inspected project/user references or documented upstream patterns.
 - Reuse existing primitives; justify any new dependency.
 - Keep existing behavior, routes, APIs and accessibility intact.
 - Render and inspect actual UI before claiming visual completion.
@@ -42,6 +42,7 @@ Copy this into an existing AGENTS.md (merge with project-specific instructions r
 
 ## Acceptance checklist
 
+- [ ] Every material design decision has a traceable inspected source.
 - [ ] Design matches the brief and has a coherent visual direction.
 - [ ] Existing components and tokens are respected.
 - [ ] Desktop/mobile layouts (or native device sizes) are inspected.

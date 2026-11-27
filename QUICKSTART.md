@@ -17,7 +17,15 @@ Want the agent to choose instead? [Give it one link](AGENT-SETUP.md).
 
 A skill is not necessarily an npm dependency. Installing a skill does not automatically add UI components or give an agent access to the browser. Some skills include scripts or hooks: review them before execution.
 
-## 2. Install one design skill
+## 2. Recommended: install only Agentic UI/UX
+
+```sh
+npx skills add sinaradme/agentic-ui-ux --skill agentic-ui-ux
+```
+
+Then ask the agent to use the skill for your design task. It routes the work and proposes only necessary additions. [Agent setup](AGENT-SETUP.md). The following upstream commands are manual alternatives for users who choose to manage tools themselves; do not run them all.
+
+### Manual alternatives
 
 Prerequisites: a coding agent, Git when needed, Node.js/npm for the following commands, and an existing project or separate test workspace. Check the actual installer release's Node engine requirement. Upstream skills 1.9.1 declares Node >=22.20.0; use a compatible maintained version rather than assuming any Node installation works. [Upstream package](https://github.com/vercel-labs/skills/blob/main/package.json).
 

@@ -2,7 +2,7 @@
 
 Build better websites and apps with AI coding agents — without installing dozens of tools.
 
-A free, open-source guide for Cursor, Codex, Claude Code and other coding agents. Pick the right design skill, give your agent a clear task, and check the result in a real browser or on a device.
+One free, open-source orchestration skill for Cursor, Codex, Claude Code and other coding agents. Give the agent a design task; it chooses compatible tools and documented patterns, then verifies the rendered result.
 
 [Give your agent one link](AGENT-SETUP.md) · [Quickstart](QUICKSTART.md) · [Tool directory](TOOLS.md) · [Visual examples](EXAMPLES.md) · [Ready-to-use prompts](WORKFLOWS.md) · [Mobile](MOBILE.md)
 
@@ -27,7 +27,7 @@ The repository includes one skill, 12 focused playbooks, a capability router and
 
 The agent routes the task to the relevant capabilities, uses the project's existing system first, and proposes external tools only for verified gaps. Every material visual decision must be grounded in an inspected project/user reference or a documented upstream pattern. [Source-grounding contract](skills/agentic-ui-ux/references/grounding.md) · [Reviewed upstream knowledge](skills/agentic-ui-ux/references/knowledge/INDEX.md). No need to install every library. [How routing works](skills/agentic-ui-ux/references/routing.md) · [Capability index](skills/agentic-ui-ux/references/INDEX.md)
 
-## See the difference
+## See the difference (upstream example)
 
 | Without Impeccable | With Impeccable |
 | --- | --- |
@@ -92,7 +92,7 @@ Ask the agent to inspect the actual rendered interface, test the important state
 
 - [Tools](TOOLS.md): what each tool is for, when to skip it, license and recent activity.
 - [Mobile](MOBILE.md): native components, animation and testing.
-- [Agentic UI/UX skill](skills/agentic-ui-ux/SKILL.md): optional workflow instructions for your agent.
+- [Agentic UI/UX skill](skills/agentic-ui-ux/SKILL.md): central orchestration instructions for your agent.
 - [Benchmarks](benchmarks/README.md): how we plan to compare real outputs.
 - [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Editorial QC](REVIEW.md) · [v1.0 quality report](QUALITY.md).
 

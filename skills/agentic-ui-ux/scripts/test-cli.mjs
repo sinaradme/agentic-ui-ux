@@ -30,6 +30,14 @@ try{
   writeFileSync(contextFile,JSON.stringify(context));
   const result=run('plan.mjs',[contextFile]);assert.equal(result.status,0,result.stderr);
   const plan=JSON.parse(result.stdout);assert.deepEqual(plan.actions.map(a=>a.id),['taste']);assert.equal(plan.executionAuthorized,false);
+  // Exercise the new primary workflow end-to-end from the installed skill directory.
+  const request={context,surfaceType:'marketing',tasks:[{id:'art-direction',coverage:'gap',evidence:'Synthetic inspected project'}]};
+  const requestFile=join(temp,'request.json');writeFileSync(requestFile,JSON.stringify(request));
+  const routed=run('route.mjs',[requestFile]);assert.equal(routed.status,0,routed.stderr);assert.deepEqual(JSON.parse(routed.stdout).actions.map(x=>x.id),['taste']);
+  const rec={phase:'preflight',request,surfaces:[{id:'hero',description:'Synthetic hero'}],decisions:[{capability:'art-direction',surfaces:['hero'],status:'grounded',sources:[{kind:'project',location:'DESIGN.md',locator:'Hero',observed:'Synthetic approved pattern'}],adaptation:'Reuse the approved pattern',verificationPlan:'Capture rendered output'}]};
+  const record=join(temp,'record.json');writeFileSync(record,JSON.stringify(rec));const pre=run('check-grounding.mjs',[record]);assert.equal(pre.status,0,pre.stdout+pre.stderr);
+  rec.phase='final';writeFileSync(record,JSON.stringify(rec));const missing=run('check-grounding.mjs',[record]);assert.equal(missing.status,2);assert.notEqual(JSON.parse(missing.stdout).status,'pass');
+  console.log('PASS installed capability router and grounding CLI preflight/final gate');
   assert.equal(readFileSync(join(target,'package-lock.json'),'utf8'),'{}');
   console.log('PASS isolated skill folder, inspector CLI, blocked incomplete context, confirmed plan CLI, target lockfile unchanged');
 }finally{rmSync(temp,{recursive:true,force:true});}
