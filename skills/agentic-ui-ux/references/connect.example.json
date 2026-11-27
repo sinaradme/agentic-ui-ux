@@ -1,0 +1,12 @@
+{
+  "agent": "codex",
+  "stack": "react-web",
+  "goal": "redesign",
+  "designMode": "rebuild",
+  "surfaceType": "marketing",
+  "motion": true,
+  "capabilities": [
+    "choreography"
+  ],
+  "browserAccess": "present"
+}

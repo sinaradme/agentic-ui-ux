@@ -23,6 +23,7 @@ jobs:
           node skills/agentic-ui-ux/scripts/test-route.mjs
           node skills/agentic-ui-ux/scripts/test-grounding.mjs
           node skills/agentic-ui-ux/scripts/test-source.mjs
+          node skills/agentic-ui-ux/scripts/test-connect.mjs
           node skills/agentic-ui-ux/scripts/test-rebuild.mjs
           node skills/agentic-ui-ux/scripts/test-rebuild-artifacts.mjs
           node skills/agentic-ui-ux/scripts/generate-index.mjs --check

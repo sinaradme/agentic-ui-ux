@@ -1,0 +1,22 @@
+name: Direct upstream connections
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/agentic-ui-ux/scripts/connect.mjs'
+      - 'skills/agentic-ui-ux/scripts/test-connect*.mjs'
+      - 'skills/agentic-ui-ux/references/upstream-lock.json'
+      - '.github/workflows/direct-connect.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  connect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - run: node skills/agentic-ui-ux/scripts/test-connect.mjs
+      - run: node skills/agentic-ui-ux/scripts/test-connect-live.mjs --all

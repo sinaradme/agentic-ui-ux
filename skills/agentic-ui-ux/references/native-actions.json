@@ -1,0 +1,54 @@
+{
+  "shadcn": {
+    "docs": "https://ui.shadcn.com/docs/cli",
+    "discovery": "npx shadcn@<reviewed-version> view <actual-item>",
+    "execution": "npx shadcn@<reviewed-version> add <actual-item>",
+    "verify": "Inspect installed registry source and dependencies; do not reinitialize or overwrite without approval."
+  },
+  "magic-ui": {
+    "docs": "https://magicui.design/docs/installation",
+    "discovery": "npx shadcn@<reviewed-version> view @magicui/<actual-item>",
+    "execution": "npx shadcn@<reviewed-version> add @magicui/<actual-item>",
+    "verify": "Inspect actual component source and test real rendered behavior."
+  },
+  "motion-web": {
+    "docs": "https://motion.dev/docs/react",
+    "execution": "Use actual project package manager to install motion@<reviewed-version> only for confirmed compatible gap.",
+    "verify": "Resolve motion/react and exercise the real interaction."
+  },
+  "playwright-mcp": {
+    "docs": "https://github.com/microsoft/playwright-mcp",
+    "execution": "Connect @playwright/mcp@<reviewed-version> via official active-host configuration.",
+    "verify": "Host tools/list and actual browser navigation/screenshot."
+  },
+  "shadcn-mcp": {
+    "docs": "https://ui.shadcn.com/docs/mcp",
+    "execution": "Connect shadcn@<reviewed-version> mcp via official host setup.",
+    "verify": "Call actual registry discovery tool through host."
+  },
+  "chrome-devtools-mcp": {
+    "docs": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "execution": "Connect reviewed chrome-devtools-mcp package via official host configuration.",
+    "verify": "Call actual DevTools browser diagnostic."
+  },
+  "rn-paper": {
+    "docs": "https://callstack.github.io/react-native-paper/",
+    "execution": "Use official install steps only when Material fits and no competing system.",
+    "verify": "Resolve real package and render native screen."
+  },
+  "reanimated": {
+    "docs": "https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/",
+    "execution": "Use official Expo/RN-compatible installation including matching worklets and rebuild if needed.",
+    "verify": "Actual native device gesture and runtime."
+  },
+  "maestro": {
+    "docs": "https://docs.maestro.dev/get-started/quickstart",
+    "execution": "Use official OS installation and device runner; request system permissions separately.",
+    "verify": "Actual Maestro flow."
+  },
+  "flutter-built-in": {
+    "docs": "https://docs.flutter.dev/ui",
+    "execution": "Use actual installed Flutter SDK widgets and animation APIs.",
+    "verify": "flutter analyze/test and native rendered result."
+  }
+}

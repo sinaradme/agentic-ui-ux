@@ -54,6 +54,7 @@ jobs:
             node "$skill/scripts/test-route.mjs"
             node "$skill/scripts/test-grounding.mjs"
             node "$skill/scripts/test-source.mjs"
+            node "$skill/scripts/test-connect.mjs"
             node "$skill/scripts/test-rebuild.mjs"
             node "$skill/scripts/test-rebuild-artifacts.mjs"
             node "$skill/scripts/generate-index.mjs" --check
@@ -83,6 +84,7 @@ jobs:
           node "$skill/scripts/test-route.mjs"
             node "$skill/scripts/test-grounding.mjs"
             node "$skill/scripts/test-source.mjs"
+            node "$skill/scripts/test-connect.mjs"
             node "$skill/scripts/test-rebuild.mjs"
             node "$skill/scripts/test-rebuild-artifacts.mjs"
             node "$skill/scripts/generate-index.mjs" --check
