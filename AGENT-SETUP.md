@@ -56,6 +56,6 @@ The agent should explain what it will reuse, what it proposes to add, what is bl
 node skills/agentic-ui-ux/scripts/test-plan.mjs
 ```
 
-The 19 fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. These are logic tests, not installation tests or visual-quality benchmarks.
+The 21 fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. These are logic tests, not installation tests or visual-quality benchmarks.
 
 [Return home](README.md) · [Manual setup](QUICKSTART.md) · [Tool directory](TOOLS.md)

@@ -430,5 +430,52 @@
     "expectedActions": {
       "uiux-pro-max": "needs-verification"
     }
+  },
+  {
+    "name": "existing MCP with unknown agent requires verification",
+    "input": {
+      "stack": "react-web",
+      "goal": "visual-qa",
+      "agent": "unknown",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "playwright-mcp"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "absent",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [
+      "playwright-mcp"
+    ],
+    "expectedStatus": "planned",
+    "expectedActions": {
+      "playwright-mcp": "needs-verification"
+    }
+  },
+  {
+    "name": "invalid prototype-like inventory ID rejected",
+    "input": {
+      "stack": "react-web",
+      "goal": "new-ui",
+      "agent": "cursor",
+      "inventoryComplete": true,
+      "primarySkill": "none",
+      "installedTools": [
+        "__proto__"
+      ],
+      "componentSystem": "present",
+      "browserAccess": "present",
+      "deviceAccess": "not-applicable",
+      "node": "present",
+      "python": "unknown",
+      "needs": []
+    },
+    "expectedIds": [],
+    "expectedStatus": "blocked"
   }
 ]

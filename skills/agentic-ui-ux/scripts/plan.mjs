@@ -14,7 +14,7 @@ function plan(context,catalog,schema){
    if(def.type==="string"&&typeof v!=="string")return fail("Invalid field: "+key);
    if(def.type==="array"&&(!Array.isArray(v)||v.some(x=>typeof x!=="string"||(def.items.enum&&!def.items.enum.includes(x)))||new Set(v).size!==v.length))return fail("Invalid field: "+key);
  }
- const byId=Object.fromEntries(catalog.tools.map(t=>[t.id,t]));
+ const byId=Object.assign(Object.create(null),Object.fromEntries(catalog.tools.map(t=>[t.id,t])));
  if(context.installedTools.some(x=>!byId[x]))return fail("installedTools must use known catalog IDs. Record other existing tools in your project notes.");
  const primary=context.primarySkill;
  const primaryKnown=byId[primary]&&["primary","alternative-primary"].includes(byId[primary].role);
@@ -34,7 +34,7 @@ function plan(context,catalog,schema){
    if(agentRestricted&&!agentRestricted.includes(context.agent))gaps.push("Verify agent support and installation method");
    let status=isInstalled?"reuse":t.install.mode==="none"?"built-in":gaps.length?"needs-verification":"candidate";
    if(isInstalled&&gaps.length)status="needs-verification";
-   if(t.kind==="mcp"&&isInstalled&&context.browserAccess==="absent"&&id==="playwright-mcp")status="configure-existing";
+   if(t.kind==="mcp"&&isInstalled&&gaps.length===0&&context.browserAccess==="absent"&&id==="playwright-mcp")status="configure-existing";
    const entry={id,name:t.name,kind:t.kind,status,reason,source:t.source,docs:t.docs,evidence:t.evidence};
    if(gaps.length)entry.blockers=gaps;
    if(status==="candidate"||status==="configure-existing"){

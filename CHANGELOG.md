@@ -4,7 +4,7 @@
 
 - Added a repository-wide agent entry point (AGENTS.md) and a one-link onboarding guide.
 - Expanded the existing agent skill with bundled machine-readable catalog, context schema, decision rules and optional dependency-free plan-only selector.
-- Added 19 deterministic fixture scenarios for compatibility, reuse, missing evidence and installation approval gates. The pure selection logic passed all 19 fixtures in the authoring runtime; the Node CLI itself and third-party installations are not yet independently executed.
+- Added 21 deterministic fixture scenarios for compatibility, reuse, missing evidence and installation approval gates. The pure selection logic passed all 21 fixtures in the authoring runtime; the Node CLI itself and third-party installations are not yet independently executed.
 - Kept the human documentation and visual examples intact, with agent-first navigation.
 
 ## 0.2 — 2026-11-27
