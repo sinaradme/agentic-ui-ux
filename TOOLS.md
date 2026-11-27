@@ -14,7 +14,7 @@ The initial catalog uses a 60-day repository-push filter (since 2026-09-28). New
 
 | Tool / source | Use it for | License | Last push | Stars (approx.) |
 | --- | --- | --- | --- | ---: |
-| [Taste Skill](https://github.com/Leonxlnx/taste-skill) · [site](https://tasteskill.dev) | Visual direction for new web pages; references and review guidance | MIT | 2026-11-26 | 122k |
+| [Taste Skill](https://github.com/Leonxlnx/taste-skill) · [site](https://tasteskill.dev) | Visual direction for new marketing websites; references and review guidance | MIT | 2026-11-26 | 122k |
 | [Impeccable](https://github.com/pbakaus/impeccable) · [site](https://impeccable.style) | Critique, audit, polishing and improving existing web interfaces | Apache-2.0 | 2026-11-27 | 118k |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Structured design-system and UX planning across supported stacks | MIT | 2026-11-27 | 155k |
 | [Hallmark](https://github.com/Nutlope/hallmark) | Alternative visual direction and anti-generic design guidance | MIT | 2026-11-11 | 62k |
@@ -89,6 +89,8 @@ Choose one browser path to start; existing automation is sufficient if it covers
 Discovery directories: [skills.sh](https://skills.sh), [shadcn registry docs](https://ui.shadcn.com/docs/registry). Directory listings are leads, not automatic approvals.
 
 ## How to choose
+
+When invoking the skill, use its [reviewed upstream knowledge cards](skills/agentic-ui-ux/references/knowledge/INDEX.md) and [source-grounding contract](skills/agentic-ui-ux/references/grounding.md). Select the exact documented pattern or component rather than inventing a visual style.
 
 Start with the tool addressing your actual bottleneck. If the interface is visually generic, choose art direction. If usability is weak, choose structured UX guidance. If interactions are rough, add a targeted motion skill. If the agent cannot inspect its work, add browser access before adding another design skill.
 

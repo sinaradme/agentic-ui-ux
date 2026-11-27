@@ -2,6 +2,8 @@
 
 ## 1.0 — 2026-11-27
 
+- Completed source-grounding hardening: exact official component/API retrieval scopes, product versus marketing routing, native-dashboard regression fix, and explicit verification outcomes. Final CI: 64 route fixtures, 504 invariant checks, 28 grounding fixtures and 26 knowledge cards passed; isolated skill installation passed.
+
 - Reviewed the primary upstream documentation of all 20 source repositories and the relevant skill files; added 26 focused knowledge cards with pinned source revisions, scope, fit/exclusions and exact documentation pointers. Added mandatory source-grounded design, preflight/final decision evidence and structural verification. No fine-tuning or independent visual quality claim.
 
 - Completed capability routing hardening: 59 task fixtures, 504 cross-product invariants, 39 generated reference checks, 20 source-repository credibility snapshots, core/supporting priority, stale-source blocking and execution contract. Both CI workflows passed. Clarified one-skill onboarding and added paired human-effort/quality evaluation criteria.

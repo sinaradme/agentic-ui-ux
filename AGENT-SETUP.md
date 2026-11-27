@@ -77,9 +77,10 @@ The agent should explain what it will reuse, what it proposes to add, what is bl
 node skills/agentic-ui-ux/scripts/test-plan.mjs
 node skills/agentic-ui-ux/scripts/test-inspect.mjs
 node skills/agentic-ui-ux/scripts/test-route.mjs
+node skills/agentic-ui-ux/scripts/test-grounding.mjs
 ```
 
-The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. The 59 route fixtures and 504 cross-product invariant checks cover capability selection, source priority, unknown coverage, conflicts and platform isolation. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
+The 32 planner fixture scenarios check tool selection, reuse, native/web separation, unknown inputs, prerequisite gates and plan-only behavior. The 11 inspector classifier fixtures and filesystem checks cover framework detection and the inspection-to-plan path. The 64 route fixtures and 504 cross-product invariant checks cover capability selection, source priority, unknown coverage, conflicts and platform isolation. These are not visual-quality benchmarks. See [v1.0 quality report](QUALITY.md).
 
 [Return home](README.md) · [Manual setup](QUICKSTART.md) · [Tool directory](TOOLS.md)
 

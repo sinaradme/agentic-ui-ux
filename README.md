@@ -63,7 +63,8 @@ You do not need to name any libraries. The agent should handle routine design de
 
 | Task | Preferred route (if a gap exists) |
 | --- | --- |
-| New web page | Taste, with the layout and art-direction playbooks |
+| New marketing website | Taste, with the layout and art-direction playbooks |
+| New functional product UI | Impeccable, existing system and task-specific patterns |
 | Existing product redesign | Impeccable, existing tokens and visual QA |
 | UX / design-system planning | UI/UX Pro Max |
 | Motion | Focused Emil guidance; existing CSS/runtime first; Motion only for an advanced compatible gap |
@@ -97,6 +98,6 @@ Ask the agent to inspect the actual rendered interface, test the important state
 
 **Research updated:** November 27, 2026 · **Edition:** 1.0
 
-We review upstream docs, repository metadata and selected official examples. The capability router, project inspection, CLI and project-scoped skill installation have passed CI checks. See [the evidence](QUALITY.md). In-app agent behavior and independent design-quality comparisons have not yet been validated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
+We review upstream docs, repository metadata and selected official examples. The capability router, source-grounding checker, project inspection, CLI and project-scoped skill installation have passed CI checks. See [the evidence](QUALITY.md). In-app agent behavior and independent design-quality comparisons have not yet been validated. Open-source tools are free to use subject to their licenses; your AI model may have its own costs.
 
 Original guide: [MIT](LICENSE). Third-party examples are linked from their creators, not relicensed here.
