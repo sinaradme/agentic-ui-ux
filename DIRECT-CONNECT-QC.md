@@ -1,5 +1,33 @@
 # Direct connection QC — edition 1.1
 
+## 1.2 — Agent selects, connector installs (2026-11-27)
+
+### Regression and connection checks
+
+The 1.1 CLI added UI/UX Pro Max and the user-invocation-only `pick-ui-library` to a request that named only `emil-web`. The 1.2 CLI accepts an ordered list of provider IDs. Unit checks cover exact selection, duplicates, empty requests, host variants, permissions, existing content and invalid source bytes. The full repository checks passed locally and in GitHub Actions. Live upstream checks passed for Linux and Windows. The isolated central skill install check covered Cursor, Codex and Claude Code project paths. [Pull request and checks](https://github.com/sinaradme/agentic-ui-ux/pull/1)
+
+On Windows, separate exact-ID requests installed and verified original `choreograph`, `animate-expo` and Anthropic `frontend-design` files from two publishers. Repeating the request reused all three installations. These checks verify connection and reuse.
+
+### Independent agent scenario
+
+An independent Codex agent received only the connector path and this task:
+
+> Add a subtle entrance transition to the existing delivery-details disclosure for pointer users. Keep it instantaneous on keyboard activation and with reduced motion. Preserve its accessible button semantics, avoid adding app dependencies for a simple transition, and verify behavior in a browser.
+
+The project started with the connector as its only project-local skill. The agent had project-scoped permission and access to a temporary cache of pinned files from several publishers. Shell Git and raw HTTPS were unavailable in this test environment. The cache contained original bytes from GitHub's file API, and the connector verified each file against its locked blob hash.
+
+| Check | Observed result |
+| --- | --- |
+| Selection | The agent compared motion skills and selected only `emil-web`, the original `animate` skill for one web transition. |
+| Installation | `original-files-verified`, using `--local-source`, with three original files totaling 21,252 bytes. |
+| Provenance | [emilkowalski/skills at 64eb3de](https://github.com/emilkowalski/skills/tree/64eb3deb9a5fbfa041faf783e0bc3fd635872e9c/skills/animate). Installed `SKILL.md` SHA-256 `4ce49ea635ec175b45552bae070ea07b2d6aa5367047994250c1c095b71c8585`. |
+| Use | The agent read the verified original `SKILL.md` and `RECIPES.md`. It applied state-indication guidance, the CSS and opacity choices, a 200 ms entrance and the upstream easing. The disclosure uses its native HTML button and CSS. |
+| Browser | Playwright assertions in Edge 158.0.4370.45 passed for mouse and emulated touch entrances, immediate Enter and Space, reduced motion, focus and ARIA state, interruption, reopening, and immediate collapse. A second run reproduced the assertions. |
+
+This scenario verified original file-based use in an active Codex run. Native skill activation in the host and comparative visual quality remain unverified.
+
+## 1.1 evidence
+
 The reported real-agent homepage result exposed the limitation of a planning-only design wrapper. Edition 1.1 makes the original upstream providers the design authority. The old playbooks and rebuild gates are not the default.
 
 Implementation [f6b8fc7](https://github.com/sinaradme/agentic-ui-ux/commit/f6b8fc73cb80cac8d196743cd33863cf3d27bce9).

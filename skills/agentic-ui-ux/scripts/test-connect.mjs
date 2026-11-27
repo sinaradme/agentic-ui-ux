@@ -1,28 +1,70 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync,mkdirSync,writeFileSync,readFileSync,rmSync,existsSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { select,connect,lock } from './connect.mjs';
-const web={agent:'codex',stack:'react-web',goal:'redesign',surfaceType:'marketing',motion:true,capabilities:['choreography','section-blocks'],browserAccess:'present'};
-const p=select(web);
-assert.equal(p.primary,'impeccable');assert.deepEqual(p.selections.map(x=>x.id),['impeccable','emil-web','emil-choreograph','shadcn','emil-pick-ui']);
-assert.equal(p.selections.find(x=>x.id==='shadcn').type,'native-skill');assert.equal(p.selections.find(x=>x.id==='shadcn').userInvocable,false);assert.equal(p.selections.find(x=>x.id==='shadcn').providerPermissions,true);assert.equal(p.selections.find(x=>x.id==='emil-pick-ui').referenceOnly,true);
-assert.equal(select({...web,agent:'cursor'}).selections[0].originalDirectory,'.cursor/skills/impeccable');
-assert.equal(select({...web,agent:'claude-code'}).selections[0].originalDirectory,'.claude/skills/impeccable');
-assert.equal(select({...web,goal:'new-ui',motion:false,capabilities:[]}).primary,'taste');
-assert.equal(select({agent:'codex',stack:'react-native',goal:'motion'}).selections[0].name,'animate-expo');
-assert.equal(select({agent:'codex',stack:'flutter',goal:'motion'}).selections[0].id,'flutter-built-in');
-assert.throws(()=>select({...web,tools:['taste','impeccable']}),/one primary/);
-assert.throws(()=>select({...web,stack:'flutter',tools:['taste']}),/Incompatible/);
-assert.equal(Object.keys(lock.skills).length,17);
-const root=mkdtempSync(join(tmpdir(),'agentic-connect-test-'));
-try{const app=join(root,'package.json');writeFileSync(app,'{"name":"fixture","private":true}');const before=readFileSync(app,'utf8');
- assert.equal((await connect(web,root)).status,'planned');assert.ok(!existsSync(join(root,'.agents')));
- const no=await connect({...web,policy:'no-new-tools',motion:false,capabilities:[]},root,{apply:true});assert.equal(no.status,'blocked');
- const hook=await connect({...web,goal:'new-ui',motion:false,capabilities:[]},root,{apply:true});assert.equal(hook.status,'blocked');assert.match(hook.results[0].error,/hooks/);
- mkdirSync(join(root,'.agents/skills/impeccable'),{recursive:true});writeFileSync(join(root,'.agents/skills/impeccable/SKILL.md'),'user content');
- const conflict=await connect({...web,motion:false,capabilities:[]},root,{apply:true});assert.equal(conflict.status,'blocked');assert.equal(readFileSync(join(root,'.agents/skills/impeccable/SKILL.md'),'utf8'),'user content');
- const perm=await connect({agent:'codex',stack:'react-web',goal:'motion',primary:'none',tools:['shadcn'],policy:'no-new-tools'},root,{apply:true});assert.equal(perm.status,'blocked');assert.match(perm.results.find(x=>x.id==='shadcn').error,/allowed-tools/);
- const bad=await connect({agent:'codex',stack:'react-web',goal:'motion',primary:'none'},root,{apply:true,rawOnly:true,fetcher:async()=>new Response('wrong bytes')});assert.equal(bad.status,'blocked');assert.ok(!existsSync(join(root,'.agents/skills/animate')));
- assert.equal(readFileSync(app,'utf8'),before);console.log('PASS direct provider selection, native distribution, no-write plan, hook approval, no-new-tools, existing conflict, mismatched source rejection');
-}finally{rmSync(root,{recursive:true,force:true});}
+import { listProviders, select, connect, lock } from './connect.mjs';
+
+const request = { agent: 'codex', tools: ['emil-web', 'emil-choreograph', 'emil-web'] };
+const plan = select(request);
+assert.deepEqual(plan.selections.map(x => x.id), ['emil-web', 'emil-choreograph']);
+assert.deepEqual(select({ ...request, tools: ['magic-ui'] }).selections.map(x => x.id), ['magic-ui']);
+assert.deepEqual(select({ ...request, tools: [] }).selections, []);
+assert.deepEqual(select({ ...request, tools: ['taste', 'impeccable'] }).selections.map(x => x.id), ['taste', 'impeccable']);
+const one = (id, agent = 'codex') => select({ agent, tools: [id] }).selections[0];
+assert.equal(one('impeccable', 'cursor').originalDirectory, '.cursor/skills/impeccable');
+assert.equal(one('impeccable', 'claude-code').originalDirectory, '.claude/skills/impeccable');
+assert.equal(one('emil-native').name, 'animate-expo');
+assert.equal(one('emil-pick-ui').activation, 'explicit-user-only');
+assert.equal(one('shadcn').activation, 'host-selection');
+assert.equal(one('shadcn').providerPermissions, true);
+assert.equal(one('flutter-built-in').status, 'native-action-required');
+assert.equal(one('make-interfaces').status, 'open-official-source');
+assert.equal(one('emil-web').originalUrl, 'https://github.com/emilkowalski/skills/tree/' + lock.skills['emil-web'].revision + '/skills/animate');
+assert.equal(new Set(listProviders().map(x => x.id)).size, listProviders().length);
+assert.ok(Object.keys(lock.skills).every(id => listProviders().some(entry => entry.id === id)));
+assert.throws(() => select({ agent: 'codex', tools: ['unknown'] }), /Unknown provider/);
+assert.throws(() => select({ ...request, goal: 'redesign' }), /Choose provider IDs/);
+
+const root = mkdtempSync(join(tmpdir(), 'agentic-connect-test-'));
+try {
+ const app = join(root, 'package.json');
+ const before = '{"name":"fixture","private":true}';
+ writeFileSync(app, before);
+ assert.equal((await connect(request, root)).status, 'planned');
+ assert.equal((await connect({ ...request, tools: [] }, root, { apply: true })).status, 'no-tools-selected');
+ assert.ok(!existsSync(join(root, '.agents')));
+
+ const noNew = await connect({ ...request, policy: 'no-new-tools' }, root, { apply: true });
+ assert.equal(noNew.status, 'blocked');
+ assert.ok(noNew.results.every(x => /No-new-tools/.test(x.error)));
+ assert.ok(!existsSync(join(root, '.agents')));
+
+ const hook = await connect({ ...request, tools: ['taste'] }, root, { apply: true });
+ assert.match(hook.results[0].error, /hooks/);
+ const permissions = await connect({ ...request, tools: ['shadcn'] }, root, { apply: true });
+ assert.match(permissions.results[0].error, /allowed-tools/);
+ assert.ok(!existsSync(join(root, '.agents')));
+
+ const official = await connect({ ...request, tools: ['motion-web', 'make-interfaces'] }, root, { apply: true });
+ assert.equal(official.status, 'native-actions-required');
+ assert.deepEqual(official.results.map(x => x.status), ['native-action-required', 'open-official-source']);
+ assert.ok(!existsSync(join(root, '.agents')));
+
+ const original = join(root, '.agents/skills/impeccable/SKILL.md');
+ mkdirSync(join(root, '.agents/skills/impeccable'), { recursive: true });
+ writeFileSync(original, 'user content');
+ const conflict = await connect({ ...request, tools: ['impeccable'] }, root, { apply: true });
+ assert.equal(conflict.status, 'blocked');
+ assert.equal(readFileSync(original, 'utf8'), 'user content');
+
+ const bad = await connect({ ...request, tools: ['emil-web'] }, root, {
+  apply: true, rawOnly: true, fetcher: async () => new Response('wrong bytes'),
+ });
+ assert.equal(bad.status, 'blocked');
+ assert.match(bad.results[0].error, /Original blob mismatch/);
+ assert.ok(!existsSync(join(root, '.agents/skills/animate')));
+ assert.equal(readFileSync(app, 'utf8'), before);
+ console.log('PASS exact provider IDs, discovery, host variants, no-write plan, original permissions, existing conflict and mismatched bytes');
+} finally {
+ rmSync(root, { recursive: true, force: true });
+}
