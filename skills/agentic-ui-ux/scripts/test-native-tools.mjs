@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync,writeFileSync,rmSync,readFileSync } from 'node:fs';
+import { mkdtempSync,writeFileSync,rmSync,readFileSync,mkdirSync,readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { spawn,spawnSync } from 'node:child_process';
@@ -14,7 +14,7 @@ function run(cmd,args){const r=spawnSync(cmd,args,{cwd:root,env,encoding:'utf8',
 try{
  writeFileSync(join(root,'package.json'),'{"name":"agentic-native-fixture","private":true}');
  const versions=['shadcn','motion-web','playwright-mcp'].map(id=>actions[id].package+'@'+actions[id].reviewedVersion);
- run('npm',['install','--no-save','--ignore-scripts','--no-audit','--no-fund',...versions,'react@19','react-dom@19']);
+ run('npm',['install','--save-exact','--ignore-scripts','--no-audit','--no-fund',...versions,'react@19','react-dom@19']);
  const req=createRequire(join(root,'package.json')),motion=req('motion/react');
  assert.ok(motion.motion&&typeof motion.useScroll==='function'&&typeof motion.useSpring==='function');
  console.log('LIVE original Motion import resolved',actions['motion-web'].reviewedVersion);
@@ -22,6 +22,16 @@ try{
  const viewed=run(process.execPath,[shadcn,'view','https://magicui.design/r/bento-grid.json']);
  assert.match(viewed,/bento-grid|BentoGrid/i);assert.ok(viewed.length>200);
  console.log('LIVE official shadcn CLI fetched real Magic UI registry item',actions.shadcn.reviewedVersion,viewed.length,'characters');
+ // Exercise the real original add path in a disposable, preconfigured fixture.
+ mkdirSync(join(root,'src'),{recursive:true});writeFileSync(join(root,'src/index.css'),'@import "tailwindcss";\n');
+ writeFileSync(join(root,'tsconfig.json'),JSON.stringify({compilerOptions:{baseUrl:'.',paths:{'@/*':['./src/*']},jsx:'react-jsx'}}));
+ writeFileSync(join(root,'components.json'),JSON.stringify({"$schema":"https://ui.shadcn.com/schema.json",style:'new-york',rsc:false,tsx:true,tailwind:{config:'',css:'src/index.css',baseColor:'neutral',cssVariables:true,prefix:''},aliases:{components:'@/components',utils:'@/lib/utils',ui:'@/components/ui',lib:'@/lib',hooks:'@/hooks'},iconLibrary:'lucide'}));
+ const added=run(process.execPath,[shadcn,'add','https://magicui.design/r/bento-grid.json','--yes']);
+ const scan=dir=>readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?scan(join(dir,e.name)):[join(dir,e.name)]);
+ const files=scan(join(root,'src'));const actual=files.find(p=>/bento-grid\.(tsx|jsx|ts|js)$/.test(p));
+ assert.ok(actual,'Official add did not produce the real bento component: '+added.slice(-1000));
+ assert.match(readFileSync(actual,'utf8'),/BentoGrid/);
+ console.log('LIVE official shadcn CLI added actual Magic UI Bento Grid source',actual.slice(root.length+1));
  server=createServer((q,r)=>{r.writeHead(200,{'content-type':'text/html'});r.end('<!doctype html><html><head><title>Agentic native fixture</title></head><body><h1>Native MCP fixture</h1><button>Test</button></body></html>');});
  await new Promise((ok,fail)=>{server.once('error',fail);server.listen(0,'127.0.0.1',ok)});
  const url='http://127.0.0.1:'+server.address().port+'/';
