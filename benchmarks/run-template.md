@@ -1,0 +1,23 @@
+# Benchmark run
+
+- Run ID:
+- Date:
+- Brief ID / source:
+- Condition (baseline / single skill / combined):
+- Starter commit:
+- Model and agent versions:
+- Skill name and exact revision:
+- Dependencies and tool configuration:
+- Budget and refinement rounds:
+- Environment / device / viewport:
+- Output commit:
+- Screenshot / recording paths:
+- Test commands and results:
+- Manual intervention count:
+- Time / token usage (if available):
+- New dependencies:
+- Rubric ratings and evidence:
+- Critical failures:
+- Blocked checks:
+- Reviewer notes:
+- Conclusion (limited to this run):
