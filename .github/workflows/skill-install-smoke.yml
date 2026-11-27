@@ -1,0 +1,57 @@
+name: Skill install smoke
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/agentic-ui-ux/**'
+      - '.github/workflows/skill-install-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install pinned skills CLI in disposable runner directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --version
+          npm --version
+          mkdir -p "$RUNNER_TEMP/skills-cli"
+          npm install --prefix "$RUNNER_TEMP/skills-cli" --no-save --ignore-scripts --no-audit --no-fund skills@1.9.1
+          node "$RUNNER_TEMP/skills-cli/node_modules/skills/bin/cli.mjs" --version
+      - name: Install only this repository's skill into three isolated projects
+        shell: bash
+        env:
+          CI: 'true'
+          DISABLE_TELEMETRY: '1'
+          DO_NOT_TRACK: '1'
+        run: |
+          set -euo pipefail
+          cli="$RUNNER_TEMP/skills-cli/node_modules/skills/bin/cli.mjs"
+          for agent in cursor codex claude-code; do
+            target="$(mktemp -d "$RUNNER_TEMP/agentic-smoke-$agent-XXXXXX")"
+            mkdir -p "$target/home"
+            cd "$target"
+            git init -q
+            printf '%s\n' '{"name":"agentic-smoke","private":true,"dependencies":{"next":"16"}}' > package.json
+            before="$(sha256sum package.json)"
+            HOME="$target/home" node "$cli" add "$GITHUB_WORKSPACE" --skill agentic-ui-ux --agent "$agent" --copy --yes
+            case "$agent" in
+              claude-code) skill="$target/.claude/skills/agentic-ui-ux" ;;
+              *) skill="$target/.agents/skills/agentic-ui-ux" ;;
+            esac
+            test -f "$skill/SKILL.md"
+            test -f "$skill/references/catalog.json"
+            test -f "$skill/references/acceptance.md"
+            test -f "$skill/scripts/inspect.mjs"
+            node "$skill/scripts/test-plan.mjs"
+            node "$skill/scripts/test-cli.mjs"
+            test "$before" = "$(sha256sum package.json)"
+            echo "PASS: $agent project-scoped skill files, executable planner and unchanged app manifest"
+          done

@@ -20,7 +20,7 @@ The goal is to let a coding agent read one repository, inspect a target project,
 | --- | --- |
 | Selection logic | 32/32 deterministic fixtures passed in authoring JavaScript runtime |
 | Inspector classification | 11/11 deterministic classifier fixtures passed in authoring JavaScript runtime |
-| Local CLI / filesystem tests | Test scripts included; see CI status when available |
+| Local CLI / filesystem tests | Passed in [GitHub Actions run 45960396562](https://github.com/sinaradme/agentic-ui-ux/actions/runs/45960396562), Node 24.22.3 on Ubuntu: filesystem inspection, symlink isolation, isolated skill copy, actual CLI exit codes, unchanged project lockfile |
 | Real skill installer, discovery in Cursor/Codex/Claude Code | Not yet independently verified |
 | Real MCP connection / native device / browser QA | Not yet verified end-to-end |
 | Baseline vs skill-generated UI quality, manual edits and time | No independent results yet |
@@ -34,6 +34,7 @@ From the repository root, with Node.js:
 ```sh
 node skills/agentic-ui-ux/scripts/test-plan.mjs
 node skills/agentic-ui-ux/scripts/test-inspect.mjs
+node skills/agentic-ui-ux/scripts/test-cli.mjs
 ```
 
 For practical adoption, use a throwaway target project, [agent setup](AGENT-SETUP.md), the [acceptance contract](skills/agentic-ui-ux/references/acceptance.md) and [benchmark protocol](benchmarks/README.md).
