@@ -23,7 +23,7 @@ function route(input,catalog,registry,policy,validateContext){
    seen.add(task.id);
  }
  const requested=new Map(tasks.map(t=>[t.id,t]));
- const surfaceType=input.surfaceType|| (requested.has("dashboard-layout")&&requested.get("dashboard-layout").priority!=="supporting"?"product":(["react-native","flutter"].includes(ctx.stack)?"native":"unknown"));
+ const surfaceType=input.surfaceType|| (["react-native","flutter"].includes(ctx.stack)?"native":requested.has("dashboard-layout")&&requested.get("dashboard-layout").priority!=="supporting"?"product":"unknown");
  if(surfaceType==="native"&&!["react-native","flutter"].includes(ctx.stack)||["marketing","product"].includes(surfaceType)&&["react-native","flutter"].includes(ctx.stack))return blocked("Surface type conflicts with target platform.");const ordered=registry.capabilities.filter(c=>requested.has(c.id)).sort((a,b)=>Number(requested.get(a.id).priority==="supporting")-Number(requested.get(b.id).priority==="supporting"));
  const routes=[],actions=new Map(),notes=[],playbooks=new Set();let newSpecialists=0;const runtimeFamilies=new Set();
  const noNew=input.policy==="no-new-tools";

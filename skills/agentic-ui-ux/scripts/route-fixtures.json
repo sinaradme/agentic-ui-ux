@@ -2098,5 +2098,35 @@
     "expectedIds": [],
     "expectedStatuses": {},
     "expectedStatus": "blocked"
+  },
+  {
+    "name": "native dashboard is not a web product surface",
+    "input": {
+      "context": {
+        "stack": "react-native",
+        "goal": "new-ui",
+        "agent": "cursor",
+        "inventoryComplete": true,
+        "primarySkill": "none",
+        "installedTools": [],
+        "componentSystem": "present",
+        "browserAccess": "not-applicable",
+        "deviceAccess": "present",
+        "node": "present",
+        "python": "present",
+        "needs": []
+      },
+      "tasks": [
+        {
+          "id": "dashboard-layout",
+          "coverage": "gap",
+          "evidence": "Synthetic native dashboard"
+        }
+      ]
+    },
+    "expectedIds": [],
+    "expectedStatuses": {
+      "dashboard-layout": "playbook"
+    }
   }
 ]
