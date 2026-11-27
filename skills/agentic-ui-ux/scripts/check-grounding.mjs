@@ -45,8 +45,9 @@ function check(record,route,registry,catalog,knowledge){
    // QA/tooling sources are not by themselves a visual pattern for a modified surface.
    if(isPlanning||route.goal==="visual-qa"||!["review","tooling"].includes(cap.kind))d.surfaces.forEach(s=>groundedSurfaces.add(s));
    if(record.phase==="final"){
-     if(!arr(d.verification,1,12)||d.verification.some(v=>!only(v,["kind","location","result"])||!["screenshot","recording","interaction","test","trace","document-review"].includes(v.kind)||!str(v.location,1000)||!str(v.result))){errors.push("Final decision needs actual evidence records: "+d.capability);continue;}
+     if(!arr(d.verification,1,12)||d.verification.some(v=>!only(v,["kind","location","result","status"])||!["screenshot","recording","interaction","test","trace","document-review"].includes(v.kind)||!str(v.location,1000)||!str(v.result)||!["pass","fail","blocked"].includes(v.status))){errors.push("Final decision needs actual evidence records: "+d.capability);continue;}
      const kinds=new Set(d.verification.map(v=>v.kind));
+     for(const v of d.verification)if(v.status!=="pass")blockers.push(d.capability+": "+v.kind+" verification "+v.status+" — "+v.result);
      if(!isPlanning&&route.goal!=="visual-qa"&&["primary","implementation","guidance"].includes(cap.kind)&&!["motion","interactions"].includes(cap.group)&&!kinds.has("screenshot"))errors.push("Visual implementation requires rendered screenshot evidence: "+d.capability);
      if(!isPlanning&&["motion","interactions"].includes(cap.group)&&!["recording","interaction","trace"].some(k=>kinds.has(k)))errors.push("Motion/interaction requires dynamic evidence: "+d.capability);
      if(d.capability==="functional-regression"&&!["test","interaction"].some(k=>kinds.has(k)))errors.push("Functional regression requires executed test/interaction evidence.");
